@@ -39,7 +39,6 @@ MainView {
     property int count;
     property var gpxx;
     property string day;
-    //  property var c : [];
     property bool am_running;
 
     //keep screen on so we still get to read GPS
@@ -315,8 +314,8 @@ MainView {
                 }
             }//Bottom component page
 
-        }
-    }
+        }//Page
+    }//Page component
     PageStack {
         id: stack
         Component.onCompleted: {

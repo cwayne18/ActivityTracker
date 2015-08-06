@@ -92,6 +92,7 @@ def add_run(gpx, name,act_type,filename,polyline):
 def get_runs():
     #add_run("1", "2", "3", "4")
     filebase = os.environ["XDG_DATA_HOME"]+"/"+os.environ["APP_ID"].split('_')[0]
+    os.makedirs(filebase, exist_ok=True)
     conn = sqlite3.connect('%s/activities.db' % filebase)
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()

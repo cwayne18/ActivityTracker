@@ -11,6 +11,8 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
 import Ubuntu.Components.Popups 1.0
 import "./lib/polyline.js" as Pl
 import "./keys.js" as Keys
+import UserMetrics 0.1
+import U1db 1.0 as U1db
 
 
 
@@ -46,6 +48,35 @@ MainView {
         id: screenSaver
         screenSaverEnabled: !Qt.application.active
     }
+
+    U1db.Database {
+        id: database
+        // TODO: change /home/phablet to ~ as soon as bug #1387294 is fixed
+        path: "settings.db"
+    }
+
+    U1db.Document {
+        id: userSettings
+        database: database
+        docId: "userSettings"
+        create: false
+        defaults: { "units": "kilometers"}
+
+        function set(key, value) {
+            var tmp = contents;
+            tmp[key] = value;
+            contents = tmp;
+        }
+        Component.onCompleted: {
+             // WORKAROUND: it seems that when the object is created, the contents aren't
+             // still set. We force the update of its contents
+             if (database.listDocs().indexOf(docId) < 0) {
+                 contents = defaults;
+             }
+
+        }
+
+    }
     Component {
         id: pageComponent
 
@@ -55,6 +86,18 @@ MainView {
             visible: true
             title: i18n.tr("Recent Activities")
             bottomEdgeTitle: "Log new Activity"
+            tools: ToolbarItems {
+            ToolbarButton {
+                            action: Action {
+                                text: "Second action"
+                                iconName: "settings"
+                                onTriggered: pageStack.push(Qt.resolvedUrl("./Settings.qml"))
+                            }
+                            // override the text of the action:
+                            text: "action 2"
+
+            }
+            }
 
             Rectangle {
                 visible : if(thelist.model.count > 0) false;else true;

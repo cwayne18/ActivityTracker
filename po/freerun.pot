@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-04 17:08-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: Main.qml:55
+msgid "Recent Activities"
+msgstr ""
+
+#: Main.qml:65
+msgid "No saved activities"
+msgstr ""
+
+#: Main.qml:67
+msgid "Swipe up to log a new activity"
+msgstr ""
+
+#: Main.qml:167
+msgid "Activity Type"
+msgstr ""
+
+#: Main.qml:168
+msgid "Run"
+msgstr ""
+
+#: Main.qml:169
+msgid "Bike Ride"
+msgstr ""
+
+#: Main.qml:170
+msgid "Walk"
+msgstr ""
+
+#: Main.qml:171
+msgid "Hike"
+msgstr ""
+
+#: Main.qml:215
+msgid "Start"
+msgstr ""
+
+#: Main.qml:236
+msgid "Stop"
+msgstr ""
+
+#: app/geepeeess.qml:30
+msgid "Simple"
+msgstr ""
+
+#: app/geepeeess.qml:43
+msgid "Hello.."
+msgstr ""
+
+#: app/geepeeess.qml:50
+msgid "Tap me!"
+msgstr ""
+
+#: app/geepeeess.qml:53
+msgid "..world!"
+msgstr ""

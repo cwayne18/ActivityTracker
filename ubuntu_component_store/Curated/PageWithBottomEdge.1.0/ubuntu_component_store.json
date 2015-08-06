@@ -1,0 +1,6 @@
+{
+    "name": "PageWithBottomEdge",
+    "description": "This component provides a bottom edge which can be used to house common actions.",
+    "version": "1.0",
+    "documentation_url": "http://ubuntu-component-store.readthedocs.org/en/latest/_components/pagewithbottomedge.html"
+}

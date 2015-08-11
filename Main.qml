@@ -1,20 +1,17 @@
 import QtQuick 2.3
 import QtPositioning 5.2
-import Ubuntu.Components 1.1
+import Ubuntu.Components 1.2
 import QtQuick.Layouts 1.1
 import io.thp.pyotherside 1.4
 import QtSystemInfo 5.0
 import QtLocation 5.2
 import ubuntu_component_store.Curated.PageWithBottomEdge 1.0
 import ubuntu_component_store.Curated.EmptyState 1.0
-import Ubuntu.Components.ListItems 1.0 as ListItem
+//import Ubuntu.Components.ListItems 1.0 as ListItem
 import Ubuntu.Components.Popups 1.0
 import "./lib/polyline.js" as Pl
 import "./keys.js" as Keys
 import UserMetrics 0.1
-import U1db 1.0 as U1db
-
-
 
 
 /*!
@@ -34,7 +31,7 @@ MainView {
     */
     automaticOrientation: false
     // Removes the old toolbar and enables new features of the new header.
-    useDeprecatedToolbar: false
+    //useDeprecatedToolbar: false
 
     width: units.gu(100)
     height: units.gu(75)
@@ -42,6 +39,7 @@ MainView {
     property var gpxx;
     property string day;
     property bool am_running;
+    property string runits;
 
     //keep screen on so we still get to read GPS
     ScreenSaver {
@@ -49,34 +47,116 @@ MainView {
         screenSaverEnabled: !Qt.application.active
     }
 
-    U1db.Database {
-        id: database
-        // TODO: change /home/phablet to ~ as soon as bug #1387294 is fixed
-        path: "settings.db"
+    ListModel {
+        id: listModel
     }
-
-    U1db.Document {
-        id: userSettings
-        database: database
-        docId: "userSettings"
-        create: false
-        defaults: { "units": "kilometers"}
-
-        function set(key, value) {
-            var tmp = contents;
-            tmp[key] = value;
-            contents = tmp;
-        }
+                    onRunitsChanged: {
+                            listModel.clear()
+                            pygpx.get_runs(listModel)
+                }
+    Python {
+        id: pygpx
         Component.onCompleted: {
-             // WORKAROUND: it seems that when the object is created, the contents aren't
-             // still set. We force the update of its contents
-             if (database.listDocs().indexOf(docId) < 0) {
-                 contents = defaults;
-             }
+            function loadit(result){
+                console.warn("STARTING GPX")
+                listModel.clear()
+                call('geepeeex.onetime_db_fix',[])
+                var un
+                get_units(result)
+                call('geepeeex.get_runs', [], function(result) {
+                    // Load the received data into the list model
+                    listModel.clear()
+                    for (var i=0; i<result.length; i++) {
+                        console.warn(runits)
+                        if (runits == "miles"){
+                            console.warn(result[i].distance)
+                            var mi
+                            mi = result[i].distance * 0.62137
+                            result[i].distance = "Distance: "+mi.toFixed(2); + "mi"
+                        }
+                        else if (runits == "kilometers"){
+                            result[i].distance = "Distance: "+result[i].distance + "km"
+                        }
+                        listModel.append(result[i]);
+                    }
 
+                });
+            }
+            addImportPath(Qt.resolvedUrl('py/'))
+            importModule('geepeeex', loadit)
+            console.warn('imported gpxpy')
+        }//Component.onCompleted
+        function addpoint(gpx,lat,lng,alt,speed){
+            call('geepeeex.add_point', [gpxx,lat,lng,alt])
+        }//addpoint
+
+
+        function get_runs(model){
+            listModel.clear()
+            call('geepeeex.get_runs', [], function(result) {
+                // Load the received data into the list model
+                listModel.clear()
+                for (var i=0; i<result.length; i++) {
+                        console.warn(runits)
+                        if (runits == "miles"){
+                            console.warn(result[i].distance)
+                            var mi
+                            mi = result[i].distance * 0.62137
+                            result[i].distance = "Distance: "+mi.toFixed(2) + "mi"
+                        }
+                        else if (runits == "kilometers"){
+                            result[i].distance = "Distance: "+result[i].distance + "km"
+                        }
+                        listModel.append(result[i]);
+                    }
+
+            });
+        }
+        function addrun(name){
+            console.warn("addiing run")
+            call('geepeeex.add_run', [gpxx, name], function(result){
+                console.warn("run added")
+            }
+            )
+        }//addrun
+        function writeit(gpx, name,act_type){
+            console.warn("Writing file")
+            var b = Pl.polyline;
+
+            //console.log("https://maps.googleapis.com/maps/api/staticmap?size=400x400&path=weight:3%7Ccolor:blue%7Cenc:"+b.encode(c,4))
+            call('geepeeex.write_gpx', [gpxx,name,act_type]
+
+                 )
+        }//writeit
+
+        function logit(result) {
+            console.warn(result)
+            gpxx = result
+        }//logit
+        function create_gpx() {
+            call('geepeeex.create_gpx', [], logit);
+
+        }//create_gpx
+
+        function get_units(result) {
+            call('geepeeex.get_units', [], function(result){
+                console.warn("getting units")
+                console.warn(result[0])
+                runits = result[0]
+                return runits
+            }
+            )}
+        function set_units(units) {
+            call('geepeeex.set_units', [units]
+                 )}
+
+        function rm_run(run) {
+            call('geepeeex.rm_run', [run])
         }
 
-    }
+
+    }//Python
+
     Component {
         id: pageComponent
 
@@ -86,18 +166,17 @@ MainView {
             visible: true
             title: i18n.tr("Recent Activities")
             bottomEdgeTitle: "Log new Activity"
-            tools: ToolbarItems {
-            ToolbarButton {
-                            action: Action {
-                                text: "Second action"
-                                iconName: "settings"
-                                onTriggered: pageStack.push(Qt.resolvedUrl("./Settings.qml"))
-                            }
-                            // override the text of the action:
-                            text: "action 2"
+            head.actions: [Action {
+                    text: "Second action"
+                    iconName: "settings"
+                    onTriggered: pageStack.push(Qt.resolvedUrl("./Settings.qml"))
+                    
+                    // override the text of the action:
+                    //text: "action 2"
+                }
+            ]
 
-            }
-            }
+            
 
             Rectangle {
                 visible : if(thelist.model.count > 0) false;else true;
@@ -112,9 +191,11 @@ MainView {
                     anchors.centerIn: parent
                 }
             }
-            ListModel {
-                id: listModel
+            Component.onCompleted: {
+                //  listModel.clear()
+                //  pygpx.get_runs(listModel)
             }
+
             UbuntuListView {
                 width: parent.width
                 height: parent.height
@@ -126,14 +207,57 @@ MainView {
                     enabled: false
                     onRefresh: pygpx.get_runs()
                 }
-                delegate: ListItem.MultiValue {
-                    width: parent.width
-                    height: units.gu(5)
-                    iconSource: "images/"+act_type+".png"
-                    text: name
-                    values: [distance, speed]
-                    onClicked: {
-                        ListView.view.model.reload();
+                delegate: ListItem {
+                    id :del
+                    Row {
+                        spacing: units.gu(1)
+                        Item{
+                            id: blank
+                            width: units.gu(.1)
+                            height: parent.height
+
+                        }
+                        Image {
+                            source: "images/"+act_type+".png"
+                            height: del.height-units.gu(2)
+                            width: height
+                            anchors.topMargin: units.gu(1)
+                            anchors.top: parent.top
+
+                        }
+                        Column {
+                                                            anchors.topMargin: units.gu(1)
+                                anchors.top: parent.top
+                            Label{
+                                text: name
+
+
+                            }
+                            Row {
+                                spacing: units.gu(1)
+                                Label {
+                                    text: speed
+                                }
+                                Label {
+                                    text: distance
+                                }
+                            }
+                        }
+                    }
+
+                    leadingActions: ListItemActions {
+                        actions: [
+                            Action {
+                                iconName: "delete"
+                                onTriggered: {
+                                    print("=====================================" + id)
+                                    pygpx.rm_run(id)
+                                    listModel.remove(index)
+                                    //listModel.clear()
+                                    //pygpx.get_runs()
+                                }
+                            }
+                        ]
                     }
                 }
             }
@@ -142,6 +266,33 @@ MainView {
             bottomEdgePageComponent: Page{
                 title: "New Activity"
                 id:newrun
+
+                PositionSource {
+                    id: src
+                    updateInterval: 1000
+                    active: true
+                    preferredPositioningMethods: PositionSource.SatellitePositioningMethods
+
+
+                    onPositionChanged: {
+                        var coord = src.position.coordinate;
+                        count++
+                        //  console.log("Coordinate:", coord.longitude, coord.latitude);
+                        map.center = QtPositioning.coordinate(coord.latitude, coord.longitude)
+                        circle.center = QtPositioning.coordinate(coord.latitude, coord.longitude)
+
+                        if (gpxx){
+
+                            if (src.position.latitudeValid && src.position.longitudeValid && src.position.altitudeValid) {
+                                pygpx.addpoint(gpxx,coord.latitude,coord.longitude,coord.altitude)
+                                pline.addCoordinate(QtPositioning.coordinate(coord.latitude,coord.longitude, coord.altitude))
+                            }
+                        }
+                    }
+                }
+                Component.onCompleted: {
+                    src.start()
+                }
 
                 Map {
                     id: map
@@ -221,7 +372,10 @@ MainView {
                                 PopupUtils.close(dialogue)
                                 pygpx.writeit(gpxx,tf.displayText,os.model[os.selectedIndex])
                                 console.log(tf.displayText)
-                                //  pygpx.addrun(tf.displayText)
+                                //  listModel.append({"name": tf.displayText, "act_type": os.model[os.selectedIndex]})
+                                //   pygpx.addrun(tf.displayText)
+                                listModel.clear()
+                                pygpx.get_runs(listModel)
                                 stack.pop()
                             }
                         }
@@ -249,7 +403,7 @@ MainView {
                             //   width:parent.width/2
                             //   height:parent.height
                             onClicked: {
-                                listModel.clear()
+                                //listModel.clear()
                                 if (!src.active){
                                     src.start()
                                 }
@@ -283,78 +437,10 @@ MainView {
 
 
 
-                Python {
-                    id: pygpx
-                    Component.onCompleted: {
-                        function loadit(result){
-                            console.warn("STARTING GPX")
-                            call('geepeeex.get_runs', [], function(result) {
-                                // Load the received data into the list model
-                                for (var i=0; i<result.length; i++) {
-                                    listModel.append(result[i]);
-                                }
-
-                            });
-                        }
-                        addImportPath(Qt.resolvedUrl('py/'))
-                        importModule('geepeeex', loadit)
-                        console.warn('imported gpxpy')
-                    }//Component.onCompleted
-                    function addpoint(gpx,lat,lng,alt,speed){
-                        call('geepeeex.add_point', [gpxx,lat,lng,alt])
-                    }//addrun
-
-                    function addrun(name){
-                        console.warn("addiing run")
-                        call('geepeeex.add_run', [gpxx, name], function(result){
-                            console.warn("run added")
-                        }
-                        )
-                    }//addrun
-                    function writeit(gpx, name,act_type){
-                        console.warn("Writing file")
-                        var b = Pl.polyline;
-
-                        //console.log("https://maps.googleapis.com/maps/api/staticmap?size=400x400&path=weight:3%7Ccolor:blue%7Cenc:"+b.encode(c,4))
-                        call('geepeeex.write_gpx', [gpxx,name,act_type]
-
-                             )
-                    }//writeit
-
-                    function logit(result) {
-                        console.warn(result)
-                        gpxx = result
-                    }//logit
-                    function create_gpx() {
-                        call('geepeeex.create_gpx', [src.position.coordinate.latitude, src.position.coordinate.longitude,src.position.coordinate.altitude], logit);
-
-                    }//create_gpx
-                }//Python
 
 
-                PositionSource {
-                    id: src
-                    updateInterval: 1000
-                    active: true
-                    preferredPositioningMethods: PositionSource.SatellitePositioningMethods
 
 
-                    onPositionChanged: {
-                        var coord = src.position.coordinate;
-                        count++
-                        //  console.log("Coordinate:", coord.longitude, coord.latitude);
-                        map.center = QtPositioning.coordinate(coord.latitude, coord.longitude)
-                        circle.center = QtPositioning.coordinate(coord.latitude, coord.longitude)
-
-                        if (gpxx){
-
-                            if (src.position.latitudeValid && src.position.longitudeValid && src.position.altitudeValid) {
-                                pygpx.addpoint(gpxx,coord.latitude,coord.longitude,coord.altitude)
-                                pline.addCoordinate(QtPositioning.coordinate(coord.latitude,coord.longitude, coord.altitude))
-                            }
-                        }
-                    }
-                }
             }//Bottom component page
 
         }//Page

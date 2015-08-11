@@ -21,12 +21,15 @@ Page {
             text: i18n.tr("Units")
             model: [i18n.tr("Kilometers"),
                     i18n.tr("Miles")]
-            selectedIndex: switch(userSettings.contents["units"]) {
+            selectedIndex: switch(runits) {
                            case "kilometers": return 0;
                            case "miles": return 1;
                            }
-            onDelegateClicked: {
-                userSettings.set("units", model[index])
+            onSelectedIndexChanged: {
+                console.warn(model[selectedIndex].toLowerCase())
+                runits=model[selectedIndex].toLowerCase()
+                pygpx.set_units(model[selectedIndex].toLowerCase())
             }
         }
+
 }

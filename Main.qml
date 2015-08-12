@@ -50,10 +50,10 @@ MainView {
     ListModel {
         id: listModel
     }
-                    onRunitsChanged: {
-                            listModel.clear()
-                            pygpx.get_runs(listModel)
-                }
+    onRunitsChanged: {
+        listModel.clear()
+        pygpx.get_runs(listModel)
+    }
     Python {
         id: pygpx
         Component.onCompleted: {
@@ -61,26 +61,7 @@ MainView {
                 console.warn("STARTING GPX")
                 listModel.clear()
                 call('geepeeex.onetime_db_fix',[])
-                var un
                 get_units(result)
-                call('geepeeex.get_runs', [], function(result) {
-                    // Load the received data into the list model
-                    listModel.clear()
-                    for (var i=0; i<result.length; i++) {
-                        console.warn(runits)
-                        if (runits == "miles"){
-                            console.warn(result[i].distance)
-                            var mi
-                            mi = result[i].distance * 0.62137
-                            result[i].distance = "Distance: "+mi.toFixed(2); + "mi"
-                        }
-                        else if (runits == "kilometers"){
-                            result[i].distance = "Distance: "+result[i].distance + "km"
-                        }
-                        listModel.append(result[i]);
-                    }
-
-                });
             }
             addImportPath(Qt.resolvedUrl('py/'))
             importModule('geepeeex', loadit)
@@ -97,18 +78,18 @@ MainView {
                 // Load the received data into the list model
                 listModel.clear()
                 for (var i=0; i<result.length; i++) {
-                        console.warn(runits)
-                        if (runits == "miles"){
-                            console.warn(result[i].distance)
-                            var mi
-                            mi = result[i].distance * 0.62137
-                            result[i].distance = "Distance: "+mi.toFixed(2) + "mi"
-                        }
-                        else if (runits == "kilometers"){
-                            result[i].distance = "Distance: "+result[i].distance + "km"
-                        }
-                        listModel.append(result[i]);
+                    console.warn(runits)
+                    if (runits == "miles"){
+                        console.warn(result[i].distance)
+                        var mi
+                        mi = result[i].distance * 0.62137
+                        result[i].distance = "Distance: "+mi.toFixed(2) + "mi"
                     }
+                    else if (runits == "kilometers"){
+                        result[i].distance = "Distance: "+result[i].distance + "km"
+                    }
+                    listModel.append(result[i]);
+                }
 
             });
         }
@@ -226,8 +207,8 @@ MainView {
 
                         }
                         Column {
-                                                            anchors.topMargin: units.gu(1)
-                                anchors.top: parent.top
+                            anchors.topMargin: units.gu(1)
+                            anchors.top: parent.top
                             Label{
                                 text: name
 

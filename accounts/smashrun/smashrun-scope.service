@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+  <type>strava-scope</type>
+  <name>Runkeeper</name>
+  <icon>meetup</icon>
+  <provider>com.ubuntu.developer.cwayne18.strava_stravaaccount</provider>
+
+</service>

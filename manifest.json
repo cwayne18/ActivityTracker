@@ -6,12 +6,17 @@
     "hooks": {
         "activitytracker": {
             "apparmor": "app.apparmor",
-            "desktop":  "app.desktop"
+            "desktop": "app.desktop",
+            "account-service": "smashrun.service",
+            "account-application": "activitytracker.application"
+        },
+        "smashrunaccount": {
+            "account-qml-plugin": "accounts/smashrun/smashrun",
+            "account-provider": "accounts/smashrun/smashrun.provider"
         }
+
     },
-    "version": "0.6",
+    "version": "0.7",
     "maintainer": "Chris Wayne <chris.wayne@canonical.com>",
-    "framework" : "ubuntu-sdk-15.04"
+    "framework": "ubuntu-sdk-15.04"
 }
-
-

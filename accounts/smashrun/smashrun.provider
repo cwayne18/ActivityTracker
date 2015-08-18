@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provider>
+  <name>Smashrun</name>
+  <icon>strava.png</icon>
+  <domains>*smashrun\.com</domains>
+  <translations>account-plugins</translations>
+  <plugin>generic-oauth</plugin>
+
+  <template>
+    <group name="auth">
+      <setting name="method">oauth2</setting>
+      <setting name="mechanism">web_server</setting>
+      <group name="oauth2">
+        <group name="web_server">
+          <setting name="Host">secure.smashrun.com</setting>
+          <setting name="AuthPath">oauth2/authenticate</setting>
+          <setting name="TokenPath">oauth2/token</setting>
+          <setting name="ClientId">uRun_a1234kk1a</setting>
+          <setting name="ClientSecret">14gdd1s2hgasds1</setting>
+          <setting name="RedirectUri">http://www.ubuntu.com/</setting>
+          <setting name="Scope" type="as">["read_activity"]</setting>
+          <setting name="State">"butts"</setting>
+          <setting name="ResponseType">code</setting>
+          <setting name="ForceClientAuthViaRequestBody" type="b">true</setting>
+        </group>
+      </group>
+    </group>
+  </template>
+</provider>

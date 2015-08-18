@@ -40,6 +40,7 @@ MainView {
     property string day;
     property bool am_running;
     property string runits;
+    property string smashkey;
 
     //keep screen on so we still get to read GPS
     ScreenSaver {
@@ -165,7 +166,6 @@ MainView {
                 anchors.fill:parent
                 color: "transparent"
                 EmptyState {
-                    iconName: "alarm-clock"
                     title: i18n.tr("No saved activities")
                     iconSource: Qt.resolvedUrl("./images/runman.png")
                     subTitle: i18n.tr("Swipe up to log a new activity")
@@ -190,6 +190,10 @@ MainView {
                 }
                 delegate: ListItem {
                     id :del
+                    onClicked: {
+                        stack.push(Qt.resolvedUrl('WebMap.qml'), {polyline: polyline})
+                    }
+
                     Row {
                         spacing: units.gu(1)
                         Item{
@@ -231,11 +235,8 @@ MainView {
                             Action {
                                 iconName: "delete"
                                 onTriggered: {
-                                    print("=====================================" + id)
                                     pygpx.rm_run(id)
                                     listModel.remove(index)
-                                    //listModel.clear()
-                                    //pygpx.get_runs()
                                 }
                             }
                         ]

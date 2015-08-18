@@ -48,8 +48,8 @@ def write_gpx(gpx,name,act_type):
     a = open(filename, 'w')
     a.write(gpx.to_xml())
     a.close()
-    cent = gpx.tracks[0].get_center()
     gpx.simplify()
+    #gpx.reduce_points(1000)
     trk = pl.read_gpx_trk(gpx.to_xml(),tzname,npoints,2,None)
     try:
     	polyline=pl.print_gpx_google_polyline(trk,numLevels,zoomFactor,epsilon,forceEndpoints)
@@ -57,7 +57,6 @@ def write_gpx(gpx,name,act_type):
     	print(er)
     	print("Not enough points to create a polyline")
     	polyline=""
-    print(cent)
     #polyline="polyline"
 
     add_run(gpx,name,act_type,filename,polyline)

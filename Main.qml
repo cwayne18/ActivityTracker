@@ -33,14 +33,19 @@ MainView {
     // Removes the old toolbar and enables new features of the new header.
     //useDeprecatedToolbar: false
 
+
+
     width: units.gu(100)
     height: units.gu(75)
     property int count;
+    property int counter;
     property var gpxx;
     property string day;
     property bool am_running;
     property string runits;
+    property string timestring : "00:00"
     property string smashkey;
+    property string dist;
 
     //keep screen on so we still get to read GPS
     ScreenSaver {
@@ -134,6 +139,29 @@ MainView {
 
         function rm_run(run) {
             call('geepeeex.rm_run', [run])
+        }
+        function current_distance(gpx) {
+            call('geepeeex.current_distance', [gpxx], function(result) {
+                console.warn("DIST")
+                console.warn(result)
+                //distlabel.text=result
+                    if (runits == "miles"){
+                        var mi
+                        mi = result * 0.62137
+                        dist = mi.toFixed(2) + "mi"
+                    }
+                    else if (runits == "kilometers"){
+                        dist = result + "km"
+                    }
+                //dist=result
+                return dist
+                })
+        }
+        function format_timer(secs){
+            call('geepeeex.stopwatchery', [counter], function(result){
+                timestring=result
+                return result
+                })
         }
 
 
@@ -243,11 +271,29 @@ MainView {
                     }
                 }
             }
+                Metric {
+        id: runmetric
+        name: 'activitytracker-runs'
+        format: '%1 activities logged today'
+        emptyFormat: 'No activities today, go do something!'
+        domain: 'metrics-activitytracker'
+        }
 
 
             bottomEdgePageComponent: Page{
-                title: "New Activity"
+                title: (am_running) ? "Activity in Progress" : "New Activity"
                 id:newrun
+
+                Timer {
+                    interval: 1000
+                    running: false
+                    repeat: true
+                    id:timer
+                    onTriggered: {
+                        counter++
+                        pygpx.format_timer(counter)
+                    }
+                }
 
                 PositionSource {
                     id: src
@@ -263,11 +309,15 @@ MainView {
                         map.center = QtPositioning.coordinate(coord.latitude, coord.longitude)
                         circle.center = QtPositioning.coordinate(coord.latitude, coord.longitude)
 
-                        if (gpxx){
+                        if (gpxx && am_running){
 
                             if (src.position.latitudeValid && src.position.longitudeValid && src.position.altitudeValid) {
                                 pygpx.addpoint(gpxx,coord.latitude,coord.longitude,coord.altitude)
                                 pline.addCoordinate(QtPositioning.coordinate(coord.latitude,coord.longitude, coord.altitude))
+                                pygpx.current_distance(gpxx)
+                                distlabel.text = dist
+                                console.warn("========================")
+                                //console.warn(pygpx.current_distance(gpxx))
                             }
                         }
                     }
@@ -357,6 +407,7 @@ MainView {
                                 //  listModel.append({"name": tf.displayText, "act_type": os.model[os.selectedIndex]})
                                 //   pygpx.addrun(tf.displayText)
                                 listModel.clear()
+                                runmetric.increment(1)
                                 pygpx.get_runs(listModel)
                                 stack.pop()
                             }
@@ -369,14 +420,32 @@ MainView {
                     }
                 }//Dialog component
 
-                Item {
+                Rectangle {
                     width: parent.width
 
                     height: units.gu(10)
                     // z:100
                     anchors.bottom: parent.bottom
-                    Column{
+                    color: "white"
+                    opacity: 0.8
+                    Row{
                         anchors.horizontalCenter: parent.horizontalCenter
+                        spacing: units.gu(2)
+                        id: stuffrow
+
+
+                        Column {
+                            Label {
+                                text: "Time"
+                                //fontSize: "large"
+                            }
+                            Label {
+                                text: timestring
+                                fontSize: "x-large"
+                                //text: "00:00"
+                            }
+                        }
+
                         Button {
                             text: i18n.tr("Start")
                             color: UbuntuColors.green
@@ -389,8 +458,8 @@ MainView {
                                 if (!src.active){
                                     src.start()
                                 }
-                                newrun.title = "Activity in Progress"
-
+                               // newrun.title = "Activity in Progress"
+                               timer.start()
                                 if (src.valid){
                                     pygpx.create_gpx()
                                     map.addMapItem(pline)
@@ -408,10 +477,22 @@ MainView {
                             onClicked: {
                                 // src.stop()
                                 am_running = false
+                                timer.stop()
                                 PopupUtils.open(dialog)
 
                             }
+                        }//Button
+                        Column {
+                        Label {
+                            text: "Distance"
                         }
+                        Label {
+                            id: distlabel
+                            text: "0"
+                            fontSize: "x-large"
+                        }
+                    }
+                    
                     }
                 }//Item (buttons)
 

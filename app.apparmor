@@ -3,7 +3,8 @@
         "networking",
         "webview",
         "location",
-        "keep-display-on"
+        "keep-display-on",
+        "usermetrics"
     ],
     "policy_version": 1.3
 }

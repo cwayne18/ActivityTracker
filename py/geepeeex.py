@@ -176,3 +176,37 @@ def rm_run(run):
 
 def km_to_mi(km):
 	return km * 0.62137
+
+def current_distance(gpx):
+    l2d='{:.3f}'.format(gpx.length_2d() / 1000.)
+    print(l2d)
+    return l2d
+
+def stopwatchery(secs):
+        #Format Seconds
+    sec = int(secs % 60);
+    if len(str(sec))<2:
+        sec = "0" + str(sec)
+    else:
+        sec = str(sec)
+    
+    #Format Minutes
+    mins = int(((secs / (60)) % 60));
+    if len(str(mins))<2:
+        mins = "0" + str(mins)
+  ##  if len(str(mins))>1:
+    #    mins = str(mins)
+     #   aux = len(mins)
+      #  mins = mins[aux-1]
+    else:
+        mins = str(mins)
+
+
+    #Format hours
+    hr = int(((secs / (60*60)) % 60));
+    if hr == 0:
+        hr = ""
+    else:
+        hr = str(hr)+":"
+    print(hr + mins+":"+sec)
+    return hr + mins+":"+sec

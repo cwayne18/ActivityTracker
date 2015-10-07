@@ -46,6 +46,9 @@ MainView {
     property string timestring : "00:00"
     property string smashkey;
     property string dist;
+    property string distmet: "%1 run today"
+    property string bikedistmet: "%1 biked today"
+
 
     //keep screen on so we still get to read GPS
     ScreenSaver {
@@ -145,23 +148,23 @@ MainView {
                 console.warn("DIST")
                 console.warn(result)
                 //distlabel.text=result
-                    if (runits == "miles"){
-                        var mi
-                        mi = result * 0.62137
-                        dist = mi.toFixed(2) + "mi"
-                    }
-                    else if (runits == "kilometers"){
-                        dist = result + "km"
-                    }
+                if (runits == "miles"){
+                    var mi
+                    mi = result * 0.62137
+                    dist = mi.toFixed(2) + "mi"
+                }
+                else if (runits == "kilometers"){
+                    dist = result + "km"
+                }
                 //dist=result
                 return dist
-                })
+            })
         }
         function format_timer(secs){
             call('geepeeex.stopwatchery', [counter], function(result){
                 timestring=result
                 return result
-                })
+            })
         }
 
 
@@ -271,18 +274,39 @@ MainView {
                     }
                 }
             }
-                Metric {
-        id: runmetric
-        name: 'activitytracker-runs'
-        format: '%1 activities logged today'
-        emptyFormat: 'No activities today, go do something!'
-        domain: 'metrics-activitytracker'
-        }
+            Metric {
+                id: runmetric
+                name: 'activitytracker-runs'
+                format: '%1 activities logged today'
+                emptyFormat: 'No activities today, go do something!'
+                domain: 'metrics-activitytracker'
+            }
+            Metric {
+                id: rundist
+                name: 'activitytracker-runsdist'
+                format: '%1 ' + distmet.arg(runits)
+                emptyFormat: '0 ' + distmet.arg(runits)
+                domain: 'metrics-activitytracker'
+            }
+            Metric {
+                id: bikedist
+                name: 'activitytracker-bikes'
+                format: '%1 ' + bikedistmet.arg(runits)
+                emptyFormat: '0 ' + bikedistmet.arg(runits)
+                domain: 'metrics-activitytracker'
+            }
 
 
             bottomEdgePageComponent: Page{
                 title: (am_running) ? "Activity in Progress" : "New Activity"
                 id:newrun
+                head.backAction: Action {
+                    iconName: "back"
+                    onTriggered: {
+                        PopupUtils.open(areyousure)
+                        console.log("Run custom back action")
+                    }
+                }
 
                 Timer {
                     interval: 1000
@@ -292,6 +316,31 @@ MainView {
                     onTriggered: {
                         counter++
                         pygpx.format_timer(counter)
+                    }
+                }
+                Component {
+                    id: areyousure
+                    Dialog {
+                        id: areyousuredialog
+                        title: "Are you sure?"
+                        text: "Are you sure you want to cancel the activity?"
+                        Button {
+                            id: yesimsure
+                            text: "Yes I'm sure"
+                            color: UbuntuColors.green
+                            onClicked: {
+                                PopupUtils.close(areyousuredialog)
+                                stack.pop()
+                            }
+                        }
+                        Button {
+                            id: noooooooo
+                            text: "No"
+                            color: UbuntuColors.red
+                            onClicked: {
+                                PopupUtils.close(areyousuredialog)
+                            }
+                        }
                     }
                 }
 
@@ -404,12 +453,28 @@ MainView {
                                 PopupUtils.close(dialogue)
                                 pygpx.writeit(gpxx,tf.displayText,os.model[os.selectedIndex])
                                 console.log(tf.displayText)
+                                console.log("----------restart------------")
+                                counter = 0
+                                pygpx.format_timer(0)
+                                timer.restart()
+                                timer.stop()
+
                                 //  listModel.append({"name": tf.displayText, "act_type": os.model[os.selectedIndex]})
                                 //   pygpx.addrun(tf.displayText)
                                 listModel.clear()
                                 runmetric.increment(1)
+                                var distfloat
+                                distfloat = parseFloat(dist.slice(0,-2))
+                                if (os.model[os.selectedIndex] == 'Run'){
+                                    console.log("LOGARUN")
+                                    rundist.increment(distfloat)
+                                }
+                                if (os.model[os.selectedIndex] == "Bike Ride") {
+                                    bikedist.increment(distfloat)
+                                }
                                 pygpx.get_runs(listModel)
                                 stack.pop()
+
                             }
                         }
                         Button {
@@ -458,8 +523,8 @@ MainView {
                                 if (!src.active){
                                     src.start()
                                 }
-                               // newrun.title = "Activity in Progress"
-                               timer.start()
+                                // newrun.title = "Activity in Progress"
+                                timer.start()
                                 if (src.valid){
                                     pygpx.create_gpx()
                                     map.addMapItem(pline)
@@ -483,16 +548,16 @@ MainView {
                             }
                         }//Button
                         Column {
-                        Label {
-                            text: "Distance"
+                            Label {
+                                text: "Distance"
+                            }
+                            Label {
+                                id: distlabel
+                                text: "0"
+                                fontSize: "x-large"
+                            }
                         }
-                        Label {
-                            id: distlabel
-                            text: "0"
-                            fontSize: "x-large"
-                        }
-                    }
-                    
+
                     }
                 }//Item (buttons)
 

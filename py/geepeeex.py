@@ -63,7 +63,7 @@ def write_gpx(gpx,name,act_type):
 
 
 def add_point(gpx,lat,lng,elev):
-    gpx.tracks[0].segments[0].points.append(gpxpy.gpx.GPXTrackPoint(lat, lng, elevation=elev,time=datetime.datetime.now()))
+    gpx.tracks[0].segments[0].points.append(gpxpy.gpx.GPXTrackPoint(lat, lng, elevation=elev,time=datetime.datetime.utcnow()))
 
 
 def add_run(gpx, name,act_type,filename,polyline):
@@ -104,7 +104,7 @@ def get_runs():
                   (id INTEGER PRIMARY KEY AUTOINCREMENT,name text, act_date text, distance text, 
                    speed text, act_type text,filename text,polyline text)""")
     ret_data=[]
-    sql = "SELECT * FROM activities LIMIT 30"
+    sql = "SELECT * FROM activities ORDER BY id DESC"
     for i in cursor.execute(sql):
         ret_data.append(dict(i))
 

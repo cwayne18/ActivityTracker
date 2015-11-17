@@ -79,7 +79,7 @@ def add_run(gpx, name,act_type,filename,polyline):
     print(max_speed)
     #print('%sStopped distance: %sm' % stopped_distance)
     maxspeed = 'Max speed: {:.2f}km/h'.format(max_speed * 60. ** 2 / 1000. if max_speed else 0)
-    duration = 'Duration: {:.2f}min'.format(gpx.get_duration() / 60)
+    duration = '{:.2f}'.format(gpx.get_duration() / 60)
 
     print("-------------------------")
     print(name)
@@ -162,6 +162,29 @@ def onetime_db_fix():
     else:
         print("db already fixed")
 
+def onetime_db_fix_again_cus_im_dumb():
+    os.makedirs(filebase, exist_ok=True)
+    filename = "%s/%s" % (filebase,".dbfixed2")
+    if not os.path.exists(filename):
+        print("Fixing db again")
+        conn = sqlite3.connect('%s/activities.db' % filebase)
+        numonly = re.compile("(\d*\.\d*)")
+        cursor = conn.cursor()
+        a=get_runs()
+        sql="UPDATE activities SET speed=? WHERE id=?"
+        for i in a:
+            print(i["speed"])
+            b=numonly.search(i["speed"])
+            cursor.execute(sql, (b.group(0), i["id"]))
+            
+        conn.commit()
+        conn.close()
+        dotfile=open(filename, "w")
+        dotfile.write("db fixed")
+        dotfile.close
+    else:
+        print("db already fixed")
+
 def rm_run(run):
     conn = sqlite3.connect('%s/activities.db' % filebase)
     cursor = conn.cursor()
@@ -210,3 +233,4 @@ def stopwatchery(secs):
         hr = str(hr)+":"
     print(hr + mins+":"+sec)
     return hr + mins+":"+sec
+

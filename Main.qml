@@ -56,6 +56,16 @@ MainView {
         screenSaverEnabled: !Qt.application.active
     }
 
+    function stopwatch(seconds) {
+        var totalNumberOfSeconds = seconds;
+        var hours = parseInt( totalNumberOfSeconds / 3600 );
+        var minutes = parseInt( (totalNumberOfSeconds - (hours * 3600)) / 60 );
+        var seconds = Math.floor((totalNumberOfSeconds - ((hours * 3600) + (minutes * 60))));
+        var hours2 = (hours == 0 ? "" : (hours < 10 ? "0" + hours +":" : hours+":"))
+        var result = hours2 + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds  < 10 ? "0" + seconds : seconds);
+        return result
+    }
+
     ListModel {
         id: listModel
     }
@@ -70,6 +80,7 @@ MainView {
                 console.warn("STARTING GPX")
                 listModel.clear()
                 call('geepeeex.onetime_db_fix',[])
+                call('geepeeex.onetime_db_fix_again_cus_im_dumb',[])
                 get_units(result)
             }
             addImportPath(Qt.resolvedUrl('py/'))
@@ -87,9 +98,10 @@ MainView {
                 // Load the received data into the list model
                 listModel.clear()
                 for (var i=0; i<result.length; i++) {
-                    console.warn(runits)
+                    console.warn(runits);
                     if (runits == "miles"){
                         console.warn(result[i].distance)
+                        //console.warn(result[i].speed)
                         var mi
                         mi = result[i].distance * 0.62137
                         result[i].distance = "Distance: "+mi.toFixed(2) + "mi"
@@ -97,6 +109,8 @@ MainView {
                     else if (runits == "kilometers"){
                         result[i].distance = "Distance: "+result[i].distance + "km"
                     }
+                    var seconds = parseFloat(result[i].speed) * 60
+                    result[i].speed = "Time: " + stopwatch(seconds)
                     listModel.append(result[i]);
                 }
 
@@ -304,6 +318,8 @@ MainView {
                     iconName: "back"
                     onTriggered: {
                         PopupUtils.open(areyousure)
+                        am_running = false
+                        timer.stop()
                         console.log("Run custom back action")
                     }
                 }
@@ -329,16 +345,24 @@ MainView {
                             text: "Yes I'm sure"
                             color: UbuntuColors.green
                             onClicked: {
+                                timer.start()
+                                counter = 0
+                                pygpx.format_timer(0)
+                                timer.restart()
+                                timer.stop()
+                                am_running = false
                                 PopupUtils.close(areyousuredialog)
                                 stack.pop()
                             }
                         }
                         Button {
-                            id: noooooooo
+                            id: noooooooodb
                             text: "No"
                             color: UbuntuColors.red
                             onClicked: {
                                 PopupUtils.close(areyousuredialog)
+                                am_running = true
+                                timer.start()
                             }
                         }
                     }
@@ -444,9 +468,12 @@ MainView {
                                 day = d.toDateString();
                             }
                         }
+                        Row {
 
                         Button {
                             text: "Save Activity"
+                            height: units.gu(10)
+                            width: parent.width /2
                             color: UbuntuColors.green
                             onClicked: {
 
@@ -479,9 +506,16 @@ MainView {
                         }
                         Button {
                             text: "Cancel"
+                            height: units.gu(10)
+                            width: parent.width / 2
                             color: UbuntuColors.red
-                            onClicked: PopupUtils.close(dialogue)
+                            onClicked: {
+                                PopupUtils.close(dialogue)
+                                am_running = true
+                                timer.start()
+                            }
                         }
+                    }
                     }
                 }//Dialog component
 

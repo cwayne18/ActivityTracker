@@ -4,7 +4,14 @@
         "webview",
         "location",
         "keep-display-on",
+<<<<<<< HEAD
         "usermetrics"
+=======
+        "audio",
+        "usermetrics",
+        "sensors",
+        "accounts"
+>>>>>>> 189b48f7042e2b41789fdb508bde47bf5f404ab3
     ],
     "policy_version": 1.3
 }

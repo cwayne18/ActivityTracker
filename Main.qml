@@ -536,12 +536,21 @@ MainView {
                         Column {
                             Label {
                                 text: "Time"
-                                //fontSize: "large"
+                                fontSize: "small"
                             }
                             Label {
                                 text: timestring
-                                fontSize: "x-large"
+                                fontSize: "large"
                                 //text: "00:00"
+                            }
+                            Label {
+                                text: "Speed"
+                                fontSize: "small"
+                            }
+                            Label {
+                                id: speedlabel
+                                text: "No data"
+                                fontSize: "large"
                             }
                         }
 
@@ -584,24 +593,26 @@ MainView {
                         Column {
                             Label {
                                 text: "Distance"
+                                fontSize: "small"
                             }
                             Label {
                                 id: distlabel
                                 text: "0"
-                                fontSize: "x-large"
+                                fontSize: "large"
+                            }
+                            Label {
+                                text: "Altitude"
+                                fontSize: "small"
+                            }
+                            Label {
+                                id: altlabel
+                                text: "No data"
+                                fontSize: "large"
                             }
                         }
 
                     }
                 }//Item (buttons)
-
-
-
-
-
-
-
-
 
             }//Bottom component page
 

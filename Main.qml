@@ -392,6 +392,16 @@ MainView {
                                 console.warn("========================")
                                 //console.warn(pygpx.current_distance(gpxx))
                             }
+                            if (src.position.altitudeValid) {
+                                altlabel.text = coord.altitude + " m"
+                            } else {
+                                altlabel.text = "No data"
+                            }
+                            if (src.position.speedValid) {
+                                speedlabel.text = src.position.speed + " m/s"
+                            } else {
+                                speedlabel.text = "No data"
+                            }
                         }
                     }
                 }

@@ -66,6 +66,36 @@ MainView {
         return result
     }
 
+    function formatDist(distance) {
+        if (runits == "miles"){
+            var mi
+            mi = distance * 0.62137 / 1000
+            distance = mi.toFixed(2) + "mi"
+        }
+        else if (runits == "kilometers"){
+            if (distance > 1000){
+                distance = distance / 1000
+                distance = distance.toFixed(2) + "km"
+            }
+            else
+                distance = distance + "m"
+        }
+        return distance
+    }
+
+    function formatSpeed(speed) {
+        if (runits == "miles"){
+            var mi
+            mi = speed * 0.62137 / 1000 * 3600
+            speed = mi.toFixed(2) + "mi/h"
+        }
+        else if (runits == "kilometers"){
+            speed = speed / 1000 * 3600
+            speed = speed.toFixed(2) + "km/h"
+        }
+        return speed
+    }
+
     ListModel {
         id: listModel
     }
@@ -393,12 +423,12 @@ MainView {
                                 //console.warn(pygpx.current_distance(gpxx))
                             }
                             if (src.position.altitudeValid) {
-                                altlabel.text = coord.altitude + " m"
+                                altlabel.text = formatDist(coord.altitude)
                             } else {
                                 altlabel.text = "No data"
                             }
                             if (src.position.speedValid) {
-                                speedlabel.text = src.position.speed + " m/s"
+                                speedlabel.text = formatSpeed(src.position.speed)
                             } else {
                                 speedlabel.text = "No data"
                             }

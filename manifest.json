@@ -5,8 +5,8 @@
     "title": "activitytracker",
     "hooks": {
         "activitytracker": {
-            "apparmor": "app.apparmor",
-            "desktop": "app.desktop"
+            "apparmor": "activitytracker.apparmor",
+            "desktop": "activitytracker.desktop"
         }
     },
     "version": "0.2",

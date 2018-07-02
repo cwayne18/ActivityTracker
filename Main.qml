@@ -656,7 +656,7 @@ MainView {
       id: stack
       Component.onCompleted: {
          am_running = false
-         stack.push(pageComponent)
+         stack.push(page1)
       }
    }
 }

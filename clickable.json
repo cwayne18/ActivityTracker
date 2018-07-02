@@ -1,4 +1,5 @@
 {
-	"template":"pure",
-	"default": "kill clean build click_build install launch logs"
+	"template":"pure-qml-cmake",
+	"default": "kill clean build click_build install launch logs",
+	"sdk": "16.04"
 }

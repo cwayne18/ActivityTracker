@@ -23,7 +23,7 @@ set(PROJECT_NAME "activitytracker")
 set(APP_ID "activitytracker.ernest")
 set(CMAKE_INSTALL_PREFIX /)
 set(DATA_DIR /)
-set(DESKTOP_FILE_NAME app.desktop)
+set(DESKTOP_FILE_NAME ${PROJECT_NAME}.desktop)
 
 # This command figures out the target architecture for use in the manifest file
 execute_process(
@@ -32,9 +32,9 @@ execute_process(
     OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 
-configure_file(manifest.json.in ${CMAKE_CURRENT_BINARY_DIR}/manifest.json)
+#configure_file(manifest.json.in ${CMAKE_CURRENT_BINARY_DIR}/manifest.json)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/manifest.json DESTINATION ${CMAKE_INSTALL_PREFIX})
-install(FILES app.apparmor DESTINATION ${DATA_DIR})
+install(FILES ${PROJECT_NAME}.apparmor DESTINATION ${DATA_DIR})
 install(DIRECTORY html DESTINATION ${DATA_DIR})
 install(DIRECTORY images DESTINATION ${DATA_DIR})
 

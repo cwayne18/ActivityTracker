@@ -2,7 +2,6 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 import QtSystemInfo 5.0
 import QtLocation 5.2
-import ubuntu_component_store.Curated.PageWithBottomEdge 1.0
 import ubuntu_component_store.Curated.EmptyState 1.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 import Ubuntu.Components.Popups 1.3
@@ -24,8 +23,7 @@ Page {
          right: parent.right
       }
       text: i18n.tr("Units")
-      model: [i18n.tr("Kilometers"),
-      i18n.tr("Miles")]
+      model: ["Kilometers", "Miles"]
       expanded: true
       selectedIndex: switch(runits) {
          case "kilometers": return 0;

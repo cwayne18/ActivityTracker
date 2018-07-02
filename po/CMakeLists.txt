@@ -18,7 +18,7 @@ endif()
 find_program(GETTEXT_XGETTEXT_EXECUTABLE xgettext)
 
 set(DOMAIN ${APP_ID})
-set(POT_FILE ${DOMAIN}.pot)
+set(POT_FILE ${PROJECT_NAME}.pot)
 file(GLOB PO_FILES *.po)
 
 file(GLOB_RECURSE I18N_SRC_FILES
@@ -35,7 +35,7 @@ add_custom_target(${POT_FILE} ALL
  COMMENT "Generating translation template"
  # Extract the translatable messages from the desktop file
  COMMAND ${INTLTOOL_EXTRACT} --update --type=gettext/ini
- --srcdir=${CMAKE_BINARY_DIR}/app ${DESKTOP_FILE_NAME}.in
+ --srcdir=${CMAKE_BINARY_DIR} ${DESKTOP_FILE_NAME}.in
  # Update the translation file
  COMMAND ${GETTEXT_XGETTEXT_EXECUTABLE} -o ${POT_FILE}
  --from-code=UTF-8
@@ -56,7 +56,7 @@ foreach(PO_FILE ${PO_FILES})
  RENAME ${DOMAIN}.mo)
 endforeach(PO_FILE)
 
-add_custom_target(${DESKTOP_FILE_NAME} ALL
-    COMMENT "Merging translations into ${DESKTOP_FILE_NAME}"
-    COMMAND LC_ALL=C ${INTLTOOL_MERGE} -d -u ${CMAKE_SOURCE_DIR}/po ${CMAKE_BINARY_DIR}/app/${DESKTOP_FILE_NAME}.in ${CMAKE_BINARY_DIR}/app/${DESKTOP_FILE_NAME} > /dev/null
-)
+#add_custom_target(${DESKTOP_FILE_NAME} ALL
+#    COMMENT "Merging translations into ${DESKTOP_FILE_NAME}"
+#    COMMAND LC_ALL=C ${INTLTOOL_MERGE} -d -u ${CMAKE_SOURCE_DIR}/po ${CMAKE_BINARY_DIR}/app/${DESKTOP_FILE_NAME}.in ${CMAKE_BINARY_DIR}/app/${DESKTOP_FILE_NAME} > /dev/null
+#)

@@ -320,7 +320,7 @@ MainView {
       }
 
       BottomEdge {
-         id: newrunEdge
+         id:newrunEdge
          hint.text: i18n.tr("Log new Activity")
          preloadContent: true
          contentComponent: Rectangle {
@@ -367,7 +367,8 @@ MainView {
                         text: "Yes I'm sure"
                         color: UbuntuColors.green
                         onClicked: {
-                           timer.start()
+                           PopupUtils.close(areyousuredialog)
+                           //timer.start()
                            counter = 0
                            pygpx.format_timer(0)
                            timer.restart()
@@ -507,7 +508,6 @@ MainView {
                            width: parent.width /2
                            color: UbuntuColors.green
                            onClicked: {
-
                               PopupUtils.close(dialogue)
                               pygpx.writeit(gpxx,tf.displayText,os.model[os.selectedIndex])
                               console.log(tf.displayText)
@@ -534,7 +534,7 @@ MainView {
                                  drivedist.increment(distfloat)
                               }
                               pygpx.get_runs(listModel)
-                              // stack.pop()
+                              //stack.pop()
 
                            }
                         }
@@ -656,7 +656,7 @@ MainView {
       id: stack
       Component.onCompleted: {
          am_running = false
-         stack.push(page1)
+         stack.push(pageComponent)
       }
    }
 }

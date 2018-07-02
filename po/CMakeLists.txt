@@ -23,9 +23,9 @@ file(GLOB PO_FILES *.po)
 
 file(GLOB_RECURSE I18N_SRC_FILES
  RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
- ${CMAKE_SOURCE_DIR}/*.qml 
- ${CMAKE_SOURCE_DIR}/*.js 
- ${CMAKE_SOURCE_DIR}/*.cpp 
+ ${CMAKE_SOURCE_DIR}/*.qml
+ ${CMAKE_SOURCE_DIR}/*.js
+ ${CMAKE_SOURCE_DIR}/*.cpp
  ${CMAKE_SOURCE_DIR}/*.h
 )
 list(APPEND I18N_SRC_FILES ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE_NAME}.in.h)
@@ -33,7 +33,7 @@ list(SORT I18N_SRC_FILES)
 
 add_custom_target(${POT_FILE} ALL
  COMMENT "Generating translation template"
- # Extract the translatable messages from the desktop file 
+ # Extract the translatable messages from the desktop file
  COMMAND ${INTLTOOL_EXTRACT} --update --type=gettext/ini
  --srcdir=${CMAKE_BINARY_DIR}/app ${DESKTOP_FILE_NAME}.in
  # Update the translation file
@@ -41,7 +41,7 @@ add_custom_target(${POT_FILE} ALL
  --from-code=UTF-8
  --c++ --qt --add-comments=TRANSLATORS
  --keyword=tr --keyword=tr:1,2 --keyword=N_
- --package-name='${PROJECT}'
+ --package-name='${DOMAIN}'
  -D ${CMAKE_CURRENT_SOURCE_DIR} ${I18N_SRC_FILES}
  # Copy the up2date translation file to the source directory
  COMMAND ${CMAKE_COMMAND} -E copy ${POT_FILE} ${CMAKE_CURRENT_SOURCE_DIR}
@@ -60,4 +60,3 @@ add_custom_target(${DESKTOP_FILE_NAME} ALL
     COMMENT "Merging translations into ${DESKTOP_FILE_NAME}"
     COMMAND LC_ALL=C ${INTLTOOL_MERGE} -d -u ${CMAKE_SOURCE_DIR}/po ${CMAKE_BINARY_DIR}/app/${DESKTOP_FILE_NAME}.in ${CMAKE_BINARY_DIR}/app/${DESKTOP_FILE_NAME} > /dev/null
 )
-

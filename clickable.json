@@ -1,0 +1,4 @@
+{
+	"template":"pure",
+	"default": "kill clean build click_build install launch logs"
+}

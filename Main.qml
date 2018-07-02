@@ -1,16 +1,15 @@
 import QtQuick 2.3
-import QtPositioning 5.2
+import QtPositioning 5.3
 import Ubuntu.Components 1.2
 import QtQuick.Layouts 1.1
-import io.thp.pyotherside 1.4
+import io.thp.pyotherside 1.5
 import QtSystemInfo 5.0
-import QtLocation 5.2
+import QtLocation 5.3
 import ubuntu_component_store.Curated.PageWithBottomEdge 1.0
 import ubuntu_component_store.Curated.EmptyState 1.0
 //import Ubuntu.Components.ListItems 1.0 as ListItem
 import Ubuntu.Components.Popups 1.0
 import "./lib/polyline.js" as Pl
-import "./keys.js" as Keys
 import UserMetrics 0.1
 
 
@@ -23,7 +22,7 @@ MainView {
     objectName: "mainView"
 
     // Note! applicationName needs to match the "name" field of the click manifest
-    applicationName: "activitytracker.cwayne18"
+    applicationName: "activitytracker.ernest"
 
     /*
      This property enables the application to change orientation
@@ -48,6 +47,8 @@ MainView {
     property string dist;
     property string distmet: "%1 run today"
     property string bikedistmet: "%1 biked today"
+    property string drivedistmet: "%1 drived today"
+
 
 
     //keep screen on so we still get to read GPS
@@ -65,6 +66,39 @@ MainView {
         var result = hours2 + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds  < 10 ? "0" + seconds : seconds);
         return result
     }
+
+
+    function formatDist(distance) {
+        if (runits == "miles"){
+            var mi
+            mi = distance * 0.62137 / 1000
+            distance = mi.toFixed(2) + "mi"
+        }
+        else if (runits == "kilometers"){
+            if (distance > 1000){
+                distance = distance / 1000
+                distance = distance.toFixed(2) + "km"
+            }
+            else
+                distance = distance.toFixed(2) + "m"
+        }
+        return distance
+    }
+
+    function formatSpeed(speed) {
+        if (runits == "miles"){
+            var mi
+            mi = speed * 0.62137 / 1000 * 3600
+            speed = mi.toFixed(1) + "mi/h"
+        }
+        else if (runits == "kilometers"){
+            speed = speed / 1000 * 3600
+            speed = speed.toFixed(1) + "km/h"
+        }
+        return speed
+    }
+
+
 
     ListModel {
         id: listModel
@@ -197,13 +231,13 @@ MainView {
                     text: "Second action"
                     iconName: "settings"
                     onTriggered: pageStack.push(Qt.resolvedUrl("./Settings.qml"))
-                    
+
                     // override the text of the action:
                     //text: "action 2"
                 }
             ]
 
-            
+
 
             Rectangle {
                 visible : if(thelist.model.count > 0) false;else true;
@@ -309,7 +343,13 @@ MainView {
                 emptyFormat: '0 ' + bikedistmet.arg(runits)
                 domain: 'metrics-activitytracker'
             }
-
+            Metric {
+                id: drivedist
+                name: 'activitytracker-drive'
+                format: '%1 ' + drivedistmet.arg(runits)
+                emptyFormat: '0 ' + drivedistmet.arg(runits)
+                domain: 'metrics-activitytracker'
+            }
 
             bottomEdgePageComponent: Page{
                 title: (am_running) ? "Activity in Progress" : "New Activity"
@@ -392,6 +432,16 @@ MainView {
                                 console.warn("========================")
                                 //console.warn(pygpx.current_distance(gpxx))
                             }
+			    if (src.position.altitudeValid) {
+                                altlabel.text = formatDist(coord.altitude)
+                            } else {
+                                altlabel.text = "No data"
+                            }
+                            if (src.position.speedValid) {
+                                speedlabel.text = formatSpeed(src.position.speed)
+                            } else {
+                                speedlabel.text = "No data"
+                            }
                         }
                     }
                 }
@@ -407,15 +457,13 @@ MainView {
                     plugin : Plugin {
                         id: plugin
                         allowExperimental: true
-                        preferred: ["mapbox", "nokia", "osm"]
+                        preferred: ["osm"]
                         required.mapping: Plugin.AnyMappingFeatures
                         required.geocoding: Plugin.AnyGeocodingFeatures
-                        parameters: [
-                            PluginParameter { name: "app_id"; value: Keys.here_appid },
-                            PluginParameter { name: "token"; value: Keys.here_token },
-                            PluginParameter { name: "mapbox.access_token"; value: Keys.mb_pk },
-                            PluginParameter { name: "mapbox.map_id"; value: Keys.mp_mid }
-                        ]
+                        //parameters: [
+                        //    PluginParameter { name: "mapbox.access_token"; value: "" },
+                        //    PluginParameter { name: "mapbox.map_id"; value: "cwayne18.lklp3m7i" }
+                        //]
                     }
 
                     Component.onCompleted: {
@@ -440,7 +488,7 @@ MainView {
                     line.width: 4
                     line.color: 'red'
                     path: []
-                }
+                    }
                 Component {
                     id: dialog
                     Dialog {
@@ -454,6 +502,7 @@ MainView {
                             model: [i18n.tr("Run"),
                                 i18n.tr("Bike Ride"),
                                 i18n.tr("Walk"),
+                                i18n.tr("Drive"),
                                 i18n.tr("Hike")]
                         }
                         Label {
@@ -499,6 +548,9 @@ MainView {
                                 if (os.model[os.selectedIndex] == "Bike Ride") {
                                     bikedist.increment(distfloat)
                                 }
+                                if (os.model[os.selectedIndex] == "Drive") {
+                                    drivedist.increment(distfloat)
+                                }
                                 pygpx.get_runs(listModel)
                                 stack.pop()
 
@@ -536,12 +588,21 @@ MainView {
                         Column {
                             Label {
                                 text: "Time"
-                                //fontSize: "large"
+                                //fontSize: "small"
                             }
                             Label {
                                 text: timestring
-                                fontSize: "x-large"
+                                fontSize: "large"
                                 //text: "00:00"
+                            }
+			    Label {
+                                text: "Speed"
+                                fontSize: "small"
+                            }
+                            Label {
+                                id: speedlabel
+                                text: "No data"
+                                fontSize: "large"
                             }
                         }
 
@@ -584,11 +645,21 @@ MainView {
                         Column {
                             Label {
                                 text: "Distance"
+				                        //fontSize: "small"
                             }
                             Label {
                                 id: distlabel
                                 text: "0"
-                                fontSize: "x-large"
+			                          fontSize: "large"
+                            }
+                            Label {
+                                text: "Altitude"
+                              //  fontSize: "small"
+                            }
+                            Label {
+                                id: altlabel
+                                text: "No data"
+                                fontSize: "large"
                             }
                         }
 

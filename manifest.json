@@ -1,7 +1,7 @@
 {
-    "name": "activitytracker.cwayne18",
-    "description": "description of activitytracker",
-    "architecture": "armhf",
+    "name": "activitytracker.ernest",
+    "description": "Activity tracker for Ubuntu touch",
+    "architecture": "all",
     "title": "activitytracker",
     "hooks": {
         "activitytracker": {
@@ -9,9 +9,7 @@
             "desktop":  "app.desktop"
         }
     },
-    "version": "0.10.1",
-    "maintainer": "Chris Wayne <chris.wayne@canonical.com>",
-    "framework" : "ubuntu-sdk-15.04"
+    "version": "0.2",
+    "maintainer": "Erne st <slash.tux@gmail.com>",
+    "framework" : "ubuntu-sdk-16.04"
 }
-
-

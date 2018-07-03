@@ -54,7 +54,7 @@ Page {
             width: parent.width
 
             Text {
-               text: "© 2016-2018 Michele Castellazzi"
+               text: "© 2016-2018 Erne st & Michele Castellazzi"
                anchors.horizontalCenter: parent.horizontalCenter
             }
 
@@ -76,7 +76,7 @@ Page {
 
             Text {
                font.underline: false
-               text: i18n.tr("Source code available on ") + "<a style=\"text-decoration: none;\" href=\"https://github.com/mymike00/ActivityTracker\">GitHub.com</a>"
+               text: i18n.tr("Source code available on ") + "<a style=\"text-decoration: none;\" href=\"https://github.com/ernesst/ActivityTracker\">GitHub.com</a>"
                font.pointSize: units.gu(1)
 
                anchors.horizontalCenter: parent.horizontalCenter

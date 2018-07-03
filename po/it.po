@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-03 00:24+0000\n"
-"PO-Revision-Date: 2018-07-03 03:30+0300\n"
+"POT-Creation-Date: 2018-07-03 00:43+0000\n"
+"PO-Revision-Date: 2018-07-03 03:57+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it\n"
@@ -50,15 +50,35 @@ msgid ""
 "creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
 "target=\"_blank\">CC 3.0 BY</a>\""
 msgstr ""
-"Parte dell'icona è realizzata da <a href=\"http://www.freepik.com\" "
-"title=\"Freepik\">Freepik</a> da <a href=\"https://www.flaticon.com/\" "
-"title=\"Flaticon\">www.flaticon.com</a>e rilasciata da <a href=\"http://"
+"Parte dell'icona è realizzata da <a href=\"http://www.freepik.com\" title="
+"\"Freepik\">Freepik</a> da <a href=\"https://www.flaticon.com/\" title="
+"\"Flaticon\">www.flaticon.com</a>e rilasciata da <a href=\"http://"
 "creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
 "target=\"_blank\">CC 3.0 BY</a>\""
 
 #: ../Settings.qml:24
 msgid "Units"
 msgstr "Unità"
+
+#: ../Main.qml:34
+msgid "%1 run today"
+msgstr ""
+
+#: ../Main.qml:35
+msgid "%1 biked today"
+msgstr ""
+
+#: ../Main.qml:36
+msgid "%1 drived today"
+msgstr ""
+
+#: ../Main.qml:123 ../Main.qml:126
+msgid "Distance: "
+msgstr "Distanza: "
+
+#: ../Main.qml:129
+msgid "Time: "
+msgstr "Tempo: "
 
 #: ../Main.qml:204
 msgid "Recent Activities"
@@ -76,38 +96,38 @@ msgstr "Nessun attività salvata"
 msgid "Swipe up to log a new activity"
 msgstr "Scorri in su per iniziare una nuova attività"
 
-#: ../Main.qml:323
+#: ../Main.qml:322
 msgid "Log new Activity"
 msgstr "Traccia una nuova attività"
 
-#: ../Main.qml:480
+#: ../Main.qml:479
 msgid "Activity Type"
 msgstr "Tipo di Attività"
 
-#: ../Main.qml:483
+#: ../Main.qml:482
 msgid "Run"
-msgstr "Corsa"
+msgstr ""
 
-#: ../Main.qml:484
+#: ../Main.qml:483
 msgid "Bike Ride"
 msgstr "Giro in Bici"
 
-#: ../Main.qml:485
+#: ../Main.qml:484
 msgid "Walk"
 msgstr "Camminata"
 
-#: ../Main.qml:486
+#: ../Main.qml:485
 msgid "Drive"
 msgstr "Viaggio"
 
-#: ../Main.qml:487
+#: ../Main.qml:486
 msgid "Hike"
 msgstr "Escursione"
 
-#: ../Main.qml:591
+#: ../Main.qml:590
 msgid "Start"
 msgstr "Inizia"
 
-#: ../Main.qml:611
+#: ../Main.qml:610
 msgid "Stop"
 msgstr "Ferma"

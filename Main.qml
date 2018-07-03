@@ -31,9 +31,9 @@ MainView {
    property string timestring : "00:00"
    property string smashkey;
    property string dist;
-   property string distmet: "%1 run today"
-   property string bikedistmet: "%1 biked today"
-   property string drivedistmet: "%1 drived today"
+   property string distmet: i18n.tr("%1 run today")
+   property string bikedistmet: i18n.tr("%1 biked today")
+   property string drivedistmet: i18n.tr("%1 drived today")
 
    //keep screen on so we still get to read GPS
    ScreenSaver {
@@ -120,13 +120,13 @@ MainView {
                   //console.warn(result[i].speed)
                   var mi
                   mi = result[i].distance * 0.62137
-                  result[i].distance = "Distance: "+mi.toFixed(2) + "mi"
+                  result[i].distance = i18n.tr("Distance: ")+mi.toFixed(2) + "mi"
                }
                else if (runits == "kilometers"){
-                  result[i].distance = "Distance: "+result[i].distance + "km"
+                  result[i].distance = i18n.tr("Distance: ")+result[i].distance + "km"
                }
                var seconds = parseFloat(result[i].speed) * 60
-               result[i].speed = "Time: " + stopwatch(seconds)
+               result[i].speed = i18n.tr("Time: ") + stopwatch(seconds)
                listModel.append(result[i]);
             }
 
@@ -263,14 +263,13 @@ MainView {
             }
 
             ListItemLayout {
-               Image {
+               ProportionalShape {
                   SlotsLayout.position: SlotsLayout.Leading
-                  source: "images/"+act_type+".png"
+                  source: Image { source: "images/"+act_type+".png" }
                   height: del.height-units.gu(2)
-                  width: height
                   anchors.topMargin: units.gu(1)
                   anchors.top: parent.top
-
+                  aspect: UbuntuShape.DropShadow
                }
                title.text: name
                subtitle.text: speed+"   "+distance
@@ -330,16 +329,17 @@ MainView {
                anchors.fill: parent
                id: newrunPage
                header: PageHeader {
-                  title: (am_running) ? "Activity in Progress" : "New Activity"
+                  title: (am_running) ? i18n.tr("Activity in Progress") : i18n.tr("New Activity")
                   leadingActionBar.actions: [
                   Action {
                      iconName: "back"
                      onTriggered: {
-                        PopupUtils.open(areyousure)
-                        // NOT TESTED!!!
-                        // am_running = false
-                        // timer.stop()
-                        console.log("Run custom back action")
+                        if (am_running) {
+                           PopupUtils.open(areyousure)
+                        }
+                        else {
+                           newrunEdge.collapse()
+                        }
                      }
                   }
                   ]
@@ -359,8 +359,8 @@ MainView {
                   id: areyousure
                   Dialog {
                      id: areyousuredialog
-                     title: "Are you sure?"
-                     text: "Are you sure you want to cancel the activity?"
+                     title: i18n.tr("Are you sure?")
+                     text: i18n.tr("Are you sure you want to cancel the activity?")
                      Button {
                         id: yesimsure
                         text: "Yes I'm sure"
@@ -378,7 +378,7 @@ MainView {
                      }
                      Button {
                         id: noooooooodb
-                        text: "No"
+                        text: i18n.tr("No")
                         color: UbuntuColors.red
                         onClicked: {
                            PopupUtils.close(areyousuredialog)
@@ -416,12 +416,12 @@ MainView {
                         if (src.position.altitudeValid) {
                            altlabel.text = formatDist(coord.altitude)
                         } else {
-                           altlabel.text = "No data"
+                           altlabel.text = i18n.tr("No data")
                         }
                         if (src.position.speedValid) {
                            speedlabel.text = formatSpeed(src.position.speed)
                         } else {
-                           speedlabel.text = "No data"
+                           speedlabel.text = i18n.tr("No data")
                         }
                      }
                   }
@@ -472,7 +472,7 @@ MainView {
                   id: dialog
                   Dialog {
                      id: dialogue
-                     title: "Save Activity"
+                     title: i18n.tr("Save Activity")
                      text: ""
 
                      OptionSelector {
@@ -480,15 +480,17 @@ MainView {
                         text: i18n.tr("Activity Type")
                         expanded: true
                         model: [
-                        i18n.tr("Run"),
-                        i18n.tr("Bike Ride"),
-                        i18n.tr("Walk"),
-                        i18n.tr("Drive"),
-                        i18n.tr("Hike")
+                        // FIXME: some codes depends on the name of the activity
+                        // cannot translate atm...
+                        /*i18n.tr(*/"Run"/*)*/,
+                        /*i18n.tr(*/"Bike Ride"/*)*/,
+                        /*i18n.tr(*/"Walk"/*)*/,
+                        /*i18n.tr(*/"Drive"/*)*/,
+                        /*i18n.tr(*/"Hike"/*)*/
                         ]
                      }
                      Label {
-                        text: "Name"
+                        text: i18n.tr("Name")
                      }
 
                      TextField {
@@ -502,7 +504,7 @@ MainView {
                      Row {
 
                         Button {
-                           text: "Save Activity"
+                           text: i18n.tr("Save Activity")
                            height: units.gu(10)
                            width: parent.width /2
                            color: UbuntuColors.green
@@ -538,7 +540,7 @@ MainView {
                            }
                         }
                         Button {
-                           text: "Cancel"
+                           text: i18n.tr("Cancel")
                            height: units.gu(10)
                            width: parent.width / 2
                            color: UbuntuColors.red

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: activitytracker.ernest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-03 00:24+0000\n"
+"POT-Creation-Date: 2018-07-03 01:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,6 +54,26 @@ msgstr ""
 msgid "Units"
 msgstr ""
 
+#: ../Main.qml:34
+msgid "%1 run today"
+msgstr ""
+
+#: ../Main.qml:35
+msgid "%1 biked today"
+msgstr ""
+
+#: ../Main.qml:36
+msgid "%1 drived today"
+msgstr ""
+
+#: ../Main.qml:123 ../Main.qml:126
+msgid "Distance: "
+msgstr ""
+
+#: ../Main.qml:129
+msgid "Time: "
+msgstr ""
+
 #: ../Main.qml:204
 msgid "Recent Activities"
 msgstr ""
@@ -70,38 +90,54 @@ msgstr ""
 msgid "Swipe up to log a new activity"
 msgstr ""
 
-#: ../Main.qml:323
+#: ../Main.qml:322
 msgid "Log new Activity"
+msgstr ""
+
+#: ../Main.qml:332
+msgid "Activity in Progress"
+msgstr ""
+
+#: ../Main.qml:332
+msgid "New Activity"
+msgstr ""
+
+#: ../Main.qml:362
+msgid "Are you sure?"
+msgstr ""
+
+#: ../Main.qml:363
+msgid "Are you sure you want to cancel the activity?"
+msgstr ""
+
+#: ../Main.qml:381
+msgid "No"
+msgstr ""
+
+#: ../Main.qml:419 ../Main.qml:424
+msgid "No data"
+msgstr ""
+
+#: ../Main.qml:475 ../Main.qml:507
+msgid "Save Activity"
 msgstr ""
 
 #: ../Main.qml:480
 msgid "Activity Type"
 msgstr ""
 
-#: ../Main.qml:483
-msgid "Run"
+#: ../Main.qml:493
+msgid "Name"
 msgstr ""
 
-#: ../Main.qml:484
-msgid "Bike Ride"
+#: ../Main.qml:543
+msgid "Cancel"
 msgstr ""
 
-#: ../Main.qml:485
-msgid "Walk"
-msgstr ""
-
-#: ../Main.qml:486
-msgid "Drive"
-msgstr ""
-
-#: ../Main.qml:487
-msgid "Hike"
-msgstr ""
-
-#: ../Main.qml:591
+#: ../Main.qml:593
 msgid "Start"
 msgstr ""
 
-#: ../Main.qml:611
+#: ../Main.qml:613
 msgid "Stop"
 msgstr ""

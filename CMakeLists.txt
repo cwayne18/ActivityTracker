@@ -20,7 +20,7 @@ execute_process(
 set(QT_IMPORTS_DIR "lib/${ARCH_TRIPLET}")
 
 set(PROJECT_NAME "activitytracker")
-set(APP_ID "activitytracker.ernest")
+set(FULL_PROJECT_NAME "activitytracker.ernest")
 set(CMAKE_INSTALL_PREFIX /)
 set(DATA_DIR /)
 set(DESKTOP_FILE_NAME ${PROJECT_NAME}.desktop)
@@ -32,11 +32,16 @@ execute_process(
     OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 
-#configure_file(manifest.json.in ${CMAKE_CURRENT_BINARY_DIR}/manifest.json)
+file(GLOB QML_FILES *.qml)
+
+configure_file(manifest.json.in ${CMAKE_CURRENT_BINARY_DIR}/manifest.json)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/manifest.json DESTINATION ${CMAKE_INSTALL_PREFIX})
 install(FILES ${PROJECT_NAME}.apparmor DESTINATION ${DATA_DIR})
 install(DIRECTORY html DESTINATION ${DATA_DIR})
 install(DIRECTORY images DESTINATION ${DATA_DIR})
+install(DIRECTORY lib DESTINATION ${DATA_DIR})
+install(DIRECTORY py DESTINATION ${DATA_DIR})
+install(FILES ${QML_FILES} DESTINATION ${DATA_DIR})
 
 # Translations
 file(GLOB_RECURSE I18N_SRC_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po *.qml)
@@ -60,3 +65,18 @@ add_custom_target(${DESKTOP_FILE_NAME} ALL
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE_NAME} DESTINATION ${DATA_DIR})
 
 add_subdirectory(po)
+
+# Make source files visible in qtcreator
+# We don't need to add plugin sources here as they get exposed
+# via the library target.
+file(GLOB_RECURSE PROJECT_SRC_FILES
+    RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
+    qml/*.qml
+    qml/*.js
+    *.json
+    *.json.in
+    *.apparmor
+    *.desktop.in
+)
+
+add_custom_target(${PROJECT_NAME}_FILES ALL SOURCES ${PROJECT_SRC_FILES})

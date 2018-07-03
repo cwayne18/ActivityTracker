@@ -1,6 +1,0 @@
-{
-    "name": "EmptyState",
-    "description": "This widget provides a standardized way to show an empty state (approved by Canonical designers) to improve the user experience and avoid showing a blank page.",
-    "version": "1.0",
-    "documentation_url": "http://ubuntu-component-store.readthedocs.org/en/latest/_components/emptystate.html"
-}

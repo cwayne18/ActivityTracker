@@ -9,7 +9,7 @@
             "desktop": "activitytracker.desktop"
         }
     },
-    "version": "0.2",
+    "version": "0.2.1",
     "maintainer": "Erne st <slash.tux@gmail.com>",
-    "framework" : "ubuntu-sdk-16.04"
+    "framework": "ubuntu-sdk-16.04"
 }

@@ -5,8 +5,6 @@ import QtQuick.Layouts 1.1
 import io.thp.pyotherside 1.5
 import QtSystemInfo 5.0
 import QtLocation 5.3
-import ubuntu_component_store.Curated.PageWithBottomEdge 1.0
-import ubuntu_component_store.Curated.EmptyState 1.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 import Ubuntu.Components.Popups 1.3
 import "./lib/polyline.js" as Pl

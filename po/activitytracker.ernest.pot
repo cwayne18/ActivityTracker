@@ -1,46 +1,45 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the activitytracker.ernest package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: activitytracker.ernest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-03 00:24+0000\n"
-"PO-Revision-Date: 2018-07-03 03:30+0300\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: it\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../WebMap.qml:17
 msgid "Activity Map"
-msgstr "Mappa Attività"
+msgstr ""
 
 #: ../About.qml:7 ../Main.qml:213
 msgid "About"
-msgstr "Riguardo"
+msgstr ""
 
 #: ../About.qml:32
 msgid "Activity Tracker"
-msgstr "Activity Tracker"
+msgstr ""
 
 #: ../About.qml:38
 msgid "Version "
-msgstr "Versione "
+msgstr ""
 
 #: ../About.qml:68
 msgid "Released under the terms of the GNU GPL v3"
-msgstr "Rilasciata sotto la licenza GNU GPL v3"
+msgstr ""
 
 #: ../About.qml:79
 msgid "Source code available on "
-msgstr "Codice sorgente disponibile su "
+msgstr ""
 
 #: ../About.qml:87
 msgid ""
@@ -50,64 +49,59 @@ msgid ""
 "creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
 "target=\"_blank\">CC 3.0 BY</a>\""
 msgstr ""
-"Parte dell'icona è realizzata da <a href=\"http://www.freepik.com\" "
-"title=\"Freepik\">Freepik</a> da <a href=\"https://www.flaticon.com/\" "
-"title=\"Flaticon\">www.flaticon.com</a>e rilasciata da <a href=\"http://"
-"creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
-"target=\"_blank\">CC 3.0 BY</a>\""
 
 #: ../Settings.qml:24
 msgid "Units"
-msgstr "Unità"
+msgstr ""
 
 #: ../Main.qml:204
 msgid "Recent Activities"
-msgstr "Attività Recenti"
+msgstr ""
 
 #: ../Main.qml:208
 msgid "Settings"
-msgstr "Impostazioni"
+msgstr ""
 
 #: ../Main.qml:231
 msgid "No saved activities"
-msgstr "Nessun attività salvata"
+msgstr ""
 
 #: ../Main.qml:233
 msgid "Swipe up to log a new activity"
-msgstr "Scorri in su per iniziare una nuova attività"
+msgstr ""
 
 #: ../Main.qml:323
 msgid "Log new Activity"
-msgstr "Traccia una nuova attività"
+msgstr ""
 
 #: ../Main.qml:480
 msgid "Activity Type"
-msgstr "Tipo di Attività"
+msgstr ""
 
 #: ../Main.qml:483
 msgid "Run"
-msgstr "Corsa"
+msgstr ""
 
 #: ../Main.qml:484
 msgid "Bike Ride"
-msgstr "Giro in Bici"
+msgstr ""
 
 #: ../Main.qml:485
 msgid "Walk"
-msgstr "Camminata"
+msgstr ""
 
 #: ../Main.qml:486
 msgid "Drive"
-msgstr "Viaggio"
+msgstr ""
 
 #: ../Main.qml:487
 msgid "Hike"
-msgstr "Escursione"
+msgstr ""
 
 #: ../Main.qml:591
 msgid "Start"
-msgstr "Inizia"
+msgstr ""
 
 #: ../Main.qml:611
 msgid "Stop"
-msgstr "Ferma"
+msgstr ""

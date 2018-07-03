@@ -11,7 +11,7 @@ import "./lib/polyline.js" as Pl
 Page {
    header: PageHeader {
       id: settingsHeader
-      title: "Units"
+      title: i18n.tr("Settings")
    }
    id:settings
 

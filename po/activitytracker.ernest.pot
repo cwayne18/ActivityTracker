@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../WebMap.qml:17
+#: ../WebMap.qml:18
 msgid "Activity Map"
 msgstr ""
 
@@ -48,6 +48,10 @@ msgid ""
 "\"Flaticon\">www.flaticon.com</a> is licensed by <a href=\"http://"
 "creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
 "target=\"_blank\">CC 3.0 BY</a>\""
+msgstr ""
+
+#: ../Settings.qml:14 ../Main.qml:208
+msgid "Settings"
 msgstr ""
 
 #: ../Settings.qml:24

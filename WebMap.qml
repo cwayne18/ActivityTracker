@@ -14,6 +14,7 @@ import Ubuntu.Web 0.2
 
 Page {
    header: PageHeader {
+      id: webmap_header
       title: i18n.tr("Activity Map")
    }
    property var polyline;
@@ -22,5 +23,6 @@ Page {
       id: webView
       url: "html/map.html?polyline="+polyline
       anchors.fill: parent
+      anchors.top: webmap_header.bottom
    }
 }

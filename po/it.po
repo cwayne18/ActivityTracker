@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-03 00:43+0000\n"
+"PO-Revision-Date: 2018-07-03 03:57+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../WebMap.qml:17
+msgid "Activity Map"
+msgstr "Mappa Attività"
+
+#: ../About.qml:7 ../Main.qml:213
+msgid "About"
+msgstr "Riguardo"
+
+#: ../About.qml:32
+msgid "Activity Tracker"
+msgstr "Activity Tracker"
+
+#: ../About.qml:38
+msgid "Version "
+msgstr "Versione "
+
+#: ../About.qml:68
+msgid "Released under the terms of the GNU GPL v3"
+msgstr "Rilasciata sotto la licenza GNU GPL v3"
+
+#: ../About.qml:79
+msgid "Source code available on "
+msgstr "Codice sorgente disponibile su "
+
+#: ../About.qml:87
+msgid ""
+"Part of the icons is made by <a href=\"http://www.freepik.com\" title="
+"\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title="
+"\"Flaticon\">www.flaticon.com</a> is licensed by <a href=\"http://"
+"creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
+"target=\"_blank\">CC 3.0 BY</a>\""
+msgstr ""
+"Parte dell'icona è realizzata da <a href=\"http://www.freepik.com\" title="
+"\"Freepik\">Freepik</a> da <a href=\"https://www.flaticon.com/\" title="
+"\"Flaticon\">www.flaticon.com</a>e rilasciata da <a href=\"http://"
+"creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
+"target=\"_blank\">CC 3.0 BY</a>\""
+
+#: ../Settings.qml:24
+msgid "Units"
+msgstr "Unità"
+
+#: ../Main.qml:34
+msgid "%1 run today"
+msgstr ""
+
+#: ../Main.qml:35
+msgid "%1 biked today"
+msgstr ""
+
+#: ../Main.qml:36
+msgid "%1 drived today"
+msgstr ""
+
+#: ../Main.qml:123 ../Main.qml:126
+msgid "Distance: "
+msgstr "Distanza: "
+
+#: ../Main.qml:129
+msgid "Time: "
+msgstr "Tempo: "
+
+#: ../Main.qml:204
+msgid "Recent Activities"
+msgstr "Attività Recenti"
+
+#: ../Main.qml:208
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: ../Main.qml:231
+msgid "No saved activities"
+msgstr "Nessun attività salvata"
+
+#: ../Main.qml:233
+msgid "Swipe up to log a new activity"
+msgstr "Scorri in su per iniziare una nuova attività"
+
+#: ../Main.qml:322
+msgid "Log new Activity"
+msgstr "Traccia una nuova attività"
+
+#: ../Main.qml:479
+msgid "Activity Type"
+msgstr "Tipo di Attività"
+
+#: ../Main.qml:482
+msgid "Run"
+msgstr ""
+
+#: ../Main.qml:483
+msgid "Bike Ride"
+msgstr "Giro in Bici"
+
+#: ../Main.qml:484
+msgid "Walk"
+msgstr "Camminata"
+
+#: ../Main.qml:485
+msgid "Drive"
+msgstr "Viaggio"
+
+#: ../Main.qml:486
+msgid "Hike"
+msgstr "Escursione"
+
+#: ../Main.qml:590
+msgid "Start"
+msgstr "Inizia"
+
+#: ../Main.qml:610
+msgid "Stop"
+msgstr "Ferma"

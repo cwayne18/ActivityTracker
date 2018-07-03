@@ -1,2 +1,5 @@
 keys.js
+build/
 activitytracker.qmlproject.user
+*.mo
+*.OLD

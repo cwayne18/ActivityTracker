@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the activitytracker.ernest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: activitytracker.ernest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-03 01:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../WebMap.qml:17
+msgid "Activity Map"
+msgstr ""
+
+#: ../About.qml:7 ../Main.qml:213
+msgid "About"
+msgstr ""
+
+#: ../About.qml:32
+msgid "Activity Tracker"
+msgstr ""
+
+#: ../About.qml:38
+msgid "Version "
+msgstr ""
+
+#: ../About.qml:68
+msgid "Released under the terms of the GNU GPL v3"
+msgstr ""
+
+#: ../About.qml:79
+msgid "Source code available on "
+msgstr ""
+
+#: ../About.qml:87
+msgid ""
+"Part of the icons is made by <a href=\"http://www.freepik.com\" title="
+"\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title="
+"\"Flaticon\">www.flaticon.com</a> is licensed by <a href=\"http://"
+"creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
+"target=\"_blank\">CC 3.0 BY</a>\""
+msgstr ""
+
+#: ../Settings.qml:24
+msgid "Units"
+msgstr ""
+
+#: ../Main.qml:34
+msgid "%1 run today"
+msgstr ""
+
+#: ../Main.qml:35
+msgid "%1 biked today"
+msgstr ""
+
+#: ../Main.qml:36
+msgid "%1 drived today"
+msgstr ""
+
+#: ../Main.qml:123 ../Main.qml:126
+msgid "Distance: "
+msgstr ""
+
+#: ../Main.qml:129
+msgid "Time: "
+msgstr ""
+
+#: ../Main.qml:204
+msgid "Recent Activities"
+msgstr ""
+
+#: ../Main.qml:208
+msgid "Settings"
+msgstr ""
+
+#: ../Main.qml:231
+msgid "No saved activities"
+msgstr ""
+
+#: ../Main.qml:233
+msgid "Swipe up to log a new activity"
+msgstr ""
+
+#: ../Main.qml:322
+msgid "Log new Activity"
+msgstr ""
+
+#: ../Main.qml:332
+msgid "Activity in Progress"
+msgstr ""
+
+#: ../Main.qml:332
+msgid "New Activity"
+msgstr ""
+
+#: ../Main.qml:362
+msgid "Are you sure?"
+msgstr ""
+
+#: ../Main.qml:363
+msgid "Are you sure you want to cancel the activity?"
+msgstr ""
+
+#: ../Main.qml:381
+msgid "No"
+msgstr ""
+
+#: ../Main.qml:419 ../Main.qml:424
+msgid "No data"
+msgstr ""
+
+#: ../Main.qml:475 ../Main.qml:507
+msgid "Save Activity"
+msgstr ""
+
+#: ../Main.qml:480
+msgid "Activity Type"
+msgstr ""
+
+#: ../Main.qml:493
+msgid "Name"
+msgstr ""
+
+#: ../Main.qml:543
+msgid "Cancel"
+msgstr ""
+
+#: ../Main.qml:593
+msgid "Start"
+msgstr ""
+
+#: ../Main.qml:613
+msgid "Stop"
+msgstr ""

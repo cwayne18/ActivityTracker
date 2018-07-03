@@ -8,19 +8,16 @@ Project {
         directory: "."
     }
     JavaScriptFiles {
-        directory: "."
+        directory: "lib"
     }
     ImageFiles {
-        directory: "."
+        directory: "images"
     }
     Files {
         filter: "*.desktop"
     }
     Files {
-        filter: "www/*.html"
-    }
-    Files {
-        filter: "Makefile"
+        filter: "html/*.html"
     }
     Files {
         filter: "*.apparmor"
@@ -30,30 +27,9 @@ Project {
         paths: ["manifest.json",".excludes"]
     }
     Files {
-        directory: "www"
-        filter: "*"
-    }
-    Files {
-        directory: "www/img/"
-        filter: "*"
-    }
-    Files {
-        directory: "www/css/"
-        filter: "*"
-    }
-    Files {
-        directory: "www/js/"
-        filter: "*"
-    }
-    Files {
         directory: "tests/"
-        filter: "*"
-    }
-    Files {
-        directory: "debian"
         filter: "*"
     }
     /* List of plugin directories passed to QML runtime */
     importPaths: [ "." ,"/usr/bin","/usr/lib/x86_64-linux-gnu/qt5/qml" ]
 }
-

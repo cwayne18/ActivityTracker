@@ -35,7 +35,7 @@ Page {
             }
 
             Text {
-               text: i18n.tr("Version ") + "0.10.4"
+               text: i18n.tr("Version ") + "0.2.2"
                anchors.horizontalCenter: parent.horizontalCenter
             }
          }
@@ -59,7 +59,7 @@ Page {
             }
 
             Text {
-               text: "© 2015 Chris Wayne"
+               text: "%1".arg("<a href=\"https://github.com/cwayne18/ActivityTracker\"> © 2015 Chris Wayne</a>")
                anchors.horizontalCenter: parent.horizontalCenter
             }
 
@@ -85,6 +85,19 @@ Page {
 
             Text {
                text: i18n.tr('Part of the icons is made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>"')
+               anchors.horizontalCenter: parent.horizontalCenter
+               horizontalAlignment: Text.AlignHCenter
+               wrapMode: Text.Wrap
+               font.pointSize: units.gu(1)
+               width: parent.width
+            }
+            Text {
+               text: "Thanks to Joan CiberSheep for the icons based on,
+                Run CC-by Vladimir Belochkin from the Noun Project,
+                Hiking CC-by Think TIfferent from the Noun Project,
+                Bike CC-by Sakchai Ruankam from the Noun Project,
+                Walk CC-by Adrien Coquet from the Noun Project,
+                Car CC-by Aneeque Ahmed from the Noun Project"
                anchors.horizontalCenter: parent.horizontalCenter
                horizontalAlignment: Text.AlignHCenter
                wrapMode: Text.Wrap

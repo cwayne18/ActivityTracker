@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the activitytracker.ernest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: activitytracker.ernest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-03 03:24+0000\n"
+"PO-Revision-Date: 2018-07-02 22:55-0500\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr_FR\n"
+
+#: ../About.qml:7 ../Main.qml:213
+msgid "About"
+msgstr "Information"
+
+#: ../About.qml:32
+msgid "Activity Tracker"
+msgstr "Activity Tracker"
+
+#: ../About.qml:38
+msgid "Version "
+msgstr "Version "
+
+#: ../About.qml:68
+msgid "Released under the terms of the GNU GPL v3"
+msgstr "Distribué sous les termes de la GNU GPL v3"
+
+#: ../About.qml:79
+msgid "Source code available on "
+msgstr "Code source disponible sur "
+
+#: ../About.qml:87
+msgid ""
+"Part of the icons is made by <a href=\"http://www.freepik.com\" title="
+"\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title="
+"\"Flaticon\">www.flaticon.com</a> is licensed by <a href=\"http://"
+"creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
+"target=\"_blank\">CC 3.0 BY</a>\""
+msgstr ""
+"Le design du logo est basé sur <a href=\"http://www.freepik.com\" title=\"Freepik"
+"\">Freepik</a> de <a href=\"https://www.flaticon.com/\" title=\"Flaticon"
+"\">www.flaticon.com</a> est sous licence <a href=\"http://"
+"creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
+"target=\"_blank\">CC 3.0 BY</a>\""
+
+#: ../WebMap.qml:17
+msgid "Activity Map"
+msgstr "Carte d'activité"
+
+#: ../Settings.qml:24
+msgid "Units"
+msgstr "Unités"
+
+#: ../Main.qml:34
+msgid "%1 run today"
+msgstr "%1 de course aujourd'hui"
+
+#: ../Main.qml:35
+msgid "%1 biked today"
+msgstr "%1 de vélo aujourd'hui"
+
+#: ../Main.qml:36
+msgid "%1 drived today"
+msgstr "%1 de conduite aujourd'hui"
+
+#: ../Main.qml:123 ../Main.qml:126
+msgid "Distance: "
+msgstr ""
+
+#: ../Main.qml:129
+msgid "Time: "
+msgstr "Temps: "
+
+#: ../Main.qml:204
+msgid "Recent Activities"
+msgstr "Activités récentes"
+
+#: ../Main.qml:208
+msgid "Settings"
+msgstr "Paramètres"
+
+#: ../Main.qml:231
+msgid "No saved activities"
+msgstr "Aucune activité sauvegardée"
+
+#: ../Main.qml:233
+msgid "Swipe up to log a new activity"
+msgstr "Glisser vers le haut pour demarrer"
+
+#: ../Main.qml:322
+msgid "Log new Activity"
+msgstr "Enregistrer une activité"
+
+#: ../Main.qml:332
+msgid "Activity in Progress"
+msgstr "Activité en cours"
+
+#: ../Main.qml:332
+msgid "New Activity"
+msgstr "Nouvelle activité"
+
+#: ../Main.qml:362
+msgid "Are you sure?"
+msgstr "Êtes-vous certain ?"
+
+#: ../Main.qml:363
+msgid "Are you sure you want to cancel the activity?"
+msgstr "Voulez-vous annuler l'enregistrement de l'activité ?"
+
+#: ../Main.qml:381
+msgid "No"
+msgstr "Non"
+
+#: ../Main.qml:419 ../Main.qml:424
+msgid "No data"
+msgstr "Aucune donnée"
+
+#: ../Main.qml:475 ../Main.qml:507
+msgid "Save Activity"
+msgstr "Enregistrer l'activité"
+
+#: ../Main.qml:480
+msgid "Activity Type"
+msgstr "Type d'activité"
+
+#: ../Main.qml:493
+msgid "Name"
+msgstr "Nom"
+
+#: ../Main.qml:543
+msgid "Cancel"
+msgstr "Annuler"
+
+#: ../Main.qml:593
+msgid "Start"
+msgstr "Commencer"
+
+#: ../Main.qml:613
+msgid "Stop"
+msgstr "Arrêter"

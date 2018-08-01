@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: activitytracker.ernest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-03 01:05+0000\n"
+"POT-Creation-Date: 2018-08-01 15:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "Activity Map"
 msgstr ""
 
-#: ../About.qml:7 ../Main.qml:213
+#: ../About.qml:7 ../Main.qml:220
 msgid "About"
 msgstr ""
 
@@ -50,98 +50,130 @@ msgid ""
 "target=\"_blank\">CC 3.0 BY</a>\""
 msgstr ""
 
-#: ../Settings.qml:14 ../Main.qml:208
+#: ../Settings.qml:14 ../Main.qml:215
 msgid "Settings"
 msgstr ""
 
-#: ../Settings.qml:24
+#: ../Settings.qml:28
 msgid "Units"
 msgstr ""
 
-#: ../Main.qml:34
-msgid "%1 run today"
+#: ../Settings.qml:44
+msgid "Log a point every:"
 msgstr ""
 
-#: ../Main.qml:35
-msgid "%1 biked today"
+#: ../Settings.qml:45
+msgid "between 50 and 3600000"
+msgstr ""
+
+#: ../Settings.qml:71
+msgid "ms"
 msgstr ""
 
 #: ../Main.qml:36
+msgid "%1 run today"
+msgstr ""
+
+#: ../Main.qml:37
+msgid "%1 biked today"
+msgstr ""
+
+#: ../Main.qml:38
 msgid "%1 drived today"
 msgstr ""
 
-#: ../Main.qml:123 ../Main.qml:126
+#: ../Main.qml:130 ../Main.qml:133
 msgid "Distance: "
 msgstr ""
 
-#: ../Main.qml:129
+#: ../Main.qml:136
 msgid "Time: "
 msgstr ""
 
-#: ../Main.qml:204
+#: ../Main.qml:211
 msgid "Recent Activities"
 msgstr ""
 
-#: ../Main.qml:208
-msgid "Settings"
-msgstr ""
-
-#: ../Main.qml:231
+#: ../Main.qml:238
 msgid "No saved activities"
 msgstr ""
 
-#: ../Main.qml:233
+#: ../Main.qml:241
 msgid "Swipe up to log a new activity"
 msgstr ""
 
-#: ../Main.qml:322
+#: ../Main.qml:342
 msgid "Log new Activity"
 msgstr ""
 
-#: ../Main.qml:332
+#: ../Main.qml:354
 msgid "Activity in Progress"
 msgstr ""
 
-#: ../Main.qml:332
+#: ../Main.qml:354
 msgid "New Activity"
 msgstr ""
 
-#: ../Main.qml:362
+#: ../Main.qml:384
 msgid "Are you sure?"
 msgstr ""
 
-#: ../Main.qml:363
+#: ../Main.qml:385
 msgid "Are you sure you want to cancel the activity?"
 msgstr ""
 
-#: ../Main.qml:381
+#: ../Main.qml:388
+msgid "Yes I'm sure"
+msgstr ""
+
+#: ../Main.qml:403
 msgid "No"
 msgstr ""
 
-#: ../Main.qml:419 ../Main.qml:424
+#: ../Main.qml:441 ../Main.qml:446
 msgid "No data"
 msgstr ""
 
-#: ../Main.qml:475 ../Main.qml:507
+#: ../Main.qml:512
+msgid "Stop Recording Activity?"
+msgstr ""
+
+#: ../Main.qml:513
+msgid "Do you want to stop recording your activity?"
+msgstr ""
+
+#: ../Main.qml:515
+msgid "Yes, Stop!"
+msgstr ""
+
+#: ../Main.qml:526
+msgid "No, Continue"
+msgstr ""
+
+#: ../Main.qml:540 ../Main.qml:575
 msgid "Save Activity"
 msgstr ""
 
-#: ../Main.qml:480
-msgid "Activity Type"
+#: ../Main.qml:541
+msgid "Select the type and the name of your activity"
 msgstr ""
 
-#: ../Main.qml:493
+#: ../Main.qml:544
 msgid "Name"
 msgstr ""
 
-#: ../Main.qml:543
+#: ../Main.qml:558
+msgid "Activity Type"
+msgstr ""
+
+#: ../Main.qml:610
 msgid "Cancel"
 msgstr ""
 
-#: ../Main.qml:593
+#: ../Main.qml:660
 msgid "Start"
 msgstr ""
 
-#: ../Main.qml:613
+#: ../Main.qml:680
 msgid "Stop"
 msgstr ""

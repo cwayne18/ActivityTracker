@@ -7,22 +7,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-03 13:10+0000\n"
-"PO-Revision-Date: 2018-07-03 16:11+0300\n"
+"POT-Creation-Date: 2018-08-01 14:59+0000\n"
+"PO-Revision-Date: 2018-08-01 17:00+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../WebMap.qml:18
 msgid "Activity Map"
 msgstr "Mappa Attività"
 
-#: ../About.qml:7 ../Main.qml:213
+#: ../About.qml:7 ../Main.qml:220
 msgid "About"
 msgstr "Riguardo"
 
@@ -56,121 +56,131 @@ msgstr ""
 "creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
 "target=\"_blank\">CC 3.0 BY</a>\""
 
-#: ../Settings.qml:14 ../Main.qml:208
+#: ../Settings.qml:14 ../Main.qml:215
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: ../Settings.qml:24
+#: ../Settings.qml:28
 msgid "Units"
 msgstr "Unità"
 
-#: ../Main.qml:34
+#: ../Settings.qml:44
+msgid "Log a point every:"
+msgstr "Salva un punto ogni:"
+
+#: ../Settings.qml:45
+msgid "between 50 and 3600000"
+msgstr "tra 50 e 3600000"
+
+#: ../Settings.qml:70
+msgid "ms"
+msgstr "ms"
+
+#: ../Main.qml:36
 msgid "%1 run today"
 msgstr ""
 
-#: ../Main.qml:35
+#: ../Main.qml:37
 msgid "%1 biked today"
 msgstr ""
 
-#: ../Main.qml:36
+#: ../Main.qml:38
 msgid "%1 drived today"
 msgstr ""
 
-#: ../Main.qml:123 ../Main.qml:126
+#: ../Main.qml:130 ../Main.qml:133
 msgid "Distance: "
 msgstr "Distanza: "
 
-#: ../Main.qml:129
+#: ../Main.qml:136
 msgid "Time: "
 msgstr "Tempo: "
 
-#: ../Main.qml:204
+#: ../Main.qml:211
 msgid "Recent Activities"
 msgstr "Attività Recenti"
 
-#: ../Main.qml:231
+#: ../Main.qml:238
 msgid "No saved activities"
 msgstr "Nessun attività salvata"
 
-#: ../Main.qml:234
+#: ../Main.qml:241
 msgid "Swipe up to log a new activity"
 msgstr "Scorri in su per iniziare una nuova attività"
 
-#: ../Main.qml:324
+#: ../Main.qml:342
 msgid "Log new Activity"
 msgstr "Traccia una nuova attività"
 
-#: ../Main.qml:336
+#: ../Main.qml:354
 msgid "Activity in Progress"
 msgstr "Attività in Corso"
 
-#: ../Main.qml:336
+#: ../Main.qml:354
 msgid "New Activity"
 msgstr "Nuova Attività"
 
-#: ../Main.qml:366
+#: ../Main.qml:384
 msgid "Are you sure?"
 msgstr "Sei sicuro?"
 
-#: ../Main.qml:367
+#: ../Main.qml:385
 msgid "Are you sure you want to cancel the activity?"
 msgstr "Sei sicuro di voler cancellare l'attività?"
 
-#: ../Main.qml:370
+#: ../Main.qml:388
 msgid "Yes I'm sure"
 msgstr "Si sono sicuro"
 
-#: ../Main.qml:385
+#: ../Main.qml:403
 msgid "No"
 msgstr "No"
 
-#: ../Main.qml:423 ../Main.qml:428
+#: ../Main.qml:441 ../Main.qml:446
 msgid "No data"
 msgstr ""
 
-#: ../Main.qml:479
+#: ../Main.qml:512
 msgid "Stop Recording Activity?"
 msgstr "Fermare la Registrazione dell'Attività?"
 
-#: ../Main.qml:480
-#, fuzzy
-#| msgid "Do you want to stop recording you activity?"
+#: ../Main.qml:513
 msgid "Do you want to stop recording your activity?"
 msgstr "Vuoi fermare la registrazione della tua attività?"
 
-#: ../Main.qml:482
+#: ../Main.qml:515
 msgid "Yes, Stop!"
 msgstr "Si, Ferma!"
 
-#: ../Main.qml:493
+#: ../Main.qml:526
 msgid "No, Continue"
 msgstr "No, Continua"
 
-#: ../Main.qml:507 ../Main.qml:542
+#: ../Main.qml:540 ../Main.qml:575
 msgid "Save Activity"
 msgstr "Salva Attività"
 
-#: ../Main.qml:508
+#: ../Main.qml:541
 msgid "Select the type and the name of your activity"
 msgstr "Scegli il tipo e il nome della tua attività"
 
-#: ../Main.qml:511
+#: ../Main.qml:544
 msgid "Name"
 msgstr "Nome"
 
-#: ../Main.qml:525
+#: ../Main.qml:558
 msgid "Activity Type"
 msgstr "Tipo di Attività"
 
-#: ../Main.qml:577
+#: ../Main.qml:610
 msgid "Cancel"
 msgstr "Annulla"
 
-#: ../Main.qml:627
+#: ../Main.qml:660
 msgid "Start"
 msgstr "Inizia"
 
-#: ../Main.qml:647
+#: ../Main.qml:680
 msgid "Stop"
 msgstr "Ferma"
 

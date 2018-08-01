@@ -9,8 +9,10 @@ import QtLocation 5.3
 import Ubuntu.Components.Popups 1.3
 import "./lib/polyline.js" as Pl
 import UserMetrics 0.1
+import Qt.labs.settings 1.0
 
 MainView {
+   id: mainView
    // objectName for functional testing purposes (autopilot-qt5)
    objectName: "mainView"
 
@@ -39,6 +41,11 @@ MainView {
    ScreenSaver {
       id: screenSaver
       screenSaverEnabled: !am_running
+   }
+   Settings {
+      id: persistentSettings
+      property int pointsInterval: 5000
+      onPointsIntervalChanged: console.log("pointsInterval has changed: "+pointsInterval)
    }
 
    function stopwatch(seconds) {
@@ -287,6 +294,17 @@ MainView {
                }
                ]
             }
+
+            trailingActions: ListItemActions {
+               actions: [
+               Action {
+                  iconName: "add"
+                  onTriggered: {
+                     stack.push(Qt.resolvedUrl('WebMapQml.qml'), {polyline: polyline})
+                  }
+               }
+               ]
+            }
          }
       }
       Metric {
@@ -410,7 +428,7 @@ MainView {
                      if (gpxx && am_running){
 
                         if (src.position.latitudeValid && src.position.longitudeValid && src.position.altitudeValid) {
-                           pygpx.addpoint(gpxx,coord.latitude,coord.longitude,coord.altitude)
+                           //pygpx.addpoint(gpxx,coord.latitude,coord.longitude,coord.altitude)
                            pline.addCoordinate(QtPositioning.coordinate(coord.latitude,coord.longitude, coord.altitude))
                            pygpx.current_distance(gpxx)
                            distlabel.text = dist
@@ -427,6 +445,21 @@ MainView {
                         } else {
                            speedlabel.text = i18n.tr("No data")
                         }
+                     }
+                  }
+               }
+               Timer {
+                  id: loggingpoints
+                  interval: 5000; running: true; repeat: true
+                  onTriggered: {
+                     var coord = src.position.coordinate
+                     if (gpxx && am_running){
+
+                        if (src.position.latitudeValid && src.position.longitudeValid && src.position.altitudeValid) {
+                           pygpx.addpoint(gpxx,coord.latitude,coord.longitude,coord.altitude)
+                           console.log("Coordinate:", coord.longitude, coord.latitude)
+                        }
+
                      }
                   }
                }

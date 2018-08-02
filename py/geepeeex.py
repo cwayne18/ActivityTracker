@@ -31,6 +31,26 @@ def create_gpx():
 # Create points:
     return gpx
 
+def visu_gpx(file):
+    temp = []
+    GPXFILE = file
+    gpx_file = open(GPXFILE, 'r')
+    gpx = gpxpy.parse(gpx_file)
+# Load the GPS coordinates
+    for track in gpx.tracks:
+        for segment in track.segments:
+            for point in segment.points:
+                #print '{{ latitude: {0}, longitude: {1}}},'.format(point.latitude, point.longitude)
+                element = {
+                'latitude': point.latitude,
+                'longitude': point.longitude,
+                }
+                temp.append(element)
+    zip(temp)
+    return temp
+# Ajouter le transfert dans une liste comme umark
+
+
 def write_gpx(gpx,name,act_type):
 # You can add routes and waypoints, too...
     tzname=None

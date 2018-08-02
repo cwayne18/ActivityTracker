@@ -25,25 +25,17 @@ Page {
       Component.onCompleted: {
          addImportPath(Qt.resolvedUrl('py/'));
          importModule("geepeeex", function() {
-            console.warn("call python script")
+            console.warn("calling python script to load the gpx file")
             pygpx.call("geepeeex.visu_gpx", [polyline], function(result) {
-               console.warn("loading gpx file")
                var t = new Array (0)
-               map.center = QtPositioning.coordinate(result[1].latitude,result[1].longitude);
+               //map.center = QtPositioning.coordinate(result[10].latitude,result[10].longitude); // Allow a delay in case of the recording start with cell tower position
                for (var i=0; i<result.length; i++) {
-                  //gpxmodel.append(result[i]);
-                  //gpxtrack.push ("{ latitude: " + result[i].latitude + ", longitude: " + result[i].longitude + " },");
                   pline.addCoordinate(QtPositioning.coordinate(result[i].latitude,result[i].longitude));
-                  //console.log("==========================");
-                  //console.log(gpxtrack[i]);
-                  //console.log(result[i].longitude);
-                  //console.log("==========================");
                }
-               console.log("fin du script");
+               map.center = QtPositioning.coordinate(result[i/2].latitude,result[i/2].longitude); // Center the map on the center of the track
             });
          });
       }//Component.onCompleted
-      //path : gpxtrack;
    }
 
    /*ListView {
@@ -67,7 +59,7 @@ Page {
       id: map
       anchors.fill: parent
       center: QtPositioning.coordinate(29.62289936, -95.64410114) // Oslo
-      zoomLevel: map.maximumZoomLevel - 8
+      zoomLevel: map.maximumZoomLevel - 5
       plugin : Plugin {
          id: plugin
          allowExperimental: true

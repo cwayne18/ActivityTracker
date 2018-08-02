@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: activitytracker.ernest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-01 15:35+0000\n"
+"POT-Creation-Date: 2018-08-02 03:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,10 +16,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: ../WebMap.qml:18
-msgid "Activity Map"
-msgstr ""
 
 #: ../About.qml:7 ../Main.qml:220
 msgid "About"
@@ -48,6 +44,10 @@ msgid ""
 "\"Flaticon\">www.flaticon.com</a> is licensed by <a href=\"http://"
 "creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
 "target=\"_blank\">CC 3.0 BY</a>\""
+msgstr ""
+
+#: ../QMLMap.qml:18
+msgid "Activity Map"
 msgstr ""
 
 #: ../Settings.qml:14 ../Main.qml:215

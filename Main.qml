@@ -267,7 +267,7 @@ MainView {
          delegate: ListItem {
             id :del
             onClicked: {
-               stack.push(Qt.resolvedUrl('WebMap.qml'), {polyline: polyline})
+               stack.push(Qt.resolvedUrl('QMLMap.qml'), {polyline: filename})
             }
 
             ListItemLayout {
@@ -300,7 +300,7 @@ MainView {
                Action {
                   iconName: "add"
                   onTriggered: {
-                     stack.push(Qt.resolvedUrl('WebMapQml.qml'), {polyline: polyline})
+                     stack.push(Qt.resolvedUrl('QMLMapQml.qml'), {polyline: filename})
                   }
                }
                ]

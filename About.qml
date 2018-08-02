@@ -54,7 +54,7 @@ Page {
             width: parent.width
 
             Text {
-               text: "© 2016-2018 Erne st & Michele Castellazzi"
+               text: "© 2018 Erne st & Michele Castellazzi"
                anchors.horizontalCenter: parent.horizontalCenter
             }
 

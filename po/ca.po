@@ -1,117 +1,46 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the activitytracker.ernest package.
+# This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: activitytracker.ernest\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-04 17:16+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2018-08-01 14:59+0000\n"
+"PO-Revision-Date: 2018-08-02 16:58+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../QMLMap.qml:18
+#: ../WebMap.qml:18
 msgid "Activity Map"
-msgstr ""
-
-#: ../Tracker.qml:15
-msgid "Activity in Progress"
-msgstr ""
-
-#: ../Tracker.qml:15
-msgid "New Activity"
-msgstr ""
-
-#: ../Tracker.qml:45
-msgid "Are you sure?"
-msgstr ""
-
-#: ../Tracker.qml:46
-msgid "Are you sure you want to cancel the activity?"
-msgstr ""
-
-#: ../Tracker.qml:49
-msgid "Yes I'm sure"
-msgstr ""
-
-#: ../Tracker.qml:65
-msgid "No"
-msgstr ""
-
-#: ../Tracker.qml:104 ../Tracker.qml:109
-msgid "No data"
-msgstr ""
-
-#: ../Tracker.qml:175
-msgid "Stop Recording Activity?"
-msgstr ""
-
-#: ../Tracker.qml:176
-msgid "Do you want to stop recording your activity?"
-msgstr ""
-
-#: ../Tracker.qml:178
-msgid "Yes, Stop!"
-msgstr ""
-
-#: ../Tracker.qml:189
-msgid "No, Continue"
-msgstr ""
-
-#: ../Tracker.qml:203 ../Tracker.qml:238
-msgid "Save Activity"
-msgstr ""
-
-#: ../Tracker.qml:204
-msgid "Select the type and the name of your activity"
-msgstr ""
-
-#: ../Tracker.qml:207
-msgid "Name"
-msgstr ""
-
-#: ../Tracker.qml:221
-msgid "Activity Type"
-msgstr ""
-
-#: ../Tracker.qml:275
-msgid "Cancel"
-msgstr ""
-
-#: ../Tracker.qml:325
-msgid "Start"
-msgstr ""
-
-#: ../Tracker.qml:345
-msgid "Stop"
-msgstr ""
+msgstr "Mapa d'activitat"
 
 #: ../About.qml:7 ../Main.qml:220
 msgid "About"
-msgstr ""
+msgstr "Quant a"
 
 #: ../About.qml:32
 msgid "Activity Tracker"
-msgstr ""
+msgstr "Activity Tracker"
 
 #: ../About.qml:38
 msgid "Version "
-msgstr ""
+msgstr "Versió"
 
 #: ../About.qml:68
 msgid "Released under the terms of the GNU GPL v3"
-msgstr ""
+msgstr "Alliberat sota la llicència GNU GPL v3"
 
 #: ../About.qml:79
 msgid "Source code available on "
-msgstr ""
+msgstr "Codi font disponible a"
 
 #: ../About.qml:87
 msgid ""
@@ -120,132 +49,144 @@ msgid ""
 "\"Flaticon\">www.flaticon.com</a> is licensed by <a href=\"http://"
 "creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
 "target=\"_blank\">CC 3.0 BY</a>\""
-msgstr ""
+msgstr "Part de les icones estan fetes per <a href=\"http://www.freepik.com\" title=\"Freepik\">Freepik</a> da <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a>e alliberada amb la llicència <a href=\"http://creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" target=\"_blank\">CC 3.0 BY</a>\""
 
-#: ../Settings.qml:16 ../Main.qml:215
+#: ../Settings.qml:14 ../Main.qml:215
 msgid "Settings"
-msgstr ""
+msgstr "Configuració"
 
-#: ../Settings.qml:30
+#: ../Settings.qml:28
 msgid "Units"
-msgstr ""
+msgstr "Unitats"
 
-#: ../Settings.qml:47
+#: ../Settings.qml:44
 msgid "Log a point every:"
-msgstr ""
+msgstr "Desa un punt cada:"
 
-#: ../Settings.qml:49
+#: ../Settings.qml:45
 msgid "between 50 and 3600000"
-msgstr ""
+msgstr "entre 50 i 3600000"
 
-#: ../Settings.qml:90
+#: ../Settings.qml:70
 msgid "ms"
-msgstr ""
+msgstr "ms"
 
 #: ../Main.qml:36
 msgid "%1 run today"
-msgstr ""
+msgstr "%1 correguts avui"
 
 #: ../Main.qml:37
 msgid "%1 biked today"
-msgstr ""
+msgstr "%1 anat en bici avui"
 
 #: ../Main.qml:38
 msgid "%1 drived today"
-msgstr ""
+msgstr "%1 conduït avui"
 
 #: ../Main.qml:130 ../Main.qml:133
 msgid "Distance: "
-msgstr ""
+msgstr "Distància: "
 
 #: ../Main.qml:136
 msgid "Time: "
-msgstr ""
+msgstr "Temps: "
 
 #: ../Main.qml:211
 msgid "Recent Activities"
-msgstr ""
+msgstr "Activitat recent"
 
 #: ../Main.qml:238
 msgid "No saved activities"
-msgstr ""
+msgstr "No hi ha activitats desades"
 
 #: ../Main.qml:241
 msgid "Swipe up to log a new activity"
-msgstr ""
+msgstr "Rellisqueu cap amunt per registrar una nova activitat"
 
-#: ../Main.qml:331
+#: ../Main.qml:342
 msgid "Log new Activity"
-msgstr ""
+msgstr "Registra una nova activitat"
 
 #: ../Main.qml:354
 msgid "Activity in Progress"
-msgstr ""
+msgstr "Actitivitat en progrés"
 
 #: ../Main.qml:354
 msgid "New Activity"
-msgstr ""
+msgstr "Nova activitata"
 
 #: ../Main.qml:384
 msgid "Are you sure?"
-msgstr ""
+msgstr "Segur que voleu?"
 
 #: ../Main.qml:385
 msgid "Are you sure you want to cancel the activity?"
-msgstr ""
+msgstr "Segur que voleu cancel·lar l'activitat?"
 
 #: ../Main.qml:388
 msgid "Yes I'm sure"
-msgstr ""
+msgstr "Si, segur que vull"
 
 #: ../Main.qml:403
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: ../Main.qml:441 ../Main.qml:446
 msgid "No data"
-msgstr ""
+msgstr "Sense dades"
 
 #: ../Main.qml:512
 msgid "Stop Recording Activity?"
-msgstr ""
+msgstr "Voleu finalitzar el registre de l'activitat?"
 
 #: ../Main.qml:513
 msgid "Do you want to stop recording your activity?"
-msgstr ""
+msgstr "Voleu finalitzar el registre de l'activitat?"
 
 #: ../Main.qml:515
 msgid "Yes, Stop!"
-msgstr ""
+msgstr "Sí, finalitza."
 
 #: ../Main.qml:526
 msgid "No, Continue"
-msgstr ""
+msgstr "No, continua"
 
 #: ../Main.qml:540 ../Main.qml:575
 msgid "Save Activity"
-msgstr ""
+msgstr "Desa l'activitat"
 
 #: ../Main.qml:541
 msgid "Select the type and the name of your activity"
-msgstr ""
+msgstr "Seleccioneu el tipus i el nom de la vostra activitat"
 
 #: ../Main.qml:544
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #: ../Main.qml:558
 msgid "Activity Type"
-msgstr ""
+msgstr "Tipus d'activitat"
 
 #: ../Main.qml:610
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel·la"
 
 #: ../Main.qml:660
 msgid "Start"
-msgstr ""
+msgstr "Inicia"
 
 #: ../Main.qml:680
 msgid "Stop"
-msgstr ""
+msgstr "Atura"
+
+#~ msgid "Bike Ride"
+#~ msgstr "Giro in Bici"
+
+#~ msgid "Walk"
+#~ msgstr "Camminata"
+
+#~ msgid "Drive"
+#~ msgstr "Viaggio"
+
+#~ msgid "Hike"
+#~ msgstr "Escursione"

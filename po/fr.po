@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: activitytracker.ernest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-03 03:24+0000\n"
-"PO-Revision-Date: 2018-07-02 22:55-0500\n"
+"PO-Revision-Date: 2018-08-03 21:19-0500\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,17 +40,15 @@ msgstr "Code source disponible sur "
 
 #: ../About.qml:87
 msgid ""
-"Part of the icons is made by <a href=\"http://www.freepik.com\" title="
-"\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title="
-"\"Flaticon\">www.flaticon.com</a> is licensed by <a href=\"http://"
-"creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
-"target=\"_blank\">CC 3.0 BY</a>\""
+"Part of the icons is made by <a href=\"http://www.freepik.com\" title=\"Freepik"
+"\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www."
+"flaticon.com</a> is licensed by <a href=\"http://creativecommons.org/licenses/"
+"by/3.0/\" title=\"Creative Commons BY 3.0\" target=\"_blank\">CC 3.0 BY</a>\""
 msgstr ""
 "Le design du logo est basé sur <a href=\"http://www.freepik.com\" title=\"Freepik"
-"\">Freepik</a> de <a href=\"https://www.flaticon.com/\" title=\"Flaticon"
-"\">www.flaticon.com</a> est sous licence <a href=\"http://"
-"creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
-"target=\"_blank\">CC 3.0 BY</a>\""
+"\">Freepik</a> de <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www."
+"flaticon.com</a> est sous licence <a href=\"http://creativecommons.org/licenses/"
+"by/3.0/\" title=\"Creative Commons BY 3.0\" target=\"_blank\">CC 3.0 BY</a>\""
 
 #: ../WebMap.qml:17
 msgid "Activity Map"
@@ -74,11 +72,11 @@ msgstr "%1 de conduite aujourd'hui"
 
 #: ../Main.qml:123 ../Main.qml:126
 msgid "Distance: "
-msgstr ""
+msgstr "Distance : "
 
 #: ../Main.qml:129
 msgid "Time: "
-msgstr "Temps: "
+msgstr "Temps : "
 
 #: ../Main.qml:204
 msgid "Recent Activities"

@@ -92,11 +92,11 @@ Page {
                width: parent.width
             }
             Text {
-               text: "Thanks to Joan CiberSheep for the icons based on,
-                Run CC-by Vladimir Belochkin from the Noun Project,
-                Hiking CC-by Think TIfferent from the Noun Project,
-                Bike CC-by Sakchai Ruankam from the Noun Project,
-                Walk CC-by Adrien Coquet from the Noun Project,
+               text: "Thanks to Joan CiberSheep for the icons based on,\
+                Run CC-by Vladimir Belochkin from the Noun Project,\
+                Hiking CC-by Think TIfferent from the Noun Project,\
+                Bike CC-by Sakchai Ruankam from the Noun Project,\
+                Walk CC-by Adrien Coquet from the Noun Project,\
                 Car CC-by Aneeque Ahmed from the Noun Project"
                anchors.horizontalCenter: parent.horizontalCenter
                horizontalAlignment: Text.AlignHCenter

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: activitytracker.ernest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-02 03:47+0000\n"
+"POT-Creation-Date: 2018-08-04 17:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,82 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../QMLMap.qml:18
+msgid "Activity Map"
+msgstr ""
+
+#: ../Tracker.qml:15
+msgid "Activity in Progress"
+msgstr ""
+
+#: ../Tracker.qml:15
+msgid "New Activity"
+msgstr ""
+
+#: ../Tracker.qml:45
+msgid "Are you sure?"
+msgstr ""
+
+#: ../Tracker.qml:46
+msgid "Are you sure you want to cancel the activity?"
+msgstr ""
+
+#: ../Tracker.qml:49
+msgid "Yes I'm sure"
+msgstr ""
+
+#: ../Tracker.qml:65
+msgid "No"
+msgstr ""
+
+#: ../Tracker.qml:104 ../Tracker.qml:109
+msgid "No data"
+msgstr ""
+
+#: ../Tracker.qml:175
+msgid "Stop Recording Activity?"
+msgstr ""
+
+#: ../Tracker.qml:176
+msgid "Do you want to stop recording your activity?"
+msgstr ""
+
+#: ../Tracker.qml:178
+msgid "Yes, Stop!"
+msgstr ""
+
+#: ../Tracker.qml:189
+msgid "No, Continue"
+msgstr ""
+
+#: ../Tracker.qml:203 ../Tracker.qml:238
+msgid "Save Activity"
+msgstr ""
+
+#: ../Tracker.qml:204
+msgid "Select the type and the name of your activity"
+msgstr ""
+
+#: ../Tracker.qml:207
+msgid "Name"
+msgstr ""
+
+#: ../Tracker.qml:221
+msgid "Activity Type"
+msgstr ""
+
+#: ../Tracker.qml:275
+msgid "Cancel"
+msgstr ""
+
+#: ../Tracker.qml:325
+msgid "Start"
+msgstr ""
+
+#: ../Tracker.qml:345
+msgid "Stop"
+msgstr ""
 
 #: ../About.qml:7 ../Main.qml:220
 msgid "About"
@@ -46,27 +122,23 @@ msgid ""
 "target=\"_blank\">CC 3.0 BY</a>\""
 msgstr ""
 
-#: ../QMLMap.qml:18
-msgid "Activity Map"
-msgstr ""
-
-#: ../Settings.qml:14 ../Main.qml:215
+#: ../Settings.qml:16 ../Main.qml:215
 msgid "Settings"
 msgstr ""
 
-#: ../Settings.qml:28
+#: ../Settings.qml:30
 msgid "Units"
 msgstr ""
 
-#: ../Settings.qml:44
+#: ../Settings.qml:47
 msgid "Log a point every:"
 msgstr ""
 
-#: ../Settings.qml:45
+#: ../Settings.qml:49
 msgid "between 50 and 3600000"
 msgstr ""
 
-#: ../Settings.qml:71
+#: ../Settings.qml:90
 msgid "ms"
 msgstr ""
 
@@ -102,78 +174,6 @@ msgstr ""
 msgid "Swipe up to log a new activity"
 msgstr ""
 
-#: ../Main.qml:342
+#: ../Main.qml:331
 msgid "Log new Activity"
-msgstr ""
-
-#: ../Main.qml:354
-msgid "Activity in Progress"
-msgstr ""
-
-#: ../Main.qml:354
-msgid "New Activity"
-msgstr ""
-
-#: ../Main.qml:384
-msgid "Are you sure?"
-msgstr ""
-
-#: ../Main.qml:385
-msgid "Are you sure you want to cancel the activity?"
-msgstr ""
-
-#: ../Main.qml:388
-msgid "Yes I'm sure"
-msgstr ""
-
-#: ../Main.qml:403
-msgid "No"
-msgstr ""
-
-#: ../Main.qml:441 ../Main.qml:446
-msgid "No data"
-msgstr ""
-
-#: ../Main.qml:512
-msgid "Stop Recording Activity?"
-msgstr ""
-
-#: ../Main.qml:513
-msgid "Do you want to stop recording your activity?"
-msgstr ""
-
-#: ../Main.qml:515
-msgid "Yes, Stop!"
-msgstr ""
-
-#: ../Main.qml:526
-msgid "No, Continue"
-msgstr ""
-
-#: ../Main.qml:540 ../Main.qml:575
-msgid "Save Activity"
-msgstr ""
-
-#: ../Main.qml:541
-msgid "Select the type and the name of your activity"
-msgstr ""
-
-#: ../Main.qml:544
-msgid "Name"
-msgstr ""
-
-#: ../Main.qml:558
-msgid "Activity Type"
-msgstr ""
-
-#: ../Main.qml:610
-msgid "Cancel"
-msgstr ""
-
-#: ../Main.qml:660
-msgid "Start"
-msgstr ""
-
-#: ../Main.qml:680
-msgid "Stop"
 msgstr ""

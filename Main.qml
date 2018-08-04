@@ -148,8 +148,6 @@ MainView {
       function writeit(gpx, name,act_type){
          console.warn("Writing file")
          var b = Pl.polyline;
-
-         //console.log("https://maps.googleapis.com/maps/api/staticmap?size=400x400&path=weight:3%7Ccolor:blue%7Cenc:"+b.encode(c,4))
          call('geepeeex.write_gpx', [gpxx,name,act_type])
       }//writeit
 
@@ -471,22 +469,17 @@ MainView {
                   id: map
                   anchors.fill: parent
                   center: src.position.coordinate
-                  zoomLevel: map.maximumZoomLevel - 5
+                  zoomLevel: map.maximumZoomLevel - 2
                   plugin : Plugin {
                      id: plugin
                      allowExperimental: true
                      preferred: ["osm"]
                      required.mapping: Plugin.AnyMappingFeatures
                      required.geocoding: Plugin.AnyGeocodingFeatures
-                     //parameters: [
-                     //    PluginParameter { name: "mapbox.access_token"; value: "" },
-                     //    PluginParameter { name: "mapbox.map_id"; value: "cwayne18.lklp3m7i" }
-                     //]
                   }
 
                   Component.onCompleted: {
                      map.addMapItem(circle)
-                     // pline.addCoordinate(src.position.coordinate)
                      map.center = src.position.coordinate
                   }
                }//Map

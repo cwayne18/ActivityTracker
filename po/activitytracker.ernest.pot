@@ -178,3 +178,75 @@ msgstr ""
 #: ../Main.qml:328
 msgid "Log new Activity"
 msgstr ""
+
+#: ../Main.qml:354
+msgid "Activity in Progress"
+msgstr ""
+
+#: ../Main.qml:354
+msgid "New Activity"
+msgstr ""
+
+#: ../Main.qml:384
+msgid "Are you sure?"
+msgstr ""
+
+#: ../Main.qml:385
+msgid "Are you sure you want to cancel the activity?"
+msgstr ""
+
+#: ../Main.qml:388
+msgid "Yes I'm sure"
+msgstr ""
+
+#: ../Main.qml:403
+msgid "No"
+msgstr ""
+
+#: ../Main.qml:441 ../Main.qml:446
+msgid "No data"
+msgstr ""
+
+#: ../Main.qml:512
+msgid "Stop Recording Activity?"
+msgstr ""
+
+#: ../Main.qml:513
+msgid "Do you want to stop recording your activity?"
+msgstr ""
+
+#: ../Main.qml:515
+msgid "Yes, Stop!"
+msgstr ""
+
+#: ../Main.qml:526
+msgid "No, Continue"
+msgstr ""
+
+#: ../Main.qml:540 ../Main.qml:575
+msgid "Save Activity"
+msgstr ""
+
+#: ../Main.qml:541
+msgid "Select the type and the name of your activity"
+msgstr ""
+
+#: ../Main.qml:544
+msgid "Name"
+msgstr ""
+
+#: ../Main.qml:558
+msgid "Activity Type"
+msgstr ""
+
+#: ../Main.qml:610
+msgid "Cancel"
+msgstr ""
+
+#: ../Main.qml:660
+msgid "Start"
+msgstr ""
+
+#: ../Main.qml:680
+msgid "Stop"
+msgstr ""

@@ -324,6 +324,7 @@ Rectangle {
                //   width:parent.width/2
                //   height:parent.height
                onClicked: {
+                  // loggingpoints.interval = persistentSettings.pointsInterval //useful or not ?
                   //listModel.clear()
                   if (!src.active){
                      src.start()

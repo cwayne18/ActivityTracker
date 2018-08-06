@@ -20,7 +20,7 @@ execute_process(
 set(QT_IMPORTS_DIR "lib/${ARCH_TRIPLET}")
 
 set(PROJECT_NAME "activitytracker")
-set(FULL_PROJECT_NAME "activitytracker.ernest")
+set(FULL_PROJECT_NAME "activitytracker.cwayne18")
 set(CMAKE_INSTALL_PREFIX /)
 set(DATA_DIR /)
 set(DESKTOP_FILE_NAME ${PROJECT_NAME}.desktop)

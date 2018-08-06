@@ -47,7 +47,6 @@ Page {
             title.text: i18n.tr("Log a point every:")
             // subtitle.text: Qt.formatDateTime(date, "ss")
             summary.text: i18n.tr("between 50 and 3600000")
-            Component.onCompleted: console.log(summary.color)
             // Row {
                TextField {
                   id: pointsIntervalField
@@ -87,6 +86,7 @@ Page {
             //    }
             // }
             Label {
+               // TRANSLATORS: millisecond abbreviation
                text:i18n.tr("ms");
                SlotsLayout.position:SlotsLayout.Last;
             }

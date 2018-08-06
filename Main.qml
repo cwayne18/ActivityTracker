@@ -17,10 +17,7 @@ MainView {
    objectName: "mainView"
 
    // Note! applicationName needs to match the "name" field of the click manifest
-   applicationName: "activitytracker.ernest"
-
-   // Removes the old toolbar and enables new features of the new header.
-   //useDeprecatedToolbar: false
+   applicationName: "activitytracker.cwayne18"
 
    width: units.gu(100)
    height: units.gu(75)
@@ -45,7 +42,7 @@ MainView {
    Settings {
       id: persistentSettings
       property int pointsInterval: 5000
-      onPointsIntervalChanged: {/*console.log("pointsInterval has changed: "+pointsInterval);*/loggingpoints.interval = pointsInterval}
+      // onPointsIntervalChanged: {/*console.log("pointsInterval has changed: "+pointsInterval);*/loggingpoints.interval = pointsInterval}
    }
 
    function stopwatch(seconds) {

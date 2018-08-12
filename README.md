@@ -21,3 +21,4 @@ Due to older QML lib on 15.04 the changes cannot be retrofited.
   - Michele for the logo
   - Joan CiberSheep for the icons.
   - Anne for the French translation : https://github.com/cwayne18/ActivityTracker/pull/14
+  - Wagafo for the Catalan translation

@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: activitytracker.actidev\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-12 05:53+0000\n"
-"PO-Revision-Date: 2018-08-12 01:11-0500\n"
+"POT-Creation-Date: 2018-08-12 21:22+0000\n"
+"PO-Revision-Date: 2018-08-12 16:36-0500\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.6\n"
-"Last-Translator: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"Language: fr\n"
 
 #: ../About.qml:7 ../Main.qml:217
 msgid "About"
@@ -30,15 +30,14 @@ msgstr "Activity Tracker"
 msgid "Version"
 msgstr "Version "
 
-#: ../About.qml:68
-msgid "Released under the terms of the GNU GPL v3"
-msgstr "Distribué sous les termes de la GNU GPL v3"
+#: ../About.qml:74
+msgid ""
+"Released under the terms of the GNU GPL v3. <br> Source code available on "
+msgstr ""
+"Distribué sous les termes de la GNU GPL v3. <br> Code source disponible "
+"sur "
 
-#: ../About.qml:79
-msgid "Source code available on "
-msgstr "Code source disponible sur "
-
-#: ../About.qml:87
+#: ../About.qml:82
 msgid ""
 "Part of the icons is made by <a href=\"http://www.freepik.com\" title="
 "\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title="
@@ -134,7 +133,7 @@ msgstr "Fréquence des point gpx :"
 
 #: ../Settings.qml:49
 msgid "between 50 and 3600000"
-msgstr "Entre 50 et 3600000"
+msgstr "entre 50 et 3600000"
 
 #. TRANSLATORS: millisecond abbreviation
 #: ../Settings.qml:90
@@ -176,3 +175,6 @@ msgstr "Glisser vers le haut pour demarrer"
 #: ../Main.qml:328
 msgid "Log new Activity"
 msgstr "Enregistrer une activité"
+
+#~ msgid "Source code available on "
+#~ msgstr "Code source disponible sur "

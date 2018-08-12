@@ -42,22 +42,25 @@ Rectangle {
          id: areyousure
          Dialog {
             id: areyousuredialog
-            title: i18n.tr("Are you sure?")
-            text: i18n.tr("Are you sure you want to cancel the activity?")
+            title: i18n.tr("Do you want to cancel the activity ?")
+//            text: i18n.tr("Are you sure you want to cancel the activity?")
             Button {
                id: yesimsure
-               text: i18n.tr("Yes I'm sure")
+               text: i18n.tr("Yes")
                height: units.gu(10)
                color: UbuntuColors.green
                onClicked: {
-                  PopupUtils.close(areyousuredialog)
-                  //timer.start()
+                  timer.start()
                   counter = 0
                   pygpx.format_timer(0)
+                  var distfloat
+                  distfloat = parseFloat(dist.slice(0,-2)) //clean up the gpx array but not the maps / path
+                  map.removeMapItem(pline)
                   timer.restart()
                   timer.stop()
                   am_running = false
                   newrunEdge.collapse()
+                  PopupUtils.close(areyousuredialog)
                }
             }
             Button {
@@ -167,8 +170,8 @@ Rectangle {
          id: dialog
          Dialog {
             id: dialogue
-            title: i18n.tr("Stop Recording Activity?")
-            text: i18n.tr("Do you want to stop recording your activity?")
+            title: i18n.tr("Do you want to stop recording your activity?")
+//            text: i18n.tr("Do you want to stop recording your activity?")
             Button {
                text: i18n.tr("Yes, Stop!")
                height: units.gu(10)
@@ -195,8 +198,8 @@ Rectangle {
          id: save_dialog
          Dialog {
             id: save_dialogue
-            title: i18n.tr("Save Activity")
-            text: i18n.tr("Select the type and the name of your activity")
+            title: i18n.tr("Select the type and the name of your activity")
+  //          text: i18n.tr("Select the type and the name of your activity")
 
             Label {
                text: i18n.tr("Name")
@@ -225,7 +228,7 @@ Rectangle {
                /*i18n.tr(*/"Drive"/*)*/,
                /*i18n.tr(*/"Hike"/*)*/
                ]
-               onExpansionCompleted: tf.focus = true
+               onExpansionCompleted: tf.focus = False
             }
             Row {
                spacing: units.gu(1)
@@ -266,6 +269,7 @@ Rectangle {
                      newrunEdge.contentUrl = Qt.resolvedUrl("Tracker.qml")
                   }
                }
+
                Button {
                   text: i18n.tr("Cancel")
                   height: units.gu(8)

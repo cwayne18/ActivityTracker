@@ -17,7 +17,7 @@ MainView {
    objectName: "mainView"
 
    // Note! applicationName needs to match the "name" field of the click manifest
-   applicationName: "activitytracker.cwayne18"
+   applicationName: "activitytracker.actidev"
 
    width: units.gu(100)
    height: units.gu(75)

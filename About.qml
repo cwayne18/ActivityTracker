@@ -62,12 +62,6 @@ Page {
                text: "%1".arg("<a href=\"https://github.com/cwayne18/ActivityTracker\"> © 2015 Chris Wayne</a>")
                anchors.horizontalCenter: parent.horizontalCenter
             }
-
-            Text {
-               font.pointSize: units.gu(1)
-               text: i18n.tr("Released under the terms of the GNU GPL v3")
-               anchors.horizontalCenter: parent.horizontalCenter
-            }
          }
 
          Column {
@@ -75,10 +69,11 @@ Page {
             spacing: units.gu(2)
 
             Text {
+               textFormat: Text.RichText
                font.underline: false
-               text: i18n.tr("Source code available on ") + "<a style=\"text-decoration: none;\" href=\"https://github.com/ernesst/ActivityTracker\">GitHub.com</a>"
+               text: i18n.tr("Released under the terms of the GNU GPL v3. <br> Source code available on ") + "<a style=\"text-decoration: none;\" href=\"https://github.com/ernesst/ActivityTracker\">GitHub.com</a>"
                font.pointSize: units.gu(1)
-
+               horizontalAlignment: Text.AlignHCenter
                anchors.horizontalCenter: parent.horizontalCenter
                onLinkActivated: Qt.openUrlExternally(link)
             }
@@ -92,11 +87,12 @@ Page {
                width: parent.width
             }
             Text {
-               text: "Thanks to Joan CiberSheep for the icons based on,\
-                Run CC-by Vladimir Belochkin from the Noun Project,\
-                Hiking CC-by Think TIfferent from the Noun Project,\
-                Bike CC-by Sakchai Ruankam from the Noun Project,\
-                Walk CC-by Adrien Coquet from the Noun Project,\
+                textFormat: Text.RichText
+                text: "Thanks to Joan CiberSheep for the icons based on,<br>
+                Run CC-by Vladimir Belochkin from the Noun Project,<br>
+                Hiking CC-by Think TIfferent from the Noun Project,<br>
+                Bike CC-by Sakchai Ruankam from the Noun Project,<br>
+                Walk CC-by Adrien Coquet from the Noun Project,<br>
                 Car CC-by Aneeque Ahmed from the Noun Project"
                anchors.horizontalCenter: parent.horizontalCenter
                horizontalAlignment: Text.AlignHCenter

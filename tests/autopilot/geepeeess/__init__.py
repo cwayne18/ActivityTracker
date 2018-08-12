@@ -12,7 +12,7 @@ from testtools.matchers import Equals
 from ubuntuuitoolkit import base
 
 
-PACKAGE_ID = 'geepeeess.cwayne18'
+PACKAGE_ID = 'geepeeess.actidev'
 
 
 def get_path_to_source_root():
@@ -74,4 +74,3 @@ class ClickAppTestCase(base.UbuntuUIToolkitAppTestCase):
     def _launch_installed_application(self):
         return self.launch_click_package(
             PACKAGE_ID, emulator_base=ApplicationCustomProxyObject)
-

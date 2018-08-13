@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the activitytracker.actidev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: activitytracker.actidev\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-12 21:36+0000\n"
+"PO-Revision-Date: 2018-08-13 12:39+0000\n"
+"Last-Translator: Josué <j2g2rp@gmail.com>\n"
+"Language-Team: UBports Spanish Team\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../About.qml:7 ../Main.qml:217
+msgid "About"
+msgstr "Acerca de"
+
+#: ../About.qml:32
+msgid "Activity Tracker"
+msgstr "Activity Tracker"
+
+#: ../About.qml:38
+msgid "Version"
+msgstr "Versión"
+
+#: ../About.qml:74
+msgid ""
+"Released under the terms of the GNU GPL v3. <br> Source code available on "
+msgstr ""
+"Publicado según la licencia GNU GPL v3. <br> Código fuente disponible en "
+
+#: ../About.qml:82
+msgid ""
+"Part of the icons is made by <a href=\"http://www.freepik.com\" title="
+"\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title="
+"\"Flaticon\">www.flaticon.com</a> is licensed by <a href=\"http://"
+"creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
+"target=\"_blank\">CC 3.0 BY</a>\""
+msgstr ""
+"Algunos de los iconos han sido hechos por <a href=\"http://www.freepik.com\" title="
+"\"Freepik\">Freepik</a> de <a href=\"https://www.flaticon.com/\" title="
+"\"Flaticon\">www.flaticon.com</a> licenciados según la <a href=\"http://"
+"creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
+"target=\"_blank\">CC 3.0 BY</a>\""
+#:1 ../QMLMap.qml:18
+msgid "Activity Map"
+msgstr "Mapa de actividad"
+
+#: ../Tracker.qml:15
+msgid "Activity in Progress"
+msgstr "Actividad en curso"
+
+#: ../Tracker.qml:15
+msgid "New Activity"
+msgstr "Nueva actividad"
+
+#: ../Tracker.qml:45
+msgid "Do you want to cancel the activity ?"
+msgstr "¿Desea cancelar la actividad?"
+
+#: ../Tracker.qml:49
+msgid "Yes"
+msgstr "Sí"
+
+#: ../Tracker.qml:68
+msgid "No"
+msgstr "No"
+
+#: ../Tracker.qml:107 ../Tracker.qml:112
+msgid "No data"
+msgstr "No hay datos"
+
+#: ../Tracker.qml:173
+msgid "Do you want to stop recording your activity?"
+msgstr "¿Desea parar la grabación de su actividad?"
+
+#: ../Tracker.qml:176
+msgid "Yes, Stop!"
+msgstr "¡Sí, parar!"
+
+#: ../Tracker.qml:187
+msgid "No, Continue"
+msgstr "No, continuar"
+
+#: ../Tracker.qml:201
+msgid "Select the type and the name of your activity"
+msgstr "Seleccione el tipo y el nombre de su actividad"
+
+#: ../Tracker.qml:205
+msgid "Name"
+msgstr "Nombre"
+
+#: ../Tracker.qml:219
+msgid "Activity Type"
+msgstr "Tipo de actividad"
+
+#: ../Tracker.qml:236
+msgid "Save Activity"
+msgstr "Guardar actividad"
+
+#: ../Tracker.qml:274
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../Tracker.qml:324
+msgid "Start"
+msgstr "Comenzar"
+
+#: ../Tracker.qml:345
+msgid "Stop"
+msgstr "Parar"
+
+#: ../Settings.qml:16 ../Main.qml:212
+msgid "Settings"
+msgstr "Configuración"
+
+#: ../Settings.qml:30
+msgid "Units"
+msgstr "Unidades"
+
+#: ../Settings.qml:47
+msgid "Log a point every:"
+msgstr "Registrar un punto cada:"
+
+#: ../Settings.qml:49
+msgid "between 50 and 3600000"
+msgstr "entre 50 y 3600000"
+
+#. TRANSLATORS: millisecond abbreviation
+#: ../Settings.qml:90
+msgid "ms"
+msgstr "ms"
+
+#: ../Main.qml:33
+msgid "%1 run today"
+msgstr "%1 corridos hoy"
+
+#: ../Main.qml:34
+msgid "%1 biked today"
+msgstr "%1 en bicicleta"
+
+#: ../Main.qml:35
+msgid "%1 drived today"
+msgstr "%1 conducidos hoy"
+
+#: ../Main.qml:127 ../Main.qml:130
+msgid "Distance: "
+msgstr "Distancia: "
+
+#: ../Main.qml:133
+msgid "Time: "
+msgstr "Tiempo: "
+
+#: ../Main.qml:208
+msgid "Recent Activities"
+msgstr "Actividades recientes"
+
+#: ../Main.qml:235
+msgid "No saved activities"
+msgstr "No hay actividades guardadas"
+
+#: ../Main.qml:238
+msgid "Swipe up to log a new activity"
+msgstr "Deslice hacia arriba para registrar una nueva actividad"
+
+#: ../Main.qml:328
+msgid "Log new Activity"
+msgstr "Registrar nueva actividad"

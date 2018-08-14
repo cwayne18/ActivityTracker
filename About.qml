@@ -35,7 +35,7 @@ Page {
             }
 
             Text {
-               text: i18n.tr("Version") + " 0.3"
+               text: i18n.tr("Version") + " 0.3.1"
                anchors.horizontalCenter: parent.horizontalCenter
             }
          }

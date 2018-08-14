@@ -2,14 +2,14 @@
     "name": "activitytracker.actidev",
     "description": "Activity tracker for Ubuntu touch",
     "architecture": "all",
-    "title": "activitytracker",
+    "title": "Activity tracker",
     "hooks": {
         "activitytracker": {
             "apparmor": "activitytracker.apparmor",
             "desktop": "activitytracker.desktop"
         }
     },
-    "version": "0.3",
+    "version": "0.3.1",
     "maintainer": "Erne st <slash.tux@gmail.com>",
     "framework": "ubuntu-sdk-16.04"
 }

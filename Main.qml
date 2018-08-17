@@ -32,7 +32,7 @@ MainView {
    property string dist;
    property string distmet: i18n.tr("%1 run today")
    property string bikedistmet: i18n.tr("%1 biked today")
-   property string drivedistmet: i18n.tr("%1 drived today")
+   property string drivedistmet: i18n.tr("%1 driven today")
 
    //keep screen on so we still get to read GPS
    ScreenSaver {

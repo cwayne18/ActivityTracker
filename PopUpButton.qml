@@ -8,7 +8,7 @@ Button {
       id: label
       text: parent.texth
       // textSize: Label.Medium
-      font.pointSize: 18
+      font.pointSize: units.dp(12)
       anchors.centerIn: parent
       color: "white"
    }

@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the activitytracker.actidev package.
+# This file is distributed under the same license as the activitytracker.cwayne18 package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: activitytracker.actidev\n"
+"Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-14 01:41+0000\n"
+"POT-Creation-Date: 2018-08-22 14:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,32 +16,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: ../About.qml:7 ../Main.qml:217
-msgid "About"
-msgstr ""
-
-#: ../About.qml:32
-msgid "Activity Tracker"
-msgstr ""
-
-#: ../About.qml:38
-msgid "Version"
-msgstr ""
-
-#: ../About.qml:74
-msgid ""
-"Released under the terms of the GNU GPL v3. <br> Source code available on "
-msgstr ""
-
-#: ../About.qml:82
-msgid ""
-"Part of the icons is made by <a href=\"http://www.freepik.com\" title="
-"\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title="
-"\"Flaticon\">www.flaticon.com</a> is licensed by <a href=\"http://"
-"creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
-"target=\"_blank\">CC 3.0 BY</a>\""
-msgstr ""
 
 #: ../QMLMap.qml:18
 msgid "Activity Map"
@@ -56,59 +30,86 @@ msgid "New Activity"
 msgstr ""
 
 #: ../Tracker.qml:45
-msgid "Do you want to cancel the activity ?"
+msgid "Do you want to cancel the activity?"
 msgstr ""
 
-#: ../Tracker.qml:49
-msgid "Yes"
+#: ../Tracker.qml:48
+msgid "Yes, cancel"
 msgstr ""
 
-#: ../Tracker.qml:68
-msgid "No"
+#: ../Tracker.qml:66
+msgid "No, continue"
 msgstr ""
 
-#: ../Tracker.qml:107 ../Tracker.qml:112
+#: ../Tracker.qml:104 ../Tracker.qml:109
 msgid "No data"
 msgstr ""
 
-#: ../Tracker.qml:173
-msgid "Do you want to stop recording your activity?"
+#: ../Tracker.qml:170
+msgid "Do you want to stop the recording?"
 msgstr ""
 
-#: ../Tracker.qml:176
+#: ../Tracker.qml:172
 msgid "Yes, Stop!"
 msgstr ""
 
-#: ../Tracker.qml:187
+#: ../Tracker.qml:182
 msgid "No, Continue"
 msgstr ""
 
-#: ../Tracker.qml:201
+#: ../Tracker.qml:193
 msgid "Select the type and the name of your activity"
 msgstr ""
 
-#: ../Tracker.qml:205
+#: ../Tracker.qml:196
 msgid "Name"
 msgstr ""
 
-#: ../Tracker.qml:219
+#: ../Tracker.qml:209
 msgid "Activity Type"
 msgstr ""
 
-#: ../Tracker.qml:236
-msgid "Save Activity"
+#: ../Tracker.qml:235
+msgid "Save"
 msgstr ""
 
-#: ../Tracker.qml:274
+#: ../Tracker.qml:273
 msgid "Cancel"
 msgstr ""
 
-#: ../Tracker.qml:324
+#: ../Tracker.qml:323
 msgid "Start"
 msgstr ""
 
-#: ../Tracker.qml:345
+#: ../Tracker.qml:344
 msgid "Stop"
+msgstr ""
+
+#: ../About.qml:7 ../Main.qml:217
+msgid "About"
+msgstr ""
+
+#: ../About.qml:32
+msgid "Activity Tracker"
+msgstr ""
+
+#: ../About.qml:38
+msgid "Version"
+msgstr ""
+
+#: ../About.qml:74
+msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
+msgstr ""
+
+#: ../About.qml:82
+msgid "Part of the icons is made by %1 from %2 is licensed by %3"
+msgstr ""
+
+#. TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
+#: ../About.qml:95
+msgid ""
+"Thanks to %1 for the icons based on:<br>%3 by %8 from %2,<br>%4 by %9 from "
+"%2,<br>%5 by %10 from %2,<br>%6 by %11 from %2,<br>%7 by %12 from %2"
 msgstr ""
 
 #: ../Settings.qml:16 ../Main.qml:212
@@ -141,7 +142,7 @@ msgid "%1 biked today"
 msgstr ""
 
 #: ../Main.qml:35
-msgid "%1 drived today"
+msgid "%1 driven today"
 msgstr ""
 
 #: ../Main.qml:127 ../Main.qml:130

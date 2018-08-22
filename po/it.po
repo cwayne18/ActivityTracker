@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-12 21:36+0000\n"
-"PO-Revision-Date: 2018-08-12 16:42-0500\n"
+"POT-Creation-Date: 2018-08-22 14:04+0000\n"
+"PO-Revision-Date: 2018-08-22 16:34+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it\n"
@@ -17,38 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: ../About.qml:7 ../Main.qml:217
-msgid "About"
-msgstr "Informazioni su"
-
-#: ../About.qml:32
-msgid "Activity Tracker"
-msgstr "Activity Tracker"
-
-#: ../About.qml:38
-msgid "Version"
-msgstr "Versione"
-
-#: ../About.qml:74
-msgid ""
-"Released under the terms of the GNU GPL v3. <br> Source code available on "
-msgstr ""
-"Rilasciata sotto la licenza GNU GPL v3. <br>Source code disponibile sul "
-
-#: ../About.qml:82
-msgid ""
-"Part of the icons is made by <a href=\"http://www.freepik.com\" title="
-"\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title="
-"\"Flaticon\">www.flaticon.com</a> is licensed by <a href=\"http://"
-"creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
-"target=\"_blank\">CC 3.0 BY</a>\""
-msgstr ""
-"Parte dell'icona è realizzata da <a href=\"http://www.freepik.com\" title="
-"\"Freepik\">Freepik</a> da <a href=\"https://www.flaticon.com/\" title="
-"\"Flaticon\">www.flaticon.com</a>e rilasciata da <a href=\"http://"
-"creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
-"target=\"_blank\">CC 3.0 BY</a>\""
 
 #: ../QMLMap.qml:18
 msgid "Activity Map"
@@ -63,62 +31,90 @@ msgid "New Activity"
 msgstr "Nuova Attività"
 
 #: ../Tracker.qml:45
-#, fuzzy
-#| msgid "Are you sure you want to cancel the activity?"
-msgid "Do you want to cancel the activity ?"
-msgstr "Sei sicuro di voler cancellare l'attività?"
+msgid "Do you want to cancel the activity?"
+msgstr "Vuoi cancellare l'attività?"
 
-#: ../Tracker.qml:49
-msgid "Yes"
-msgstr "Si"
+#: ../Tracker.qml:48
+msgid "Yes, cancel"
+msgstr "Si, cancella"
 
-#: ../Tracker.qml:68
-msgid "No"
-msgstr "No"
+#: ../Tracker.qml:66
+msgid "No, continue"
+msgstr "No, continua"
 
-#: ../Tracker.qml:107 ../Tracker.qml:112
+#: ../Tracker.qml:104 ../Tracker.qml:109
 msgid "No data"
 msgstr "No data"
 
-#: ../Tracker.qml:173
-msgid "Do you want to stop recording your activity?"
-msgstr "Vuoi fermare la registrazione della tua attività?"
+#: ../Tracker.qml:170
+msgid "Do you want to stop the recording?"
+msgstr "Vuoi fermare la registrazione?"
 
-#: ../Tracker.qml:176
+#: ../Tracker.qml:172
 msgid "Yes, Stop!"
 msgstr "Si, Ferma!"
 
-#: ../Tracker.qml:187
+#: ../Tracker.qml:182
 msgid "No, Continue"
 msgstr "No, Continua"
 
-#: ../Tracker.qml:201
+#: ../Tracker.qml:193
 msgid "Select the type and the name of your activity"
 msgstr "Scegli il tipo e il nome della tua attività"
 
-#: ../Tracker.qml:205
+#: ../Tracker.qml:196
 msgid "Name"
 msgstr "Nome"
 
-#: ../Tracker.qml:219
+#: ../Tracker.qml:209
 msgid "Activity Type"
 msgstr "Tipo di Attività"
 
-#: ../Tracker.qml:236
-msgid "Save Activity"
-msgstr "Salva Attività"
+#: ../Tracker.qml:225
+msgid "Save"
+msgstr "Salva"
 
-#: ../Tracker.qml:274
+#: ../Tracker.qml:263
 msgid "Cancel"
 msgstr "Annulla"
 
-#: ../Tracker.qml:324
+#: ../Tracker.qml:313
 msgid "Start"
 msgstr "Inizia"
 
-#: ../Tracker.qml:345
+#: ../Tracker.qml:334
 msgid "Stop"
 msgstr "Ferma"
+
+#: ../About.qml:7 ../Main.qml:217
+msgid "About"
+msgstr "Informazioni su"
+
+#: ../About.qml:32
+msgid "Activity Tracker"
+msgstr "Activity Tracker"
+
+#: ../About.qml:38
+msgid "Version"
+msgstr "Versione"
+
+#: ../About.qml:74
+msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
+msgstr ""
+"Rilasciata sotto la licenza GNU GPL v3. <br>Codice sorgente disponibile su"
+
+#: ../About.qml:82
+msgid "Part of the icons is made by %1 from %2 is licensed by %3"
+msgstr "Parte dell'icona è realizzata da %1 di %2 con la licenza %3"
+
+#. TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
+#: ../About.qml:95
+msgid ""
+"Thanks to %1 for the icons based on:<br>%3 by %8 from %2,<br>%4 by %9 from "
+"%2,<br>%5 by %10 from %2,<br>%6 by %11 from %2,<br>%7 by %12 from %2"
+msgstr ""
+"Grazie a %1 per le icone basate su:<br>%3 di %8 di %2,<br>%4 di %9 di %2,<br>"
+"%5 di %10 di %2,<br>%6 di %11 di %2,<br>%7 di %12 di %2"
 
 #: ../Settings.qml:16 ../Main.qml:212
 msgid "Settings"
@@ -150,7 +146,7 @@ msgid "%1 biked today"
 msgstr "%1 in bici oggi"
 
 #: ../Main.qml:35
-msgid "%1 drived today"
+msgid "%1 driven today"
 msgstr "%1 in auto oggi"
 
 #: ../Main.qml:127 ../Main.qml:130
@@ -176,6 +172,24 @@ msgstr "Scorri in su per iniziare una nuova attività"
 #: ../Main.qml:328
 msgid "Log new Activity"
 msgstr "Traccia una nuova attività"
+
+#~ msgid ""
+#~ "Part of the icons is made by %1 from %2 is licensed by <a href=\"http://"
+#~ "creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
+#~ "target=\"_blank\">CC 3.0 BY</a>\""
+#~ msgstr ""
+#~ "Parte dell'icona è realizzata da %1 di %2 con la licenza <a href=\"http://"
+#~ "creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
+#~ "target=\"_blank\">CC 3.0 BY</a>\""
+
+#~ msgid "Yes"
+#~ msgstr "Si"
+
+#~ msgid "No"
+#~ msgstr "No"
+
+#~ msgid "Save Activity"
+#~ msgstr "Salva Attività"
 
 #~ msgid "Are you sure?"
 #~ msgstr "Sei sicuro?"

@@ -42,14 +42,13 @@ Rectangle {
          id: areyousure
          Dialog {
             id: areyousuredialog
-            title: i18n.tr("Do you want to cancel the activity ?")
-//            text: i18n.tr("Are you sure you want to cancel the activity?")
-            Button {
+            title: i18n.tr("Do you want to cancel the activity?")
+            PopUpButton {
                id: yesimsure
-               text: i18n.tr("Yes")
-               height: units.gu(10)
-               color: UbuntuColors.green
+               texth: i18n.tr("Yes, cancel")
+               color: UbuntuColors.red
                onClicked: {
+                  PopupUtils.close(areyousuredialog)
                   timer.start()
                   counter = 0
                   pygpx.format_timer(0)
@@ -60,14 +59,12 @@ Rectangle {
                   timer.stop()
                   am_running = false
                   newrunEdge.collapse()
-                  PopupUtils.close(areyousuredialog)
                }
             }
-            Button {
+            PopUpButton {
                id: noooooooodb
-               text: i18n.tr("No")
-               height: units.gu(10)
-               color: UbuntuColors.red
+               texth: i18n.tr("No, continue")
+               color: UbuntuColors.green
                onClicked: {
                   PopupUtils.close(areyousuredialog)
                   am_running = true
@@ -170,11 +167,9 @@ Rectangle {
          id: dialog
          Dialog {
             id: dialogue
-            title: i18n.tr("Do you want to stop recording your activity?")
-//            text: i18n.tr("Do you want to stop recording your activity?")
-            Button {
-               text: i18n.tr("Yes, Stop!")
-               height: units.gu(10)
+            title: i18n.tr("Do you want to stop the recording?")
+            PopUpButton {
+               texth: i18n.tr("Yes, Stop!")
                color: UbuntuColors.green
                onClicked: {
                   PopupUtils.close(dialogue)
@@ -183,13 +178,10 @@ Rectangle {
                   PopupUtils.open(save_dialog)
                }
             }
-            Button {
-               text: i18n.tr("No, Continue")
-               height: units.gu(10)
+            PopUpButton {
+               texth: i18n.tr("No, Continue")
                color: UbuntuColors.red
-               onClicked: {
-                  PopupUtils.close(dialogue)
-               }
+               onClicked: PopupUtils.close(dialogue)
             }
          }
       }//Dialog component
@@ -199,12 +191,10 @@ Rectangle {
          Dialog {
             id: save_dialogue
             title: i18n.tr("Select the type and the name of your activity")
-  //          text: i18n.tr("Select the type and the name of your activity")
 
             Label {
                text: i18n.tr("Name")
             }
-
             TextField {
                placeholderText: os.model[os.selectedIndex] + " " + day
                id: tf
@@ -217,8 +207,9 @@ Rectangle {
             OptionSelector {
                id: os
                text: i18n.tr("Activity Type")
-               currentlyExpanded: true
                containerHeight: itemHeight*3.5
+               currentlyExpanded: true
+               // delegate: selectorDelegate
                model: [
                // FIXME: some codes depends on the name of the activity
                // cannot translate atm...
@@ -228,12 +219,20 @@ Rectangle {
                /*i18n.tr(*/"Drive"/*)*/,
                /*i18n.tr(*/"Hike"/*)*/
                ]
-               onExpansionCompleted: tf.focus = False
+               // onExpansionCompleted: tf.focus = true
             }
+            // Component {
+            //    id: selectorDelegate
+            //    OptionSelectorDelegate {
+            //       text: os.model[index]
+            //       iconSource: "images/"+os.model[index]+".png"
+            //       constrainImage: true
+            //    }
+            // }
             Row {
                spacing: units.gu(1)
-               Button {
-                  text: i18n.tr("Save Activity")
+               PopUpButton {
+                  texth: i18n.tr("Save")
                   height: units.gu(8)
                   width: parent.width /2 -units.gu(0.5)
                   color: UbuntuColors.green
@@ -270,8 +269,8 @@ Rectangle {
                   }
                }
 
-               Button {
-                  text: i18n.tr("Cancel")
+               PopUpButton {
+                  texth: i18n.tr("Cancel")
                   height: units.gu(8)
                   width: parent.width /2 -units.gu(0.5)
                   color: UbuntuColors.red

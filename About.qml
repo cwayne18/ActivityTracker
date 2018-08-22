@@ -59,7 +59,7 @@ Page {
             }
 
             Text {
-               text: "%1".arg("<a href=\"https://github.com/cwayne18/ActivityTracker\"> © 2015 Chris Wayne</a>")
+               text: "<a href='https://github.com/cwayne18/ActivityTracker'> © 2015 Chris Wayne</a>"
                anchors.horizontalCenter: parent.horizontalCenter
             }
          }
@@ -71,7 +71,7 @@ Page {
             Text {
                textFormat: Text.RichText
                font.underline: false
-               text: i18n.tr("Released under the terms of the GNU GPL v3. <br> Source code available on ") + "<a style=\"text-decoration: none;\" href=\"https://github.com/ernesst/ActivityTracker\">GitHub.com</a>"
+               text: i18n.tr("Released under the terms of the GNU GPL v3.<br>Source code available on") + " <a style=\"text-decoration: none;\" href=\"https://github.com/ernesst/ActivityTracker\">GitHub.com</a>"
                font.pointSize: units.gu(1)
                horizontalAlignment: Text.AlignHCenter
                anchors.horizontalCenter: parent.horizontalCenter
@@ -79,7 +79,10 @@ Page {
             }
 
             Text {
-               text: i18n.tr('Part of the icons is made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>"')
+               text: i18n.tr('Part of the icons is made by %1 from %2 is licensed by %3')
+               .arg('<a href="http://www.freepik.com" title="Freepik">Freepik</a>')
+               .arg('<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>')
+               .arg('<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>"')
                anchors.horizontalCenter: parent.horizontalCenter
                horizontalAlignment: Text.AlignHCenter
                wrapMode: Text.Wrap
@@ -88,12 +91,15 @@ Page {
             }
             Text {
                 textFormat: Text.RichText
-                text: "Thanks to Joan CiberSheep for the icons based on,<br>
-                Run CC-by Vladimir Belochkin from the Noun Project,<br>
-                Hiking CC-by Think TIfferent from the Noun Project,<br>
-                Bike CC-by Sakchai Ruankam from the Noun Project,<br>
-                Walk CC-by Adrien Coquet from the Noun Project,<br>
-                Car CC-by Aneeque Ahmed from the Noun Project"
+                //TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
+                text: i18n.tr("Thanks to %1 for the icons based on:<br>"+
+                "%3 by %8 from %2,<br>"+
+                "%4 by %9 from %2,<br>"+
+                "%5 by %10 from %2,<br>"+
+                "%6 by %11 from %2,<br>"+
+                "%7 by %12 from %2").arg("Joan CiberSheep").arg("The Noun Project")
+                .arg("Run CC").arg("Hiking CC").arg("Bike CC").arg("Walk CC").arg("Car CC")
+                .arg("Vladimir Belochkin").arg("Think TIfferent").arg("Sakchai Ruankam").arg("Adrien Coquet").arg("Aneeque Ahmed")
                anchors.horizontalCenter: parent.horizontalCenter
                horizontalAlignment: Text.AlignHCenter
                wrapMode: Text.Wrap

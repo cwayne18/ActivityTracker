@@ -52,7 +52,7 @@ Page {
                   id: pointsIntervalField
                   // text: persistentSettings.pointsInterval/1000
                   color: !acceptableInput ? UbuntuColors.red : UbuntuColors.jet
-                  placeholderText: "5"
+                  placeholderText: "5000"
                   inputMethodHints: Qt.ImhDigitsOnly //Qt.ImhFormattedNumbersOnly
                   hasClearButton:false
                   // double validator not working

@@ -15,7 +15,7 @@ Due to older QML lib on 15.04 the changes cannot be retrofited.
 
 ## General information
  - Due to OS limitation the recording must happen screen on
- - The gpx files are located in .local/share/activitytracker.actidev/
+ - The gpx files are located in .local/share/activitytracker.cwayne18/
 
  ## Thanks
   - Michele for the logo

@@ -1,13 +1,77 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
-import QtPositioning 5.3
-import QtLocation 5.3
+import QtPositioning 5.9
+import QtLocation 5.9
 
 Rectangle {
+   id: trackerroot
+   property bool openDialog: false
+   onOpenDialogChanged: openDialog == true ? PopupUtils.open(sportselect) : ""
+   property int selectedsport: -1
+   property int previousSport: -1
+   readonly property var sports: [
+   i18n.tr("Run"),
+   i18n.tr("BikeRide"),
+   i18n.tr("Walk"),
+   i18n.tr("Drive"),
+   i18n.tr("Hike")
+   ]
    color: "white"
    width: page1.width
    height: page1.height
+
+   Component {
+      id: sportselect
+      Dialog {
+         id: sportselectdialog
+         title: i18n.tr("Choose sport:")
+         OptionSelector {
+            expanded: true
+            model: sports
+            selectedIndex: -1
+            delegate: selectorDelegate
+            onDelegateClicked: {
+               selectedsport=index
+               PopupUtils.close(sportselectdialog)
+               openDialog=false
+            }
+         }
+         Button {
+            text:i18n.tr("After")
+            onClicked:{PopupUtils.close(sportselectdialog);openDialog=false}
+         }
+         // Grid {
+         //    property int itemWidth: units.gu(12)
+         //
+         //    // The amount of whitespace, including column spacing
+         //    property int space: parent.width - columns * itemWidth
+         //
+         //    // The column spacing is 1/n of the left/right margins
+         //    property int n: 4
+         //
+         //    columnSpacing: space / ((2 * n) + (columns - 1))
+         //    rowSpacing: units.gu(3)
+         //    width: (columns * itemWidth) + columnSpacing * (columns - 1)
+         //    anchors.horizontalCenter: parent.horizontalCenter
+         //    columns: {
+         //       var items = Math.floor(parent.width / itemWidth)
+         //       var count = repeater.count
+         //       return count < items ? count : items
+         //    }
+         // }
+      }
+   }
+
+   Component {
+      id: selectorDelegate
+      OptionSelectorDelegate {
+         text: sports[index]
+         iconSource: "images/"+sports[index]+"-symbolic.svg"
+         constrainImage: true
+      }
+   }
+
    Page {
       id: newrunPage
       anchors.fill: parent
@@ -24,6 +88,14 @@ Rectangle {
                   newrunEdge.collapse()
                }
             }
+         }
+         ]
+
+         trailingActionBar.actions: [
+         Action {
+            iconSource: "images/"+sports[selectedsport]+"-symbolic.svg"
+            visible: selectedsport != -1
+            onTriggered: PopupUtils.open(sportselect)
          }
          ]
       }
@@ -173,6 +245,14 @@ Rectangle {
                color: UbuntuColors.green
                onClicked: {
                   PopupUtils.close(dialogue)
+
+                  //FIXME: do I want to add a point even if gps params aren't valid? I want to add a point here to get the exact time of activity
+                  var coord = src.position.coordinate
+                  if (gpxx && am_running){
+                     if (src.position.latitudeValid && src.position.longitudeValid && src.position.altitudeValid) {
+                        pygpx.addpoint(gpxx,coord.latitude,coord.longitude,coord.altitude)
+                     }
+                  }
                   am_running = false
                   timer.stop()
                   PopupUtils.open(save_dialog)
@@ -191,12 +271,13 @@ Rectangle {
          Dialog {
             id: save_dialogue
             title: i18n.tr("Select the type and the name of your activity")
+            Component.onCompleted: previousSport = selectedsport
 
             Label {
                text: i18n.tr("Name")
             }
             TextField {
-               placeholderText: os.model[os.selectedIndex] + " " + day
+               placeholderText: selectedsport == -1 ? i18n.tr("Select a sport below") : sports[selectedsport] + " " + day
                id: tf
                property var name: displayText == "" ? placeholderText : displayText
                Component.onCompleted: {
@@ -208,27 +289,17 @@ Rectangle {
                id: os
                text: i18n.tr("Activity Type")
                containerHeight: itemHeight*3.5
-               currentlyExpanded: true
-               // delegate: selectorDelegate
-               model: [
-               // FIXME: some codes depends on the name of the activity
-               // cannot translate atm...
-               /*i18n.tr(*/"Run"/*)*/,
-               /*i18n.tr(*/"Bike Ride"/*)*/,
-               /*i18n.tr(*/"Walk"/*)*/,
-               /*i18n.tr(*/"Drive"/*)*/,
-               /*i18n.tr(*/"Hike"/*)*/
-               ]
-               // onExpansionCompleted: tf.focus = true
+               selectedIndex: selectedsport
+               currentlyExpanded: selectedsport == -1
+               delegate: selectorDelegate
+               model: sports
+               // onExpansionCompleted: {
+               //    // tf.focus = true
+               //    console.log("sport: "+selectedsport+"\n è definito? "+(selectedsport?true:false)+"\ntypeof"+typeof selectedsport)
+               // }
+               // Component.onCompleted: console.log("selectedsport: "+selectedsport+"\n è definito? "+(selectedsport?true:false)+"\ntypeof"+typeof selectedsport)
+               onDelegateClicked: selectedsport=index
             }
-            // Component {
-            //    id: selectorDelegate
-            //    OptionSelectorDelegate {
-            //       text: os.model[index]
-            //       iconSource: "images/"+os.model[index]+".png"
-            //       constrainImage: true
-            //    }
-            // }
             Row {
                spacing: units.gu(1)
                PopUpButton {
@@ -236,30 +307,32 @@ Rectangle {
                   height: units.gu(8)
                   width: parent.width /2 -units.gu(0.5)
                   color: UbuntuColors.green
+                  enabled: selectedsport != -1
                   onClicked: {
                      PopupUtils.close(save_dialogue)
-                     pygpx.writeit(gpxx,tf.name,os.model[os.selectedIndex])
-                     console.log(tf.displayText)
+                     selectedsport = selectedsport != -1 ? selectedsport : 0
+                     pygpx.writeit(gpxx,tf.name,sports[selectedsport])
+                     console.log(tf.name)
                      console.log("----------restart------------")
                      counter = 0
                      pygpx.format_timer(0)
                      timer.restart()
                      timer.stop()
 
-                     //  listModel.append({"name": tf.displayText, "act_type": os.model[os.selectedIndex]})
+                     //  listModel.append({"name": tf.displayText, "act_type": sports[selectedsport]})
                      //   pygpx.addrun(tf.displayText)
                      listModel.clear()
                      runmetric.increment(1)
                      var distfloat
                      distfloat = parseFloat(dist.slice(0,-2))
-                     if (os.model[os.selectedIndex] == 'Run'){
+                     if (sports[selectedsport] == 'Run'){
                         console.log("LOGARUN")
                         rundist.increment(distfloat)
                      }
-                     if (os.model[os.selectedIndex] == "Bike Ride") {
+                     if (sports[selectedsport] == "BikeRide") {
                         bikedist.increment(distfloat)
                      }
-                     if (os.model[os.selectedIndex] == "Drive") {
+                     if (sports[selectedsport] == "Drive") {
                         drivedist.increment(distfloat)
                      }
                      pygpx.get_runs(listModel)
@@ -278,6 +351,7 @@ Rectangle {
                      PopupUtils.close(save_dialogue)
                      am_running = true
                      timer.start()
+                     selectedsport=previousSport
                   }
                }
             }

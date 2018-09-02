@@ -1,10 +1,10 @@
 import QtQuick 2.4
-import QtPositioning 5.3
+import QtPositioning 5.9
 import Ubuntu.Components 1.3
 import QtQuick.Layouts 1.1
 import io.thp.pyotherside 1.5
 import QtSystemInfo 5.0
-import QtLocation 5.3
+import QtLocation 5.9
 //import Ubuntu.Components.ListItems 1.3 as ListItem
 import Ubuntu.Components.Popups 1.3
 import "./lib/polyline.js" as Pl
@@ -242,6 +242,7 @@ MainView {
       Component.onCompleted: {
          //  listModel.clear()
          //  pygpx.get_runs(listModel)
+         newrunEdge.preloadContent = true
       }
 
       ListView {
@@ -264,7 +265,7 @@ MainView {
          delegate: ListItem {
             id :del
             onClicked: {
-               stack.push(Qt.resolvedUrl('QMLMap.qml'), {polyline: filename})
+               stack.push(Qt.resolvedUrl('Map.qml'), {polyline: filename})
             }
 
             ListItemLayout {
@@ -272,8 +273,6 @@ MainView {
                   SlotsLayout.position: SlotsLayout.Leading
                   source: Image { source: "images/"+act_type+".svg" }
                   height: del.height-units.gu(2)
-                  anchors.topMargin: units.gu(1)
-                  anchors.top: parent.top
                   aspect: UbuntuShape.DropShadow
                }
                title.text: name
@@ -337,7 +336,8 @@ MainView {
             // }
          }
          onCollapseStarted: hint.status = "Active"
-         preloadContent: true
+         onCommitCompleted: contentItem.openDialog = true
+         preloadContent: false
          contentUrl: Qt.resolvedUrl("Tracker.qml")
       }//Bottom edge
 

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-22 14:04+0000\n"
-"PO-Revision-Date: 2018-08-22 16:34+0200\n"
+"POT-Creation-Date: 2018-09-02 17:01+0000\n"
+"PO-Revision-Date: 2018-09-02 19:02+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it\n"
@@ -18,73 +18,105 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../QMLMap.qml:18
-msgid "Activity Map"
-msgstr "Mappa Attività"
+#: ../Tracker.qml:14
+msgid "Run"
+msgstr "Corsa"
 
 #: ../Tracker.qml:15
+msgid "BikeRide"
+msgstr "Bici"
+
+#: ../Tracker.qml:16
+msgid "Walk"
+msgstr "Camminata"
+
+#: ../Tracker.qml:17
+msgid "Drive"
+msgstr "Viaggio"
+
+#: ../Tracker.qml:18
+msgid "Hike"
+msgstr "Escursione"
+
+#: ../Tracker.qml:28
+msgid "Choose sport:"
+msgstr "Scegli sport:"
+
+#: ../Tracker.qml:41
+msgid "After"
+msgstr "Dopo"
+
+#: ../Tracker.qml:79
 msgid "Activity in Progress"
 msgstr "Attività in Corso"
 
-#: ../Tracker.qml:15
+#: ../Tracker.qml:79
 msgid "New Activity"
 msgstr "Nuova Attività"
 
-#: ../Tracker.qml:45
+#: ../Tracker.qml:117
 msgid "Do you want to cancel the activity?"
 msgstr "Vuoi cancellare l'attività?"
 
-#: ../Tracker.qml:48
+#: ../Tracker.qml:120
 msgid "Yes, cancel"
 msgstr "Si, cancella"
 
-#: ../Tracker.qml:66
+#: ../Tracker.qml:138
 msgid "No, continue"
 msgstr "No, continua"
 
-#: ../Tracker.qml:104 ../Tracker.qml:109
+#: ../Tracker.qml:176 ../Tracker.qml:181
 msgid "No data"
 msgstr "No data"
 
-#: ../Tracker.qml:170
+#: ../Tracker.qml:242
 msgid "Do you want to stop the recording?"
 msgstr "Vuoi fermare la registrazione?"
 
-#: ../Tracker.qml:172
+#: ../Tracker.qml:244
 msgid "Yes, Stop!"
 msgstr "Si, Ferma!"
 
-#: ../Tracker.qml:182
+#: ../Tracker.qml:262
 msgid "No, Continue"
 msgstr "No, Continua"
 
-#: ../Tracker.qml:193
+#: ../Tracker.qml:273
 msgid "Select the type and the name of your activity"
 msgstr "Scegli il tipo e il nome della tua attività"
 
-#: ../Tracker.qml:196
+#: ../Tracker.qml:277
 msgid "Name"
 msgstr "Nome"
 
-#: ../Tracker.qml:209
+#: ../Tracker.qml:280
+msgid "Select a sport below"
+msgstr "Seleziona uno sport sotto"
+
+#: ../Tracker.qml:290
 msgid "Activity Type"
 msgstr "Tipo di Attività"
 
-#: ../Tracker.qml:225
+#: ../Tracker.qml:306
 msgid "Save"
 msgstr "Salva"
 
-#: ../Tracker.qml:263
+#: ../Tracker.qml:346
 msgid "Cancel"
 msgstr "Annulla"
 
-#: ../Tracker.qml:313
+#: ../Tracker.qml:397
 msgid "Start"
 msgstr "Inizia"
 
-#: ../Tracker.qml:334
+#: ../Tracker.qml:418
 msgid "Stop"
 msgstr "Ferma"
+
+#: ../Map.qml:18
+msgid "Activity Map"
+msgstr "Mappa Attività"
 
 #: ../About.qml:7 ../Main.qml:217
 msgid "About"
@@ -115,6 +147,14 @@ msgid ""
 msgstr ""
 "Grazie a %1 per le icone basate su:<br>%3 di %8 di %2,<br>%4 di %9 di %2,<br>"
 "%5 di %10 di %2,<br>%6 di %11 di %2,<br>%7 di %12 di %2"
+
+#: ../About.qml:116
+msgid "Translate this app on Weblate!"
+msgstr "Traduci quest'app su Weblate!"
+
+#: ../About.qml:125
+msgid "Support Weblate"
+msgstr "Supporta Weblate"
 
 #: ../Settings.qml:16 ../Main.qml:212
 msgid "Settings"
@@ -169,7 +209,7 @@ msgstr "Nessun attività salvata"
 msgid "Swipe up to log a new activity"
 msgstr "Scorri in su per iniziare una nuova attività"
 
-#: ../Main.qml:328
+#: ../Main.qml:327
 msgid "Log new Activity"
 msgstr "Traccia una nuova attività"
 
@@ -202,15 +242,3 @@ msgstr "Traccia una nuova attività"
 
 #~ msgid "Source code available on "
 #~ msgstr "Codice sorgente disponibile su "
-
-#~ msgid "Bike Ride"
-#~ msgstr "Giro in Bici"
-
-#~ msgid "Walk"
-#~ msgstr "Camminata"
-
-#~ msgid "Drive"
-#~ msgstr "Viaggio"
-
-#~ msgid "Hike"
-#~ msgstr "Escursione"

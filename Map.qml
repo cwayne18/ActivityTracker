@@ -1,10 +1,10 @@
 import QtQuick 2.4
-import QtPositioning 5.6
+import QtPositioning 5.9
 import Ubuntu.Components 1.3
 import QtQuick.Layouts 1.1
 import io.thp.pyotherside 1.5
 import QtSystemInfo 5.0
-import QtLocation 5.6
+import QtLocation 5.9
 import Ubuntu.Components.ListItems 1.3 as ListItem
 import Ubuntu.Components.Popups 1.3
 import "./lib/polyline.js" as Pl

@@ -270,7 +270,7 @@ MainView {
             ListItemLayout {
                ProportionalShape {
                   SlotsLayout.position: SlotsLayout.Leading
-                  source: Image { source: "images/"+act_type+".png" }
+                  source: Image { source: "images/"+act_type+".svg" }
                   height: del.height-units.gu(2)
                   anchors.topMargin: units.gu(1)
                   anchors.top: parent.top

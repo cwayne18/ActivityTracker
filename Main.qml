@@ -271,7 +271,7 @@ MainView {
             ListItemLayout {
                ProportionalShape {
                   SlotsLayout.position: SlotsLayout.Leading
-                  source: Image { source: "images/"+act_type+".svg" }
+                  source: Image { source: "images/"+(act_type=="Bike Ride"?"BikeRide":act_type)+".svg" } //Legacy, old act_type was "Bike Ride" substituted with "bikeRide"
                   height: del.height-units.gu(2)
                   aspect: UbuntuShape.DropShadow
                }

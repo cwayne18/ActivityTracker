@@ -10,13 +10,14 @@ Rectangle {
    onOpenDialogChanged: openDialog == true ? PopupUtils.open(sportselect) : ""
    property int selectedsport: -1
    property int previousSport: -1
-   readonly property var sports: [
+   readonly property var translatedSports: [
    i18n.tr("Run"),
    i18n.tr("BikeRide"),
    i18n.tr("Walk"),
    i18n.tr("Drive"),
    i18n.tr("Hike")
    ]
+   readonly property var sports: ["Run","BikeRide","Walk","Drive","Hike"]
    color: "white"
    width: page1.width
    height: page1.height
@@ -66,7 +67,7 @@ Rectangle {
    Component {
       id: selectorDelegate
       OptionSelectorDelegate {
-         text: sports[index]
+         text: translatedSports[index]
          iconSource: "images/"+sports[index]+"-symbolic.svg"
          constrainImage: true
       }
@@ -277,7 +278,7 @@ Rectangle {
                text: i18n.tr("Name")
             }
             TextField {
-               placeholderText: selectedsport == -1 ? i18n.tr("Select a sport below") : sports[selectedsport] + " " + day
+               placeholderText: selectedsport == -1 ? i18n.tr("Select a sport below") : translatedSports[selectedsport] + " " + day
                id: tf
                property var name: displayText == "" ? placeholderText : displayText
                Component.onCompleted: {

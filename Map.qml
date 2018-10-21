@@ -32,7 +32,7 @@ Page {
                for (var i=0; i<result.length; i++) {
                   pline.addCoordinate(QtPositioning.coordinate(result[i].latitude,result[i].longitude));
                }
-               map.center = QtPositioning.coordinate(result[i/2].latitude,result[i/2].longitude); // Center the map on the center of the track
+               map.center = QtPositioning.coordinate(result[i/2].latitude,result[i/2].longitude); // Center the map on the enter of the track
             });
          });
       }//Component.onCompleted

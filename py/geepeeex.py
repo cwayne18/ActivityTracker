@@ -14,7 +14,7 @@ filebase = os.environ["XDG_DATA_HOME"]+"/"+os.environ["APP_ID"].split('_')[0]
 
 
 def create_gpx():
-    
+
 # Creating a new file:
 # --------------------
 
@@ -90,7 +90,7 @@ def add_run(gpx, name,act_type,filename,polyline):
     conn = sqlite3.connect('%s/activities.db' % filebase)
     cursor = conn.cursor()
     cursor.execute("""CREATE TABLE if not exists activities
-                  (id INTEGER PRIMARY KEY AUTOINCREMENT,name text, act_date text, distance text, 
+                  (id INTEGER PRIMARY KEY AUTOINCREMENT,name text, act_date text, distance text,
                    speed text, act_type text,filename text,polyline text)""")
     sql = "INSERT INTO activities VALUES (?,?,?,?,?,?,?,?)"
     start_time, end_time = gpx.get_time_bounds()
@@ -111,6 +111,7 @@ def add_run(gpx, name,act_type,filename,polyline):
         cursor.execute(sql, [None, name,start_time,l2d,duration,act_type,filename,polyline])
         conn.commit()
     except sqlite3.Error as er:
+        print("-------------______---_____---___----____--____---___-----")
         print(er)
     conn.close()
 
@@ -121,7 +122,7 @@ def get_runs():
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
     cursor.execute("""CREATE TABLE if not exists activities
-                  (id INTEGER PRIMARY KEY AUTOINCREMENT,name text, act_date text, distance text, 
+                  (id INTEGER PRIMARY KEY AUTOINCREMENT,name text, act_date text, distance text,
                    speed text, act_type text,filename text,polyline text)""")
     ret_data=[]
     sql = "SELECT * FROM activities ORDER BY id DESC"
@@ -173,7 +174,7 @@ def onetime_db_fix():
             print(b.group(0))
             print(b)
             cursor.execute(sql, (b.group(0), i["id"]))
-            
+
         conn.commit()
         conn.close()
         dotfile=open(filename, "w")
@@ -196,7 +197,7 @@ def onetime_db_fix_again_cus_im_dumb():
             print(i["speed"])
             b=numonly.search(i["speed"])
             cursor.execute(sql, (b.group(0), i["id"]))
-            
+
         conn.commit()
         conn.close()
         dotfile=open(filename, "w")
@@ -211,6 +212,19 @@ def rm_run(run):
     sql = "DELETE from activities WHERE id=?"
     try:
         cursor.execute(sql, [run])
+        conn.commit()
+    except sqlite3.Error as er:
+        print("-------------______---_____---___----____--____---___-----")
+        print(er)
+    conn.close()
+
+def edit_run(run,act_type,name):
+    run = '{:.0f}'.format(run)
+    conn = sqlite3.connect('%s/activities.db' % filebase)
+    cursor = conn.cursor()
+    sql = "UPDATE Activities SET name=?, act_type=?  WHERE id=?"
+    try:
+        cursor.execute(sql, [name,act_type,run])
         conn.commit()
     except sqlite3.Error as er:
         print("-------------______---_____---___----____--____---___-----")
@@ -232,7 +246,7 @@ def stopwatchery(secs):
         sec = "0" + str(sec)
     else:
         sec = str(sec)
-    
+
     #Format Minutes
     mins = int(((secs / (60)) % 60));
     if len(str(mins))<2:
@@ -253,4 +267,3 @@ def stopwatchery(secs):
         hr = str(hr)+":"
     print(hr + mins+":"+sec)
     return hr + mins+":"+sec
-

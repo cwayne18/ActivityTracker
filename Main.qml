@@ -10,6 +10,7 @@ import Ubuntu.Components.Popups 1.3
 import "./lib/polyline.js" as Pl
 import UserMetrics 0.1
 import Qt.labs.settings 1.0
+import Ubuntu.Content 1.3
 
 MainView {
    id: mainView
@@ -23,7 +24,13 @@ MainView {
    height: units.gu(75)
    property int count;
    property int counter;
+   property var importfile;
    property var gpxx;
+   property var name;
+   property var act_type;
+   property var filename;
+   property var indexrun;
+   property var polyline;
    property string day;
    property bool am_running;
    property string runits;
@@ -33,6 +40,16 @@ MainView {
    property string distmet: i18n.tr("%1 run today")
    property string bikedistmet: i18n.tr("%1 biked today")
    property string drivedistmet: i18n.tr("%1 driven today")
+   property int selectedsport: -1
+   property int previousSport: -1
+   readonly property var translatedSports: [
+   i18n.tr("Run"),
+   i18n.tr("BikeRide"),
+   i18n.tr("Walk"),
+   i18n.tr("Drive"),
+   i18n.tr("Hike")
+   ]
+   readonly property var sports: ["Run","BikeRide","Walk","Drive","Hike"]
 
    //keep screen on so we still get to read GPS
    ScreenSaver {
@@ -93,6 +110,9 @@ MainView {
       listModel.clear()
       pygpx.get_runs(listModel)
    }
+   ContentPickerDialog {
+         id: contentPickerDialog
+   }
    Python {
       id: pygpx
       Component.onCompleted: {
@@ -102,23 +122,25 @@ MainView {
             call('geepeeex.onetime_db_fix',[])
             call('geepeeex.onetime_db_fix_again_cus_im_dumb',[])
             get_units(result)
-         }
-         addImportPath(Qt.resolvedUrl('py/'))
-         importModule('geepeeex', loadit)
-         console.warn('imported gpxpy')
+         };
+         addImportPath(Qt.resolvedUrl('py/'));
+         importModule('geepeeex', loadit);
+         console.warn('imported gpxpy');
+         importModule('gpximport', loadit);
+         console.warn('imported gpximport');
+
       }//Component.onCompleted
+
       function addpoint(gpx,lat,lng,alt,speed){
          call('geepeeex.add_point', [gpxx,lat,lng,alt])
       }//addpoint
-
-
       function get_runs(model){
          listModel.clear()
          call('geepeeex.get_runs', [], function(result) {
             // Load the received data into the list model
             listModel.clear()
             for (var i=0; i<result.length; i++) {
-               console.warn(runits);
+               //console.warn(runits);
                if (runits == "miles"){
                   console.warn(result[i].distance)
                   //console.warn(result[i].speed)
@@ -137,7 +159,7 @@ MainView {
          });
       }
       function addrun(name){
-         console.warn("addiing run")
+         console.warn("adding run")
          call('geepeeex.add_run', [gpxx, name], function(result){
             console.warn("run added")
          })
@@ -145,11 +167,12 @@ MainView {
       function writeit(gpx, name,act_type){
          console.warn("Writing file")
          var b = Pl.polyline;
-
-         //console.log("https://maps.googleapis.com/maps/api/staticmap?size=400x400&path=weight:3%7Ccolor:blue%7Cenc:"+b.encode(c,4))
          call('geepeeex.write_gpx', [gpxx,name,act_type])
+      }//Import gpx file
+      function import_run(importfile, name,act_type){
+         console.warn("importing " +  importfile)
+         call('gpximport.Import_run', [importfile,name,act_type])
       }//writeit
-
       function logit(result) {
          console.warn(result)
          gpxx = result
@@ -158,7 +181,6 @@ MainView {
          call('geepeeex.create_gpx', [], logit);
 
       }//create_gpx
-
       function get_units(result) {
          call('geepeeex.get_units', [], function(result){
             console.warn("getting units")
@@ -167,18 +189,13 @@ MainView {
             return runits
          }
       )}
-      function set_units(units) {
-         call('geepeeex.set_units', [units]
-      )}
-
-      function rm_run(run) {
-         call('geepeeex.rm_run', [run])
-      }
+      function set_units(units) {call('geepeeex.set_units', [units])}
+      function rm_run(run) {call('geepeeex.rm_run', [run])}
+      function edit_run(run,name,act_type) {call('geepeeex.edit_run', [run,name,act_type])}
       function current_distance(gpx) {
          call('geepeeex.current_distance', [gpxx], function(result) {
             console.warn("DIST")
             console.warn(result)
-            //distlabel.text=result
             if (runits == "miles"){
                var mi
                mi = result * 0.62137
@@ -197,8 +214,6 @@ MainView {
             return result
          })
       }
-
-
    }//Python
 
    Page {
@@ -217,9 +232,183 @@ MainView {
             text: i18n.tr("About")
             iconName: "info"
             onTriggered: stack.push(Qt.resolvedUrl("About.qml"))
+          },
+         Action {
+            text: i18n.tr("Import")
+            iconName: "import"
+            onTriggered: {
+            var importPage = stack.push(Qt.resolvedUrl("ImportPage.qml"),{"contentType": ContentType.All, "handler": ContentHandler.Source})
+            importPage.imported.connect(function(fileUrl) {
+                importfile = fileUrl
+                PopupUtils.open(save_dialog)
+              })//Import
+          }//trigger
+        }//Action
+      ]
+    }//PageHeader
+
+      Component {
+         id: sportselect
+         Dialog {
+            id: sportselectdialog
+            title: i18n.tr("Choose sport:")
+            OptionSelector {
+               expanded: true
+               model: sports
+               selectedIndex: -1
+               delegate: selectorDelegate
+               onDelegateClicked: {
+                  selectedsport=index
+                  PopupUtils.close(sportselectdialog)
+                  openDialog=false
+               }
+            }
+            Button {
+               text:i18n.tr("After")
+               onClicked:{PopupUtils.close(sportselectdialog);openDialog=false}
+            }
+
          }
-         ]
       }
+
+      Component {
+         id: selectorDelegate
+         OptionSelectorDelegate {
+            text: translatedSports[index]
+            iconSource: "images/"+sports[index]+"-symbolic.svg"
+            constrainImage: true
+         }
+       }
+
+      Component {
+         id: save_dialog
+         Dialog {
+            id: save_dialogue
+            title: i18n.tr("Select the type and the name of your activity")
+            Component.onCompleted: previousSport = selectedsport
+
+            Label {
+               text: i18n.tr("Name")
+            }
+            TextField {
+               placeholderText: selectedsport == -1 ? i18n.tr("Select a sport below") : translatedSports[selectedsport] + " " + day
+               id: tf
+               property var name: displayText == "" ? placeholderText : displayText
+               Component.onCompleted: {
+                  var d = new Date();
+                  day = d.toDateString();
+               }
+            }
+            OptionSelector {
+               id: os
+               text: i18n.tr("Activity Type")
+               containerHeight: itemHeight*3.5
+               selectedIndex: selectedsport
+               currentlyExpanded: selectedsport == -1
+               delegate: selectorDelegate
+               model: sports
+               onDelegateClicked: selectedsport=index
+            }
+            Row {
+               spacing: units.gu(1)
+               PopUpButton {
+                  texth: i18n.tr("Save")
+                  height: units.gu(8)
+                  width: parent.width /2 -units.gu(0.5)
+                  color: UbuntuColors.green
+                  enabled: selectedsport != -1
+                  MapPolyline {
+                     id: pline
+                     line.width: 4
+                     line.color: 'red'
+                     path: []
+                  }
+                onClicked: {
+                    PopupUtils.close(save_dialogue)
+                    selectedsport = selectedsport != -1 ? selectedsport : 0
+                    pygpx.import_run(importfile,tf.name,sports[selectedsport])
+                    listModel.clear()
+                    pygpx.get_runs(listModel)
+                  }
+               }
+
+               PopUpButton {
+                  texth: i18n.tr("Cancel")
+                  height: units.gu(8)
+                  width: parent.width /2 -units.gu(0.5)
+                  color: UbuntuColors.red
+                  onClicked: {
+                     PopupUtils.close(save_dialogue)
+                  }
+               }
+            }
+         }
+      }//Save Dialog component
+
+      Component {
+         id: edit_dialog
+         Dialog {
+            id: edit_dialogue
+            title: i18n.tr("Edit the type and the name of your activity")
+            Component.onCompleted: previousSport = selectedsport
+
+            Label {
+               text: i18n.tr("Name")
+            }
+            TextField {
+               placeholderText: selectedsport == -1 ? i18n.tr("Select a sport below") : translatedSports[selectedsport] + " " + day
+               id: tf
+               property var name: displayText == "" ? placeholderText : displayText
+               Component.onCompleted: {
+                  var d = new Date();
+                  day = d.toDateString();
+               }
+            }
+            OptionSelector {
+               id: os
+               text: i18n.tr("Activity Type")
+               containerHeight: itemHeight*3.5
+               selectedIndex: selectedsport
+               currentlyExpanded: selectedsport == -1
+               delegate: selectorDelegate
+               model: sports
+               onDelegateClicked: selectedsport=index
+            }
+            Row {
+               spacing: units.gu(1)
+               PopUpButton {
+                  texth: i18n.tr("Save")
+                  height: units.gu(8)
+                  width: parent.width /2 -units.gu(0.5)
+                  color: UbuntuColors.green
+                  enabled: selectedsport != -1
+                  MapPolyline {
+                     id: pline
+                     line.width: 4
+                     line.color: 'red'
+                     path: []
+                  }
+                onClicked: {
+                    PopupUtils.close(edit_dialogue)
+                    selectedsport = selectedsport != -1 ? selectedsport : 0
+                    pygpx.edit_run(indexrun,sports[selectedsport],tf.name)
+                    listModel.clear()
+                    pygpx.get_runs(listModel)
+                  }
+               }
+
+               PopUpButton {
+                  texth: i18n.tr("Cancel")
+                  height: units.gu(8)
+                  width: parent.width /2 -units.gu(0.5)
+                  color: UbuntuColors.red
+                  onClicked: {
+                     PopupUtils.close(edit_dialogue)
+                  }
+               }
+            }
+         }
+      }//Edit Dialog component
 
       Rectangle {
          visible : !(thelist.model.count > 0)
@@ -289,8 +478,20 @@ MainView {
                   }
                }
                ]
-            }
-         }
+            }//leading
+            trailingActions: ListItemActions {
+              actions: [
+              Action {
+                 iconName: "edit"
+                 onTriggered: {
+                      indexrun = id;
+                      print(indexrun);
+                      PopupUtils.open(edit_dialog)
+                 }
+              }
+             ]
+           }//Trailing
+         }//ListItem
       }
       Metric {
          id: runmetric

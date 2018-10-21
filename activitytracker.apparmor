@@ -4,7 +4,8 @@
         "webview",
         "location",
         "keep-display-on",
-        "usermetrics"
+        "usermetrics",
+        "content_exchange"
     ],
     "policy_version": 16.04
 }

@@ -25,8 +25,11 @@ MainView {
    property int count;
    property int counter;
    property var importfile;
+   property var infofile;
+   property var info_display;
    property var gpxx;
    property var name;
+   property var testto;
    property var act_type;
    property var filename;
    property var indexrun;
@@ -128,6 +131,8 @@ MainView {
          console.warn('imported gpxpy');
          importModule('gpximport', loadit);
          console.warn('imported gpximport');
+         importModule('gpxinfo', loadit);
+         console.warn('imported gpxinfo');
 
       }//Component.onCompleted
 
@@ -168,11 +173,20 @@ MainView {
          console.warn("Writing file")
          var b = Pl.polyline;
          call('geepeeex.write_gpx', [gpxx,name,act_type])
-      }//Import gpx file
+      }//writeit
       function import_run(importfile, name,act_type){
          console.warn("importing " +  importfile)
          call('gpximport.Import_run', [importfile,name,act_type])
-      }//writeit
+      }//Import gpx file
+      function info_run(id){
+        // console.warn("Printing info : " +  infofile)
+         call('gpxinfo.Info_run', [id],function(info_display)
+         {console.log("2 ",info_display);
+         testto = info_display;
+         PopupUtils.open(infogpx);
+          //console.log("[LOG]: Reading contents from Python");
+         })
+      }//Import gpx file
       function logit(result) {
          console.warn(result)
          gpxx = result
@@ -237,6 +251,7 @@ MainView {
             text: i18n.tr("Import")
             iconName: "import"
             onTriggered: {
+
             var importPage = stack.push(Qt.resolvedUrl("ImportPage.qml"),{"contentType": ContentType.All, "handler": ContentHandler.Source})
             importPage.imported.connect(function(fileUrl) {
                 importfile = fileUrl
@@ -488,11 +503,38 @@ MainView {
                       print(indexrun);
                       PopupUtils.open(edit_dialog)
                  }
+              },
+              Action {
+                 iconName: "info"
+                 onTriggered: {
+                      indexrun = id
+                      //console.log(indexrun)
+                      pygpx.info_run(id)
+                      //console.log("1 ", info_display)
+                    //  PopupUtils.open(edit_dialog)
+                 }
               }
              ]
            }//Trailing
          }//ListItem
       }
+      Component {
+         id: infogpx
+         Dialog {
+            id: infogpxdialog
+            title: i18n.tr("Track information")
+            text: testto
+            PopUpButton {
+               id: infogpxclose
+               text: i18n.tr("close")
+               //color: UbuntuColors.red
+               onClicked: {
+                  PopupUtils.close(infogpxdialog)
+               }
+            }
+         }
+      }
+
       Metric {
          id: runmetric
          name: 'activitytracker-runs'

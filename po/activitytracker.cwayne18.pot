@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-21 03:47+0000\n"
+"POT-Creation-Date: 2018-10-22 05:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "Choose"
 msgstr ""
 
-#: ../About.qml:7 ../Main.qml:232
+#: ../About.qml:7 ../Main.qml:246
 msgid "About"
 msgstr ""
 
@@ -60,31 +60,31 @@ msgstr ""
 msgid "Support Weblate"
 msgstr ""
 
-#: ../Tracker.qml:14 ../Main.qml:46
+#: ../Tracker.qml:14 ../Main.qml:49
 msgid "Run"
 msgstr ""
 
-#: ../Tracker.qml:15 ../Main.qml:47
+#: ../Tracker.qml:15 ../Main.qml:50
 msgid "BikeRide"
 msgstr ""
 
-#: ../Tracker.qml:16 ../Main.qml:48
+#: ../Tracker.qml:16 ../Main.qml:51
 msgid "Walk"
 msgstr ""
 
-#: ../Tracker.qml:17 ../Main.qml:49
+#: ../Tracker.qml:17 ../Main.qml:52
 msgid "Drive"
 msgstr ""
 
-#: ../Tracker.qml:18 ../Main.qml:50
+#: ../Tracker.qml:18 ../Main.qml:53
 msgid "Hike"
 msgstr ""
 
-#: ../Tracker.qml:29 ../Main.qml:254
+#: ../Tracker.qml:29 ../Main.qml:269
 msgid "Choose sport:"
 msgstr ""
 
-#: ../Tracker.qml:42 ../Main.qml:267
+#: ../Tracker.qml:42 ../Main.qml:282
 msgid "After"
 msgstr ""
 
@@ -124,39 +124,39 @@ msgstr ""
 msgid "No, Continue"
 msgstr ""
 
-#: ../Tracker.qml:274 ../Main.qml:287
+#: ../Tracker.qml:274 ../Main.qml:302
 msgid "Select the type and the name of your activity"
 msgstr ""
 
-#: ../Tracker.qml:278 ../Main.qml:291 ../Main.qml:356
+#: ../Tracker.qml:278 ../Main.qml:306 ../Main.qml:371
 msgid "Name"
 msgstr ""
 
-#: ../Tracker.qml:281 ../Main.qml:294 ../Main.qml:359
+#: ../Tracker.qml:281 ../Main.qml:309 ../Main.qml:374
 msgid "Select a sport below"
 msgstr ""
 
-#: ../Tracker.qml:291 ../Main.qml:304 ../Main.qml:369
+#: ../Tracker.qml:291 ../Main.qml:319 ../Main.qml:384
 msgid "Activity Type"
 msgstr ""
 
-#: ../Tracker.qml:307 ../Main.qml:315 ../Main.qml:380
+#: ../Tracker.qml:307 ../Main.qml:330 ../Main.qml:395
 msgid "Save"
 msgstr ""
 
-#: ../Tracker.qml:348 ../Main.qml:336 ../Main.qml:401
+#: ../Tracker.qml:347 ../Main.qml:351 ../Main.qml:416
 msgid "Cancel"
 msgstr ""
 
-#: ../Tracker.qml:399
+#: ../Tracker.qml:398
 msgid "Start"
 msgstr ""
 
-#: ../Tracker.qml:420
+#: ../Tracker.qml:419
 msgid "Stop"
 msgstr ""
 
-#: ../Settings.qml:16 ../Main.qml:227
+#: ../Settings.qml:16 ../Main.qml:241
 msgid "Settings"
 msgstr ""
 
@@ -177,46 +177,54 @@ msgstr ""
 msgid "ms"
 msgstr ""
 
-#: ../Main.qml:40
+#: ../Main.qml:43
 msgid "%1 run today"
 msgstr ""
 
-#: ../Main.qml:41
+#: ../Main.qml:44
 msgid "%1 biked today"
 msgstr ""
 
-#: ../Main.qml:42
+#: ../Main.qml:45
 msgid "%1 driven today"
 msgstr ""
 
-#: ../Main.qml:149 ../Main.qml:152
+#: ../Main.qml:154 ../Main.qml:157
 msgid "Distance: "
 msgstr ""
 
-#: ../Main.qml:155
+#: ../Main.qml:160
 msgid "Time: "
 msgstr ""
 
-#: ../Main.qml:223
+#: ../Main.qml:237
 msgid "Recent Activities"
 msgstr ""
 
-#: ../Main.qml:237
+#: ../Main.qml:251
 msgid "Import"
 msgstr ""
 
-#: ../Main.qml:352
+#: ../Main.qml:367
 msgid "Edit the type and the name of your activity"
 msgstr ""
 
-#: ../Main.qml:424
+#: ../Main.qml:439
 msgid "No saved activities"
 msgstr ""
 
-#: ../Main.qml:427
+#: ../Main.qml:442
 msgid "Swipe up to log a new activity"
 msgstr ""
 
-#: ../Main.qml:528
+#: ../Main.qml:525
+msgid "Track information"
+msgstr ""
+
+#: ../Main.qml:529
+msgid "close"
+msgstr ""
+
+#: ../Main.qml:570
 msgid "Log new Activity"
 msgstr ""

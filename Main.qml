@@ -29,7 +29,7 @@ MainView {
    property var info_display;
    property var gpxx;
    property var name;
-   property var testto;
+   property var infodis;
    property var act_type;
    property var filename;
    property var indexrun;
@@ -182,8 +182,11 @@ MainView {
         // console.warn("Printing info : " +  infofile)
          call('gpxinfo.Info_run', [id],function(info_display)
          {console.log("2 ",info_display);
-         testto = info_display;
+         infodis = info_display;
          PopupUtils.open(infogpx);
+         refreshIndicator.visible = false
+         refreshIndicator.running = false
+         refreshIndicator.focus = false
           //console.log("[LOG]: Reading contents from Python");
          })
       }//Import gpx file
@@ -260,7 +263,16 @@ MainView {
           }//trigger
         }//Action
       ]
+      ActivityIndicator {
+          id:refreshIndicator
+          objectName: "activityIndicator"
+          anchors.centerIn: page1Header
+          anchors.horizontalCenterOffset : 150
+          //anchors.topMargin: 250
+         // ColorAnimation: UbuntuColors.orange
+      }
     }//PageHeader
+
 
       Component {
          id: sportselect
@@ -508,10 +520,10 @@ MainView {
                  iconName: "info"
                  onTriggered: {
                       indexrun = id
-                      //console.log(indexrun)
+                      refreshIndicator.visible = true
+                      refreshIndicator.running = true
+                      refreshIndicator.focus = true
                       pygpx.info_run(id)
-                      //console.log("1 ", info_display)
-                    //  PopupUtils.open(edit_dialog)
                  }
               }
              ]
@@ -523,7 +535,7 @@ MainView {
          Dialog {
             id: infogpxdialog
             title: i18n.tr("Track information")
-            text: testto
+            text: infodis
             PopUpButton {
                id: infogpxclose
                text: i18n.tr("close")

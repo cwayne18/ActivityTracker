@@ -34,69 +34,14 @@ def format_long_length(length):
 
 
 def format_short_length(length):
-    return '{:.2f}m'.format(length)
+    return '{:.1f}m'.format(length)
 
 
 def format_speed(speed):
     if not speed:
         speed = 0
     else:
-        return '{:.2f}m/s = {:.2f}km/h'.format(speed, speed * 3600. / 1000.)
-
-def print_gpx_info2(gpx, gpx_file):
-    indentation='    '
-    info_display = "File: %s\n" % gpx_file
-
-    if gpx.name:
-        info_display += "GPX name: %s\n" % gpx.name
-    if gpx.description:
-        info_display += "GPX description: %s\n" % gpx.description
-    if gpx.author_name:
-        info_display += "Author: %s\n" % gpx.author_name
-    if gpx.author_email:
-        info_display += "Email: %s\n" % gpx.author_email
-
-    """
-    gpx_part may be a track or segment.
-    """
-    length_2d = gpx.length_2d()
-    length_3d = gpx.length_3d()
-    info_display += "%sLength 2D: %s\n" % (indentation, format_long_length(length_2d))
-    info_display += "%sLength 3D: %s\n" % (indentation, format_long_length(length_3d))
-    moving_time, stopped_time, moving_distance, stopped_distance, max_speed = gpx.get_moving_data()
-    info_display += "%sMoving time: %s\n" %(indentation, format_time(moving_time))
-    info_display += "%sStopped time: %s\n" %(indentation, format_time(stopped_time))
-    info_display += "%sMax speed: %s\n" % (indentation, format_speed(max_speed))
-    info_display += "%sAvg speed: %s\n" % (indentation, format_speed(moving_distance / moving_time) if moving_time > 0 else "?")
-
-    uphill, downhill = gpx.get_uphill_downhill()
-    info_display += "%sTotal uphill: %s\n" % (indentation, format_short_length(uphill))
-    info_display += "%sTotal downhill: %s\n" % (indentation, format_short_length(downhill))
-
-    start_time, end_time = gpx.get_time_bounds()
-    info_display += "%sStarted: %s\n" % (indentation, start_time)
-    info_display += "%sEnded: %s\n" % (indentation, end_time)
-
-    points_no = len(list(gpx.walk(only_points=True)))
-    info_display += "%sPoints: %s\n" % (indentation, points_no)
-
-    if points_no > 0:
-        distances = []
-        previous_point = None
-        for point in gpx.walk(only_points=True):
-            if previous_point:
-                distance = point.distance_2d(previous_point)
-                distances.append(distance)
-            previous_point = point
-        info_display += "%sAvg distance between points: %s\n" % (indentation, format_short_length(sum(distances) / len(list(gpx.walk()))))
-
-    zip(info_display)
-    print(info_display)
-    return(info_display)
-    #print_gpx_part_info(gpx,info_display)
-
-    #print_gpx_part_info(gpx)
-    #mod_sys.exit(1)
+        return '{:.0f}m/s = {:.0f}km/h'.format(speed, speed * 3600. / 1000.)
 
 def read_run(gpx_file):
     if not gpx_file:
@@ -104,7 +49,7 @@ def read_run(gpx_file):
         mod_sys.exit(1)
     try:
         gpx = mod_gpxpy.parse(open(gpx_file))
-        print_gpx_info2(gpx, gpx_file)
+        print_gpx_info(gpx, gpx_file)
     except Exception as e:
         mod_logging.exception(e)
         print('Error processing %s' % gpx_file)
@@ -126,42 +71,42 @@ def Info_run(run):
         mod_sys.exit(1)
     try:
         gpx = mod_gpxpy.parse(open(gpx_file))
-        #print_gpx_info2(gpx, gpx_file)
+        #print_gpx_info(gpx, gpx_file)
         indentation='    '
-        info_display = "File: %s\n" % gpx_file
-
+        gpx_file = gpx_file.split('/', 7)[6]
+        info_display = "<b>File: </b>%s<br>" % gpx_file
         if gpx.name:
-            info_display += "GPX name: %s\n" % gpx.name
+            info_display += "<b>GPX name: </b>%s<br>" % gpx.name
         if gpx.description:
-            info_display += "GPX description: %s\n" % gpx.description
+            info_display += "<b>GPX description: </b>%s<br>" % gpx.description
         if gpx.author_name:
-            info_display += "Author: %s\n" % gpx.author_name
+            info_display += "<b>Author: </b>%s<br>" % gpx.author_name
         if gpx.author_email:
-            info_display += "Email: %s\n" % gpx.author_email
+            info_display += "<b>Email: </b>%s<br>" % gpx.author_email
 
         """
         gpx_part may be a track or segment.
         """
         length_2d = gpx.length_2d()
         length_3d = gpx.length_3d()
-        info_display += "%sLength 2D: %s\n" % (indentation, format_long_length(length_2d))
-        info_display += "%sLength 3D: %s\n" % (indentation, format_long_length(length_3d))
+        info_display += "<b>%sLength 2D: </b>%s<br>" % (indentation, format_long_length(length_2d))
+        info_display += "<b>%sLength 3D: </b>%s<br>" % (indentation, format_long_length(length_3d))
         moving_time, stopped_time, moving_distance, stopped_distance, max_speed = gpx.get_moving_data()
-        info_display += "%sMoving time: %s\n" %(indentation, format_time(moving_time))
-        info_display += "%sStopped time: %s\n" %(indentation, format_time(stopped_time))
-        info_display += "%sMax speed: %s\n" % (indentation, format_speed(max_speed))
-        info_display += "%sAvg speed: %s\n" % (indentation, format_speed(moving_distance / moving_time) if moving_time > 0 else "?")
+        info_display += "<b>%sMoving time: </b>%s<br>" %(indentation, format_time(moving_time))
+        info_display += "<b>%sStopped time: </b>%s<br>" %(indentation, format_time(stopped_time))
+        info_display += "<b>%sMax speed: </b>%s<br>" % (indentation, format_speed(max_speed))
+        info_display += "<b>%sAvg speed: </b>%s<br>" % (indentation, format_speed(moving_distance / moving_time) if moving_time > 0 else "?")
 
         uphill, downhill = gpx.get_uphill_downhill()
-        info_display += "%sTotal uphill: %s\n" % (indentation, format_short_length(uphill))
-        info_display += "%sTotal downhill: %s\n" % (indentation, format_short_length(downhill))
+        info_display += "<b>%sTotal uphill: </b>%s<br>" % (indentation, format_short_length(uphill))
+        info_display += "<b>%sTotal downhill: </b>%s<br>" % (indentation, format_short_length(downhill))
 
         start_time, end_time = gpx.get_time_bounds()
-        info_display += "%sStarted: %s\n" % (indentation, start_time)
-        info_display += "%sEnded: %s\n" % (indentation, end_time)
+        info_display += "<b>%sStarted: </b>%s<br>" % (indentation, start_time)
+        info_display += "<b>%sEnded: </b>%s<br>" % (indentation, end_time)
 
         points_no = len(list(gpx.walk(only_points=True)))
-        info_display += "%sPoints: %s\n" % (indentation, points_no)
+        info_display += "<b>%sPoints: </b>%s<br>" % (indentation, points_no)
 
         if points_no > 0:
             distances = []
@@ -171,8 +116,7 @@ def Info_run(run):
                     distance = point.distance_2d(previous_point)
                     distances.append(distance)
                 previous_point = point
-            info_display += "%sAvg distance between points: %s\n" % (indentation, format_short_length(sum(distances) / len(list(gpx.walk()))))
-
+            info_display += "<b>%sAvg distance between points: </b>%s<br>" % (indentation, format_short_length(sum(distances) / len(list(gpx.walk()))))
         zip(info_display)
         #print(info_display)
         return info_display

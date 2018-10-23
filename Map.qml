@@ -14,12 +14,11 @@ import Ubuntu.Web 0.2
 
 Page {
    header: PageHeader {
-      id: webmap_header
+      id: map_header
       title: i18n.tr("Activity Map")
-   }
+      }
    id: mainPage
    property var polyline;
-
    Python {
       id: pygpx
       Component.onCompleted: {
@@ -28,29 +27,15 @@ Page {
             console.warn("calling python script to load the gpx file")
             pygpx.call("geepeeex.visu_gpx", [polyline], function(result) {
                var t = new Array (0)
-               //map.center = QtPositioning.coordinate(result[10].latitude,result[10].longitude); // Allow a delay in case of the recording start with cell tower position
                for (var i=0; i<result.length; i++) {
                   pline.addCoordinate(QtPositioning.coordinate(result[i].latitude,result[i].longitude));
                }
                map.center = QtPositioning.coordinate(result[i/2].latitude,result[i/2].longitude); // Center the map on the enter of the track
+
             });
          });
       }//Component.onCompleted
    }
-
-   /*ListView {
-      id: whattheproblem
-      whattheproblem.model:
-      id: gpxmodel
-      whattheproblem.delegate: Component {
-         Text {
-            latitude: gpxmodel.latitude
-            longitude: gpxmodel.longitude
-         }
-      }
-   }*/
-
-
    Plugin {
       id: mapPlugin
       name: "osm"

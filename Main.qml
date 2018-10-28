@@ -267,7 +267,7 @@ MainView {
           id:refreshIndicator
           objectName: "activityIndicator"
           anchors.centerIn: page1Header
-          anchors.horizontalCenterOffset : 150
+          anchors.horizontalCenterOffset : 100
           //anchors.topMargin: 250
          // ColorAnimation: UbuntuColors.orange
       }

@@ -51,7 +51,7 @@ Page {
                TextField {
                   id: pointsIntervalField
                   // text: persistentSettings.pointsInterval/1000
-                  color: !acceptableInput ? UbuntuColors.red : UbuntuColors.jet
+                  color: !acceptableInput ? UbuntuColors.red : theme.palette.normal.backgroundText
                   placeholderText: "5000"
                   inputMethodHints: Qt.ImhDigitsOnly //Qt.ImhFormattedNumbersOnly
                   hasClearButton:false

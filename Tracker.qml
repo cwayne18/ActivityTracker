@@ -157,6 +157,7 @@ Rectangle {
          anchors.fill: parent
          center: src.position.coordinate
          zoomLevel: map.maximumZoomLevel - 2
+         color: Theme.palette.normal.background
          plugin : Plugin {
             id: plugin
             allowExperimental: true
@@ -260,7 +261,7 @@ Rectangle {
          height: units.gu(10)
          // z:100
          anchors.bottom: parent.bottom
-         color: "white"
+         color: theme.palette.normal.background
          opacity: 0.8
          Row{
             anchors.horizontalCenter: parent.horizontalCenter

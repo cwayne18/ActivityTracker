@@ -289,7 +289,7 @@ MainView {
          EmptyState {
             title: i18n.tr("No saved activities")
             iconSource: Qt.resolvedUrl("./images/runman.svg")
-            iconColor: UbuntuColors.jet
+            iconColor: Theme.palette.normal.backgroundText
             subTitle: i18n.tr("Swipe up to log a new activity")
             anchors.centerIn: parent
          }

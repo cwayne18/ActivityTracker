@@ -3,73 +3,21 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import QtPositioning 5.9
 import QtLocation 5.9
+import "components"
 
 Rectangle {
    id: trackerroot
    property bool openDialog: false
    onOpenDialogChanged: openDialog == true ? PopupUtils.open(sportselect) : ""
-   property int selectedsport: -1
-   property int previousSport: -1
-   readonly property var translatedSports: [
-   i18n.tr("Run"),
-   i18n.tr("BikeRide"),
-   i18n.tr("Walk"),
-   i18n.tr("Drive"),
-   i18n.tr("Hike")
-   ]
-   readonly property var sports: ["Run","BikeRide","Walk","Drive","Hike"]
-   color: "white"
+   Sports {id:sportsComp}
+   color: Theme.palette.normal.background
    width: page1.width
    height: page1.height
 
    Component {
-      id: sportselect
-      Dialog {
-         id: sportselectdialog
-         title: i18n.tr("Choose sport:")
-         OptionSelector {
-            expanded: true
-            model: sports
-            selectedIndex: -1
-            delegate: selectorDelegate
-            onDelegateClicked: {
-               selectedsport=index
-               PopupUtils.close(sportselectdialog)
-               openDialog=false
-            }
-         }
-         Button {
-            text:i18n.tr("After")
-            onClicked:{PopupUtils.close(sportselectdialog);openDialog=false}
-         }
-         // Grid {
-         //    property int itemWidth: units.gu(12)
-         //
-         //    // The amount of whitespace, including column spacing
-         //    property int space: parent.width - columns * itemWidth
-         //
-         //    // The column spacing is 1/n of the left/right margins
-         //    property int n: 4
-         //
-         //    columnSpacing: space / ((2 * n) + (columns - 1))
-         //    rowSpacing: units.gu(3)
-         //    width: (columns * itemWidth) + columnSpacing * (columns - 1)
-         //    anchors.horizontalCenter: parent.horizontalCenter
-         //    columns: {
-         //       var items = Math.floor(parent.width / itemWidth)
-         //       var count = repeater.count
-         //       return count < items ? count : items
-         //    }
-         // }
-      }
-   }
-
-   Component {
-      id: selectorDelegate
-      OptionSelectorDelegate {
-         text: translatedSports[index]
-         iconSource: "images/"+sports[index]+"-symbolic.svg"
-         constrainImage: true
+      id:sportselect
+      SportSelectPopUp {
+         sportsComponent: sportsComp
       }
    }
 
@@ -94,8 +42,8 @@ Rectangle {
 
          trailingActionBar.actions: [
          Action {
-            iconSource: "images/"+sports[selectedsport]+"-symbolic.svg"
-            visible: selectedsport != -1
+            iconSource: "images/"+sportsComp.name[sportsComp.selected]+"-symbolic.svg"
+            visible: sportsComp.selected != -1
             onTriggered: PopupUtils.open(sportselect)
          }
          ]
@@ -131,6 +79,7 @@ Rectangle {
                   timer.restart()
                   timer.stop()
                   am_running = false
+                  sportsComp.reset()
                   newrunEdge.collapse()
                }
             }
@@ -269,95 +218,38 @@ Rectangle {
 
       Component {
          id: save_dialog
-         Dialog {
+         ActivityDialog {
             id: save_dialogue
+            sportsComponent: sportsComp
             title: i18n.tr("Select the type and the name of your activity")
-            Component.onCompleted: previousSport = selectedsport
+            save.onClicked: {
+               PopupUtils.close(save_dialogue)
+               pygpx.writeit(gpxx,trackName,sportsComponent.name[sportsComponent.selected])
+               console.log(trackName)
+               console.log("----------restart------------")
+               counter = 0
+               pygpx.format_timer(0)
+               timer.restart()
+               timer.stop()
 
-            Label {
-               text: i18n.tr("Name")
+               //  listModel.append({"name": tf.displayText, "act_type": sportsComp.name[sportsComp.selected]})
+               //   pygpx.addrun(tf.displayText)
+               listModel.clear()
+               var distfloat
+               distfloat = parseFloat(dist.slice(0,-2))
+               pygpx.get_runs(listModel)
+               newrunEdge.collapse()
+               newrunEdge.contentUrl = ""
+               newrunEdge.contentUrl = Qt.resolvedUrl("Tracker.qml")
             }
-            TextField {
-               placeholderText: selectedsport == -1 ? i18n.tr("Select a sport below") : translatedSports[selectedsport] + " " + day
-               id: tf
-               property var name: displayText == "" ? placeholderText : displayText
-               Component.onCompleted: {
-                  var d = new Date();
-                  day = d.toDateString();
-               }
-            }
-            OptionSelector {
-               id: os
-               text: i18n.tr("Activity Type")
-               containerHeight: itemHeight*3.5
-               selectedIndex: selectedsport
-               currentlyExpanded: selectedsport == -1
-               delegate: selectorDelegate
-               model: sports
-               // onExpansionCompleted: {
-               //    // tf.focus = true
-               //    console.log("sport: "+selectedsport+"\n è definito? "+(selectedsport?true:false)+"\ntypeof"+typeof selectedsport)
-               // }
-               // Component.onCompleted: console.log("selectedsport: "+selectedsport+"\n è definito? "+(selectedsport?true:false)+"\ntypeof"+typeof selectedsport)
-               onDelegateClicked: selectedsport=index
-            }
-            Row {
-               spacing: units.gu(1)
-               PopUpButton {
-                  texth: i18n.tr("Save")
-                  height: units.gu(8)
-                  width: parent.width /2 -units.gu(0.5)
-                  color: UbuntuColors.green
-                  enabled: selectedsport != -1
-                  onClicked: {
-                     PopupUtils.close(save_dialogue)
-                     selectedsport = selectedsport != -1 ? selectedsport : 0
-                     pygpx.writeit(gpxx,tf.name,sports[selectedsport])
-                     console.log(tf.name)
-                     console.log("----------restart------------")
-                     counter = 0
-                     pygpx.format_timer(0)
-                     timer.restart()
-                     timer.stop()
-
-                     //  listModel.append({"name": tf.displayText, "act_type": sports[selectedsport]})
-                     //   pygpx.addrun(tf.displayText)
-                     listModel.clear()
-                     runmetric.increment(1)
-                     var distfloat
-                     distfloat = parseFloat(dist.slice(0,-2))
-                     if (sports[selectedsport] == 'Run'){
-                        console.log("LOGARUN")
-                        rundist.increment(distfloat)
-                     }
-                     if (sports[selectedsport] == "BikeRide") {
-                        bikedist.increment(distfloat)
-                     }
-                     if (sports[selectedsport] == "Drive") {
-                        drivedist.increment(distfloat)
-                     }
-                     pygpx.get_runs(listModel)
-                     newrunEdge.collapse()
-                     newrunEdge.contentUrl = ""
-                     newrunEdge.contentUrl = Qt.resolvedUrl("Tracker.qml")
-                  }
-               }
-
-               PopUpButton {
-                  texth: i18n.tr("Cancel")
-                  height: units.gu(8)
-                  width: parent.width /2 -units.gu(0.5)
-                  color: UbuntuColors.red
-                  onClicked: {
-                     PopupUtils.close(save_dialogue)
-                     am_running = true
-                     timer.start()
-                     selectedsport=previousSport
-                  }
-               }
+            cancel.onClicked: {
+               PopupUtils.close(save_dialogue)
+               am_running = true
+               timer.start()
+               sportsComp.selected=sportsComp.previous
             }
          }
-      }//Dialog component
+      }
 
       Rectangle {
          width: parent.width

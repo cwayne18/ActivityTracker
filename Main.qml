@@ -10,6 +10,7 @@ import Ubuntu.Components.Popups 1.3
 import "./lib/polyline.js" as Pl
 import Qt.labs.settings 1.0
 import Ubuntu.Content 1.3
+import "components"
 
 MainView {
    id: mainView
@@ -39,18 +40,9 @@ MainView {
    property string timestring : "00:00"
    property string smashkey;
    property string dist;
-   property int selectedsport: -1
-   property int previousSport: -1
-   readonly property var translatedSports: [
-   i18n.tr("Run"),
-   i18n.tr("BikeRide"),
-   i18n.tr("Walk"),
-   i18n.tr("Drive"),
-   i18n.tr("Hike")
-   ]
-   readonly property var sports: ["Run","BikeRide","Walk","Drive","Hike"]
+   Sports {id:sportsComp}
 
-   //keep screen on so we still get to read GPS
+   //keep screen on while tracking an activity so we still get to read GPS
    ScreenSaver {
       id: screenSaver
       screenSaverEnabled: !am_running
@@ -266,163 +258,35 @@ MainView {
       }
     }//PageHeader
 
-
-      Component {
-         id: sportselect
-         Dialog {
-            id: sportselectdialog
-            title: i18n.tr("Choose sport:")
-            OptionSelector {
-               expanded: true
-               model: sports
-               selectedIndex: -1
-               delegate: selectorDelegate
-               onDelegateClicked: {
-                  selectedsport=index
-                  PopupUtils.close(sportselectdialog)
-                  openDialog=false
-               }
-            }
-            Button {
-               text:i18n.tr("After")
-               onClicked:{PopupUtils.close(sportselectdialog);openDialog=false}
-            }
-
-         }
-      }
-
-      Component {
-         id: selectorDelegate
-         OptionSelectorDelegate {
-            text: translatedSports[index]
-            iconSource: "images/"+sports[index]+"-symbolic.svg"
-            constrainImage: true
-         }
+       Component {
+          id: save_dialog
+          ActivityDialog {
+             id: save_dialogue
+             sportsComponent: sportsComp
+             title: i18n.tr("Select the type and the name of your activity")
+             save.onClicked: {
+                PopupUtils.close(save_dialogue)
+                pygpx.import_run(importfile,trackName,sportsComponent.name[sportsComponent.selected])
+                listModel.clear()
+                pygpx.get_runs(listModel)
+             }
+          }
        }
 
       Component {
-         id: save_dialog
-         Dialog {
-            id: save_dialogue
-            title: i18n.tr("Select the type and the name of your activity")
-            Component.onCompleted: previousSport = selectedsport
-
-            Label {
-               text: i18n.tr("Name")
-            }
-            TextField {
-               placeholderText: selectedsport == -1 ? i18n.tr("Select a sport below") : translatedSports[selectedsport] + " " + day
-               id: tf
-               property var name: displayText == "" ? placeholderText : displayText
-               Component.onCompleted: {
-                  var d = new Date();
-                  day = d.toDateString();
-               }
-            }
-            OptionSelector {
-               id: os
-               text: i18n.tr("Activity Type")
-               containerHeight: itemHeight*3.5
-               selectedIndex: selectedsport
-               currentlyExpanded: selectedsport == -1
-               delegate: selectorDelegate
-               model: sports
-               onDelegateClicked: selectedsport=index
-            }
-            Row {
-               spacing: units.gu(1)
-               PopUpButton {
-                  texth: i18n.tr("Save")
-                  height: units.gu(8)
-                  width: parent.width /2 -units.gu(0.5)
-                  color: UbuntuColors.green
-                  enabled: selectedsport != -1
-                onClicked: {
-                    PopupUtils.close(save_dialogue)
-                    selectedsport = selectedsport != -1 ? selectedsport : 0
-                    pygpx.import_run(importfile,tf.name,sports[selectedsport])
-                    listModel.clear()
-                    pygpx.get_runs(listModel)
-                  }
-               }
-
-               PopUpButton {
-                  texth: i18n.tr("Cancel")
-                  height: units.gu(8)
-                  width: parent.width /2 -units.gu(0.5)
-                  color: UbuntuColors.red
-                  onClicked: {
-                     PopupUtils.close(save_dialogue)
-                  }
-               }
-            }
-         }
-      }//Save Dialog component
-
-      Component {
          id: edit_dialog
-         Dialog {
+         ActivityDialog {
             id: edit_dialogue
+            sportsComponent: sportsComp
             title: i18n.tr("Edit the type and the name of your activity")
-            Component.onCompleted: previousSport = selectedsport
-
-            Label {
-               text: i18n.tr("Name")
-            }
-            TextField {
-               placeholderText: selectedsport == -1 ? i18n.tr("Select a sport below") : translatedSports[selectedsport] + " " + day
-               id: tf
-               property var name: displayText == "" ? placeholderText : displayText
-               Component.onCompleted: {
-                  var d = new Date();
-                  day = d.toDateString();
-               }
-            }
-            OptionSelector {
-               id: os
-               text: i18n.tr("Activity Type")
-               containerHeight: itemHeight*3.5
-               selectedIndex: selectedsport
-               currentlyExpanded: selectedsport == -1
-               delegate: selectorDelegate
-               model: sports
-               onDelegateClicked: selectedsport=index
-            }
-            Row {
-               spacing: units.gu(1)
-               PopUpButton {
-                  texth: i18n.tr("Save")
-                  height: units.gu(8)
-                  width: parent.width /2 -units.gu(0.5)
-                  color: UbuntuColors.green
-                  enabled: selectedsport != -1
-                  MapPolyline {
-                     id: pline
-                     line.width: 4
-                     line.color: 'red'
-                     path: []
-                  }
-                onClicked: {
-                    PopupUtils.close(edit_dialogue)
-                    selectedsport = selectedsport != -1 ? selectedsport : 0
-                    pygpx.edit_run(indexrun,sports[selectedsport],tf.name)
-                    listModel.clear()
-                    pygpx.get_runs(listModel)
-                  }
-               }
-
-               PopUpButton {
-                  texth: i18n.tr("Cancel")
-                  height: units.gu(8)
-                  width: parent.width /2 -units.gu(0.5)
-                  color: UbuntuColors.red
-                  onClicked: {
-                     PopupUtils.close(edit_dialogue)
-                  }
-               }
+            save.onClicked: {
+                PopupUtils.close(edit_dialogue)
+                pygpx.edit_run(indexrun,sportsComponent.name[sportsComponent.selected],trackName)
+                listModel.clear()
+                pygpx.get_runs(listModel)
             }
          }
-      }//Edit Dialog component
+      }
 
       Rectangle {
          visible : !(thelist.model.count > 0)

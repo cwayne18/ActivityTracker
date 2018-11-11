@@ -1,4 +1,5 @@
 {
 	"template":"pure-qml-cmake",
-	"default": "kill clean build click_build install launch logs"
+	"default": "kill clean build click_build install launch logs",
+	"dependencies": ["qml-module-io-thp-pyotherside"]
 }

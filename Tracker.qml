@@ -203,6 +203,7 @@ Rectangle {
                         pygpx.addpoint(gpxx,coord.latitude,coord.longitude,coord.altitude)
                      }
                   }
+                  src.stop()
                   am_running = false
                   timer.stop()
                   PopupUtils.open(save_dialog)
@@ -227,6 +228,7 @@ Rectangle {
                pygpx.writeit(gpxx,trackName,sportsComponent.name[sportsComponent.selected])
                console.log(trackName)
                console.log("----------restart------------")
+               // counter & timer stuff used only here in Tracker -> why? FIXME
                counter = 0
                pygpx.format_timer(0)
                timer.restart()
@@ -235,6 +237,7 @@ Rectangle {
                //  listModel.append({"name": tf.displayText, "act_type": sportsComp.name[sportsComp.selected]})
                //   pygpx.addrun(tf.displayText)
                listModel.clear()
+               // distfloat stuff used only here in Tracker -> why? FIXME
                var distfloat
                distfloat = parseFloat(dist.slice(0,-2))
                pygpx.get_runs(listModel)
@@ -315,9 +318,6 @@ Rectangle {
                //   width:parent.width/2
                //   height:parent.height
                onClicked: {
-                  // src.stop()
-                  // am_running = false
-                  // timer.stop()
                   PopupUtils.open(dialog)
 
                }

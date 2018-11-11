@@ -326,7 +326,7 @@ MainView {
             ListItemLayout {
                ProportionalShape {
                   SlotsLayout.position: SlotsLayout.Leading
-                  source: Image { source: "images/"+(act_type=="Bike Ride"?"BikeRide":act_type)+".svg" } //Legacy, old act_type was "Bike Ride" substituted with "bikeRide"
+                  source: Image { source: "images/"+(act_type=="Bike Ride"?"BikeRide":act_type)+".svg" } //Legacy, old act_type was "Bike Ride" substituted with "BikeRide"
                   height: del.height-units.gu(2)
                   aspect: UbuntuShape.DropShadow
                }
@@ -401,12 +401,6 @@ MainView {
             iconSource: "images/runman.svg"
             status: "Active"
             flickable: thelist
-            // onStatusChanged: {
-            //    switch (hint.status) {
-            //    case 1: console.log("hint status: "+1); hint.status=2; break;
-            //    case 0: console.log("hint status: "+0); break;
-            //    case 2: console.log("hint status: "+2); break;
-            // }
          }
          onCollapseStarted: hint.status = "Active"
          onCommitCompleted: contentItem.openDialog = true

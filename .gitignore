@@ -3,3 +3,4 @@ build/
 activitytracker.qmlproject.user
 *.mo
 *.OLD
+.clickable/

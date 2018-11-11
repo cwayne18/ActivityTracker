@@ -1,5 +1,6 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
+import "components"
 
 Page {
    header: PageHeader {
@@ -23,19 +24,23 @@ Page {
          anchors.centerIn: parent
          spacing: units.gu(4)
          width: parent.width-spacing
+         // #335280 is the new blue by Canonical
+         // https://github.com/CanonicalLtd/desktop-design/blob/master/Colour/colour.png
+         property string themableBlue: Theme.name == "Ubuntu.Components.Themes.SuruDark" ? UbuntuColors.blue : "#335280"
+         property string linkColor: " style=\"color:"+about_column.themableBlue+";\""  //' style="color:'+ about_column.themableBlue +';"'
 
          Column {
             width: parent.width
 
-            Text {
+            Label {
                font.weight: Font.DemiBold
                text: i18n.tr("Activity Tracker")
                font.pointSize: units.gu(2.5)
                anchors.horizontalCenter: parent.horizontalCenter
             }
 
-            Text {
-               text: i18n.tr("Version") + " 0.11"
+            Label {
+               text: i18n.tr("Version") + " 0.12"
                anchors.horizontalCenter: parent.horizontalCenter
             }
          }
@@ -53,14 +58,16 @@ Page {
          Column {
             width: parent.width
 
-            Text {
+            Label {
                text: "© 2018 Erne st & Michele Castellazzi"
                anchors.horizontalCenter: parent.horizontalCenter
             }
 
-            Text {
-               text: "<a href='https://github.com/cwayne18/ActivityTracker'> © 2015 Chris Wayne</a>"
+            Label {
+               textFormat: Text.RichText
+               text: "<a "+about_column.linkColor+" href=\"https://github.com/cwayne18/ActivityTracker\"> © 2015 Chris Wayne</a>"
                anchors.horizontalCenter: parent.horizontalCenter
+               color: about_column.themableBlue
             }
          }
 
@@ -68,28 +75,29 @@ Page {
             width: parent.width
             spacing: units.gu(2)
 
-            Text {
+            Label {
                textFormat: Text.RichText
                font.underline: false
-               text: i18n.tr("Released under the terms of the GNU GPL v3.<br>Source code available on") + " <a style=\"text-decoration: none;\" href=\"https://github.com/ernesst/ActivityTracker\">GitHub.com</a>"
+               text: i18n.tr("Released under the terms of the GNU GPL v3.<br>Source code available on") + " <a style=\"text-decoration: none;color:"+about_column.themableBlue+";\" href=\"https://github.com/ernesst/ActivityTracker\">GitHub.com</a>"
                font.pointSize: units.gu(1)
                horizontalAlignment: Text.AlignHCenter
                anchors.horizontalCenter: parent.horizontalCenter
                onLinkActivated: Qt.openUrlExternally(link)
             }
 
-            Text {
+            Label {
+               textFormat: Text.RichText
                text: i18n.tr('Part of the icons is made by %1 from %2 is licensed by %3')
-               .arg('<a href="http://www.freepik.com" title="Freepik">Freepik</a>')
-               .arg('<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>')
-               .arg('<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>"')
+               .arg('<a href="http://www.freepik.com" title="Freepik"'+about_column.linkColor+'>Freepik</a>')
+               .arg('<a href="https://www.flaticon.com/" title="Flaticon"'+about_column.linkColor+'>www.flaticon.com</a>')
+               .arg('<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank"'+about_column.linkColor+'>CC 3.0 BY</a>"')
                anchors.horizontalCenter: parent.horizontalCenter
                horizontalAlignment: Text.AlignHCenter
                wrapMode: Text.Wrap
                font.pointSize: units.gu(1)
                width: parent.width
             }
-            Text {
+            Label {
                 textFormat: Text.RichText
                 //TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
                 text: i18n.tr("Thanks to %1 for the icons based on:<br>"+

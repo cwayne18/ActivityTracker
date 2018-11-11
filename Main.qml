@@ -8,8 +8,9 @@ import QtLocation 5.9
 //import Ubuntu.Components.ListItems 1.3 as ListItem
 import Ubuntu.Components.Popups 1.3
 import "./lib/polyline.js" as Pl
-import UserMetrics 0.1
 import Qt.labs.settings 1.0
+import Ubuntu.Content 1.3
+import "components"
 
 MainView {
    id: mainView
@@ -23,18 +24,25 @@ MainView {
    height: units.gu(75)
    property int count;
    property int counter;
+   property var importfile;
+   property var infofile;
+   property var info_display;
    property var gpxx;
+   property var name;
+   property var infodis;
+   property var act_type;
+   property var filename;
+   property var indexrun;
+   property var polyline;
    property string day;
    property bool am_running;
    property string runits;
    property string timestring : "00:00"
    property string smashkey;
    property string dist;
-   property string distmet: i18n.tr("%1 run today")
-   property string bikedistmet: i18n.tr("%1 biked today")
-   property string drivedistmet: i18n.tr("%1 driven today")
+   Sports {id:sportsComp}
 
-   //keep screen on so we still get to read GPS
+   //keep screen on while tracking an activity so we still get to read GPS
    ScreenSaver {
       id: screenSaver
       screenSaverEnabled: !am_running
@@ -102,23 +110,27 @@ MainView {
             call('geepeeex.onetime_db_fix',[])
             call('geepeeex.onetime_db_fix_again_cus_im_dumb',[])
             get_units(result)
-         }
-         addImportPath(Qt.resolvedUrl('py/'))
-         importModule('geepeeex', loadit)
-         console.warn('imported gpxpy')
+         };
+         addImportPath(Qt.resolvedUrl('py/'));
+         importModule('geepeeex', loadit);
+         console.warn('imported gpxpy');
+         importModule('gpximport', loadit);
+         console.warn('imported gpximport');
+         importModule('gpxinfo', loadit);
+         console.warn('imported gpxinfo');
+
       }//Component.onCompleted
+
       function addpoint(gpx,lat,lng,alt,speed){
          call('geepeeex.add_point', [gpxx,lat,lng,alt])
       }//addpoint
-
-
       function get_runs(model){
          listModel.clear()
          call('geepeeex.get_runs', [], function(result) {
             // Load the received data into the list model
             listModel.clear()
             for (var i=0; i<result.length; i++) {
-               console.warn(runits);
+               //console.warn(runits);
                if (runits == "miles"){
                   console.warn(result[i].distance)
                   //console.warn(result[i].speed)
@@ -137,7 +149,7 @@ MainView {
          });
       }
       function addrun(name){
-         console.warn("addiing run")
+         console.warn("adding run")
          call('geepeeex.add_run', [gpxx, name], function(result){
             console.warn("run added")
          })
@@ -145,11 +157,20 @@ MainView {
       function writeit(gpx, name,act_type){
          console.warn("Writing file")
          var b = Pl.polyline;
-
-         //console.log("https://maps.googleapis.com/maps/api/staticmap?size=400x400&path=weight:3%7Ccolor:blue%7Cenc:"+b.encode(c,4))
          call('geepeeex.write_gpx', [gpxx,name,act_type])
       }//writeit
-
+      function import_run(importfile, name,act_type){
+         console.warn("importing " +  importfile)
+         call('gpximport.Import_run', [importfile,name,act_type])
+      }//Import gpx file
+      function info_run(id){
+        // console.warn("Printing info : " +  infofile)
+         call('gpxinfo.Info_run', [id],function(info_display)
+         {console.log("2 ",info_display);
+         infodis = info_display;
+          //console.log("[LOG]: Reading contents from Python");
+         })
+      }//gpx file info
       function logit(result) {
          console.warn(result)
          gpxx = result
@@ -158,7 +179,6 @@ MainView {
          call('geepeeex.create_gpx', [], logit);
 
       }//create_gpx
-
       function get_units(result) {
          call('geepeeex.get_units', [], function(result){
             console.warn("getting units")
@@ -167,18 +187,13 @@ MainView {
             return runits
          }
       )}
-      function set_units(units) {
-         call('geepeeex.set_units', [units]
-      )}
-
-      function rm_run(run) {
-         call('geepeeex.rm_run', [run])
-      }
+      function set_units(units) {call('geepeeex.set_units', [units])}
+      function rm_run(run) {call('geepeeex.rm_run', [run])}
+      function edit_run(run,name,act_type) {call('geepeeex.edit_run', [run,name,act_type])}
       function current_distance(gpx) {
          call('geepeeex.current_distance', [gpxx], function(result) {
             console.warn("DIST")
             console.warn(result)
-            //distlabel.text=result
             if (runits == "miles"){
                var mi
                mi = result * 0.62137
@@ -197,8 +212,6 @@ MainView {
             return result
          })
       }
-
-
    }//Python
 
    Page {
@@ -217,8 +230,50 @@ MainView {
             text: i18n.tr("About")
             iconName: "info"
             onTriggered: stack.push(Qt.resolvedUrl("About.qml"))
+          },
+         Action {
+            text: i18n.tr("Import")
+            iconName: "import"
+            onTriggered: {
+
+            var importPage = stack.push(Qt.resolvedUrl("ImportPage.qml"),{"contentType": ContentType.All, "handler": ContentHandler.Source})
+            importPage.imported.connect(function(fileUrl) {
+                importfile = fileUrl
+                PopupUtils.open(save_dialog)
+              })//Import
+          }//trigger
+        }//Action
+      ]
+    }//PageHeader
+
+       Component {
+          id: save_dialog
+          ActivityDialog {
+             id: save_dialogue
+             sportsComponent: sportsComp
+             title: i18n.tr("Select the type and the name of your activity")
+             save.onClicked: {
+                PopupUtils.close(save_dialogue)
+                pygpx.import_run(importfile,trackName,sportsComponent.name[sportsComponent.selected])
+                listModel.clear()
+                pygpx.get_runs(listModel)
+             }
+          }
+       }
+
+      Component {
+         id: edit_dialog
+         ActivityDialog {
+            id: edit_dialogue
+            sportsComponent: sportsComp
+            title: i18n.tr("Edit the type and the name of your activity")
+            save.onClicked: {
+                PopupUtils.close(edit_dialogue)
+                pygpx.edit_run(indexrun,sportsComponent.name[sportsComponent.selected],trackName)
+                listModel.clear()
+                pygpx.get_runs(listModel)
+            }
          }
-         ]
       }
 
       Rectangle {
@@ -234,7 +289,7 @@ MainView {
          EmptyState {
             title: i18n.tr("No saved activities")
             iconSource: Qt.resolvedUrl("./images/runman.svg")
-            iconColor: UbuntuColors.jet
+            iconColor: Theme.palette.normal.backgroundText
             subTitle: i18n.tr("Swipe up to log a new activity")
             anchors.centerIn: parent
          }
@@ -271,7 +326,7 @@ MainView {
             ListItemLayout {
                ProportionalShape {
                   SlotsLayout.position: SlotsLayout.Leading
-                  source: Image { source: "images/"+(act_type=="Bike Ride"?"BikeRide":act_type)+".svg" } //Legacy, old act_type was "Bike Ride" substituted with "bikeRide"
+                  source: Image { source: "images/"+(act_type=="Bike Ride"?"BikeRide":act_type)+".svg" } //Legacy, old act_type was "Bike Ride" substituted with "BikeRide"
                   height: del.height-units.gu(2)
                   aspect: UbuntuShape.DropShadow
                }
@@ -289,36 +344,54 @@ MainView {
                   }
                }
                ]
+            }//leading
+            trailingActions: ListItemActions {
+              actions: [
+              Action {
+                 iconName: "edit"
+                 onTriggered: {
+                      indexrun = id;
+                      print(indexrun);
+                      PopupUtils.open(edit_dialog)
+                 }
+              },
+              Action {
+                 iconName: "info"
+                 onTriggered: {
+                      indexrun = id
+                      infodis=""
+                      PopupUtils.open(infogpx)
+                      pygpx.info_run(id)
+                 }
+              }
+             ]
+           }//Trailing
+         }//ListItem
+      }
+      Component {
+         id: infogpx
+         Dialog {
+            id: infogpxdialog
+            title: i18n.tr("Track information")
+            text: infodis
+            onTextChanged: {
+               refreshIndicator.visible = false
+               refreshIndicator.running = false
+               refreshIndicator.focus = false
+            }
+            ActivityIndicator {
+               id:refreshIndicator
+               visible: true
+               running: true
+               focus: true
+            }
+            Button {
+               text: i18n.tr("Close")
+               onClicked: {
+                  PopupUtils.close(infogpxdialog)
+               }
             }
          }
-      }
-      Metric {
-         id: runmetric
-         name: 'activitytracker-runs'
-         format: '%1 activities logged today'
-         emptyFormat: 'No activities today, go do something!'
-         domain: 'metrics-activitytracker'
-      }
-      Metric {
-         id: rundist
-         name: 'activitytracker-runsdist'
-         format: '%1 ' + distmet.arg(runits)
-         emptyFormat: '0 ' + distmet.arg(runits)
-         domain: 'metrics-activitytracker'
-      }
-      Metric {
-         id: bikedist
-         name: 'activitytracker-bikes'
-         format: '%1 ' + bikedistmet.arg(runits)
-         emptyFormat: '0 ' + bikedistmet.arg(runits)
-         domain: 'metrics-activitytracker'
-      }
-      Metric {
-         id: drivedist
-         name: 'activitytracker-drive'
-         format: '%1 ' + drivedistmet.arg(runits)
-         emptyFormat: '0 ' + drivedistmet.arg(runits)
-         domain: 'metrics-activitytracker'
       }
 
       BottomEdge {
@@ -328,12 +401,6 @@ MainView {
             iconSource: "images/runman.svg"
             status: "Active"
             flickable: thelist
-            // onStatusChanged: {
-            //    switch (hint.status) {
-            //    case 1: console.log("hint status: "+1); hint.status=2; break;
-            //    case 0: console.log("hint status: "+0); break;
-            //    case 2: console.log("hint status: "+2); break;
-            // }
          }
          onCollapseStarted: hint.status = "Active"
          onCommitCompleted: contentItem.openDialog = true

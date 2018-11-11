@@ -14,43 +14,41 @@ import Ubuntu.Web 0.2
 
 Page {
    header: PageHeader {
-      id: webmap_header
+      id: map_header
       title: i18n.tr("Activity Map")
    }
    id: mainPage
    property var polyline;
 
+   ActivityIndicator {
+       id:refreshmap
+       anchors.centerIn: parent
+       z: 5
+   }
+
    Python {
       id: pygpx
       Component.onCompleted: {
+
          addImportPath(Qt.resolvedUrl('py/'));
          importModule("geepeeex", function() {
             console.warn("calling python script to load the gpx file")
+            refreshmap.visible = true
+            refreshmap.running = true
+            refreshmap.focus = true
             pygpx.call("geepeeex.visu_gpx", [polyline], function(result) {
                var t = new Array (0)
-               //map.center = QtPositioning.coordinate(result[10].latitude,result[10].longitude); // Allow a delay in case of the recording start with cell tower position
                for (var i=0; i<result.length; i++) {
                   pline.addCoordinate(QtPositioning.coordinate(result[i].latitude,result[i].longitude));
                }
-               map.center = QtPositioning.coordinate(result[i/2].latitude,result[i/2].longitude); // Center the map on the center of the track
+               map.center = QtPositioning.coordinate(result[(i/2).toFixed(0)].latitude,result[(i/2).toFixed(0)].longitude); // Center the map on the enter of the track
+               refreshmap.visible = false
+               refreshmap.running = false
+               refreshmap.focus = false
             });
          });
       }//Component.onCompleted
    }
-
-   /*ListView {
-      id: whattheproblem
-      whattheproblem.model:
-      id: gpxmodel
-      whattheproblem.delegate: Component {
-         Text {
-            latitude: gpxmodel.latitude
-            longitude: gpxmodel.longitude
-         }
-      }
-   }*/
-
-
    Plugin {
       id: mapPlugin
       name: "osm"
@@ -60,6 +58,7 @@ Page {
       anchors.fill: parent
       center: QtPositioning.coordinate(29.62289936, -95.64410114) // Oslo
       zoomLevel: map.maximumZoomLevel - 5
+      color: Theme.palette.normal.background
       plugin : Plugin {
          id: plugin
          allowExperimental: true

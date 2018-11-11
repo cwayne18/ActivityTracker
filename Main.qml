@@ -8,7 +8,6 @@ import QtLocation 5.9
 //import Ubuntu.Components.ListItems 1.3 as ListItem
 import Ubuntu.Components.Popups 1.3
 import "./lib/polyline.js" as Pl
-import UserMetrics 0.1
 import Qt.labs.settings 1.0
 import Ubuntu.Content 1.3
 
@@ -40,9 +39,6 @@ MainView {
    property string timestring : "00:00"
    property string smashkey;
    property string dist;
-   property string distmet: i18n.tr("%1 run today")
-   property string bikedistmet: i18n.tr("%1 biked today")
-   property string drivedistmet: i18n.tr("%1 driven today")
    property int selectedsport: -1
    property int previousSport: -1
    readonly property var translatedSports: [
@@ -112,9 +108,6 @@ MainView {
    onRunitsChanged: {
       listModel.clear()
       pygpx.get_runs(listModel)
-   }
-   ContentPickerDialog {
-         id: contentPickerDialog
    }
    Python {
       id: pygpx
@@ -344,12 +337,6 @@ MainView {
                   width: parent.width /2 -units.gu(0.5)
                   color: UbuntuColors.green
                   enabled: selectedsport != -1
-                  MapPolyline {
-                     id: pline
-                     line.width: 4
-                     line.color: 'red'
-                     path: []
-                  }
                 onClicked: {
                     PopupUtils.close(save_dialogue)
                     selectedsport = selectedsport != -1 ? selectedsport : 0
@@ -545,35 +532,6 @@ MainView {
                }
             }
          }
-      }
-
-      Metric {
-         id: runmetric
-         name: 'activitytracker-runs'
-         format: '%1 activities logged today'
-         emptyFormat: 'No activities today, go do something!'
-         domain: 'metrics-activitytracker'
-      }
-      Metric {
-         id: rundist
-         name: 'activitytracker-runsdist'
-         format: '%1 ' + distmet.arg(runits)
-         emptyFormat: '0 ' + distmet.arg(runits)
-         domain: 'metrics-activitytracker'
-      }
-      Metric {
-         id: bikedist
-         name: 'activitytracker-bikes'
-         format: '%1 ' + bikedistmet.arg(runits)
-         emptyFormat: '0 ' + bikedistmet.arg(runits)
-         domain: 'metrics-activitytracker'
-      }
-      Metric {
-         id: drivedist
-         name: 'activitytracker-drive'
-         format: '%1 ' + drivedistmet.arg(runits)
-         emptyFormat: '0 ' + drivedistmet.arg(runits)
-         domain: 'metrics-activitytracker'
       }
 
       BottomEdge {

@@ -168,13 +168,9 @@ MainView {
          call('gpxinfo.Info_run', [id],function(info_display)
          {console.log("2 ",info_display);
          infodis = info_display;
-         PopupUtils.open(infogpx);
-         refreshIndicator.visible = false
-         refreshIndicator.running = false
-         refreshIndicator.focus = false
           //console.log("[LOG]: Reading contents from Python");
          })
-      }//Import gpx file
+      }//gpx file info
       function logit(result) {
          console.warn(result)
          gpxx = result
@@ -248,14 +244,6 @@ MainView {
           }//trigger
         }//Action
       ]
-      ActivityIndicator {
-          id:refreshIndicator
-          objectName: "activityIndicator"
-          anchors.centerIn: page1Header
-          anchors.horizontalCenterOffset : 100
-          //anchors.topMargin: 250
-         // ColorAnimation: UbuntuColors.orange
-      }
     }//PageHeader
 
        Component {
@@ -371,9 +359,8 @@ MainView {
                  iconName: "info"
                  onTriggered: {
                       indexrun = id
-                      refreshIndicator.visible = true
-                      refreshIndicator.running = true
-                      refreshIndicator.focus = true
+                      infodis=""
+                      PopupUtils.open(infogpx)
                       pygpx.info_run(id)
                  }
               }
@@ -387,10 +374,19 @@ MainView {
             id: infogpxdialog
             title: i18n.tr("Track information")
             text: infodis
-            PopUpButton {
-               id: infogpxclose
-               text: i18n.tr("close")
-               //color: UbuntuColors.red
+            onTextChanged: {
+               refreshIndicator.visible = false
+               refreshIndicator.running = false
+               refreshIndicator.focus = false
+            }
+            ActivityIndicator {
+               id:refreshIndicator
+               visible: true
+               running: true
+               focus: true
+            }
+            Button {
+               text: i18n.tr("Close")
                onClicked: {
                   PopupUtils.close(infogpxdialog)
                }

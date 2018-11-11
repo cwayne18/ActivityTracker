@@ -16,17 +16,15 @@ Page {
    header: PageHeader {
       id: map_header
       title: i18n.tr("Activity Map")
-      ActivityIndicator {
-          id:refreshmap
-          objectName: "activityIndicator"
-          anchors.centerIn: map_header
-          anchors.horizontalCenterOffset : 100
-          //anchors.topMargin: 250
-         // ColorAnimation: UbuntuColors.orange
-      }
-      }
+   }
    id: mainPage
    property var polyline;
+
+   ActivityIndicator {
+       id:refreshmap
+       anchors.centerIn: parent
+       z: 5
+   }
 
    Python {
       id: pygpx

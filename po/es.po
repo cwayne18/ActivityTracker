@@ -1,25 +1,34 @@
-# SOME DESCRIPTIVE TITLE.
+SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the activitytracker.actidev package.
+# This file is distributed under the same license as the activitytracker.cwayne18 package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: activitytracker.actidev\n"
+"Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-12 21:36+0000\n"
-"PO-Revision-Date: 2018-08-13 12:39+0000\n"
-"Last-Translator: Josué <j2g2rp@gmail.com>\n"
-"Language-Team: UBports Spanish Team\n"
-"Language: es\n"
+"POT-Creation-Date: 2018-11-11 16:17+0000\n"
+"PO-Revision-Date: 2018-11-17 22:55+0100\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es_ES\n"
 
-#: ../About.qml:7 ../Main.qml:217
+#: ../Map.qml:18
+msgid "Activity Map"
+msgstr "Mapa de actividad"
+
+#: ../ImportPage.qml:34
+msgid "Choose"
+msgstr "Seleccionar"
+
+#: ../About.qml:7 ../Main.qml:242
 msgid "About"
-msgstr "Acerca de"
+msgstr "Acerca de..."
 
 #: ../About.qml:32
 msgid "Activity Tracker"
@@ -30,95 +39,132 @@ msgid "Version"
 msgstr "Versión"
 
 #: ../About.qml:74
-msgid ""
-"Released under the terms of the GNU GPL v3. <br> Source code available on "
+msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
 msgstr ""
-"Publicado según la licencia GNU GPL v3. <br> Código fuente disponible en "
+"Publicado bajo los términos de licencia GNU GPL v3.<br>Código fuente "
+"disponible en:"
 
 #: ../About.qml:82
-msgid ""
-"Part of the icons is made by <a href=\"http://www.freepik.com\" title="
-"\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title="
-"\"Flaticon\">www.flaticon.com</a> is licensed by <a href=\"http://"
-"creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
-"target=\"_blank\">CC 3.0 BY</a>\""
+msgid "Part of the icons is made by %1 from %2 is licensed by %3"
 msgstr ""
-"Algunos de los iconos han sido hechos por <a href=\"http://www.freepik.com\" title="
-"\"Freepik\">Freepik</a> de <a href=\"https://www.flaticon.com/\" title="
-"\"Flaticon\">www.flaticon.com</a> licenciados según la <a href=\"http://"
-"creativecommons.org/licenses/by/3.0/\" title=\"Creative Commons BY 3.0\" "
-"target=\"_blank\">CC 3.0 BY</a>\""
-#:1 ../QMLMap.qml:18
-msgid "Activity Map"
-msgstr "Mapa de actividad"
+"Parte de los iconos han sido realizados por: %1 de %2 y bajo la licencia %3"
 
-#: ../Tracker.qml:15
+#. TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
+#: ../About.qml:95
+msgid ""
+"Thanks to %1 for the icons based on:<br>%3 by %8 from %2,<br>%4 by %9 from "
+"%2,<br>%5 by %10 from %2,<br>%6 by %11 from %2,<br>%7 by %12 from %2"
+msgstr ""
+"Gracias a %1 por los iconos basados en: <br> %3 de %2<br> %4 por %9  de %2, "
+"<br> %5 por %10 de %2, <br>%6 por %11 de %2, <br> %7 por %12 de %2"
+
+#: ../About.qml:116
+msgid "Translate this app on Weblate!"
+msgstr "¡Traduzca esta aplicación en Weblate!"
+
+#: ../About.qml:125
+msgid "Support Weblate"
+msgstr "Soporta Weblate"
+
+#: ../Tracker.qml:14 ../Main.qml:45
+msgid "Run"
+msgstr "Correr"
+
+#: ../Tracker.qml:15 ../Main.qml:46
+msgid "BikeRide"
+msgstr "Bicicleta"
+
+#: ../Tracker.qml:16 ../Main.qml:47
+msgid "Walk"
+msgstr "Andar"
+
+#: ../Tracker.qml:17 ../Main.qml:48
+msgid "Drive"
+msgstr "Conducir"
+
+#: ../Tracker.qml:18 ../Main.qml:49
+msgid "Hike"
+msgstr "Caminata"
+
+#: ../Tracker.qml:29 ../Main.qml:274
+msgid "Choose sport:"
+msgstr "Seleccione deporte:"
+
+#: ../Tracker.qml:42 ../Main.qml:287
+msgid "After"
+msgstr "Después"
+
+#: ../Tracker.qml:80
 msgid "Activity in Progress"
 msgstr "Actividad en curso"
 
-#: ../Tracker.qml:15
+#: ../Tracker.qml:80
 msgid "New Activity"
 msgstr "Nueva actividad"
 
-#: ../Tracker.qml:45
-msgid "Do you want to cancel the activity ?"
+#: ../Tracker.qml:118
+msgid "Do you want to cancel the activity?"
 msgstr "¿Desea cancelar la actividad?"
 
-#: ../Tracker.qml:49
-msgid "Yes"
-msgstr "Sí"
+#: ../Tracker.qml:121
+msgid "Yes, cancel"
+msgstr "Si, cancelar"
 
-#: ../Tracker.qml:68
-msgid "No"
-msgstr "No"
+#: ../Tracker.qml:139
+msgid "No, continue"
+msgstr "No, continuar"
 
-#: ../Tracker.qml:107 ../Tracker.qml:112
+#: ../Tracker.qml:177 ../Tracker.qml:182
 msgid "No data"
-msgstr "No hay datos"
+msgstr "Sin datos"
 
-#: ../Tracker.qml:173
-msgid "Do you want to stop recording your activity?"
+#: ../Tracker.qml:243
+msgid "Do you want to stop the recording?"
 msgstr "¿Desea parar la grabación de su actividad?"
 
-#: ../Tracker.qml:176
+#: ../Tracker.qml:245
 msgid "Yes, Stop!"
-msgstr "¡Sí, parar!"
+msgstr "¡Si, detener!"
 
-#: ../Tracker.qml:187
+#: ../Tracker.qml:263
 msgid "No, Continue"
 msgstr "No, continuar"
 
-#: ../Tracker.qml:201
+#: ../Tracker.qml:274 ../Main.qml:307
 msgid "Select the type and the name of your activity"
 msgstr "Seleccione el tipo y el nombre de su actividad"
 
-#: ../Tracker.qml:205
+#: ../Tracker.qml:278 ../Main.qml:311 ../Main.qml:370
 msgid "Name"
 msgstr "Nombre"
 
-#: ../Tracker.qml:219
+#: ../Tracker.qml:281 ../Main.qml:314 ../Main.qml:373
+msgid "Select a sport below"
+msgstr "Seleccione uno de los siguientes deportes"
+
+#: ../Tracker.qml:291 ../Main.qml:324 ../Main.qml:383
 msgid "Activity Type"
 msgstr "Tipo de actividad"
 
-#: ../Tracker.qml:236
-msgid "Save Activity"
-msgstr "Guardar actividad"
+#: ../Tracker.qml:307 ../Main.qml:335 ../Main.qml:394
+msgid "Save"
+msgstr "Guardar"
 
-#: ../Tracker.qml:274
+#: ../Tracker.qml:347 ../Main.qml:350 ../Main.qml:415
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: ../Tracker.qml:324
+#: ../Tracker.qml:398
 msgid "Start"
 msgstr "Comenzar"
 
-#: ../Tracker.qml:345
+#: ../Tracker.qml:419
 msgid "Stop"
-msgstr "Parar"
+msgstr "Detener"
 
-#: ../Settings.qml:16 ../Main.qml:212
+#: ../Settings.qml:16 ../Main.qml:237
 msgid "Settings"
-msgstr "Configuración"
+msgstr "Ajustes"
 
 #: ../Settings.qml:30
 msgid "Units"
@@ -130,45 +176,49 @@ msgstr "Registrar un punto cada:"
 
 #: ../Settings.qml:49
 msgid "between 50 and 3600000"
-msgstr "entre 50 y 3600000"
+msgstr "Entre 50 y 3600000"
 
 #. TRANSLATORS: millisecond abbreviation
 #: ../Settings.qml:90
 msgid "ms"
 msgstr "ms"
 
-#: ../Main.qml:33
-msgid "%1 run today"
-msgstr "%1 corridos hoy"
-
-#: ../Main.qml:34
-msgid "%1 biked today"
-msgstr "%1 en bicicleta"
-
-#: ../Main.qml:35
-msgid "%1 drived today"
-msgstr "%1 conducidos hoy"
-
-#: ../Main.qml:127 ../Main.qml:130
+#: ../Main.qml:147 ../Main.qml:150
 msgid "Distance: "
-msgstr "Distancia: "
+msgstr "Distancia:"
 
-#: ../Main.qml:133
+#: ../Main.qml:153
 msgid "Time: "
-msgstr "Tiempo: "
+msgstr "Tiempo:"
 
-#: ../Main.qml:208
+#: ../Main.qml:233
 msgid "Recent Activities"
-msgstr "Actividades recientes"
+msgstr "Actividades recientes:"
 
-#: ../Main.qml:235
+#: ../Main.qml:247
+msgid "Import"
+msgstr "Importar:"
+
+#: ../Main.qml:366
+msgid "Edit the type and the name of your activity"
+msgstr "Edite el tipo y el nombre de su actividad"
+
+#: ../Main.qml:438
 msgid "No saved activities"
 msgstr "No hay actividades guardadas"
 
-#: ../Main.qml:238
+#: ../Main.qml:441
 msgid "Swipe up to log a new activity"
 msgstr "Deslice hacia arriba para registrar una nueva actividad"
 
-#: ../Main.qml:328
+#: ../Main.qml:524
+msgid "Track information"
+msgstr "Información de rastreo"
+
+#: ../Main.qml:528
+msgid "close"
+msgstr "cerrar"
+
+#: ../Main.qml:540
 msgid "Log new Activity"
 msgstr "Registrar nueva actividad"

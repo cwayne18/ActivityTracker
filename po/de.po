@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-11 16:17+0000\n"
-"PO-Revision-Date: 2018-12-01 19:08+0000\n"
-"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
+"PO-Revision-Date: 2018-12-14 18:07+0000\n"
+"Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/activity-tracker/"
 "translations/de/>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.3\n"
+"X-Generator: Weblate 3.4-dev\n"
 
 #: ../Map.qml:18
 msgid "Activity Map"
@@ -72,11 +72,11 @@ msgstr "Fahrradtour"
 
 #: ../Tracker.qml:16 ../Main.qml:47
 msgid "Walk"
-msgstr ""
+msgstr "Laufen"
 
 #: ../Tracker.qml:17 ../Main.qml:48
 msgid "Drive"
-msgstr ""
+msgstr "Fahren"
 
 #: ../Tracker.qml:18 ../Main.qml:49
 msgid "Hike"
@@ -88,11 +88,11 @@ msgstr ""
 
 #: ../Tracker.qml:42 ../Main.qml:287
 msgid "After"
-msgstr ""
+msgstr "Nach"
 
 #: ../Tracker.qml:80
 msgid "Activity in Progress"
-msgstr ""
+msgstr "Aktivität Läuft"
 
 #: ../Tracker.qml:80
 msgid "New Activity"

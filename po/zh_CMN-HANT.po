@@ -8,13 +8,16 @@ msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-11 16:17+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-01-15 17:56+0000\n"
+"Last-Translator: wcy <m895686@163.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"activity-tracker/translations/zh_CMN-HANT/>\n"
 "Language: zh_CMN-HANT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.4-dev\n"
 
 #: ../Map.qml:18
 msgid "Activity Map"
@@ -22,7 +25,7 @@ msgstr ""
 
 #: ../ImportPage.qml:34
 msgid "Choose"
-msgstr ""
+msgstr "选择"
 
 #: ../About.qml:7 ../Main.qml:242
 msgid "About"

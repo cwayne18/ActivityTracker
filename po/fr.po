@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: activitytracker.actidev\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-12 21:22+0000\n"
-"PO-Revision-Date: 2018-11-13 10:06+0000\n"
+"PO-Revision-Date: 2019-01-15 17:52+0000\n"
 "Last-Translator: Michele <miguel2000@livecom.it>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/activity-tracker/"
 "translations/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.3-dev\n"
+"X-Generator: Weblate 3.4-dev\n"
 
 #: ../About.qml:7 ../Main.qml:217
 msgid "About"
@@ -29,7 +29,7 @@ msgstr "Activity Tracker"
 
 #: ../About.qml:38
 msgid "Version"
-msgstr "Version "
+msgstr "Version"
 
 #: ../About.qml:74
 msgid ""

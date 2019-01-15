@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-12 21:22+0000\n"
 "PO-Revision-Date: 2019-01-15 17:52+0000\n"
-"Last-Translator: Michele <miguel2000@livecom.it>\n"
+"Last-Translator: Ewan Lehnebach <ewan.lehnebach@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/activity-tracker/"
 "translations/fr/>\n"
 "Language: fr\n"
@@ -86,7 +86,7 @@ msgstr "Voulez-vous arrêter l'enregistrement ?"
 
 #: ../Tracker.qml:176
 msgid "Yes, Stop!"
-msgstr "Oui, sauvegarder!"
+msgstr "Oui, arrêt !"
 
 #: ../Tracker.qml:187
 msgid "No, Continue"

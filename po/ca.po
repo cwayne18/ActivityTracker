@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-01 14:59+0000\n"
-"PO-Revision-Date: 2018-11-13 10:06+0000\n"
+"PO-Revision-Date: 2019-01-15 17:56+0000\n"
 "Last-Translator: Michele <miguel2000@livecom.it>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/activity-tracker/"
 "translations/ca/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.3-dev\n"
+"X-Generator: Weblate 3.4-dev\n"
 
 #: ../WebMap.qml:18
 msgid "Activity Map"
@@ -33,7 +33,7 @@ msgstr "Activity Tracker"
 
 #: ../About.qml:38
 msgid "Version "
-msgstr "Versió"
+msgstr "Versió "
 
 #: ../About.qml:68
 msgid "Released under the terms of the GNU GPL v3"
@@ -41,7 +41,7 @@ msgstr "Alliberat sota la llicència GNU GPL v3"
 
 #: ../About.qml:79
 msgid "Source code available on "
-msgstr "Codi font disponible a"
+msgstr "Codi font disponible a "
 
 #: ../About.qml:87
 msgid ""

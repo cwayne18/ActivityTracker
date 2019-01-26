@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-11 16:17+0000\n"
 "PO-Revision-Date: 2019-01-26 13:03+0000\n"
-"Last-Translator: ta88 <tanzicheng@gmail.com>\n"
+"Last-Translator: YONGLE <tanyongle0633@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "activity-tracker/translations/zh_CMN-HANT/>\n"
 "Language: zh_CMN-HANT\n"
@@ -29,15 +29,15 @@ msgstr "选择"
 
 #: ../About.qml:7 ../Main.qml:242
 msgid "About"
-msgstr ""
+msgstr "关于"
 
 #: ../About.qml:32
 msgid "Activity Tracker"
-msgstr ""
+msgstr "活动追踪器"
 
 #: ../About.qml:38
 msgid "Version"
-msgstr ""
+msgstr "版本"
 
 #: ../About.qml:74
 msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"

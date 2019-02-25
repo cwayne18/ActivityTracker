@@ -166,7 +166,7 @@ MainView {
       function info_run(id){
         // console.warn("Printing info : " +  infofile)
          call('gpxinfo.Info_run', [id],function(info_display)
-         {console.log("2 ",info_display);
+         {//console.log("2 ",info_display);
          infodis = info_display;
           //console.log("[LOG]: Reading contents from Python");
          })
@@ -320,7 +320,7 @@ MainView {
          delegate: ListItem {
             id :del
             onClicked: {
-               stack.push(Qt.resolvedUrl('Map.qml'), {polyline: filename})
+               stack.push(Qt.resolvedUrl('Map.qml'), {polyline: filename, index: id})
             }
 
             ListItemLayout {

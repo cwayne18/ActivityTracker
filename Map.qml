@@ -16,9 +16,22 @@ Page {
    header: PageHeader {
       id: map_header
       title: i18n.tr("Activity Map")
+      trailingActionBar.actions: [
+         Action {
+            text: i18n.tr("Info")
+            iconName: "info"
+            onTriggered: {
+                 indexrun = index
+                 infodis=""
+                 PopupUtils.open(infogpx)
+                 pygpx.info_run(index)
+            }
+         }
+      ]
    }
    id: mainPage
-   property var polyline;
+   property var polyline
+   property var index
 
    ActivityIndicator {
        id:refreshmap
@@ -27,7 +40,7 @@ Page {
    }
 
    Python {
-      id: pygpx
+      id: pygpxmap
       Component.onCompleted: {
 
          addImportPath(Qt.resolvedUrl('py/'));
@@ -36,7 +49,7 @@ Page {
             refreshmap.visible = true
             refreshmap.running = true
             refreshmap.focus = true
-            pygpx.call("geepeeex.visu_gpx", [polyline], function(result) {
+            pygpxmap.call("geepeeex.visu_gpx", [polyline], function(result) {
                var t = new Array (0)
                for (var i=0; i<result.length; i++) {
                   pline.addCoordinate(QtPositioning.coordinate(result[i].latitude,result[i].longitude));

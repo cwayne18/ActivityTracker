@@ -8,41 +8,46 @@ msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-11 16:17+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-03-01 13:17+0000\n"
+"Last-Translator: WWWesten <wwwesten@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/activity-tracker/"
+"translations/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.5-dev\n"
 
 #: ../Map.qml:18
 msgid "Activity Map"
-msgstr ""
+msgstr "Карта деятельности"
 
 #: ../ImportPage.qml:34
 msgid "Choose"
-msgstr ""
+msgstr "Выбрать"
 
 #: ../About.qml:7 ../Main.qml:242
 msgid "About"
-msgstr ""
+msgstr "Об Activity Tracker"
 
 #: ../About.qml:32
 msgid "Activity Tracker"
-msgstr ""
+msgstr "Трекер деятельности"
 
 #: ../About.qml:38
 msgid "Version"
-msgstr ""
+msgstr "Версия"
 
 #: ../About.qml:74
 msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
 msgstr ""
+"Выпущено в соответствии с условиями GNU GPL v3. <br> Исходный код доступен на"
 
 #: ../About.qml:82
 msgid "Part of the icons is made by %1 from %2 is licensed by %3"
-msgstr ""
+msgstr "Часть значков сделана %1, из %2, лицензирована %3"
 
 #. TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
 #: ../About.qml:95
@@ -50,168 +55,170 @@ msgid ""
 "Thanks to %1 for the icons based on:<br>%3 by %8 from %2,<br>%4 by %9 from "
 "%2,<br>%5 by %10 from %2,<br>%6 by %11 from %2,<br>%7 by %12 from %2"
 msgstr ""
+"Благодарим %1 за значки основанные на:<br>%3 от %8 на %2,<br>%4 от %9 на "
+"%2,<br>%5 от 10% на 2%,<br>%6 от 11% на %2,<br>%7 от 12% на %2"
 
 #: ../About.qml:116
 msgid "Translate this app on Weblate!"
-msgstr ""
+msgstr "Переведите это приложение на Weblate!"
 
 #: ../About.qml:125
 msgid "Support Weblate"
-msgstr ""
+msgstr "Поддержите Weblate"
 
 #: ../Tracker.qml:14 ../Main.qml:45
 msgid "Run"
-msgstr ""
+msgstr "Работа"
 
 #: ../Tracker.qml:15 ../Main.qml:46
 msgid "BikeRide"
-msgstr ""
+msgstr "Езда на велосипеде"
 
 #: ../Tracker.qml:16 ../Main.qml:47
 msgid "Walk"
-msgstr ""
+msgstr "Прогулка"
 
 #: ../Tracker.qml:17 ../Main.qml:48
 msgid "Drive"
-msgstr ""
+msgstr "Езда"
 
 #: ../Tracker.qml:18 ../Main.qml:49
 msgid "Hike"
-msgstr ""
+msgstr "Марш"
 
 #: ../Tracker.qml:29 ../Main.qml:274
 msgid "Choose sport:"
-msgstr ""
+msgstr "Выбрать спорт:"
 
 #: ../Tracker.qml:42 ../Main.qml:287
 msgid "After"
-msgstr ""
+msgstr "После"
 
 #: ../Tracker.qml:80
 msgid "Activity in Progress"
-msgstr ""
+msgstr "Текущая деятельность"
 
 #: ../Tracker.qml:80
 msgid "New Activity"
-msgstr ""
+msgstr "Новая деятельность"
 
 #: ../Tracker.qml:118
 msgid "Do you want to cancel the activity?"
-msgstr ""
+msgstr "Вы желаете прекратить деятельность?"
 
 #: ../Tracker.qml:121
 msgid "Yes, cancel"
-msgstr ""
+msgstr "Да, прекратить"
 
 #: ../Tracker.qml:139
 msgid "No, continue"
-msgstr ""
+msgstr "Нет, продолжать"
 
 #: ../Tracker.qml:177 ../Tracker.qml:182
 msgid "No data"
-msgstr ""
+msgstr "Нет данных"
 
 #: ../Tracker.qml:243
 msgid "Do you want to stop the recording?"
-msgstr ""
+msgstr "Вы желаете остановить запись?"
 
 #: ../Tracker.qml:245
 msgid "Yes, Stop!"
-msgstr ""
+msgstr "Да, остановить!"
 
 #: ../Tracker.qml:263
 msgid "No, Continue"
-msgstr ""
+msgstr "Нет, продолжать"
 
 #: ../Tracker.qml:274 ../Main.qml:307
 msgid "Select the type and the name of your activity"
-msgstr ""
+msgstr "Выбрать тип и название вашей деятельности"
 
 #: ../Tracker.qml:278 ../Main.qml:311 ../Main.qml:370
 msgid "Name"
-msgstr ""
+msgstr "Имя"
 
 #: ../Tracker.qml:281 ../Main.qml:314 ../Main.qml:373
 msgid "Select a sport below"
-msgstr ""
+msgstr "Выбрать спорт ниже"
 
 #: ../Tracker.qml:291 ../Main.qml:324 ../Main.qml:383
 msgid "Activity Type"
-msgstr ""
+msgstr "Тип деятельности"
 
 #: ../Tracker.qml:307 ../Main.qml:335 ../Main.qml:394
 msgid "Save"
-msgstr ""
+msgstr "Сохранить"
 
 #: ../Tracker.qml:347 ../Main.qml:350 ../Main.qml:415
 msgid "Cancel"
-msgstr ""
+msgstr "Прекратить"
 
 #: ../Tracker.qml:398
 msgid "Start"
-msgstr ""
+msgstr "Старт"
 
 #: ../Tracker.qml:419
 msgid "Stop"
-msgstr ""
+msgstr "Стоп"
 
 #: ../Settings.qml:16 ../Main.qml:237
 msgid "Settings"
-msgstr ""
+msgstr "Параметры"
 
 #: ../Settings.qml:30
 msgid "Units"
-msgstr ""
+msgstr "Единицы"
 
 #: ../Settings.qml:47
 msgid "Log a point every:"
-msgstr ""
+msgstr "Записывать точку каждые:"
 
 #: ../Settings.qml:49
 msgid "between 50 and 3600000"
-msgstr ""
+msgstr "между 50 и 3600000"
 
 #. TRANSLATORS: millisecond abbreviation
 #: ../Settings.qml:90
 msgid "ms"
-msgstr ""
+msgstr "мс"
 
 #: ../Main.qml:147 ../Main.qml:150
 msgid "Distance: "
-msgstr ""
+msgstr "Дистанция: "
 
 #: ../Main.qml:153
 msgid "Time: "
-msgstr ""
+msgstr "Время: "
 
 #: ../Main.qml:233
 msgid "Recent Activities"
-msgstr ""
+msgstr "Недавняя активность"
 
 #: ../Main.qml:247
 msgid "Import"
-msgstr ""
+msgstr "Импорт"
 
 #: ../Main.qml:366
 msgid "Edit the type and the name of your activity"
-msgstr ""
+msgstr "Править тип и название вашей деятельности"
 
 #: ../Main.qml:438
 msgid "No saved activities"
-msgstr ""
+msgstr "Нет сохранённой активности"
 
 #: ../Main.qml:441
 msgid "Swipe up to log a new activity"
-msgstr ""
+msgstr "Проведите вверх для журналирования новой деятельности"
 
 #: ../Main.qml:524
 msgid "Track information"
-msgstr ""
+msgstr "Информация о дорожке"
 
 #: ../Main.qml:528
 msgid "close"
-msgstr ""
+msgstr "закрыть"
 
 #: ../Main.qml:540
 msgid "Log new Activity"
-msgstr ""
+msgstr "Журналировать новую деятельность"

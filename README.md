@@ -29,6 +29,7 @@ Due to older QML lib on 15.04, the changes cannot be retrofitted.
 ## General information
  - Due to a OS limitation the recording must occur with the screen on
  - The GPX files are located in .local/share/activitytracker.cwayne18/
+ - Translations are welcome on [weblate](https://hosted.weblate.org/projects/activity-tracker/translations/)
 
  ## Thanks
   - Michele for the logo

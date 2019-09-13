@@ -40,6 +40,7 @@ MainView {
    property string timestring : "00:00"
    property string smashkey;
    property string dist;
+   property bool filtered: false
    Sports {id:sportsComp}
 
    //keep screen on while tracking an activity so we still get to read GPS
@@ -96,6 +97,11 @@ MainView {
 
    ListModel {
       id: listModel
+   }
+   SortFilterModel {
+      id: filteredModel
+      model: listModel
+      filter.property: "act_type"
    }
    onRunitsChanged: {
       listModel.clear()
@@ -227,9 +233,9 @@ MainView {
             onTriggered: stack.push(Qt.resolvedUrl("Settings.qml"))
          },
          Action {
-            text: i18n.tr("About")
-            iconName: "info"
-            onTriggered: stack.push(Qt.resolvedUrl("About.qml"))
+            text: i18n.tr("Filter")
+            iconName: "filters"
+            onTriggered: filtered = ! filtered
           },
          Action {
             text: i18n.tr("Import")
@@ -244,6 +250,17 @@ MainView {
           }//trigger
         }//Action
       ]
+      extension: Sections {
+         visible: filtered
+         height: visible ? implicitHeight : 0
+         model: sportsComp.translated
+         anchors {
+            left: parent.left
+            right: parent.right
+         }
+         onSelectedIndexChanged: filteredModel.filter.pattern = new RegExp(sportsComp.name[selectedIndex], 'i')
+         onVisibleChanged: filteredModel.filter.pattern = new RegExp(sportsComp.name[selectedIndex], 'i')
+      }
     }//PageHeader
 
        Component {
@@ -311,7 +328,7 @@ MainView {
          height: parent.height
          clip:true
          id:thelist
-         model: listModel
+         model: filtered ? filteredModel : listModel
          // let refresh control know when the refresh gets completed
          // pullToRefresh {
          //    enabled: false

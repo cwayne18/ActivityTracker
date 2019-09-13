@@ -14,6 +14,14 @@ Page {
    header: PageHeader {
       id: settingsHeader
       title: i18n.tr("Settings")
+
+      trailingActionBar.actions: [
+      Action {
+         text: i18n.tr("About")
+         iconName: "info"
+         onTriggered: stack.push(Qt.resolvedUrl("About.qml"))
+       }
+       ]
    }
    id:settings
    Column {

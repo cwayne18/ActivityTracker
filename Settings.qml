@@ -5,8 +5,6 @@ import QtLocation 5.3
 import Ubuntu.Components.ListItems 1.3 as LI
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Components.Pickers 1.3
-import "./lib/polyline.js" as Pl
-
 
 
 Page {
@@ -71,29 +69,45 @@ Page {
                   }
                   Component.onCompleted: text = persistentSettings.pointsInterval///1000
                }
-            //    Label {
-            //       text:"."
-            //       anchors {
-            //          bottom: parent.bottom
-            //          margins: units.gu(1)
-            //       }
-            //    }
-            //    TextField {
-            //       placeholderText: "050"
-            //       inputMethodHints: Qt.ImhDigitsOnly
-            //       hasClearButton:false
-            //       width: units.gu(length>0?length:placeholderText.length)+units.gu(2.75)
-            //    }
-            // }
             Label {
                // TRANSLATORS: millisecond abbreviation
                text:i18n.tr("ms");
                SlotsLayout.position:SlotsLayout.Last;
             }
          }
-         // onClicked: {
-         //    var picker = PickerPanel.openDatePicker(pointsIntervalLayout, "date", "Seconds")
-         // }
+       }
+      ListItem {
+        divider.visible: false
+        height:altitudeOffsetLayout.height
+         ListItemLayout {
+            id: altitudeOffsetLayout
+            title.text: i18n.tr("Altitude offset:")
+            summary.text: i18n.tr("between -100 and 100")
+               TextField {
+                  id: altitudeOffsetField
+                  color: !acceptableInput ? UbuntuColors.red : theme.palette.normal.backgroundText
+                  placeholderText: "0"
+                  inputMethodHints: Qt.ImhDigitsOnly
+                  hasClearButton:false
+                  validator: IntValidator {
+                     bottom:-100;
+                     top:100;
+                  }
+                  width: units.gu(length>0?length:placeholderText.length)+units.gu(2.75)
+                  SlotsLayout.position:SlotsLayout.Trailing
+                  onTextChanged: {
+                     if (acceptableInput)
+                     persistentSettings.altitudeOffset = text | 0
+                     else if (length==0)
+                     persistentSettings.altitudeOffset = 0 //default value
+                  }
+                  Component.onCompleted: text = persistentSettings.altitudeOffset
+               }
+            Label {
+               text:i18n.tr("meter(s)");
+               SlotsLayout.position:SlotsLayout.Last;
+            }
+         }
       }
    }
 }

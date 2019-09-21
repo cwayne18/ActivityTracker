@@ -13,6 +13,7 @@ Rectangle {
    color: Theme.palette.normal.background
    width: page1.width
    height: page1.height
+   property int altitudeCorrected
 
    Component {
       id:sportselect
@@ -114,14 +115,15 @@ Rectangle {
 
                if (src.position.latitudeValid && src.position.longitudeValid && src.position.altitudeValid) {
                   //pygpx.addpoint(gpxx,coord.latitude,coord.longitude,coord.altitude)
-                  pline.addCoordinate(QtPositioning.coordinate(coord.latitude,coord.longitude, coord.altitude))
+                  altitudeCorrected = coord.altitude + persistentSettings.altitudeOffset
+                  pline.addCoordinate(QtPositioning.coordinate(coord.latitude,coord.longitude, altitudeCorrected))
                   pygpx.current_distance(gpxx)
                   distlabel.text = dist
                   console.warn("========================")
                   //console.warn(pygpx.current_distance(gpxx))
                }
                if (src.position.altitudeValid) {
-                  altlabel.text = formatDist(coord.altitude)
+                  altlabel.text = formatAlt(altitudeCorrected)
                } else {
                   altlabel.text = i18n.tr("No data")
                }
@@ -141,8 +143,10 @@ Rectangle {
             if (gpxx && am_running){
 
                if (src.position.latitudeValid && src.position.longitudeValid && src.position.altitudeValid) {
-                  pygpx.addpoint(gpxx,coord.latitude,coord.longitude,coord.altitude)
+                 altitudeCorrected = coord.altitude + persistentSettings.altitudeOffset
+                  pygpx.addpoint(gpxx,coord.latitude,coord.longitude,altitudeCorrected)
                   console.log("Coordinate:", coord.longitude, coord.latitude)
+                  console.log("calibrated altitude :", altitudeCorrected, "& raw Altitude:", coord.altitude )
                }
 
             }
@@ -201,7 +205,9 @@ Rectangle {
                   var coord = src.position.coordinate
                   if (gpxx && am_running){
                      if (src.position.latitudeValid && src.position.longitudeValid && src.position.altitudeValid) {
-                        pygpx.addpoint(gpxx,coord.latitude,coord.longitude,coord.altitude)
+                       altitudeCorrected = coord.altitude + persistentSettings.altitudeOffset
+                        pygpx.addpoint(gpxx,coord.latitude,coord.longitude,altitudeCorrected)
+                        //pygpx.addpoint(gpxx,coord.latitude,coord.longitude,coord.altitude)
                      }
                   }
                   src.stop()

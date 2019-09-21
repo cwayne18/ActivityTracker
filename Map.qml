@@ -7,7 +7,6 @@ import QtSystemInfo 5.0
 import QtLocation 5.9
 import Ubuntu.Components.ListItems 1.3 as ListItem
 import Ubuntu.Components.Popups 1.3
-import "./lib/polyline.js" as Pl
 import Ubuntu.Web 0.2
 
 

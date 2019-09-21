@@ -5,9 +5,7 @@ import QtQuick.Layouts 1.1
 import io.thp.pyotherside 1.5
 import QtSystemInfo 5.0
 import QtLocation 5.9
-//import Ubuntu.Components.ListItems 1.3 as ListItem
 import Ubuntu.Components.Popups 1.3
-import "./lib/polyline.js" as Pl
 import Qt.labs.settings 1.0
 import Ubuntu.Content 1.3
 import "components"
@@ -50,7 +48,10 @@ MainView {
    Settings {
       id: persistentSettings
       property int pointsInterval: 5000
+      property int altitudeOffset: 0
       // onPointsIntervalChanged: {/*console.log("pointsInterval has changed: "+pointsInterval);*/loggingpoints.interval = pointsInterval}
+      //onaltitudeOffsetChanged: {console.log("altitudeOffset has changed: "+altitudeOffset)}
+
    }
 
    function stopwatch(seconds) {
@@ -81,15 +82,20 @@ MainView {
       return distance
    }
 
+   function formatAlt(Alti) {
+      Alti = Alti.toFixed(0) + "m"
+      return Alti
+   }
+
    function formatSpeed(speed) {
       if (runits == "miles"){
          var mi
          mi = speed * 0.62137 / 1000 * 3600
-         speed = mi.toFixed(1) + "mi/h"
+         speed = mi.toFixed(0) + "mi/h"
       }
       else if (runits == "kilometers"){
          speed = speed / 1000 * 3600
-         speed = speed.toFixed(1) + "km/h"
+         speed = speed.toFixed(0) + "km/h"
       }
       return speed
    }
@@ -156,7 +162,6 @@ MainView {
       }//addrun
       function writeit(gpx, name,act_type){
          console.warn("Writing file")
-         var b = Pl.polyline;
          call('geepeeex.write_gpx', [gpxx,name,act_type])
       }//writeit
       function import_run(importfile, name,act_type){

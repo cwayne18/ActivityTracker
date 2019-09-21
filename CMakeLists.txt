@@ -17,8 +17,6 @@ execute_process(
     OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 
-set(QT_IMPORTS_DIR "lib/${ARCH_TRIPLET}")
-
 set(PROJECT_NAME "activitytracker")
 set(FULL_PROJECT_NAME "activitytracker.cwayne18")
 set(CMAKE_INSTALL_PREFIX /)
@@ -38,7 +36,6 @@ configure_file(manifest.json.in ${CMAKE_CURRENT_BINARY_DIR}/manifest.json)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/manifest.json DESTINATION ${CMAKE_INSTALL_PREFIX})
 install(FILES ${PROJECT_NAME}.apparmor DESTINATION ${DATA_DIR})
 install(DIRECTORY images DESTINATION ${DATA_DIR})
-install(DIRECTORY lib DESTINATION ${DATA_DIR})
 install(DIRECTORY py DESTINATION ${DATA_DIR})
 install(DIRECTORY components DESTINATION ${DATA_DIR})
 install(FILES ${QML_FILES} DESTINATION ${DATA_DIR})

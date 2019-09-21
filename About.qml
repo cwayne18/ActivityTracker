@@ -40,7 +40,7 @@ Page {
             }
 
             Label {
-               text: i18n.tr("Version") + " 0.13"
+               text: i18n.tr("Version") + " 0.14"
                anchors.horizontalCenter: parent.horizontalCenter
             }
          }
@@ -59,7 +59,7 @@ Page {
             width: parent.width
 
             Label {
-               text: "© 2018 Erne st & Michele Castellazzi"
+               text: "© 2018-2019 Erne st & Michele Castellazzi"
                anchors.horizontalCenter: parent.horizontalCenter
             }
 

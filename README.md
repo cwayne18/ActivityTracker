@@ -6,7 +6,15 @@ This repo is a fork of the original app created by CWayne18.
 The app has been upgraded by Michele and Ernes_t to work only on 16.04 Ubuntu Touch.
 Due to older QML lib on 15.04, the changes cannot be retrofitted.
 
-## Majors changes 0.12:
+## Changes 0.12:
+- Add the possibility to calibrate the altitude,
+- Remove JavaScript lib,
+- Thanks to the contributors to update translation.
+
+## Changes 0.13:
+- Thanks to the contributors to update translation.
+
+## Changes 0.12:
 - Improved sport selection
 - Missing appname substitution and removed unused images
 - Back to appname cwayne18, UX and translation improvements. Updated it.po
@@ -19,7 +27,7 @@ Due to older QML lib on 15.04, the changes cannot be retrofitted.
 - Fixed PositionSource not being closed and code cleaning
 - Theme support
 
-## Majors changes initial Xenial version:
+## Changes initial Xenial version:
 - Add speed and altitude, thanks to https://github.com/cwayne18/ActivityTracker/pull/17
 - Update of the QML code
 - Uniformise and change the tile service to QML/OSM.

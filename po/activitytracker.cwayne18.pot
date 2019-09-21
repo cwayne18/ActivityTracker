@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-23 16:14+0000\n"
+"POT-Creation-Date: 2019-09-21 08:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,218 +17,286 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Map.qml:17
-msgid "Activity Map"
-msgstr ""
-
-#: ../Map.qml:20
-msgid "Info"
-msgstr ""
-
 #: ../SportSelectPopUp.qml:10
+#: ../build/x86_64-linux-gnu/app/install/SportSelectPopUp.qml:10
+#: ../build/tmp/SportSelectPopUp.qml:10
 msgid "Choose sport:"
 msgstr ""
 
 #: ../SportSelectPopUp.qml:21
+#: ../build/x86_64-linux-gnu/app/install/SportSelectPopUp.qml:21
+#: ../build/tmp/SportSelectPopUp.qml:21
 msgid "After"
 msgstr ""
 
-#: ../ActivityDialog.qml:16
-msgid "Name"
+#: ../Tracker.qml:29 ../build/x86_64-linux-gnu/app/install/Tracker.qml:28
+#: ../build/tmp/Tracker.qml:29
+msgid "Activity in Progress"
 msgstr ""
 
-#: ../ActivityDialog.qml:19
-msgid "Select a sport below"
+#: ../Tracker.qml:29 ../build/x86_64-linux-gnu/app/install/Tracker.qml:28
+#: ../build/tmp/Tracker.qml:29
+msgid "New Activity"
 msgstr ""
 
-#: ../ActivityDialog.qml:29
-msgid "Activity Type"
+#: ../Tracker.qml:67 ../build/x86_64-linux-gnu/app/install/Tracker.qml:66
+#: ../build/tmp/Tracker.qml:67
+msgid "Do you want to cancel the activity?"
 msgstr ""
 
-#: ../ActivityDialog.qml:39
-msgid "Save"
+#: ../Tracker.qml:70 ../build/x86_64-linux-gnu/app/install/Tracker.qml:69
+#: ../build/tmp/Tracker.qml:70
+msgid "Yes, cancel"
 msgstr ""
 
-#: ../ActivityDialog.qml:53
-msgid "Cancel"
+#: ../Tracker.qml:89 ../build/x86_64-linux-gnu/app/install/Tracker.qml:88
+#: ../build/tmp/Tracker.qml:89
+msgid "No, continue"
 msgstr ""
 
-#: ../ImportPage.qml:34
+#: ../Tracker.qml:128 ../Tracker.qml:133
+#: ../build/x86_64-linux-gnu/app/install/Tracker.qml:126
+#: ../build/x86_64-linux-gnu/app/install/Tracker.qml:131
+#: ../build/tmp/Tracker.qml:128 ../build/tmp/Tracker.qml:133
+msgid "No data"
+msgstr ""
+
+#: ../Tracker.qml:197 ../build/x86_64-linux-gnu/app/install/Tracker.qml:193
+#: ../build/tmp/Tracker.qml:197
+msgid "Do you want to stop the recording?"
+msgstr ""
+
+#: ../Tracker.qml:199 ../build/x86_64-linux-gnu/app/install/Tracker.qml:195
+#: ../build/tmp/Tracker.qml:199
+msgid "Yes, Stop!"
+msgstr ""
+
+#: ../Tracker.qml:220 ../build/x86_64-linux-gnu/app/install/Tracker.qml:214
+#: ../build/tmp/Tracker.qml:220
+msgid "No, Continue"
+msgstr ""
+
+#: ../Tracker.qml:232 ../build/x86_64-linux-gnu/app/install/Tracker.qml:226
+#: ../build/x86_64-linux-gnu/app/install/Main.qml:272
+#: ../build/tmp/Tracker.qml:232 ../build/tmp/Main.qml:260 ../Main.qml:276
+msgid "Select the type and the name of your activity"
+msgstr ""
+
+#: ../Tracker.qml:300 ../build/x86_64-linux-gnu/app/install/Tracker.qml:294
+#: ../build/tmp/Tracker.qml:300
+msgid "Start"
+msgstr ""
+
+#: ../Tracker.qml:321 ../build/x86_64-linux-gnu/app/install/Tracker.qml:315
+#: ../build/tmp/Tracker.qml:321
+msgid "Stop"
+msgstr ""
+
+#: ../Map.qml:17 ../build/x86_64-linux-gnu/app/install/Map.qml:18
+#: ../build/tmp/Map.qml:17
+msgid "Activity Map"
+msgstr ""
+
+#: ../Map.qml:20 ../build/x86_64-linux-gnu/app/install/Map.qml:21
+#: ../build/tmp/Map.qml:20
+msgid "Info"
+msgstr ""
+
+#: ../ImportPage.qml:34 ../build/x86_64-linux-gnu/app/install/ImportPage.qml:34
+#: ../build/tmp/ImportPage.qml:34
 msgid "Choose"
 msgstr ""
 
-#: ../About.qml:8 ../Main.qml:236
+#: ../build/x86_64-linux-gnu/app/install/components/Sports.qml:7
+#: ../build/tmp/components/Sports.qml:7 ../components/Sports.qml:7
+msgid "Run"
+msgstr ""
+
+#: ../build/x86_64-linux-gnu/app/install/components/Sports.qml:8
+#: ../build/tmp/components/Sports.qml:8 ../components/Sports.qml:8
+msgid "BikeRide"
+msgstr ""
+
+#: ../build/x86_64-linux-gnu/app/install/components/Sports.qml:9
+#: ../build/tmp/components/Sports.qml:9 ../components/Sports.qml:9
+msgid "Walk"
+msgstr ""
+
+#: ../build/x86_64-linux-gnu/app/install/components/Sports.qml:10
+#: ../build/tmp/components/Sports.qml:10 ../components/Sports.qml:10
+msgid "Drive"
+msgstr ""
+
+#: ../build/x86_64-linux-gnu/app/install/components/Sports.qml:11
+#: ../build/tmp/components/Sports.qml:11 ../components/Sports.qml:11
+msgid "Hike"
+msgstr ""
+
+#: ../build/x86_64-linux-gnu/app/install/ActivityDialog.qml:16
+#: ../build/tmp/ActivityDialog.qml:16 ../ActivityDialog.qml:16
+msgid "Name"
+msgstr ""
+
+#: ../build/x86_64-linux-gnu/app/install/ActivityDialog.qml:19
+#: ../build/tmp/ActivityDialog.qml:19 ../ActivityDialog.qml:19
+msgid "Select a sport below"
+msgstr ""
+
+#: ../build/x86_64-linux-gnu/app/install/ActivityDialog.qml:29
+#: ../build/tmp/ActivityDialog.qml:29 ../ActivityDialog.qml:29
+msgid "Activity Type"
+msgstr ""
+
+#: ../build/x86_64-linux-gnu/app/install/ActivityDialog.qml:39
+#: ../build/tmp/ActivityDialog.qml:39 ../ActivityDialog.qml:39
+msgid "Save"
+msgstr ""
+
+#: ../build/x86_64-linux-gnu/app/install/ActivityDialog.qml:53
+#: ../build/tmp/ActivityDialog.qml:53 ../ActivityDialog.qml:53
+msgid "Cancel"
+msgstr ""
+
+#: ../build/x86_64-linux-gnu/app/install/About.qml:8
+#: ../build/x86_64-linux-gnu/app/install/Settings.qml:20
+#: ../build/tmp/About.qml:8 ../build/tmp/Main.qml:236 ../About.qml:8
+#: ../Settings.qml:18
 msgid "About"
 msgstr ""
 
+#: ../build/x86_64-linux-gnu/app/install/About.qml:37 ../build/tmp/About.qml:37
 #: ../About.qml:37
 msgid "Activity Tracker"
 msgstr ""
 
+#: ../build/x86_64-linux-gnu/app/install/About.qml:43 ../build/tmp/About.qml:43
 #: ../About.qml:43
 msgid "Version"
 msgstr ""
 
+#: ../build/x86_64-linux-gnu/app/install/About.qml:81 ../build/tmp/About.qml:81
 #: ../About.qml:81
 msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
 msgstr ""
 
+#: ../build/x86_64-linux-gnu/app/install/About.qml:90 ../build/tmp/About.qml:90
 #: ../About.qml:90
 msgid "Part of the icons is made by %1 from %2 is licensed by %3"
 msgstr ""
 
 #. TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
-#: ../About.qml:103
+#: ../build/x86_64-linux-gnu/app/install/About.qml:103
+#: ../build/tmp/About.qml:103 ../About.qml:103
 msgid ""
 "Thanks to %1 for the icons based on:<br>%3 by %8 from %2,<br>%4 by %9 from "
 "%2,<br>%5 by %10 from %2,<br>%6 by %11 from %2,<br>%7 by %12 from %2"
 msgstr ""
 
-#: ../About.qml:124
+#: ../build/x86_64-linux-gnu/app/install/About.qml:124
+#: ../build/tmp/About.qml:124 ../About.qml:124
 msgid "Translate this app on Weblate!"
 msgstr ""
 
-#: ../About.qml:133
+#: ../build/x86_64-linux-gnu/app/install/About.qml:133
+#: ../build/tmp/About.qml:133 ../About.qml:133
 msgid "Support Weblate"
 msgstr ""
 
-#: ../Tracker.qml:29
-msgid "Activity in Progress"
-msgstr ""
-
-#: ../Tracker.qml:29
-msgid "New Activity"
-msgstr ""
-
-#: ../Tracker.qml:67
-msgid "Do you want to cancel the activity?"
-msgstr ""
-
-#: ../Tracker.qml:70
-msgid "Yes, cancel"
-msgstr ""
-
-#: ../Tracker.qml:89
-msgid "No, continue"
-msgstr ""
-
-#: ../Tracker.qml:128 ../Tracker.qml:133
-msgid "No data"
-msgstr ""
-
-#: ../Tracker.qml:197
-msgid "Do you want to stop the recording?"
-msgstr ""
-
-#: ../Tracker.qml:199
-msgid "Yes, Stop!"
-msgstr ""
-
-#: ../Tracker.qml:220
-msgid "No, Continue"
-msgstr ""
-
-#: ../Tracker.qml:232 ../Main.qml:260
-msgid "Select the type and the name of your activity"
-msgstr ""
-
-#: ../Tracker.qml:300
-msgid "Start"
-msgstr ""
-
-#: ../Tracker.qml:321
-msgid "Stop"
-msgstr ""
-
-#: ../components/Sports.qml:7
-msgid "Run"
-msgstr ""
-
-#: ../components/Sports.qml:8
-msgid "BikeRide"
-msgstr ""
-
-#: ../components/Sports.qml:9
-msgid "Walk"
-msgstr ""
-
-#: ../components/Sports.qml:10
-msgid "Drive"
-msgstr ""
-
-#: ../components/Sports.qml:11
-msgid "Hike"
-msgstr ""
-
-#: ../Settings.qml:14 ../Main.qml:231
+#: ../build/x86_64-linux-gnu/app/install/Settings.qml:16
+#: ../build/x86_64-linux-gnu/app/install/Main.qml:236
+#: ../build/tmp/Settings.qml:14 ../build/tmp/Main.qml:231 ../Settings.qml:14
+#: ../Main.qml:236
 msgid "Settings"
 msgstr ""
 
-#: ../Settings.qml:28
+#: ../build/x86_64-linux-gnu/app/install/Settings.qml:38
+#: ../build/tmp/Settings.qml:28 ../Settings.qml:36
 msgid "Units"
 msgstr ""
 
-#: ../Settings.qml:45
+#: ../build/x86_64-linux-gnu/app/install/Settings.qml:55
+#: ../build/tmp/Settings.qml:45 ../Settings.qml:53
 msgid "Log a point every:"
 msgstr ""
 
-#: ../Settings.qml:47
+#: ../build/x86_64-linux-gnu/app/install/Settings.qml:57
+#: ../build/tmp/Settings.qml:47 ../Settings.qml:55
 msgid "between 50 and 3600000"
 msgstr ""
 
 #. TRANSLATORS: millisecond abbreviation
-#: ../Settings.qml:74
+#: ../build/x86_64-linux-gnu/app/install/Settings.qml:98
+#: ../build/tmp/Settings.qml:74 ../Settings.qml:82
 msgid "ms"
 msgstr ""
 
-#: ../Settings.qml:84
-msgid "Altitude offset:"
-msgstr ""
-
-#: ../Settings.qml:85
-msgid "between 0 and 100"
-msgstr ""
-
-#: ../Settings.qml:107
-msgid "meter(s)"
-msgstr ""
-
-#: ../Main.qml:145 ../Main.qml:148
+#: ../build/x86_64-linux-gnu/app/install/Main.qml:150
+#: ../build/x86_64-linux-gnu/app/install/Main.qml:153 ../build/tmp/Main.qml:145
+#: ../build/tmp/Main.qml:148 ../Main.qml:151 ../Main.qml:154
 msgid "Distance: "
 msgstr ""
 
-#: ../Main.qml:151
+#: ../build/x86_64-linux-gnu/app/install/Main.qml:156 ../build/tmp/Main.qml:151
+#: ../Main.qml:157
 msgid "Time: "
 msgstr ""
 
-#: ../Main.qml:227
+#: ../build/x86_64-linux-gnu/app/install/Main.qml:232 ../build/tmp/Main.qml:227
+#: ../Main.qml:232
 msgid "Recent Activities"
 msgstr ""
 
-#: ../Main.qml:241
+#: ../build/x86_64-linux-gnu/app/install/Main.qml:241 ../Main.qml:241
+msgid "Filter"
+msgstr ""
+
+#: ../build/x86_64-linux-gnu/app/install/Main.qml:246 ../build/tmp/Main.qml:241
+#: ../Main.qml:246
 msgid "Import"
 msgstr ""
 
-#: ../Main.qml:275
+#: ../build/x86_64-linux-gnu/app/install/Main.qml:287 ../build/tmp/Main.qml:275
+#: ../Main.qml:291
 msgid "Edit the type and the name of your activity"
 msgstr ""
 
-#: ../Main.qml:296
+#: ../build/x86_64-linux-gnu/app/install/Main.qml:308 ../build/tmp/Main.qml:296
+#: ../Main.qml:312
 msgid "No saved activities"
 msgstr ""
 
-#: ../Main.qml:299
+#: ../build/x86_64-linux-gnu/app/install/Main.qml:311 ../build/tmp/Main.qml:299
+#: ../Main.qml:315
 msgid "Swipe up to log a new activity"
 msgstr ""
 
-#: ../Main.qml:381
+#: ../build/x86_64-linux-gnu/app/install/Main.qml:393 ../build/tmp/Main.qml:381
+#: ../Main.qml:397
 msgid "Track information"
 msgstr ""
 
-#: ../Main.qml:395
+#: ../build/x86_64-linux-gnu/app/install/Main.qml:407 ../build/tmp/Main.qml:395
+#: ../Main.qml:411
 msgid "Close"
 msgstr ""
 
-#: ../Main.qml:406
+#: ../build/x86_64-linux-gnu/app/install/Main.qml:418 ../build/tmp/Main.qml:406
+#: ../Main.qml:422
 msgid "Log new Activity"
+msgstr ""
+
+#: ../build/tmp/Settings.qml:84 ../Settings.qml:92
+msgid "Altitude offset:"
+msgstr ""
+
+#: ../build/tmp/Settings.qml:85
+msgid "between 0 and 100"
+msgstr ""
+
+#: ../build/tmp/Settings.qml:107 ../Settings.qml:115
+msgid "meter(s)"
+msgstr ""
+
+#: ../Settings.qml:93
+msgid "between -100 and 100"
 msgstr ""

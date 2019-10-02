@@ -12,7 +12,7 @@ OptionSelector {
       id: selectorDelegate
       OptionSelectorDelegate {
          text: sportsComp.translated[index]
-         iconSource: "images/"+sportsComp.name[index]+"-symbolic.svg"
+         iconSource: "../images/"+sportsComp.name[index]+"-symbolic.svg"
          constrainImage: true
       }
    }

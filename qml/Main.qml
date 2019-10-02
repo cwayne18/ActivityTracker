@@ -123,7 +123,7 @@ MainView {
             call('geepeeex.onetime_db_fix_again_cus_im_dumb',[])
             get_units(result)
          };
-         addImportPath(Qt.resolvedUrl('py/'));
+         addImportPath(Qt.resolvedUrl('../py/'));
          importModule('geepeeex', loadit);
          console.warn('imported gpxpy');
          importModule('gpximport', loadit);
@@ -310,7 +310,7 @@ MainView {
          color: "transparent"
          EmptyState {
             title: i18n.tr("No saved activities")
-            iconSource: Qt.resolvedUrl("./images/runman.svg")
+            iconSource: Qt.resolvedUrl("../images/runman.svg")
             iconColor: Theme.palette.normal.backgroundText
             subTitle: i18n.tr("Swipe up to log a new activity")
             anchors.centerIn: parent
@@ -348,7 +348,7 @@ MainView {
             ListItemLayout {
                ProportionalShape {
                   SlotsLayout.position: SlotsLayout.Leading
-                  source: Image { source: "images/"+(act_type=="Bike Ride"?"BikeRide":act_type)+".svg" } //Legacy, old act_type was "Bike Ride" substituted with "BikeRide"
+                  source: Image { source: "../images/"+(act_type=="Bike Ride"?"BikeRide":act_type)+".svg" } //Legacy, old act_type was "Bike Ride" substituted with "BikeRide"
                   height: del.height-units.gu(2)
                   aspect: UbuntuShape.DropShadow
                }
@@ -420,7 +420,7 @@ MainView {
          id:newrunEdge
          hint {
             text: i18n.tr("Log new Activity")
-            iconSource: "images/runman.svg"
+            iconSource: "../images/runman.svg"
             status: "Active"
             flickable: thelist
          }

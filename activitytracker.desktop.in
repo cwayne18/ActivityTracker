@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Activity Tracker
-Exec=qmlscene %u Main.qml
+Exec=qmlscene %u qml/Main.qml
 Icon=./images/new-icon.svg
 Terminal=false
 Type=Application

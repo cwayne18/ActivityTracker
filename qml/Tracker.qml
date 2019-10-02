@@ -43,7 +43,7 @@ Rectangle {
 
          trailingActionBar.actions: [
          Action {
-            iconSource: "images/"+sportsComp.name[sportsComp.selected]+"-symbolic.svg"
+            iconSource: "../images/"+sportsComp.name[sportsComp.selected]+"-symbolic.svg"
             visible: sportsComp.selected != -1
             onTriggered: PopupUtils.open(sportselect)
          }

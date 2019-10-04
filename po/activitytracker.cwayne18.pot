@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-02 20:54+0000\n"
+"POT-Creation-Date: 2019-10-04 12:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,32 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/SportSelectPopUp.qml:10
-msgid "Choose sport:"
+#: ../qml/ImportPage.qml:34
+msgid "Choose"
 msgstr ""
 
-#: ../qml/SportSelectPopUp.qml:21
-msgid "After"
+#: ../qml/components/Sports.qml:7
+msgid "Run"
+msgstr ""
+
+#: ../qml/components/Sports.qml:8
+msgid "BikeRide"
+msgstr ""
+
+#: ../qml/components/Sports.qml:9
+msgid "Walk"
+msgstr ""
+
+#: ../qml/components/Sports.qml:10
+msgid "Drive"
+msgstr ""
+
+#: ../qml/components/Sports.qml:11
+msgid "Hike"
+msgstr ""
+
+#: ../qml/components/Sports.qml:12
+msgid "UnicycleRide"
 msgstr ""
 
 #: ../qml/Tracker.qml:29
@@ -79,30 +99,6 @@ msgstr ""
 
 #: ../qml/Map.qml:20
 msgid "Info"
-msgstr ""
-
-#: ../qml/ImportPage.qml:34
-msgid "Choose"
-msgstr ""
-
-#: ../qml/components/Sports.qml:7
-msgid "Run"
-msgstr ""
-
-#: ../qml/components/Sports.qml:8
-msgid "BikeRide"
-msgstr ""
-
-#: ../qml/components/Sports.qml:9
-msgid "Walk"
-msgstr ""
-
-#: ../qml/components/Sports.qml:10
-msgid "Drive"
-msgstr ""
-
-#: ../qml/components/Sports.qml:11
-msgid "Hike"
 msgstr ""
 
 #: ../qml/ActivityDialog.qml:16
@@ -191,6 +187,14 @@ msgstr ""
 
 #: ../qml/Settings.qml:115
 msgid "meter(s)"
+msgstr ""
+
+#: ../qml/SportSelectPopUp.qml:10
+msgid "Choose sport:"
+msgstr ""
+
+#: ../qml/SportSelectPopUp.qml:21
+msgid "After"
 msgstr ""
 
 #: ../qml/Main.qml:151 ../qml/Main.qml:154

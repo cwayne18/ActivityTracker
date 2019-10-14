@@ -8,41 +8,44 @@ msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-11 16:17+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-07-02 10:02+0000\n"
+"Last-Translator: ditokp <ditokpl@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/"
+"activity-tracker/translations/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.8-dev\n"
 
 #: ../Map.qml:18
 msgid "Activity Map"
-msgstr ""
+msgstr "Peta Aktivitas"
 
 #: ../ImportPage.qml:34
 msgid "Choose"
-msgstr ""
+msgstr "Pilih"
 
 #: ../About.qml:7 ../Main.qml:242
 msgid "About"
-msgstr ""
+msgstr "Tentang"
 
 #: ../About.qml:32
 msgid "Activity Tracker"
-msgstr ""
+msgstr "Pelacak Aktivitas"
 
 #: ../About.qml:38
 msgid "Version"
-msgstr ""
+msgstr "Versi"
 
 #: ../About.qml:74
 msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
-msgstr ""
+msgstr "Dirilis berdasarkan ketentuan GNU GPL v3.<br>Kode sumber tersedia di"
 
 #: ../About.qml:82
 msgid "Part of the icons is made by %1 from %2 is licensed by %3"
-msgstr ""
+msgstr "Sebagian ikon dibuat oleh %1 dari %2 dilisensikan oleh %3"
 
 #. TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
 #: ../About.qml:95
@@ -50,168 +53,171 @@ msgid ""
 "Thanks to %1 for the icons based on:<br>%3 by %8 from %2,<br>%4 by %9 from "
 "%2,<br>%5 by %10 from %2,<br>%6 by %11 from %2,<br>%7 by %12 from %2"
 msgstr ""
+"Terima kasih kepada %1 untuk ikon berdasarkan :<br>% 3 oleh% 8 dari% 2, <br>%"
+" 4 oleh% 9 dari% 2, <br>% 5 oleh% 10 dari% 2, <br>% 6 dengan% 11 dari% 2, "
+"<br>% 7 oleh% 12 dari% 2"
 
 #: ../About.qml:116
 msgid "Translate this app on Weblate!"
-msgstr ""
+msgstr "Terjemahkan aplikasi ini di Weblate!"
 
 #: ../About.qml:125
 msgid "Support Weblate"
-msgstr ""
+msgstr "Dukung Weblate"
 
 #: ../Tracker.qml:14 ../Main.qml:45
 msgid "Run"
-msgstr ""
+msgstr "Berlari"
 
 #: ../Tracker.qml:15 ../Main.qml:46
 msgid "BikeRide"
-msgstr ""
+msgstr "Bersepeda"
 
 #: ../Tracker.qml:16 ../Main.qml:47
 msgid "Walk"
-msgstr ""
+msgstr "Jalan"
 
 #: ../Tracker.qml:17 ../Main.qml:48
 msgid "Drive"
-msgstr ""
+msgstr "Berkendaraan"
 
 #: ../Tracker.qml:18 ../Main.qml:49
 msgid "Hike"
-msgstr ""
+msgstr "Mendaki"
 
 #: ../Tracker.qml:29 ../Main.qml:274
 msgid "Choose sport:"
-msgstr ""
+msgstr "Pilih olahraga:"
 
 #: ../Tracker.qml:42 ../Main.qml:287
 msgid "After"
-msgstr ""
+msgstr "Sesudah"
 
 #: ../Tracker.qml:80
 msgid "Activity in Progress"
-msgstr ""
+msgstr "Aktivitas dalam pantauan"
 
 #: ../Tracker.qml:80
 msgid "New Activity"
-msgstr ""
+msgstr "Aktivitas Baru"
 
 #: ../Tracker.qml:118
 msgid "Do you want to cancel the activity?"
-msgstr ""
+msgstr "Anda ingin membatalkan aktivitas?"
 
 #: ../Tracker.qml:121
 msgid "Yes, cancel"
-msgstr ""
+msgstr "Ya, Batalkan"
 
 #: ../Tracker.qml:139
 msgid "No, continue"
-msgstr ""
+msgstr "Tidak, lanjutkan"
 
 #: ../Tracker.qml:177 ../Tracker.qml:182
 msgid "No data"
-msgstr ""
+msgstr "Tidak ada data"
 
 #: ../Tracker.qml:243
 msgid "Do you want to stop the recording?"
-msgstr ""
+msgstr "Anda ingin menghentikan perekaman?"
 
 #: ../Tracker.qml:245
 msgid "Yes, Stop!"
-msgstr ""
+msgstr "Ya, Hentikan!"
 
 #: ../Tracker.qml:263
 msgid "No, Continue"
-msgstr ""
+msgstr "Tidak, Lanjutkan"
 
 #: ../Tracker.qml:274 ../Main.qml:307
 msgid "Select the type and the name of your activity"
-msgstr ""
+msgstr "Pilih tipe dan nama aktivitas anda"
 
 #: ../Tracker.qml:278 ../Main.qml:311 ../Main.qml:370
 msgid "Name"
-msgstr ""
+msgstr "Nama"
 
 #: ../Tracker.qml:281 ../Main.qml:314 ../Main.qml:373
 msgid "Select a sport below"
-msgstr ""
+msgstr "Pilih olahraga di bawah"
 
 #: ../Tracker.qml:291 ../Main.qml:324 ../Main.qml:383
 msgid "Activity Type"
-msgstr ""
+msgstr "Jenis Aktivitas"
 
 #: ../Tracker.qml:307 ../Main.qml:335 ../Main.qml:394
 msgid "Save"
-msgstr ""
+msgstr "Simpan"
 
 #: ../Tracker.qml:347 ../Main.qml:350 ../Main.qml:415
 msgid "Cancel"
-msgstr ""
+msgstr "Batal"
 
 #: ../Tracker.qml:398
 msgid "Start"
-msgstr ""
+msgstr "Mulai"
 
 #: ../Tracker.qml:419
 msgid "Stop"
-msgstr ""
+msgstr "Berhenti"
 
 #: ../Settings.qml:16 ../Main.qml:237
 msgid "Settings"
-msgstr ""
+msgstr "Pengaturan"
 
 #: ../Settings.qml:30
 msgid "Units"
-msgstr ""
+msgstr "Unit"
 
 #: ../Settings.qml:47
 msgid "Log a point every:"
-msgstr ""
+msgstr "Catat setiap:"
 
 #: ../Settings.qml:49
 msgid "between 50 and 3600000"
-msgstr ""
+msgstr "antara 50 dan 3600000"
 
 #. TRANSLATORS: millisecond abbreviation
 #: ../Settings.qml:90
 msgid "ms"
-msgstr ""
+msgstr "ms"
 
 #: ../Main.qml:147 ../Main.qml:150
 msgid "Distance: "
-msgstr ""
+msgstr "Jarak "
 
 #: ../Main.qml:153
 msgid "Time: "
-msgstr ""
+msgstr "Waktu: "
 
 #: ../Main.qml:233
 msgid "Recent Activities"
-msgstr ""
+msgstr "Aktivitas Terakhir"
 
 #: ../Main.qml:247
 msgid "Import"
-msgstr ""
+msgstr "Impor"
 
 #: ../Main.qml:366
 msgid "Edit the type and the name of your activity"
-msgstr ""
+msgstr "Edit tipe dan nama aktivitas anda"
 
 #: ../Main.qml:438
 msgid "No saved activities"
-msgstr ""
+msgstr "Tidak ada aktivitas tersimpan"
 
 #: ../Main.qml:441
 msgid "Swipe up to log a new activity"
-msgstr ""
+msgstr "Geser ke atas untuk mencatat aktivitas baru"
 
 #: ../Main.qml:524
 msgid "Track information"
-msgstr ""
+msgstr "Lacak informasi"
 
 #: ../Main.qml:528
 msgid "close"
-msgstr ""
+msgstr "tutup"
 
 #: ../Main.qml:540
 msgid "Log new Activity"
-msgstr ""
+msgstr "Catat aktivitas baru"

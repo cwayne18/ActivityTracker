@@ -8,37 +8,41 @@ msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-11 16:17+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-08-23 23:24+0000\n"
+"Last-Translator: Swann Martinet <swann.ranskassa@laposte.net>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/activity-tracker/"
+"translations/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9-dev\n"
 
 #: ../Map.qml:18
 msgid "Activity Map"
-msgstr ""
+msgstr "Toimintakartta"
 
 #: ../ImportPage.qml:34
 msgid "Choose"
-msgstr ""
+msgstr "Valitse"
 
 #: ../About.qml:7 ../Main.qml:242
 msgid "About"
-msgstr ""
+msgstr "Sovelluksesta"
 
 #: ../About.qml:32
 msgid "Activity Tracker"
-msgstr ""
+msgstr "Activity Tracker"
 
 #: ../About.qml:38
 msgid "Version"
-msgstr ""
+msgstr "Versio"
 
 #: ../About.qml:74
 msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
 msgstr ""
+"Julkaistu GNU GPL v3: n ehtojen mukaisesti. <br> Lähdekoodi on saatavana"
 
 #: ../About.qml:82
 msgid "Part of the icons is made by %1 from %2 is licensed by %3"
@@ -53,39 +57,40 @@ msgstr ""
 
 #: ../About.qml:116
 msgid "Translate this app on Weblate!"
-msgstr ""
+msgstr "Käännä tämä sovellus Weblate-avulla!"
 
 #: ../About.qml:125
 msgid "Support Weblate"
-msgstr ""
+msgstr "Tue Weblate"
 
 #: ../Tracker.qml:14 ../Main.qml:45
 msgid "Run"
-msgstr ""
+msgstr "Juokseminen"
 
 #: ../Tracker.qml:15 ../Main.qml:46
 msgid "BikeRide"
-msgstr ""
+msgstr "Pyöräileminen"
 
 #: ../Tracker.qml:16 ../Main.qml:47
 msgid "Walk"
-msgstr ""
+msgstr "Käveleminen"
 
 #: ../Tracker.qml:17 ../Main.qml:48
 msgid "Drive"
-msgstr ""
+msgstr "Ajaminen"
 
 #: ../Tracker.qml:18 ../Main.qml:49
 msgid "Hike"
-msgstr ""
+msgstr "Retkeileminen"
 
 #: ../Tracker.qml:29 ../Main.qml:274
 msgid "Choose sport:"
-msgstr ""
+msgstr "Valitse urheilu:"
 
 #: ../Tracker.qml:42 ../Main.qml:287
+#, fuzzy
 msgid "After"
-msgstr ""
+msgstr "Jälkeen"
 
 #: ../Tracker.qml:80
 msgid "Activity in Progress"
@@ -93,125 +98,126 @@ msgstr ""
 
 #: ../Tracker.qml:80
 msgid "New Activity"
-msgstr ""
+msgstr "Uusi toiminto"
 
 #: ../Tracker.qml:118
 msgid "Do you want to cancel the activity?"
-msgstr ""
+msgstr "Haluatko peruuttaa toiminnon?"
 
 #: ../Tracker.qml:121
 msgid "Yes, cancel"
-msgstr ""
+msgstr "Kyllä, peruuta"
 
 #: ../Tracker.qml:139
 msgid "No, continue"
-msgstr ""
+msgstr "En, jatka"
 
 #: ../Tracker.qml:177 ../Tracker.qml:182
 msgid "No data"
-msgstr ""
+msgstr "Ei tietoja"
 
 #: ../Tracker.qml:243
 msgid "Do you want to stop the recording?"
-msgstr ""
+msgstr "Haluatko pysäyttää tallennuksen?"
 
 #: ../Tracker.qml:245
 msgid "Yes, Stop!"
-msgstr ""
+msgstr "Kyllä, lopeta!"
 
 #: ../Tracker.qml:263
 msgid "No, Continue"
-msgstr ""
+msgstr "En, jatka"
 
 #: ../Tracker.qml:274 ../Main.qml:307
 msgid "Select the type and the name of your activity"
-msgstr ""
+msgstr "Valitse toimintasi laji ja nimi"
 
 #: ../Tracker.qml:278 ../Main.qml:311 ../Main.qml:370
 msgid "Name"
-msgstr ""
+msgstr "Nimi"
 
 #: ../Tracker.qml:281 ../Main.qml:314 ../Main.qml:373
 msgid "Select a sport below"
-msgstr ""
+msgstr "Valitse urheilulaji alapuolella"
 
 #: ../Tracker.qml:291 ../Main.qml:324 ../Main.qml:383
 msgid "Activity Type"
-msgstr ""
+msgstr "Toimintalaji"
 
 #: ../Tracker.qml:307 ../Main.qml:335 ../Main.qml:394
 msgid "Save"
-msgstr ""
+msgstr "Tallenna"
 
 #: ../Tracker.qml:347 ../Main.qml:350 ../Main.qml:415
 msgid "Cancel"
-msgstr ""
+msgstr "Peruuta"
 
 #: ../Tracker.qml:398
 msgid "Start"
-msgstr ""
+msgstr "Aloita"
 
 #: ../Tracker.qml:419
 msgid "Stop"
-msgstr ""
+msgstr "Pysäytä"
 
 #: ../Settings.qml:16 ../Main.qml:237
 msgid "Settings"
-msgstr ""
+msgstr "Asetukset"
 
 #: ../Settings.qml:30
 msgid "Units"
-msgstr ""
+msgstr "Yksiköt"
 
 #: ../Settings.qml:47
 msgid "Log a point every:"
-msgstr ""
+msgstr "Kirjaa piste joka:"
 
 #: ../Settings.qml:49
 msgid "between 50 and 3600000"
-msgstr ""
+msgstr "50 ja 360000 välillä"
 
 #. TRANSLATORS: millisecond abbreviation
 #: ../Settings.qml:90
 msgid "ms"
-msgstr ""
+msgstr "ms"
 
 #: ../Main.qml:147 ../Main.qml:150
 msgid "Distance: "
-msgstr ""
+msgstr "Etäisyys: "
 
 #: ../Main.qml:153
 msgid "Time: "
-msgstr ""
+msgstr "Aika: "
 
 #: ../Main.qml:233
 msgid "Recent Activities"
-msgstr ""
+msgstr "Viimeaikaiset toiminnat"
 
 #: ../Main.qml:247
+#, fuzzy
 msgid "Import"
-msgstr ""
+msgstr "Tuo"
 
 #: ../Main.qml:366
 msgid "Edit the type and the name of your activity"
-msgstr ""
+msgstr "Muokkaa toimintasi laji ja nimi"
 
 #: ../Main.qml:438
 msgid "No saved activities"
-msgstr ""
+msgstr "Ei tallennettuja toimintoja"
 
 #: ../Main.qml:441
 msgid "Swipe up to log a new activity"
-msgstr ""
+msgstr "Luo uusi toiminta pyyhkäisemällä ylöspäin"
 
 #: ../Main.qml:524
 msgid "Track information"
-msgstr ""
+msgstr "Jäljitä tietoja"
 
 #: ../Main.qml:528
 msgid "close"
-msgstr ""
+msgstr "sulje"
 
 #: ../Main.qml:540
 msgid "Log new Activity"
-msgstr ""
+msgstr "Kirjaa uusi toiminta"

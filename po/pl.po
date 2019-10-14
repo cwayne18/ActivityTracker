@@ -1,0 +1,227 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the activitytracker.cwayne18 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: activitytracker.cwayne18\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-15 15:08+0000\n"
+"PO-Revision-Date: 2019-06-20 07:01+0000\n"
+"Last-Translator: DamN <damiannadolski@wp.pl>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/activity-tracker/"
+"translations/pl/>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.7\n"
+
+#: ../SportSelectPopUp.qml:10
+msgid "Choose sport:"
+msgstr "Wybierz sport:"
+
+#: ../SportSelectPopUp.qml:21
+msgid "After"
+msgstr "Po"
+
+#: ../Tracker.qml:28
+msgid "Activity in Progress"
+msgstr "Rejestrowanie aktywności"
+
+#: ../Tracker.qml:28
+msgid "New Activity"
+msgstr "Nowa aktywność"
+
+#: ../Tracker.qml:66
+msgid "Do you want to cancel the activity?"
+msgstr "Czy chcesz anulować aktywność?"
+
+#: ../Tracker.qml:69
+msgid "Yes, cancel"
+msgstr "Tak, anuluj"
+
+#: ../Tracker.qml:88
+msgid "No, continue"
+msgstr "Nie, kontynuuj"
+
+#: ../Tracker.qml:126 ../Tracker.qml:131
+msgid "No data"
+msgstr "Brak danych"
+
+#: ../Tracker.qml:193
+msgid "Do you want to stop the recording?"
+msgstr "Czy chcesz przerwać rejestrowanie?"
+
+#: ../Tracker.qml:195
+msgid "Yes, Stop!"
+msgstr "Tak, Przerwij!"
+
+#: ../Tracker.qml:214
+msgid "No, Continue"
+msgstr "Nie, kontynuuj"
+
+#: ../Tracker.qml:226 ../Main.qml:254
+msgid "Select the type and the name of your activity"
+msgstr "Wybierz rodzaj i nazwę swojej aktywności"
+
+#: ../Tracker.qml:294
+msgid "Start"
+msgstr "Start"
+
+#: ../Tracker.qml:315
+msgid "Stop"
+msgstr "Stop"
+
+#: ../Map.qml:18
+msgid "Activity Map"
+msgstr "Mapa aktywności"
+
+#: ../Map.qml:21
+msgid "Info"
+msgstr "Info"
+
+#: ../ImportPage.qml:34
+msgid "Choose"
+msgstr "Wybierz"
+
+#: ../components/Sports.qml:7
+msgid "Run"
+msgstr "Bieg"
+
+#: ../components/Sports.qml:8
+msgid "BikeRide"
+msgstr "Jazda na rowerze"
+
+#: ../components/Sports.qml:9
+msgid "Walk"
+msgstr "Chodzenie"
+
+#: ../components/Sports.qml:10
+msgid "Drive"
+msgstr "Kierowanie"
+
+#: ../components/Sports.qml:11
+msgid "Hike"
+msgstr "Wspinaczka"
+
+#: ../ActivityDialog.qml:16
+msgid "Name"
+msgstr "Nazwa"
+
+#: ../ActivityDialog.qml:19
+msgid "Select a sport below"
+msgstr "Wybierz poniżej sport"
+
+#: ../ActivityDialog.qml:29
+msgid "Activity Type"
+msgstr "Rodzaj aktywności"
+
+#: ../ActivityDialog.qml:39
+msgid "Save"
+msgstr "Zapisz"
+
+#: ../ActivityDialog.qml:53
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: ../About.qml:8 ../Main.qml:230
+msgid "About"
+msgstr "O"
+
+#: ../About.qml:37
+msgid "Activity Tracker"
+msgstr "Monitor aktywności"
+
+#: ../About.qml:43
+msgid "Version"
+msgstr "Wersja"
+
+#: ../About.qml:81
+msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
+msgstr "Wydane na warunkach GNU GPL v3.<br>Kod źródłowy dostępny pod"
+
+#: ../About.qml:90
+msgid "Part of the icons is made by %1 from %2 is licensed by %3"
+msgstr "Część ikon stworzone przez %1 z %2 na licencji %3"
+
+#. TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
+#: ../About.qml:103
+msgid ""
+"Thanks to %1 for the icons based on:<br>%3 by %8 from %2,<br>%4 by %9 from "
+"%2,<br>%5 by %10 from %2,<br>%6 by %11 from %2,<br>%7 by %12 from %2"
+msgstr ""
+"Podziękowania dla %1 za ikony oparte na:<br>%3 przez %8 z %2,<br>%4 przez %9 "
+"z %2,<br>%5 przez %10 z %2,<br>%6 przez %11 z %2,<br>%7 przez %12 z %2"
+
+#: ../About.qml:124
+msgid "Translate this app on Weblate!"
+msgstr "Przetłumacz tą aplikację na Weblate!"
+
+#: ../About.qml:133
+msgid "Support Weblate"
+msgstr "Wsparcie Weblate"
+
+#: ../Settings.qml:16 ../Main.qml:225
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: ../Settings.qml:30
+msgid "Units"
+msgstr "Jednostki"
+
+#: ../Settings.qml:47
+msgid "Log a point every:"
+msgstr "Rejestruj punkt co:"
+
+#: ../Settings.qml:49
+msgid "between 50 and 3600000"
+msgstr "pomiędzy 50 a 3600000"
+
+#. TRANSLATORS: millisecond abbreviation
+#: ../Settings.qml:90
+msgid "ms"
+msgstr "ms"
+
+#: ../Main.qml:139 ../Main.qml:142
+msgid "Distance: "
+msgstr "Dystans: "
+
+#: ../Main.qml:145
+msgid "Time: "
+msgstr "Czas: "
+
+#: ../Main.qml:221
+msgid "Recent Activities"
+msgstr "Ostatnie aktywności"
+
+#: ../Main.qml:235
+msgid "Import"
+msgstr "Import"
+
+#: ../Main.qml:269
+msgid "Edit the type and the name of your activity"
+msgstr "Edytuj typ i nazwę swojej aktywności"
+
+#: ../Main.qml:290
+msgid "No saved activities"
+msgstr "Brak zapisanych aktywności"
+
+#: ../Main.qml:293
+msgid "Swipe up to log a new activity"
+msgstr "Przesuń do góry żeby zarejestrować nową aktywność"
+
+#: ../Main.qml:375
+msgid "Track information"
+msgstr "Śledź informacje"
+
+#: ../Main.qml:389
+msgid "Close"
+msgstr "Zamknij"
+
+#: ../Main.qml:400
+msgid "Log new Activity"
+msgstr "Zapisz nową aktywność"

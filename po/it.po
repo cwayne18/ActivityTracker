@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-02 17:01+0000\n"
-"PO-Revision-Date: 2018-09-02 19:02+0200\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"PO-Revision-Date: 2019-08-28 04:24+0000\n"
+"Last-Translator: Swann Martinet <swann.ranskassa@laposte.net>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/activity-tracker/"
+"translations/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9-dev\n"
 
 #: ../Tracker.qml:14
 msgid "Run"
@@ -60,7 +61,7 @@ msgstr "Vuoi cancellare l'attività?"
 
 #: ../Tracker.qml:120
 msgid "Yes, cancel"
-msgstr "Si, cancella"
+msgstr "Sì, cancella"
 
 #: ../Tracker.qml:138
 msgid "No, continue"
@@ -76,11 +77,11 @@ msgstr "Vuoi fermare la registrazione?"
 
 #: ../Tracker.qml:244
 msgid "Yes, Stop!"
-msgstr "Si, Ferma!"
+msgstr "Sì, ferma!"
 
 #: ../Tracker.qml:262
 msgid "No, Continue"
-msgstr "No, Continua"
+msgstr "No, continua"
 
 #: ../Tracker.qml:273
 msgid "Select the type and the name of your activity"
@@ -116,7 +117,7 @@ msgstr "Ferma"
 
 #: ../Map.qml:18
 msgid "Activity Map"
-msgstr "Mappa Attività"
+msgstr "Mappa attività"
 
 #: ../About.qml:7 ../Main.qml:217
 msgid "About"

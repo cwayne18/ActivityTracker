@@ -1,0 +1,228 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the activitytracker.cwayne18 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: activitytracker.cwayne18\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-15 15:08+0000\n"
+"PO-Revision-Date: 2019-06-20 07:01+0000\n"
+"Last-Translator: THANOS SIOURDAKIS <siourdakisthanos@gmail.com>\n"
+"Language-Team: Greek <https://hosted.weblate.org/projects/activity-tracker/"
+"translations/el/>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.7\n"
+
+#: ../SportSelectPopUp.qml:10
+msgid "Choose sport:"
+msgstr "Επιλέξτε άθλημα:"
+
+#: ../SportSelectPopUp.qml:21
+msgid "After"
+msgstr "Μετά"
+
+#: ../Tracker.qml:28
+msgid "Activity in Progress"
+msgstr "Δραστηριότητα σε εξέλιξη"
+
+#: ../Tracker.qml:28
+msgid "New Activity"
+msgstr "Νέα δραστηριότητα"
+
+#: ../Tracker.qml:66
+msgid "Do you want to cancel the activity?"
+msgstr "Θέλετε να ακυρώσετε τη δραστηριότητα;"
+
+#: ../Tracker.qml:69
+msgid "Yes, cancel"
+msgstr "Ναι, ακύρωσέ το"
+
+#: ../Tracker.qml:88
+msgid "No, continue"
+msgstr "Όχι, συνέχισε"
+
+#: ../Tracker.qml:126 ../Tracker.qml:131
+msgid "No data"
+msgstr "Δεν υπάρχουν δεδομένα"
+
+#: ../Tracker.qml:193
+msgid "Do you want to stop the recording?"
+msgstr "Θέλεις να σταματήσεις την ηχογράφηση;"
+
+#: ../Tracker.qml:195
+msgid "Yes, Stop!"
+msgstr "Ναι, σταμάτα!"
+
+#: ../Tracker.qml:214
+msgid "No, Continue"
+msgstr "Όχι, συνέχισε"
+
+#: ../Tracker.qml:226 ../Main.qml:254
+msgid "Select the type and the name of your activity"
+msgstr "Επιλέξτε τον τύπο και το όνομα της δραστηριότητάς σας"
+
+#: ../Tracker.qml:294
+msgid "Start"
+msgstr "Έναρξη"
+
+#: ../Tracker.qml:315
+msgid "Stop"
+msgstr "Σταμάτα"
+
+#: ../Map.qml:18
+msgid "Activity Map"
+msgstr "Χάρτης δραστηριότητας"
+
+#: ../Map.qml:21
+msgid "Info"
+msgstr "Πληροφορίες"
+
+#: ../ImportPage.qml:34
+msgid "Choose"
+msgstr "Επιλέξτε"
+
+#: ../components/Sports.qml:7
+msgid "Run"
+msgstr "Εκτέλεση"
+
+#: ../components/Sports.qml:8
+msgid "BikeRide"
+msgstr "Βόλτα με το ποδήλατο"
+
+#: ../components/Sports.qml:9
+msgid "Walk"
+msgstr "Περπάτημα"
+
+#: ../components/Sports.qml:10
+msgid "Drive"
+msgstr "Οδήγηση"
+
+#: ../components/Sports.qml:11
+msgid "Hike"
+msgstr "Πεζοπορία"
+
+#: ../ActivityDialog.qml:16
+msgid "Name"
+msgstr "Όνομα"
+
+#: ../ActivityDialog.qml:19
+msgid "Select a sport below"
+msgstr "Επιλέξτε ένα άθλημα παρακάτω"
+
+#: ../ActivityDialog.qml:29
+msgid "Activity Type"
+msgstr "Τύπος δραστηριότητας"
+
+#: ../ActivityDialog.qml:39
+msgid "Save"
+msgstr "Αποθήκευση"
+
+#: ../ActivityDialog.qml:53
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: ../About.qml:8 ../Main.qml:230
+msgid "About"
+msgstr "Σχετικά"
+
+#: ../About.qml:37
+msgid "Activity Tracker"
+msgstr "Παρακολούθηση δραστηριότητας"
+
+#: ../About.qml:43
+msgid "Version"
+msgstr "Έκδοση"
+
+#: ../About.qml:81
+msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
+msgstr ""
+"Κυκλοφορεί υπό τους όρους της GNU GPL v3.<br>Πηγαίος κώδικας διαθέσιμος στο"
+
+#: ../About.qml:90
+msgid "Part of the icons is made by %1 from %2 is licensed by %3"
+msgstr "Μέρος των εικονιδίων γίνεται από το %1 από %2 έχει αδειοδοτηθεί από %3"
+
+#. TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
+#: ../About.qml:103
+msgid ""
+"Thanks to %1 for the icons based on:<br>%3 by %8 from %2,<br>%4 by %9 from "
+"%2,<br>%5 by %10 from %2,<br>%6 by %11 from %2,<br>%7 by %12 from %2"
+msgstr ""
+"Χάρη στο% 1 για τα εικονίδια που βασίζονται σε: <br>%3 από %8 από %2,<br> %4 "
+"από %9 από %2,<br>%5 από %10 από %2,<br>%6 από %11 από %2,<br>%7 από %12 από "
+"%2"
+
+#: ../About.qml:124
+msgid "Translate this app on Weblate!"
+msgstr "Μετάφρασε αυτή την εφαρμογή στο Weblate!"
+
+#: ../About.qml:133
+msgid "Support Weblate"
+msgstr "Υποστήριξη του Weblate"
+
+#: ../Settings.qml:16 ../Main.qml:225
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: ../Settings.qml:30
+msgid "Units"
+msgstr "Μονάδες"
+
+#: ../Settings.qml:47
+msgid "Log a point every:"
+msgstr "Καταγραφή ενός σημείου κάθε:"
+
+#: ../Settings.qml:49
+msgid "between 50 and 3600000"
+msgstr "μεταξύ 50 και 3600000"
+
+#. TRANSLATORS: millisecond abbreviation
+#: ../Settings.qml:90
+msgid "ms"
+msgstr "ms"
+
+#: ../Main.qml:139 ../Main.qml:142
+msgid "Distance: "
+msgstr "Απόσταση: "
+
+#: ../Main.qml:145
+msgid "Time: "
+msgstr "Χρόνος: "
+
+#: ../Main.qml:221
+msgid "Recent Activities"
+msgstr "Πρόσφατες δραστηριότητες"
+
+#: ../Main.qml:235
+msgid "Import"
+msgstr "Εισαγωγή"
+
+#: ../Main.qml:269
+msgid "Edit the type and the name of your activity"
+msgstr "Επεξεργασία του τύπου και του ονόματος της δραστηριότητάς σας"
+
+#: ../Main.qml:290
+msgid "No saved activities"
+msgstr "Δεν υπάρχουν αποθηκευμένες δραστηριότητες"
+
+#: ../Main.qml:293
+msgid "Swipe up to log a new activity"
+msgstr "Σύρετε προς τα επάνω για να καταγράψετε μια νέα δραστηριότητα"
+
+#: ../Main.qml:375
+msgid "Track information"
+msgstr "Πληροφορίες κομματιού"
+
+#: ../Main.qml:389
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: ../Main.qml:400
+msgid "Log new Activity"
+msgstr "Καταγραφή νέας δραστηριότητας"

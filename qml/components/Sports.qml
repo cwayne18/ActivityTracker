@@ -8,10 +8,11 @@ Item {
    i18n.tr("BikeRide"),
    i18n.tr("Walk"),
    i18n.tr("Drive"),
-   i18n.tr("Hike")
+   i18n.tr("Hike"),
+   i18n.tr("Unicycle")
    ]
    //List of available sports not translatable to be used as property value for each track
-   readonly property var name: ["Run","BikeRide","Walk","Drive","Hike"]
+   readonly property var name: ["Run","BikeRide","Walk","Drive","Hike","Unicycle"]
    // index of the selected sport when editing/importing/saving a track
    property int selected: -1
    // index of the sport selected in the first dialog popped up while tracking a new activity

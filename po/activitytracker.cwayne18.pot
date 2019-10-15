@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-02 20:54+0000\n"
+"POT-Creation-Date: 2019-10-15 10:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -103,6 +103,10 @@ msgstr ""
 
 #: ../qml/components/Sports.qml:11
 msgid "Hike"
+msgstr ""
+
+#: ../qml/components/Sports.qml:12
+msgid "Unicycle"
 msgstr ""
 
 #: ../qml/ActivityDialog.qml:16

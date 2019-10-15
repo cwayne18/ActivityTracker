@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg3768"
+   width="96"
+   height="96"
+   viewBox="0 0 96 96"
+   sodipodi:docname="UnicycleRide-symbolic.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata3774">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3772">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter75"
+       inkscape:label="filtro0" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1306"
+     inkscape:window-height="704"
+     id="namedview3770"
+     showgrid="false"
+     inkscape:zoom="4.50044"
+     inkscape:cx="49.060469"
+     inkscape:cy="39.524323"
+     inkscape:window-x="60"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer3"
+     inkscape:measure-start="400.926,273.063"
+     inkscape:measure-end="403.093,356.499"
+     inkscape:object-paths="false"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-midpoints="false"
+     inkscape:snap-center="true"
+     inkscape:snap-object-midpoints="true" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Layer 1"
+     style="display:inline">
+    <g
+       id="g4595"
+       transform="matrix(1.5018602,0,0,1.5018602,-23.178327,-39.025559)"
+       inkscape:label="unicycle">
+      <circle
+         r="13.093669"
+         transform="scale(-1,1)"
+         cy="70.866829"
+         cx="-47.393444"
+         id="path4589"
+         style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#808080;stroke-width:3.9000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:1.41400003;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:stroke markers fill"
+         inkscape:label="wheel" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4591"
+         d="M 47.393446,70.866829 47.328706,34.339363"
+         style="fill:none;stroke:#808080;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:label="pipe" />
+      <path
+         style="fill:none;stroke:#808080;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 39.343014,33.348403 c 12.60313,2.941496 18.043774,-1.602502 18.043774,-1.602502"
+         id="path4622"
+         inkscape:connector-curvature="0"
+         inkscape:label="seat" />
+    </g>
+  </g>
+</svg>

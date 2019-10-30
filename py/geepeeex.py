@@ -209,6 +209,16 @@ def onetime_db_fix_again_cus_im_dumb():
 def rm_run(run):
     conn = sqlite3.connect('%s/activities.db' % filebase)
     cursor = conn.cursor()
+    try:
+        sql_file = "SELECT filename text FROM Activities WHERE id=?"
+        cursor.execute(sql_file, [run])
+        activity_file = cursor.fetchone()[0]
+        print("file deleted: " + activity_file)
+        os.remove(activity_file)
+    except sqlite3.Error as er:
+        print("-------------______---_____---___----____--____---___-----")
+        print(er)
+
     sql = "DELETE from activities WHERE id=?"
     try:
         cursor.execute(sql, [run])

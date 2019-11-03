@@ -6,6 +6,9 @@ This repo is a fork of the original app created by CWayne18.
 The app has been upgraded by Michele and Ernes_t to work only on 16.04 Ubuntu Touch.
 Due to older QML lib on 15.04, the changes cannot be retrofitted.
 
+## Download
+[![OpenStore](https://open-store.io/badges/en_US.png)](https://open-store.io/app/activitytracker.cwayne18)
+
 ## Changes 0.14:
 - Add the possibility to calibrate the altitude,
 - Remove JavaScript lib,

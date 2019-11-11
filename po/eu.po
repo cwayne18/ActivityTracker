@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-15 15:08+0000\n"
+"POT-Creation-Date: 2019-10-15 10:29+0000\n"
 "PO-Revision-Date: 2019-08-05 18:23+0000\n"
 "Last-Translator: aitzol berasategi <aitzol@disroot.org>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/activity-tracker/"
@@ -19,139 +19,143 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.8-dev\n"
 
-#: ../SportSelectPopUp.qml:10
+#: ../qml/SportSelectPopUp.qml:10
 msgid "Choose sport:"
 msgstr "Kirola aukeratu:"
 
-#: ../SportSelectPopUp.qml:21
+#: ../qml/SportSelectPopUp.qml:21
 msgid "After"
 msgstr "Ondoren"
 
-#: ../Tracker.qml:28
+#: ../qml/Tracker.qml:29
 msgid "Activity in Progress"
 msgstr "Uneko aktibitatea"
 
-#: ../Tracker.qml:28
+#: ../qml/Tracker.qml:29
 msgid "New Activity"
 msgstr "Aktibitate berria"
 
-#: ../Tracker.qml:66
+#: ../qml/Tracker.qml:67
 msgid "Do you want to cancel the activity?"
 msgstr "Bertan behera utzi nahi al duzu aktibitatea?"
 
-#: ../Tracker.qml:69
+#: ../qml/Tracker.qml:70
 msgid "Yes, cancel"
 msgstr "Bai, utzi"
 
-#: ../Tracker.qml:88
+#: ../qml/Tracker.qml:89
 msgid "No, continue"
 msgstr "Ez, jarraitu"
 
-#: ../Tracker.qml:126 ../Tracker.qml:131
+#: ../qml/Tracker.qml:128 ../qml/Tracker.qml:133
 msgid "No data"
 msgstr "Datu gabe"
 
-#: ../Tracker.qml:193
+#: ../qml/Tracker.qml:197
 msgid "Do you want to stop the recording?"
 msgstr "Grabaketa gelditu nahi al duzu?"
 
-#: ../Tracker.qml:195
+#: ../qml/Tracker.qml:199
 msgid "Yes, Stop!"
 msgstr "Bai, gelditu!"
 
-#: ../Tracker.qml:214
+#: ../qml/Tracker.qml:220
 msgid "No, Continue"
 msgstr "Ez, jarraitu"
 
-#: ../Tracker.qml:226 ../Main.qml:254
+#: ../qml/Tracker.qml:232 ../qml/Main.qml:276
 msgid "Select the type and the name of your activity"
 msgstr "Aukeratu zure aktibitate mota eta izena"
 
-#: ../Tracker.qml:294
+#: ../qml/Tracker.qml:300
 msgid "Start"
 msgstr "Hasi"
 
-#: ../Tracker.qml:315
+#: ../qml/Tracker.qml:321
 msgid "Stop"
 msgstr "Gelditu"
 
-#: ../Map.qml:18
+#: ../qml/Map.qml:17
 msgid "Activity Map"
 msgstr "Aktibitate mapa"
 
-#: ../Map.qml:21
+#: ../qml/Map.qml:20
 msgid "Info"
 msgstr "Info"
 
-#: ../ImportPage.qml:34
+#: ../qml/ImportPage.qml:34
 msgid "Choose"
 msgstr "Aukeratu"
 
-#: ../components/Sports.qml:7
+#: ../qml/components/Sports.qml:7
 msgid "Run"
 msgstr "Lasterka"
 
-#: ../components/Sports.qml:8
+#: ../qml/components/Sports.qml:8
 msgid "BikeRide"
 msgstr "Txirrindua"
 
-#: ../components/Sports.qml:9
+#: ../qml/components/Sports.qml:9
 msgid "Walk"
 msgstr "Oinez"
 
-#: ../components/Sports.qml:10
+#: ../qml/components/Sports.qml:10
 msgid "Drive"
 msgstr "Gidatu"
 
-#: ../components/Sports.qml:11
+#: ../qml/components/Sports.qml:11
 msgid "Hike"
 msgstr "Txangoa"
 
-#: ../ActivityDialog.qml:16
+#: ../qml/components/Sports.qml:12
+msgid "Unicycle"
+msgstr ""
+
+#: ../qml/ActivityDialog.qml:16
 msgid "Name"
 msgstr "Izena"
 
-#: ../ActivityDialog.qml:19
+#: ../qml/ActivityDialog.qml:19
 msgid "Select a sport below"
 msgstr "Hautatu ondorengo kirol bat"
 
-#: ../ActivityDialog.qml:29
+#: ../qml/ActivityDialog.qml:29
 msgid "Activity Type"
 msgstr "Aktibitate mota"
 
-#: ../ActivityDialog.qml:39
+#: ../qml/ActivityDialog.qml:39
 msgid "Save"
 msgstr "Gorde"
 
-#: ../ActivityDialog.qml:53
+#: ../qml/ActivityDialog.qml:53
 msgid "Cancel"
 msgstr "Utzi"
 
-#: ../About.qml:8 ../Main.qml:230
+#: ../qml/About.qml:8 ../qml/Settings.qml:18
 msgid "About"
 msgstr "Honi buruz"
 
-#: ../About.qml:37
+#: ../qml/About.qml:37
 msgid "Activity Tracker"
 msgstr "Activity Tracker"
 
-#: ../About.qml:43
+#: ../qml/About.qml:43
 msgid "Version"
 msgstr "Bertsioa"
 
-#: ../About.qml:81
+#: ../qml/About.qml:81
 msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
 msgstr ""
 "GNU GPL v3. baldintzapean argitaratua.\n"
 "<br>Iturburu kodea:"
 
-#: ../About.qml:90
+#: ../qml/About.qml:90
 msgid "Part of the icons is made by %1 from %2 is licensed by %3"
 msgstr ""
 "Ikonoak hein batean %1-ek eginak izan dira %3 lizentziapean dagoen %2-tik"
 
 #. TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
-#: ../About.qml:103
+#: ../qml/About.qml:103
 msgid ""
 "Thanks to %1 for the icons based on:<br>%3 by %8 from %2,<br>%4 by %9 from "
 "%2,<br>%5 by %10 from %2,<br>%6 by %11 from %2,<br>%7 by %12 from %2"
@@ -160,71 +164,88 @@ msgstr ""
 "%5,<br>%2-eko %11-ren %6 eta <br>%2-eko %12-ren %7-n oinarritutako "
 "ikonoengatik"
 
-#: ../About.qml:124
+#: ../qml/About.qml:124
 msgid "Translate this app on Weblate!"
 msgstr "Itzuli aplikazio hau Weblate bidez!"
 
-#: ../About.qml:133
+#: ../qml/About.qml:133
 msgid "Support Weblate"
 msgstr "Weblate babestu"
 
-#: ../Settings.qml:16 ../Main.qml:225
+#: ../qml/Settings.qml:14 ../qml/Main.qml:236
 msgid "Settings"
 msgstr "Ezarpenak"
 
-#: ../Settings.qml:30
+#: ../qml/Settings.qml:36
 msgid "Units"
 msgstr "Unitateak"
 
-#: ../Settings.qml:47
+#: ../qml/Settings.qml:53
 msgid "Log a point every:"
 msgstr "Puntu bakoitzaren erregistro denbora:"
 
-#: ../Settings.qml:49
+#: ../qml/Settings.qml:55
 msgid "between 50 and 3600000"
 msgstr "50 eta 3600000 artean"
 
 #. TRANSLATORS: millisecond abbreviation
-#: ../Settings.qml:90
+#: ../qml/Settings.qml:82
 msgid "ms"
 msgstr "ms"
 
-#: ../Main.qml:139 ../Main.qml:142
+#: ../qml/Settings.qml:92
+msgid "Altitude offset:"
+msgstr ""
+
+#: ../qml/Settings.qml:93
+#, fuzzy
+msgid "between -100 and 100"
+msgstr "50 eta 3600000 artean"
+
+#: ../qml/Settings.qml:115
+msgid "meter(s)"
+msgstr ""
+
+#: ../qml/Main.qml:151 ../qml/Main.qml:154
 msgid "Distance: "
 msgstr "Distantzia: "
 
-#: ../Main.qml:145
+#: ../qml/Main.qml:157
 msgid "Time: "
 msgstr "Denbora: "
 
-#: ../Main.qml:221
+#: ../qml/Main.qml:232
 msgid "Recent Activities"
 msgstr "Azkeneko aktibitateak"
 
-#: ../Main.qml:235
+#: ../qml/Main.qml:241
+msgid "Filter"
+msgstr ""
+
+#: ../qml/Main.qml:246
 msgid "Import"
 msgstr "Inportatu"
 
-#: ../Main.qml:269
+#: ../qml/Main.qml:291
 msgid "Edit the type and the name of your activity"
 msgstr "Editatu zure aktibitate mota eta izena"
 
-#: ../Main.qml:290
+#: ../qml/Main.qml:312
 msgid "No saved activities"
 msgstr "Ez dago gordetako aktibitaterik"
 
-#: ../Main.qml:293
+#: ../qml/Main.qml:315
 msgid "Swipe up to log a new activity"
 msgstr "Irristatu goruntz aktibitate berria erregistratzeko"
 
-#: ../Main.qml:375
+#: ../qml/Main.qml:397
 msgid "Track information"
 msgstr "Jarraipen informazioa"
 
-#: ../Main.qml:389
+#: ../qml/Main.qml:411
 msgid "Close"
 msgstr "Itxi"
 
-#: ../Main.qml:400
+#: ../qml/Main.qml:422
 msgid "Log new Activity"
 msgstr "Aktibitate berria erregistratu"

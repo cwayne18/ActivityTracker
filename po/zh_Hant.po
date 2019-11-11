@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-11 16:17+0000\n"
+"POT-Creation-Date: 2019-10-15 10:29+0000\n"
 "PO-Revision-Date: 2019-01-27 15:11+0000\n"
 "Last-Translator: YONGLE <tanyongle0633@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -19,204 +19,230 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.5-dev\n"
 
-#: ../Map.qml:18
+#: ../qml/SportSelectPopUp.qml:10
+msgid "Choose sport:"
+msgstr "選擇運動："
+
+#: ../qml/SportSelectPopUp.qml:21
+msgid "After"
+msgstr "以後"
+
+#: ../qml/Tracker.qml:29
+msgid "Activity in Progress"
+msgstr "正在進行的活動"
+
+#: ../qml/Tracker.qml:29
+msgid "New Activity"
+msgstr "新建活動"
+
+#: ../qml/Tracker.qml:67
+msgid "Do you want to cancel the activity?"
+msgstr "您想取消活動嗎？"
+
+#: ../qml/Tracker.qml:70
+msgid "Yes, cancel"
+msgstr "是的，取消"
+
+#: ../qml/Tracker.qml:89
+msgid "No, continue"
+msgstr "不，繼續"
+
+#: ../qml/Tracker.qml:128 ../qml/Tracker.qml:133
+msgid "No data"
+msgstr "沒有數據"
+
+#: ../qml/Tracker.qml:197
+msgid "Do you want to stop the recording?"
+msgstr "您想停止錄音嗎？"
+
+#: ../qml/Tracker.qml:199
+msgid "Yes, Stop!"
+msgstr "是的，停！"
+
+#: ../qml/Tracker.qml:220
+msgid "No, Continue"
+msgstr "不，繼續"
+
+#: ../qml/Tracker.qml:232 ../qml/Main.qml:276
+msgid "Select the type and the name of your activity"
+msgstr "選擇活動的類型和名稱"
+
+#: ../qml/Tracker.qml:300
+msgid "Start"
+msgstr "開始"
+
+#: ../qml/Tracker.qml:321
+msgid "Stop"
+msgstr "停止"
+
+#: ../qml/Map.qml:17
 msgid "Activity Map"
 msgstr "活動地圖"
 
-#: ../ImportPage.qml:34
+#: ../qml/Map.qml:20
+msgid "Info"
+msgstr ""
+
+#: ../qml/ImportPage.qml:34
 msgid "Choose"
 msgstr "選擇"
 
-#: ../About.qml:7 ../Main.qml:242
+#: ../qml/components/Sports.qml:7
+msgid "Run"
+msgstr "運行"
+
+#: ../qml/components/Sports.qml:8
+msgid "BikeRide"
+msgstr "騎行"
+
+#: ../qml/components/Sports.qml:9
+msgid "Walk"
+msgstr "步行"
+
+#: ../qml/components/Sports.qml:10
+msgid "Drive"
+msgstr "駕駛"
+
+#: ../qml/components/Sports.qml:11
+msgid "Hike"
+msgstr "遠足"
+
+#: ../qml/components/Sports.qml:12
+msgid "Unicycle"
+msgstr ""
+
+#: ../qml/ActivityDialog.qml:16
+msgid "Name"
+msgstr "名稱"
+
+#: ../qml/ActivityDialog.qml:19
+msgid "Select a sport below"
+msgstr "選擇下面的運動"
+
+#: ../qml/ActivityDialog.qml:29
+msgid "Activity Type"
+msgstr "活動類型"
+
+#: ../qml/ActivityDialog.qml:39
+msgid "Save"
+msgstr "保存"
+
+#: ../qml/ActivityDialog.qml:53
+msgid "Cancel"
+msgstr "取消"
+
+#: ../qml/About.qml:8 ../qml/Settings.qml:18
 msgid "About"
 msgstr "關於"
 
-#: ../About.qml:32
+#: ../qml/About.qml:37
 msgid "Activity Tracker"
 msgstr "活動追踪器"
 
-#: ../About.qml:38
+#: ../qml/About.qml:43
 msgid "Version"
 msgstr "版本"
 
-#: ../About.qml:74
+#: ../qml/About.qml:81
 msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
 msgstr "根據 GNU GPL v3 的條款發布。<br>源代碼可在"
 
-#: ../About.qml:82
+#: ../qml/About.qml:90
 msgid "Part of the icons is made by %1 from %2 is licensed by %3"
 msgstr "部分圖標由 %2 的 %1 製作，由 %3 許可"
 
 #. TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
-#: ../About.qml:95
+#: ../qml/About.qml:103
 msgid ""
 "Thanks to %1 for the icons based on:<br>%3 by %8 from %2,<br>%4 by %9 from "
 "%2,<br>%5 by %10 from %2,<br>%6 by %11 from %2,<br>%7 by %12 from %2"
 msgstr ""
-"感謝基於 %1 的圖標：<br>%3 由 %8 從 %2，<br>%4 由 %9 從 %2，<br>%5 由 %10 從 %2，<br>%6 由 %11 "
-"從 %2，<br>%7 由 %12 從 %2"
+"感謝基於 %1 的圖標：<br>%3 由 %8 從 %2，<br>%4 由 %9 從 %2，<br>%5 由 %10 從 "
+"%2，<br>%6 由 %11 從 %2，<br>%7 由 %12 從 %2"
 
-#: ../About.qml:116
+#: ../qml/About.qml:124
 msgid "Translate this app on Weblate!"
 msgstr "在 Weblate 上翻譯這個應用程序！"
 
-#: ../About.qml:125
+#: ../qml/About.qml:133
 msgid "Support Weblate"
 msgstr "支持 Weblate"
 
-#: ../Tracker.qml:14 ../Main.qml:45
-msgid "Run"
-msgstr "運行"
-
-#: ../Tracker.qml:15 ../Main.qml:46
-msgid "BikeRide"
-msgstr "騎行"
-
-#: ../Tracker.qml:16 ../Main.qml:47
-msgid "Walk"
-msgstr "步行"
-
-#: ../Tracker.qml:17 ../Main.qml:48
-msgid "Drive"
-msgstr "駕駛"
-
-#: ../Tracker.qml:18 ../Main.qml:49
-msgid "Hike"
-msgstr "遠足"
-
-#: ../Tracker.qml:29 ../Main.qml:274
-msgid "Choose sport:"
-msgstr "選擇運動："
-
-#: ../Tracker.qml:42 ../Main.qml:287
-msgid "After"
-msgstr "以後"
-
-#: ../Tracker.qml:80
-msgid "Activity in Progress"
-msgstr "正在進行的活動"
-
-#: ../Tracker.qml:80
-msgid "New Activity"
-msgstr "新建活動"
-
-#: ../Tracker.qml:118
-msgid "Do you want to cancel the activity?"
-msgstr "您想取消活動嗎？"
-
-#: ../Tracker.qml:121
-msgid "Yes, cancel"
-msgstr "是的，取消"
-
-#: ../Tracker.qml:139
-msgid "No, continue"
-msgstr "不，繼續"
-
-#: ../Tracker.qml:177 ../Tracker.qml:182
-msgid "No data"
-msgstr "沒有數據"
-
-#: ../Tracker.qml:243
-msgid "Do you want to stop the recording?"
-msgstr "您想停止錄音嗎？"
-
-#: ../Tracker.qml:245
-msgid "Yes, Stop!"
-msgstr "是的，停！"
-
-#: ../Tracker.qml:263
-msgid "No, Continue"
-msgstr "不，繼續"
-
-#: ../Tracker.qml:274 ../Main.qml:307
-msgid "Select the type and the name of your activity"
-msgstr "選擇活動的類型和名稱"
-
-#: ../Tracker.qml:278 ../Main.qml:311 ../Main.qml:370
-msgid "Name"
-msgstr "名稱"
-
-#: ../Tracker.qml:281 ../Main.qml:314 ../Main.qml:373
-msgid "Select a sport below"
-msgstr "選擇下面的運動"
-
-#: ../Tracker.qml:291 ../Main.qml:324 ../Main.qml:383
-msgid "Activity Type"
-msgstr "活動類型"
-
-#: ../Tracker.qml:307 ../Main.qml:335 ../Main.qml:394
-msgid "Save"
-msgstr "保存"
-
-#: ../Tracker.qml:347 ../Main.qml:350 ../Main.qml:415
-msgid "Cancel"
-msgstr "取消"
-
-#: ../Tracker.qml:398
-msgid "Start"
-msgstr "開始"
-
-#: ../Tracker.qml:419
-msgid "Stop"
-msgstr "停止"
-
-#: ../Settings.qml:16 ../Main.qml:237
+#: ../qml/Settings.qml:14 ../qml/Main.qml:236
 msgid "Settings"
 msgstr "設置"
 
-#: ../Settings.qml:30
+#: ../qml/Settings.qml:36
 msgid "Units"
 msgstr "單位"
 
-#: ../Settings.qml:47
+#: ../qml/Settings.qml:53
 msgid "Log a point every:"
 msgstr "每個記錄一點："
 
-#: ../Settings.qml:49
+#: ../qml/Settings.qml:55
 msgid "between 50 and 3600000"
 msgstr "在50到3600000之間"
 
 #. TRANSLATORS: millisecond abbreviation
-#: ../Settings.qml:90
+#: ../qml/Settings.qml:82
 msgid "ms"
 msgstr "女性"
 
-#: ../Main.qml:147 ../Main.qml:150
+#: ../qml/Settings.qml:92
+msgid "Altitude offset:"
+msgstr ""
+
+#: ../qml/Settings.qml:93
+#, fuzzy
+msgid "between -100 and 100"
+msgstr "在50到3600000之間"
+
+#: ../qml/Settings.qml:115
+msgid "meter(s)"
+msgstr ""
+
+#: ../qml/Main.qml:151 ../qml/Main.qml:154
 msgid "Distance: "
 msgstr "距離： "
 
-#: ../Main.qml:153
+#: ../qml/Main.qml:157
 msgid "Time: "
 msgstr "時間： "
 
-#: ../Main.qml:233
+#: ../qml/Main.qml:232
 msgid "Recent Activities"
 msgstr "近期活動"
 
-#: ../Main.qml:247
+#: ../qml/Main.qml:241
+msgid "Filter"
+msgstr ""
+
+#: ../qml/Main.qml:246
 msgid "Import"
 msgstr "輸入"
 
-#: ../Main.qml:366
+#: ../qml/Main.qml:291
 msgid "Edit the type and the name of your activity"
 msgstr "編輯活動的類型和名稱"
 
-#: ../Main.qml:438
+#: ../qml/Main.qml:312
 msgid "No saved activities"
 msgstr "沒有保存的活動"
 
-#: ../Main.qml:441
+#: ../qml/Main.qml:315
 msgid "Swipe up to log a new activity"
 msgstr "向上滑動以記錄新活動"
 
-#: ../Main.qml:524
+#: ../qml/Main.qml:397
 msgid "Track information"
 msgstr "跟踪信息"
 
-#: ../Main.qml:528
-msgid "close"
+#: ../qml/Main.qml:411
+#, fuzzy
+msgid "Close"
 msgstr "關閉"
 
-#: ../Main.qml:540
+#: ../qml/Main.qml:422
 msgid "Log new Activity"
 msgstr "記錄新活動"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-11 16:17+0000\n"
-"PO-Revision-Date: 2019-01-27 17:04+0000\n"
+"POT-Creation-Date: 2019-10-15 10:29+0000\n"
+"PO-Revision-Date: 2019-10-30 01:54+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "activity-tracker/translations/nb_NO/>\n"
@@ -17,212 +17,238 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.5-dev\n"
+"X-Generator: Weblate 3.9.1\n"
 
-#: ../Map.qml:18
-msgid "Activity Map"
-msgstr "Aktivitetskartlegging"
-
-#: ../ImportPage.qml:34
-msgid "Choose"
-msgstr "Velg"
-
-#: ../About.qml:7 ../Main.qml:242
-msgid "About"
-msgstr "Om"
-
-#: ../About.qml:32
-msgid "Activity Tracker"
-msgstr "Aktivitetskartlegger"
-
-#: ../About.qml:38
-msgid "Version"
-msgstr "Versjon"
-
-#: ../About.qml:74
-msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
-msgstr ""
-"Utgitt i henhold til vilkårene i GNU GPL v3.<br>Kildekode tilgjengelig på"
-
-#: ../About.qml:82
-msgid "Part of the icons is made by %1 from %2 is licensed by %3"
-msgstr "Deler av ikonene er laget av %1 fra %1 lisensiert av %3"
-
-#. TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
-#: ../About.qml:95
-msgid ""
-"Thanks to %1 for the icons based on:<br>%3 by %8 from %2,<br>%4 by %9 from "
-"%2,<br>%5 by %10 from %2,<br>%6 by %11 from %2,<br>%7 by %12 from %2"
-msgstr ""
-"Takk til %1 for ikonene basert på:<br>%3 av %8 fra %2,<br>%4 av %9 fra "
-"%2,<br>%5 av %10 fra %2,<br>%6 av %11 fra %2,<br>%7 av %12 fra %2"
-
-#: ../About.qml:116
-msgid "Translate this app on Weblate!"
-msgstr "Hjelp til i oversettelsen av dette programmet på Weblate."
-
-#: ../About.qml:125
-msgid "Support Weblate"
-msgstr "Støtt Weblate"
-
-#: ../Tracker.qml:14 ../Main.qml:45
-msgid "Run"
-msgstr "Kjør"
-
-#: ../Tracker.qml:15 ../Main.qml:46
-msgid "BikeRide"
-msgstr "Sykkeltur"
-
-#: ../Tracker.qml:16 ../Main.qml:47
-msgid "Walk"
-msgstr "Gåtur"
-
-#: ../Tracker.qml:17 ../Main.qml:48
-msgid "Drive"
-msgstr "Kjøretur"
-
-#: ../Tracker.qml:18 ../Main.qml:49
-msgid "Hike"
-msgstr "Fottur"
-
-#: ../Tracker.qml:29 ../Main.qml:274
+#: ../qml/SportSelectPopUp.qml:10
 msgid "Choose sport:"
 msgstr "Velg sport:"
 
-#: ../Tracker.qml:42 ../Main.qml:287
+#: ../qml/SportSelectPopUp.qml:21
 msgid "After"
 msgstr "Etter"
 
-#: ../Tracker.qml:80
+#: ../qml/Tracker.qml:29
 msgid "Activity in Progress"
 msgstr "Aktivitet underveis"
 
-#: ../Tracker.qml:80
+#: ../qml/Tracker.qml:29
 msgid "New Activity"
 msgstr "Ny aktivitet"
 
-#: ../Tracker.qml:118
+#: ../qml/Tracker.qml:67
 msgid "Do you want to cancel the activity?"
 msgstr "Ønsker du å avbryte aktiviteten?"
 
-#: ../Tracker.qml:121
+#: ../qml/Tracker.qml:70
 msgid "Yes, cancel"
 msgstr "Ja, avbryt"
 
-#: ../Tracker.qml:139
+#: ../qml/Tracker.qml:89
 msgid "No, continue"
 msgstr "Nei, fortsett"
 
-#: ../Tracker.qml:177 ../Tracker.qml:182
+#: ../qml/Tracker.qml:128 ../qml/Tracker.qml:133
 msgid "No data"
 msgstr "Ingen data"
 
-#: ../Tracker.qml:243
+#: ../qml/Tracker.qml:197
 msgid "Do you want to stop the recording?"
 msgstr "Ønsker du å stoppe opptaket?"
 
-#: ../Tracker.qml:245
+#: ../qml/Tracker.qml:199
 #, fuzzy
 msgid "Yes, Stop!"
 msgstr "Ja, stopp"
 
-#: ../Tracker.qml:263
+#: ../qml/Tracker.qml:220
 #, fuzzy
 msgid "No, Continue"
 msgstr "Nei, fortsett"
 
-#: ../Tracker.qml:274 ../Main.qml:307
+#: ../qml/Tracker.qml:232 ../qml/Main.qml:276
 msgid "Select the type and the name of your activity"
 msgstr "Velg typen og navn på aktiviteten din"
 
-#: ../Tracker.qml:278 ../Main.qml:311 ../Main.qml:370
-msgid "Name"
-msgstr "Navn"
-
-#: ../Tracker.qml:281 ../Main.qml:314 ../Main.qml:373
-msgid "Select a sport below"
-msgstr "Velg en sport nedenfor"
-
-#: ../Tracker.qml:291 ../Main.qml:324 ../Main.qml:383
-msgid "Activity Type"
-msgstr "Aktivitetstype"
-
-#: ../Tracker.qml:307 ../Main.qml:335 ../Main.qml:394
-msgid "Save"
-msgstr "Lagre"
-
-#: ../Tracker.qml:347 ../Main.qml:350 ../Main.qml:415
-msgid "Cancel"
-msgstr "Avbryt"
-
-#: ../Tracker.qml:398
+#: ../qml/Tracker.qml:300
 msgid "Start"
 msgstr "Start"
 
-#: ../Tracker.qml:419
+#: ../qml/Tracker.qml:321
 msgid "Stop"
 msgstr "Stopp"
 
-#: ../Settings.qml:16 ../Main.qml:237
+#: ../qml/Map.qml:17
+msgid "Activity Map"
+msgstr "Aktivitetskartlegging"
+
+#: ../qml/Map.qml:20
+msgid "Info"
+msgstr "Info"
+
+#: ../qml/ImportPage.qml:34
+msgid "Choose"
+msgstr "Velg"
+
+#: ../qml/components/Sports.qml:7
+msgid "Run"
+msgstr "Kjør"
+
+#: ../qml/components/Sports.qml:8
+msgid "BikeRide"
+msgstr "Sykkeltur"
+
+#: ../qml/components/Sports.qml:9
+msgid "Walk"
+msgstr "Gåtur"
+
+#: ../qml/components/Sports.qml:10
+msgid "Drive"
+msgstr "Kjøretur"
+
+#: ../qml/components/Sports.qml:11
+msgid "Hike"
+msgstr "Fottur"
+
+#: ../qml/components/Sports.qml:12
+msgid "Unicycle"
+msgstr "Enhjulssykkel"
+
+#: ../qml/ActivityDialog.qml:16
+msgid "Name"
+msgstr "Navn"
+
+#: ../qml/ActivityDialog.qml:19
+msgid "Select a sport below"
+msgstr "Velg en sport nedenfor"
+
+#: ../qml/ActivityDialog.qml:29
+msgid "Activity Type"
+msgstr "Aktivitetstype"
+
+#: ../qml/ActivityDialog.qml:39
+msgid "Save"
+msgstr "Lagre"
+
+#: ../qml/ActivityDialog.qml:53
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: ../qml/About.qml:8 ../qml/Settings.qml:18
+msgid "About"
+msgstr "Om"
+
+#: ../qml/About.qml:37
+msgid "Activity Tracker"
+msgstr "Aktivitetskartlegger"
+
+#: ../qml/About.qml:43
+msgid "Version"
+msgstr "Versjon"
+
+#: ../qml/About.qml:81
+msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
+msgstr ""
+"Utgitt i henhold til vilkårene i GNU GPL v3.<br>Kildekode tilgjengelig på"
+
+#: ../qml/About.qml:90
+msgid "Part of the icons is made by %1 from %2 is licensed by %3"
+msgstr "Deler av ikonene er laget av %1 fra %1 lisensiert av %3"
+
+#. TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
+#: ../qml/About.qml:103
+msgid ""
+"Thanks to %1 for the icons based on:<br>%3 by %8 from %2,<br>%4 by %9 from "
+"%2,<br>%5 by %10 from %2,<br>%6 by %11 from %2,<br>%7 by %12 from %2"
+msgstr ""
+"Takk til %1 for ikonene basert på:<br>%3 av %8 fra %2,<br>%4 av %9 fra %2,"
+"<br>%5 av %10 fra %2,<br>%6 av %11 fra %2,<br>%7 av %12 fra %2"
+
+#: ../qml/About.qml:124
+msgid "Translate this app on Weblate!"
+msgstr "Hjelp til i oversettelsen av dette programmet på Weblate."
+
+#: ../qml/About.qml:133
+msgid "Support Weblate"
+msgstr "Støtt Weblate"
+
+#: ../qml/Settings.qml:14 ../qml/Main.qml:236
 msgid "Settings"
 msgstr "Innstillinger"
 
-#: ../Settings.qml:30
+#: ../qml/Settings.qml:36
 msgid "Units"
 msgstr "Enheter"
 
-#: ../Settings.qml:47
+#: ../qml/Settings.qml:53
 msgid "Log a point every:"
 msgstr "Loggfør punkt hver:"
 
-#: ../Settings.qml:49
+#: ../qml/Settings.qml:55
 msgid "between 50 and 3600000"
 msgstr "mellom 50 og 3600000"
 
 #. TRANSLATORS: millisecond abbreviation
-#: ../Settings.qml:90
+#: ../qml/Settings.qml:82
 msgid "ms"
 msgstr "ms"
 
-#: ../Main.qml:147 ../Main.qml:150
+#: ../qml/Settings.qml:92
+#, fuzzy
+msgid "Altitude offset:"
+msgstr "Høydekompensasjon:"
+
+#: ../qml/Settings.qml:93
+#, fuzzy
+msgid "between -100 and 100"
+msgstr "mellom 50 og 3600000"
+
+#: ../qml/Settings.qml:115
+msgid "meter(s)"
+msgstr "meter"
+
+#: ../qml/Main.qml:151 ../qml/Main.qml:154
 msgid "Distance: "
 msgstr "Distanse: "
 
-#: ../Main.qml:153
+#: ../qml/Main.qml:157
 msgid "Time: "
 msgstr "Tid: "
 
-#: ../Main.qml:233
+#: ../qml/Main.qml:232
 msgid "Recent Activities"
 msgstr "Nylige aktiviteter"
 
-#: ../Main.qml:247
+#: ../qml/Main.qml:241
+msgid "Filter"
+msgstr "Filter"
+
+#: ../qml/Main.qml:246
 msgid "Import"
 msgstr "Importer"
 
-#: ../Main.qml:366
+#: ../qml/Main.qml:291
 msgid "Edit the type and the name of your activity"
 msgstr "Rediger typen og navnet på aktiviteten din"
 
-#: ../Main.qml:438
+#: ../qml/Main.qml:312
 msgid "No saved activities"
 msgstr "Ingen lagrede aktiviteter"
 
-#: ../Main.qml:441
+#: ../qml/Main.qml:315
 msgid "Swipe up to log a new activity"
 msgstr "Dra opp for å logge en ny aktivitet"
 
-#: ../Main.qml:524
+#: ../qml/Main.qml:397
 #, fuzzy
 msgid "Track information"
 msgstr "Spor-informasjon"
 
-#: ../Main.qml:528
+#: ../qml/Main.qml:411
 #, fuzzy
-msgid "close"
+msgid "Close"
 msgstr "lukk"
 
-#: ../Main.qml:540
+#: ../qml/Main.qml:422
 #, fuzzy
 msgid "Log new Activity"
 msgstr "Logg ny aktivitet"

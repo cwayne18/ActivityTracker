@@ -40,7 +40,7 @@ Page {
             }
 
             Label {
-               text: i18n.tr("Version") + " 0.14"
+               text: i18n.tr("Version") + " 0.15"
                anchors.horizontalCenter: parent.horizontalCenter
             }
          }

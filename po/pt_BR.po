@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15 10:29+0000\n"
-"PO-Revision-Date: 2019-10-25 20:53+0000\n"
-"Last-Translator: Oseias lima <oseiasrodrigues03@gmail.com>\n"
+"PO-Revision-Date: 2019-11-16 16:04+0000\n"
+"Last-Translator: Theeiss <azaz9a@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "activity-tracker/translations/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1-dev\n"
+"X-Generator: Weblate 3.10-dev\n"
 
 #: ../qml/SportSelectPopUp.qml:10
 msgid "Choose sport:"
@@ -194,9 +194,8 @@ msgid "Altitude offset:"
 msgstr "Deslocamento de altitude:"
 
 #: ../qml/Settings.qml:93
-#, fuzzy
 msgid "between -100 and 100"
-msgstr "entre 50 e 3600000"
+msgstr "entre -100 e 100"
 
 #: ../qml/Settings.qml:115
 msgid "meter(s)"

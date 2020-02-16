@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15 10:29+0000\n"
-"PO-Revision-Date: 2019-11-05 15:04+0000\n"
-"Last-Translator: Zaicheng Qi <vmlinz@gmail.com>\n"
+"PO-Revision-Date: 2019-12-13 17:57+0000\n"
+"Last-Translator: Kyle <hughka@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
-"activity-tracker/translations/zh_HANS-CN/>\n"
+"activity-tracker/translations/zh_Hans/>\n"
 "Language: zh_HANS-CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -191,16 +191,15 @@ msgstr "女性"
 
 #: ../qml/Settings.qml:92
 msgid "Altitude offset:"
-msgstr ""
+msgstr "高度偏移："
 
 #: ../qml/Settings.qml:93
-#, fuzzy
 msgid "between -100 and 100"
-msgstr "在50到3600000之间"
+msgstr "在负100到正100之间"
 
 #: ../qml/Settings.qml:115
 msgid "meter(s)"
-msgstr ""
+msgstr "仪表"
 
 #: ../qml/Main.qml:151 ../qml/Main.qml:154
 msgid "Distance: "
@@ -216,7 +215,7 @@ msgstr "近期活动"
 
 #: ../qml/Main.qml:241
 msgid "Filter"
-msgstr ""
+msgstr "筛选"
 
 #: ../qml/Main.qml:246
 msgid "Import"
@@ -239,7 +238,6 @@ msgid "Track information"
 msgstr "跟踪信息"
 
 #: ../qml/Main.qml:411
-#, fuzzy
 msgid "Close"
 msgstr "关闭"
 

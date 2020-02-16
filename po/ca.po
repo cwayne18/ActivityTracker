@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15 10:29+0000\n"
-"PO-Revision-Date: 2019-10-31 12:03+0000\n"
-"Last-Translator: Alexandra Bonet Canela <abonetcan@gmail.com>\n"
+"PO-Revision-Date: 2020-02-14 15:50+0000\n"
+"Last-Translator: Xomin <theiacobumrex@gmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/activity-tracker/"
 "translations/ca/>\n"
 "Language: ca\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10-dev\n"
+"X-Generator: Weblate 3.11-dev\n"
 
 #: ../qml/SportSelectPopUp.qml:10
 msgid "Choose sport:"
@@ -52,7 +52,6 @@ msgid "No data"
 msgstr "Sense dades"
 
 #: ../qml/Tracker.qml:197
-#, fuzzy
 msgid "Do you want to stop the recording?"
 msgstr "Voleu finalitzar el registre de l'activitat?"
 
@@ -82,20 +81,19 @@ msgstr "Mapa d'activitat"
 
 #: ../qml/Map.qml:20
 msgid "Info"
-msgstr ""
+msgstr "Informació"
 
 #: ../qml/ImportPage.qml:34
 msgid "Choose"
-msgstr ""
+msgstr "Trieu"
 
 #: ../qml/components/Sports.qml:7
 msgid "Run"
-msgstr ""
+msgstr "Córrer"
 
 #: ../qml/components/Sports.qml:8
-#, fuzzy
 msgid "BikeRide"
-msgstr "Giro in Bici"
+msgstr "Anar en bici"
 
 #: ../qml/components/Sports.qml:9
 msgid "Walk"
@@ -111,7 +109,7 @@ msgstr "Escursione"
 
 #: ../qml/components/Sports.qml:12
 msgid "Unicycle"
-msgstr ""
+msgstr "Monocicle"
 
 #: ../qml/ActivityDialog.qml:16
 msgid "Name"
@@ -119,7 +117,7 @@ msgstr "Nom"
 
 #: ../qml/ActivityDialog.qml:19
 msgid "Select a sport below"
-msgstr ""
+msgstr "Seleccioneu un esport a continuació"
 
 #: ../qml/ActivityDialog.qml:29
 msgid "Activity Type"
@@ -127,7 +125,7 @@ msgstr "Tipus d'activitat"
 
 #: ../qml/ActivityDialog.qml:39
 msgid "Save"
-msgstr ""
+msgstr "Desar"
 
 #: ../qml/ActivityDialog.qml:53
 msgid "Cancel"
@@ -142,9 +140,8 @@ msgid "Activity Tracker"
 msgstr "Activity Tracker"
 
 #: ../qml/About.qml:43
-#, fuzzy
 msgid "Version"
-msgstr "Versió "
+msgstr "Versió"
 
 #: ../qml/About.qml:81
 #, fuzzy
@@ -153,7 +150,7 @@ msgstr "Alliberat sota la llicència GNU GPL v3"
 
 #: ../qml/About.qml:90
 msgid "Part of the icons is made by %1 from %2 is licensed by %3"
-msgstr ""
+msgstr "Part de les icones estan fetes per %1 de %2 amb el permís de %3"
 
 #. TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
 #: ../qml/About.qml:103
@@ -164,11 +161,11 @@ msgstr ""
 
 #: ../qml/About.qml:124
 msgid "Translate this app on Weblate!"
-msgstr ""
+msgstr "Traduïu aquesta aplicació a Weblate!"
 
 #: ../qml/About.qml:133
 msgid "Support Weblate"
-msgstr ""
+msgstr "Dona suport a Weblate"
 
 #: ../qml/Settings.qml:14 ../qml/Main.qml:236
 msgid "Settings"
@@ -193,16 +190,15 @@ msgstr "ms"
 
 #: ../qml/Settings.qml:92
 msgid "Altitude offset:"
-msgstr ""
+msgstr "Compensació d'altitud:"
 
 #: ../qml/Settings.qml:93
-#, fuzzy
 msgid "between -100 and 100"
-msgstr "entre 50 i 3600000"
+msgstr "entre -100 i 100"
 
 #: ../qml/Settings.qml:115
 msgid "meter(s)"
-msgstr ""
+msgstr "metre(s)"
 
 #: ../qml/Main.qml:151 ../qml/Main.qml:154
 msgid "Distance: "
@@ -218,14 +214,13 @@ msgstr "Activitat recent"
 
 #: ../qml/Main.qml:241
 msgid "Filter"
-msgstr ""
+msgstr "Filtre"
 
 #: ../qml/Main.qml:246
 msgid "Import"
-msgstr ""
+msgstr "Importeu"
 
 #: ../qml/Main.qml:291
-#, fuzzy
 msgid "Edit the type and the name of your activity"
 msgstr "Seleccioneu el tipus i el nom de la vostra activitat"
 
@@ -239,11 +234,11 @@ msgstr "Rellisqueu cap amunt per registrar una nova activitat"
 
 #: ../qml/Main.qml:397
 msgid "Track information"
-msgstr ""
+msgstr "Informació de rastreig"
 
 #: ../qml/Main.qml:411
 msgid "Close"
-msgstr ""
+msgstr "Tanqueu"
 
 #: ../qml/Main.qml:422
 msgid "Log new Activity"

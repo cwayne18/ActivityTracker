@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15 10:29+0000\n"
-"PO-Revision-Date: 2019-11-08 01:04+0000\n"
-"Last-Translator: Kiste <christian.buschau+weblate@mailbox.org>\n"
+"PO-Revision-Date: 2019-11-30 16:05+0000\n"
+"Last-Translator: Johann150 <johann.galle@gmx.net>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/activity-tracker/"
 "translations/de/>\n"
 "Language: de\n"
@@ -137,7 +137,7 @@ msgstr "Über"
 
 #: ../qml/About.qml:37
 msgid "Activity Tracker"
-msgstr "Activity Tracker"
+msgstr "Aktivitäts-Tracker"
 
 #: ../qml/About.qml:43
 msgid "Version"
@@ -191,7 +191,7 @@ msgstr "ms"
 
 #: ../qml/Settings.qml:92
 msgid "Altitude offset:"
-msgstr ""
+msgstr "Höhenunterschied:"
 
 #: ../qml/Settings.qml:93
 msgid "between -100 and 100"

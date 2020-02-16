@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15 10:29+0000\n"
-"PO-Revision-Date: 2019-08-05 18:23+0000\n"
+"PO-Revision-Date: 2020-02-06 19:50+0000\n"
 "Last-Translator: aitzol berasategi <aitzol@disroot.org>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/activity-tracker/"
 "translations/eu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.8-dev\n"
+"X-Generator: Weblate 3.11-dev\n"
 
 #: ../qml/SportSelectPopUp.qml:10
 msgid "Choose sport:"
@@ -109,7 +109,7 @@ msgstr "Txangoa"
 
 #: ../qml/components/Sports.qml:12
 msgid "Unicycle"
-msgstr ""
+msgstr "Unizikloa"
 
 #: ../qml/ActivityDialog.qml:16
 msgid "Name"
@@ -195,16 +195,15 @@ msgstr "ms"
 
 #: ../qml/Settings.qml:92
 msgid "Altitude offset:"
-msgstr ""
+msgstr "Garaieraren konpentsazioa:"
 
 #: ../qml/Settings.qml:93
-#, fuzzy
 msgid "between -100 and 100"
-msgstr "50 eta 3600000 artean"
+msgstr "-100 eta 100 artean"
 
 #: ../qml/Settings.qml:115
 msgid "meter(s)"
-msgstr ""
+msgstr "metro"
 
 #: ../qml/Main.qml:151 ../qml/Main.qml:154
 msgid "Distance: "
@@ -220,7 +219,7 @@ msgstr "Azkeneko aktibitateak"
 
 #: ../qml/Main.qml:241
 msgid "Filter"
-msgstr ""
+msgstr "Iragazkia"
 
 #: ../qml/Main.qml:246
 msgid "Import"

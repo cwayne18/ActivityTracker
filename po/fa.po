@@ -8,149 +8,148 @@ msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15 10:29+0000\n"
-"PO-Revision-Date: 2019-12-05 22:05+0000\n"
-"Last-Translator: DIMITRIOS DALAVOURAS <DIMITRIS@general-refrigeration.gr>\n"
-"Language-Team: Greek <https://hosted.weblate.org/projects/activity-tracker/"
-"translations/el/>\n"
-"Language: el\n"
+"PO-Revision-Date: 2020-01-20 10:21+0000\n"
+"Last-Translator: آراز <arazmnsr@gmail.com>\n"
+"Language-Team: Persian <https://hosted.weblate.org/projects/activity-tracker/"
+"translations/fa/>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10-dev\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.11-dev\n"
 
 #: ../qml/SportSelectPopUp.qml:10
 msgid "Choose sport:"
-msgstr "Επιλέξτε άθλημα:"
+msgstr "انتخاب ورزش:"
 
 #: ../qml/SportSelectPopUp.qml:21
 msgid "After"
-msgstr "Μετά"
+msgstr "بعد از"
 
 #: ../qml/Tracker.qml:29
 msgid "Activity in Progress"
-msgstr "Δραστηριότητα σε εξέλιξη"
+msgstr "فعالیت درحال انجام"
 
 #: ../qml/Tracker.qml:29
 msgid "New Activity"
-msgstr "Νέα δραστηριότητα"
+msgstr "فعالیت جدید"
 
 #: ../qml/Tracker.qml:67
 msgid "Do you want to cancel the activity?"
-msgstr "Θέλετε να ακυρώσετε τη δραστηριότητα;"
+msgstr "مایل به انصراف از این فعالیت هستید؟"
 
 #: ../qml/Tracker.qml:70
 msgid "Yes, cancel"
-msgstr "Ναι, ακύρωσέ το"
+msgstr "بله ، انصراف"
 
 #: ../qml/Tracker.qml:89
 msgid "No, continue"
-msgstr "Όχι, συνέχισε"
+msgstr "خیر ، ادامه"
 
 #: ../qml/Tracker.qml:128 ../qml/Tracker.qml:133
 msgid "No data"
-msgstr "Δεν υπάρχουν δεδομένα"
+msgstr "فاقد داده"
 
 #: ../qml/Tracker.qml:197
 msgid "Do you want to stop the recording?"
-msgstr "Θέλεις να σταματήσεις την ηχογράφηση;"
+msgstr "مایل به توقف عملیات ضبط هستید؟"
 
 #: ../qml/Tracker.qml:199
 msgid "Yes, Stop!"
-msgstr "Ναι, σταμάτα!"
+msgstr "بله ، توقف"
 
 #: ../qml/Tracker.qml:220
 msgid "No, Continue"
-msgstr "Όχι, συνέχισε"
+msgstr "خیر ، ادامه"
 
 #: ../qml/Tracker.qml:232 ../qml/Main.qml:276
 msgid "Select the type and the name of your activity"
-msgstr "Επιλέξτε τον τύπο και το όνομα της δραστηριότητάς σας"
+msgstr "انتخاب نوع و نام فعالیت موردنظر"
 
 #: ../qml/Tracker.qml:300
 msgid "Start"
-msgstr "Έναρξη"
+msgstr "شروع"
 
 #: ../qml/Tracker.qml:321
 msgid "Stop"
-msgstr "Σταμάτα"
+msgstr "توقف"
 
 #: ../qml/Map.qml:17
 msgid "Activity Map"
-msgstr "Χάρτης δραστηριότητας"
+msgstr "نقشه مسیر فعالیت"
 
 #: ../qml/Map.qml:20
 msgid "Info"
-msgstr "Πληροφορίες"
+msgstr "اطلاعات"
 
 #: ../qml/ImportPage.qml:34
 msgid "Choose"
-msgstr "Επιλέξτε"
+msgstr "انتخاب"
 
 #: ../qml/components/Sports.qml:7
 msgid "Run"
-msgstr "Εκτέλεση"
+msgstr "دویدن"
 
 #: ../qml/components/Sports.qml:8
 msgid "BikeRide"
-msgstr "Βόλτα με το ποδήλατο"
+msgstr "دوچرخه سواری"
 
 #: ../qml/components/Sports.qml:9
 msgid "Walk"
-msgstr "Περπάτημα"
+msgstr "پیاده روی"
 
 #: ../qml/components/Sports.qml:10
 msgid "Drive"
-msgstr "Οδήγηση"
+msgstr "اتومبیل رانی"
 
 #: ../qml/components/Sports.qml:11
 msgid "Hike"
-msgstr "Πεζοπορία"
+msgstr "پیاده روی"
 
 #: ../qml/components/Sports.qml:12
 msgid "Unicycle"
-msgstr "Μονόκυκλο"
+msgstr "تک چرخ"
 
 #: ../qml/ActivityDialog.qml:16
 msgid "Name"
-msgstr "Όνομα"
+msgstr "نام"
 
 #: ../qml/ActivityDialog.qml:19
 msgid "Select a sport below"
-msgstr "Επιλέξτε ένα άθλημα παρακάτω"
+msgstr "یک رشته ورزشی را در لیست زیر انتخاب کنید"
 
 #: ../qml/ActivityDialog.qml:29
 msgid "Activity Type"
-msgstr "Τύπος δραστηριότητας"
+msgstr "نوع فعالیت"
 
 #: ../qml/ActivityDialog.qml:39
 msgid "Save"
-msgstr "Αποθήκευση"
+msgstr "ذخیره"
 
 #: ../qml/ActivityDialog.qml:53
 msgid "Cancel"
-msgstr "Ακύρωση"
+msgstr "انصراف"
 
 #: ../qml/About.qml:8 ../qml/Settings.qml:18
 msgid "About"
-msgstr "Σχετικά"
+msgstr "درباره"
 
 #: ../qml/About.qml:37
 msgid "Activity Tracker"
-msgstr "Παρακολούθηση δραστηριότητας"
+msgstr ""
 
 #: ../qml/About.qml:43
 msgid "Version"
-msgstr "Έκδοση"
+msgstr ""
 
 #: ../qml/About.qml:81
 msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
 msgstr ""
-"Κυκλοφορεί υπό τους όρους της GNU GPL v3.<br>Πηγαίος κώδικας διαθέσιμος στο"
 
 #: ../qml/About.qml:90
 msgid "Part of the icons is made by %1 from %2 is licensed by %3"
-msgstr "Μέρος των εικονιδίων γίνεται από το %1 από %2 έχει αδειοδοτηθεί από %3"
+msgstr ""
 
 #. TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
 #: ../qml/About.qml:103
@@ -158,91 +157,88 @@ msgid ""
 "Thanks to %1 for the icons based on:<br>%3 by %8 from %2,<br>%4 by %9 from "
 "%2,<br>%5 by %10 from %2,<br>%6 by %11 from %2,<br>%7 by %12 from %2"
 msgstr ""
-"Χάρη στο% 1 για τα εικονίδια που βασίζονται σε: <br>%3 από %8 από %2,<br> %4 "
-"από %9 από %2,<br>%5 από %10 από %2,<br>%6 από %11 από %2,<br>%7 από %12 από "
-"%2"
 
 #: ../qml/About.qml:124
 msgid "Translate this app on Weblate!"
-msgstr "Μετάφρασε αυτή την εφαρμογή στο Weblate!"
+msgstr ""
 
 #: ../qml/About.qml:133
 msgid "Support Weblate"
-msgstr "Υποστήριξη του Weblate"
+msgstr ""
 
 #: ../qml/Settings.qml:14 ../qml/Main.qml:236
 msgid "Settings"
-msgstr "Ρυθμίσεις"
+msgstr ""
 
 #: ../qml/Settings.qml:36
 msgid "Units"
-msgstr "Μονάδες"
+msgstr ""
 
 #: ../qml/Settings.qml:53
 msgid "Log a point every:"
-msgstr "Καταγραφή ενός σημείου κάθε:"
+msgstr ""
 
 #: ../qml/Settings.qml:55
 msgid "between 50 and 3600000"
-msgstr "μεταξύ 50 και 3600000"
+msgstr ""
 
 #. TRANSLATORS: millisecond abbreviation
 #: ../qml/Settings.qml:82
 msgid "ms"
-msgstr "ms"
+msgstr ""
 
 #: ../qml/Settings.qml:92
 msgid "Altitude offset:"
-msgstr "Αντιστάθμιση υψομέτρου:"
+msgstr ""
 
 #: ../qml/Settings.qml:93
 msgid "between -100 and 100"
-msgstr "μεταξύ -100 και 100"
+msgstr ""
 
 #: ../qml/Settings.qml:115
 msgid "meter(s)"
-msgstr "Μέτρο(α)"
+msgstr ""
 
 #: ../qml/Main.qml:151 ../qml/Main.qml:154
 msgid "Distance: "
-msgstr "Απόσταση: "
+msgstr ""
 
 #: ../qml/Main.qml:157
 msgid "Time: "
-msgstr "Χρόνος: "
+msgstr ""
 
 #: ../qml/Main.qml:232
 msgid "Recent Activities"
-msgstr "Πρόσφατες Δραστηριότητες"
+msgstr ""
 
 #: ../qml/Main.qml:241
 msgid "Filter"
-msgstr "Φίλτρο"
+msgstr ""
 
 #: ../qml/Main.qml:246
 msgid "Import"
-msgstr "Εισαγωγή"
+msgstr ""
 
 #: ../qml/Main.qml:291
 msgid "Edit the type and the name of your activity"
-msgstr "Επεξεργασία του τύπου και του ονόματος της δραστηριότητάς σας"
+msgstr ""
 
 #: ../qml/Main.qml:312
 msgid "No saved activities"
-msgstr "Δεν υπάρχουν αποθηκευμένες δραστηριότητες"
+msgstr ""
 
 #: ../qml/Main.qml:315
 msgid "Swipe up to log a new activity"
-msgstr "Σύρετε προς τα επάνω για να καταγράψετε μια νέα δραστηριότητα"
+msgstr ""
 
 #: ../qml/Main.qml:397
 msgid "Track information"
-msgstr "Πληροφορίες κομματιού"
+msgstr ""
 
 #: ../qml/Main.qml:411
 msgid "Close"
-msgstr "Κλείσιμο"
+msgstr ""
 
 #: ../qml/Main.qml:422
 msgid "Log new Activity"
-msgstr "Καταγραφή νέας δραστηριότητας"
+msgstr ""

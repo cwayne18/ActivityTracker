@@ -19,6 +19,7 @@ add_custom_target(${POT_FILE} ALL
         --keyword=tr --keyword=tr:1,2 --keyword=N_ --keyword=_
         --package-name='${DOMAIN}'
         ${I18N_SRC_FILES}
+        --sort-by-file
     COMMAND ${CMAKE_COMMAND} -E copy ${POT_FILE} ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Builds the binary translations catalog for each language

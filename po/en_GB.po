@@ -21,91 +21,91 @@ msgstr ""
 
 #: ../qml/SportSelectPopUp.qml:10
 msgid "Choose sport:"
-msgstr "Escolher desporto:"
+msgstr ""
 
 #: ../qml/SportSelectPopUp.qml:21
 msgid "After"
-msgstr "Depois"
+msgstr ""
 
 #: ../qml/Tracker.qml:29
 msgid "Activity in Progress"
-msgstr "Atividade em progresso"
+msgstr ""
 
 #: ../qml/Tracker.qml:29
 msgid "New Activity"
-msgstr "Nova Atividade"
+msgstr ""
 
 #: ../qml/Tracker.qml:67
 msgid "Do you want to cancel the activity?"
-msgstr "Deseja cancelar a atividade?"
+msgstr ""
 
 #: ../qml/Tracker.qml:70
 msgid "Yes, cancel"
-msgstr "Sim, cancelar"
+msgstr ""
 
 #: ../qml/Tracker.qml:89
 msgid "No, continue"
-msgstr "Não, continuar"
+msgstr ""
 
 #: ../qml/Tracker.qml:128 ../qml/Tracker.qml:133
 msgid "No data"
-msgstr "Sem dados"
+msgstr ""
 
 #: ../qml/Tracker.qml:197
 msgid "Do you want to stop the recording?"
-msgstr "Deseja parar a gravação?"
+msgstr ""
 
 #: ../qml/Tracker.qml:199
 msgid "Yes, Stop!"
-msgstr "Sim, parar!"
+msgstr ""
 
 #: ../qml/Tracker.qml:220
 msgid "No, Continue"
-msgstr "Não, continuar"
+msgstr ""
 
 #: ../qml/Tracker.qml:232 ../qml/Main.qml:276
 msgid "Select the type and the name of your activity"
-msgstr "Selecione o tipo e o nome da sua atividadde"
+msgstr ""
 
 #: ../qml/Tracker.qml:300
 msgid "Start"
-msgstr "Iniciar"
+msgstr ""
 
 #: ../qml/Tracker.qml:321
 msgid "Stop"
-msgstr "Parar"
+msgstr ""
 
 #: ../qml/Map.qml:17
 msgid "Activity Map"
-msgstr "Mapa de Atividades"
+msgstr ""
 
 #: ../qml/Map.qml:20
 msgid "Info"
-msgstr "Informação"
+msgstr ""
 
 #: ../qml/ImportPage.qml:34
 msgid "Choose"
-msgstr "Escolher"
+msgstr ""
 
 #: ../qml/components/Sports.qml:7
 msgid "Run"
-msgstr "Correr"
+msgstr ""
 
 #: ../qml/components/Sports.qml:8
 msgid "BikeRide"
-msgstr "Andar Bicicleta"
+msgstr ""
 
 #: ../qml/components/Sports.qml:9
 msgid "Walk"
-msgstr "Caminhar"
+msgstr ""
 
 #: ../qml/components/Sports.qml:10
 msgid "Drive"
-msgstr "Conduzir"
+msgstr ""
 
 #: ../qml/components/Sports.qml:11
 msgid "Hike"
-msgstr "Caminhada"
+msgstr ""
 
 #: ../qml/components/Sports.qml:12
 msgid "Unicycle"
@@ -113,27 +113,27 @@ msgstr "Monociclo"
 
 #: ../qml/ActivityDialog.qml:16
 msgid "Name"
-msgstr "Nome"
+msgstr ""
 
 #: ../qml/ActivityDialog.qml:19
 msgid "Select a sport below"
-msgstr "Selecione um desporto em baixo"
+msgstr ""
 
 #: ../qml/ActivityDialog.qml:29
 msgid "Activity Type"
-msgstr "Tipo de Atividade"
+msgstr ""
 
 #: ../qml/ActivityDialog.qml:39
 msgid "Save"
-msgstr "Guardar"
+msgstr ""
 
 #: ../qml/ActivityDialog.qml:53
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr ""
 
 #: ../qml/About.qml:8 ../qml/Settings.qml:18
 msgid "About"
-msgstr "Sobre"
+msgstr ""
 
 #: ../qml/About.qml:37
 msgid "Activity Tracker"
@@ -141,7 +141,7 @@ msgstr "Activity Tracker"
 
 #: ../qml/About.qml:43
 msgid "Version"
-msgstr "Versão"
+msgstr ""
 
 #: ../qml/About.qml:81
 msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
@@ -171,11 +171,11 @@ msgstr "Support Weblate"
 
 #: ../qml/Settings.qml:14 ../qml/Main.qml:236
 msgid "Settings"
-msgstr "Definições"
+msgstr ""
 
 #: ../qml/Settings.qml:36
 msgid "Units"
-msgstr "Unidades"
+msgstr ""
 
 #: ../qml/Settings.qml:53
 msgid "Log a point every:"
@@ -188,7 +188,7 @@ msgstr "between 50 and 3600000"
 #. TRANSLATORS: millisecond abbreviation
 #: ../qml/Settings.qml:82
 msgid "ms"
-msgstr "ms"
+msgstr ""
 
 #: ../qml/Settings.qml:92
 msgid "Altitude offset:"
@@ -204,15 +204,15 @@ msgstr "meter(s)"
 
 #: ../qml/Main.qml:151 ../qml/Main.qml:154
 msgid "Distance: "
-msgstr "Distância "
+msgstr ""
 
 #: ../qml/Main.qml:157
 msgid "Time: "
-msgstr "Hora: "
+msgstr ""
 
 #: ../qml/Main.qml:232
 msgid "Recent Activities"
-msgstr "Atividades Recentes"
+msgstr ""
 
 #: ../qml/Main.qml:241
 msgid "Filter"
@@ -220,7 +220,7 @@ msgstr "Filter"
 
 #: ../qml/Main.qml:246
 msgid "Import"
-msgstr "Importar"
+msgstr ""
 
 #: ../qml/Main.qml:291
 msgid "Edit the type and the name of your activity"
@@ -240,8 +240,8 @@ msgstr "Track information"
 
 #: ../qml/Main.qml:411
 msgid "Close"
-msgstr "Fechar"
+msgstr ""
 
 #: ../qml/Main.qml:422
 msgid "Log new Activity"
-msgstr "Registar nova Atividade"
+msgstr ""

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15 10:29+0000\n"
-"PO-Revision-Date: 2020-01-22 15:21+0000\n"
-"Last-Translator: Juan Manuel Sinisterra Arcila <sini6toa@gmail.com>\n"
+"PO-Revision-Date: 2020-03-19 14:48+0000\n"
+"Last-Translator: Jeannette L <j.lavoie@net-c.ca>\n"
 "Language-Team: English (United Kingdom) <https://hosted.weblate.org/projects/"
 "activity-tracker/translations/en_GB/>\n"
 "Language: en_GB\n"
@@ -17,123 +17,123 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.11-dev\n"
+"X-Generator: Weblate 4.0-dev\n"
 
 #: ../qml/SportSelectPopUp.qml:10
 msgid "Choose sport:"
-msgstr ""
+msgstr "Choose sport:"
 
 #: ../qml/SportSelectPopUp.qml:21
 msgid "After"
-msgstr ""
+msgstr "After"
 
 #: ../qml/Tracker.qml:29
 msgid "Activity in Progress"
-msgstr ""
+msgstr "Activity in Progress"
 
 #: ../qml/Tracker.qml:29
 msgid "New Activity"
-msgstr ""
+msgstr "New Activity"
 
 #: ../qml/Tracker.qml:67
 msgid "Do you want to cancel the activity?"
-msgstr ""
+msgstr "Do you want to cancel the activity?"
 
 #: ../qml/Tracker.qml:70
 msgid "Yes, cancel"
-msgstr ""
+msgstr "Yes, cancel"
 
 #: ../qml/Tracker.qml:89
 msgid "No, continue"
-msgstr ""
+msgstr "No, continue"
 
 #: ../qml/Tracker.qml:128 ../qml/Tracker.qml:133
 msgid "No data"
-msgstr ""
+msgstr "No data"
 
 #: ../qml/Tracker.qml:197
 msgid "Do you want to stop the recording?"
-msgstr ""
+msgstr "Do you want to stop the recording?"
 
 #: ../qml/Tracker.qml:199
 msgid "Yes, Stop!"
-msgstr ""
+msgstr "Yes, Stop!"
 
 #: ../qml/Tracker.qml:220
 msgid "No, Continue"
-msgstr ""
+msgstr "No, continue"
 
 #: ../qml/Tracker.qml:232 ../qml/Main.qml:276
 msgid "Select the type and the name of your activity"
-msgstr ""
+msgstr "Select the type and the name of your activity"
 
 #: ../qml/Tracker.qml:300
 msgid "Start"
-msgstr ""
+msgstr "Start"
 
 #: ../qml/Tracker.qml:321
 msgid "Stop"
-msgstr ""
+msgstr "Stop"
 
 #: ../qml/Map.qml:17
 msgid "Activity Map"
-msgstr ""
+msgstr "Activity Map"
 
 #: ../qml/Map.qml:20
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: ../qml/ImportPage.qml:34
 msgid "Choose"
-msgstr ""
+msgstr "Choose"
 
 #: ../qml/components/Sports.qml:7
 msgid "Run"
-msgstr ""
+msgstr "Run"
 
 #: ../qml/components/Sports.qml:8
 msgid "BikeRide"
-msgstr ""
+msgstr "Bike ride"
 
 #: ../qml/components/Sports.qml:9
 msgid "Walk"
-msgstr ""
+msgstr "Walk"
 
 #: ../qml/components/Sports.qml:10
 msgid "Drive"
-msgstr ""
+msgstr "Drive"
 
 #: ../qml/components/Sports.qml:11
 msgid "Hike"
-msgstr ""
+msgstr "Rambling"
 
 #: ../qml/components/Sports.qml:12
 msgid "Unicycle"
-msgstr "Monociclo"
+msgstr "Unicycle"
 
 #: ../qml/ActivityDialog.qml:16
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #: ../qml/ActivityDialog.qml:19
 msgid "Select a sport below"
-msgstr ""
+msgstr "Select a sport below"
 
 #: ../qml/ActivityDialog.qml:29
 msgid "Activity Type"
-msgstr ""
+msgstr "Activity Type"
 
 #: ../qml/ActivityDialog.qml:39
 msgid "Save"
-msgstr ""
+msgstr "Save"
 
 #: ../qml/ActivityDialog.qml:53
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel"
 
 #: ../qml/About.qml:8 ../qml/Settings.qml:18
 msgid "About"
-msgstr ""
+msgstr "About"
 
 #: ../qml/About.qml:37
 msgid "Activity Tracker"
@@ -141,7 +141,7 @@ msgstr "Activity Tracker"
 
 #: ../qml/About.qml:43
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 #: ../qml/About.qml:81
 msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
@@ -171,11 +171,11 @@ msgstr "Support Weblate"
 
 #: ../qml/Settings.qml:14 ../qml/Main.qml:236
 msgid "Settings"
-msgstr ""
+msgstr "Settings"
 
 #: ../qml/Settings.qml:36
 msgid "Units"
-msgstr ""
+msgstr "Units"
 
 #: ../qml/Settings.qml:53
 msgid "Log a point every:"
@@ -188,7 +188,7 @@ msgstr "between 50 and 3600000"
 #. TRANSLATORS: millisecond abbreviation
 #: ../qml/Settings.qml:82
 msgid "ms"
-msgstr ""
+msgstr "ms"
 
 #: ../qml/Settings.qml:92
 msgid "Altitude offset:"
@@ -200,19 +200,19 @@ msgstr "between -100 and 100"
 
 #: ../qml/Settings.qml:115
 msgid "meter(s)"
-msgstr "meter(s)"
+msgstr "metre(s)"
 
 #: ../qml/Main.qml:151 ../qml/Main.qml:154
 msgid "Distance: "
-msgstr ""
+msgstr "Distance: "
 
 #: ../qml/Main.qml:157
 msgid "Time: "
-msgstr ""
+msgstr "Time: "
 
 #: ../qml/Main.qml:232
 msgid "Recent Activities"
-msgstr ""
+msgstr "Recent Activities"
 
 #: ../qml/Main.qml:241
 msgid "Filter"
@@ -220,7 +220,7 @@ msgstr "Filter"
 
 #: ../qml/Main.qml:246
 msgid "Import"
-msgstr ""
+msgstr "Import"
 
 #: ../qml/Main.qml:291
 msgid "Edit the type and the name of your activity"
@@ -240,8 +240,8 @@ msgstr "Track information"
 
 #: ../qml/Main.qml:411
 msgid "Close"
-msgstr ""
+msgstr "Close"
 
 #: ../qml/Main.qml:422
 msgid "Log new Activity"
-msgstr ""
+msgstr "Log new Activity"

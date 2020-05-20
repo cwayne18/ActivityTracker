@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15 10:29+0000\n"
-"PO-Revision-Date: 2019-10-18 16:53+0000\n"
+"PO-Revision-Date: 2020-05-04 08:11+0000\n"
 "Last-Translator: Hacker1245 <kacper12455@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/activity-tracker/"
 "translations/pl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1-dev\n"
+"X-Generator: Weblate 4.1-dev\n"
 
 #: ../qml/SportSelectPopUp.qml:10
 msgid "Choose sport:"
@@ -236,7 +236,7 @@ msgstr "Przesuń do góry żeby zarejestrować nową aktywność"
 
 #: ../qml/Main.qml:397
 msgid "Track information"
-msgstr "Śledź informacje"
+msgstr "Informacje o trasie"
 
 #: ../qml/Main.qml:411
 msgid "Close"

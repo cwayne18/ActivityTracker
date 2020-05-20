@@ -7,150 +7,149 @@ msgid ""
 msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-15 10:29+0000\n"
-"PO-Revision-Date: 2020-04-29 03:11+0000\n"
-"Last-Translator: markomi1 <okram.je.car.4@gmail.com>\n"
-"Language-Team: Serbian <https://hosted.weblate.org/projects/activity-tracker/"
-"translations/sr/>\n"
-"Language: sr\n"
+"POT-Creation-Date: 2020-02-16 17:32+0000\n"
+"PO-Revision-Date: 2020-05-06 16:12+0000\n"
+"Last-Translator: Shreyas Murali Thottuvai <shreyas.murali@hotmail.com>\n"
+"Language-Team: Hindi <https://hosted.weblate.org/projects/activity-tracker/"
+"translations/hi/>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.0.2\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.1-dev\n"
 
 #: ../qml/SportSelectPopUp.qml:10
 msgid "Choose sport:"
-msgstr "Izaberi sport:"
+msgstr "खेल चुनें:"
 
 #: ../qml/SportSelectPopUp.qml:21
 msgid "After"
-msgstr "Nakon"
+msgstr "बाद"
 
 #: ../qml/Tracker.qml:29
 msgid "Activity in Progress"
-msgstr "Aktivnost u toku"
+msgstr "प्रगति में गतिविधि"
 
 #: ../qml/Tracker.qml:29
 msgid "New Activity"
-msgstr "Nova aktivnost"
+msgstr "नई गतिविधि"
 
 #: ../qml/Tracker.qml:67
 msgid "Do you want to cancel the activity?"
-msgstr "Da li želite da prekinete ovu aktivnost?"
+msgstr "क्या आप गतिविधि रद्द करना चाहते हैं?"
 
 #: ../qml/Tracker.qml:70
 msgid "Yes, cancel"
-msgstr "Da, prekini"
+msgstr "हाँ, रद्द करें"
 
 #: ../qml/Tracker.qml:89
 msgid "No, continue"
-msgstr "Ne, nastavi"
+msgstr "नहीं, जारी रखें"
 
 #: ../qml/Tracker.qml:128 ../qml/Tracker.qml:133
 msgid "No data"
-msgstr "Nema podataka"
+msgstr "कोई आकड़ा उपलब्ध नहीं है"
 
 #: ../qml/Tracker.qml:197
 msgid "Do you want to stop the recording?"
-msgstr "Da li želite da zaustavite zapisivanje?"
+msgstr "क्या आप रिकॉर्डिंग बंद करना चाहते हैं?"
 
 #: ../qml/Tracker.qml:199
 msgid "Yes, Stop!"
-msgstr "Da, zaustavi!"
+msgstr "हाँ, रुक जाओ!"
 
 #: ../qml/Tracker.qml:220
 msgid "No, Continue"
-msgstr "Ne, Nastavi"
+msgstr "नहीं, जारी रखें"
 
 #: ../qml/Tracker.qml:232 ../qml/Main.qml:276
 msgid "Select the type and the name of your activity"
-msgstr "Izaberite tip i ime vaše aktivnosti"
+msgstr "अपनी गतिविधि का प्रकार और नाम चुनें"
 
 #: ../qml/Tracker.qml:300
 msgid "Start"
-msgstr "Počni"
+msgstr "प्रारंभ"
 
 #: ../qml/Tracker.qml:321
 msgid "Stop"
-msgstr "Zaustavi"
+msgstr "रुको"
 
 #: ../qml/Map.qml:17
 msgid "Activity Map"
-msgstr "Mapa Aktivnosti"
+msgstr "गतिविधि मानचित्र"
 
 #: ../qml/Map.qml:20
 msgid "Info"
-msgstr "informacije"
+msgstr "जानकारी"
 
 #: ../qml/ImportPage.qml:34
 msgid "Choose"
-msgstr "Izaberi"
+msgstr "चुनें"
 
 #: ../qml/components/Sports.qml:7
 msgid "Run"
-msgstr "Pokreni"
+msgstr "चलाना"
 
 #: ../qml/components/Sports.qml:8
 msgid "BikeRide"
-msgstr "VožnjaBicikla"
+msgstr ""
 
 #: ../qml/components/Sports.qml:9
 msgid "Walk"
-msgstr "Hodaj"
+msgstr ""
 
 #: ../qml/components/Sports.qml:10
 msgid "Drive"
-msgstr "Vozi"
+msgstr ""
 
 #: ../qml/components/Sports.qml:11
 msgid "Hike"
-msgstr "Pešači"
+msgstr ""
 
 #: ../qml/components/Sports.qml:12
 msgid "Unicycle"
-msgstr "Unicikl"
+msgstr ""
 
 #: ../qml/ActivityDialog.qml:16
 msgid "Name"
-msgstr "Ime"
+msgstr "नाम"
 
 #: ../qml/ActivityDialog.qml:19
 msgid "Select a sport below"
-msgstr "Izaberite sport ispod"
+msgstr ""
 
 #: ../qml/ActivityDialog.qml:29
 msgid "Activity Type"
-msgstr "Tip aktivnosti"
+msgstr ""
 
 #: ../qml/ActivityDialog.qml:39
 msgid "Save"
-msgstr "Sačuvaj"
+msgstr ""
 
 #: ../qml/ActivityDialog.qml:53
 msgid "Cancel"
-msgstr "Prekini"
+msgstr ""
 
 #: ../qml/About.qml:8 ../qml/Settings.qml:18
 msgid "About"
-msgstr "O"
+msgstr ""
 
 #: ../qml/About.qml:37
 msgid "Activity Tracker"
-msgstr "Pratilac Aktivnosti"
+msgstr ""
 
 #: ../qml/About.qml:43
 msgid "Version"
-msgstr "Verzija"
+msgstr ""
 
 #: ../qml/About.qml:81
 msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
-msgstr "Objavljeno prema uslovima iz GNU GPL v3.<br> Izvorni kod dostupan na"
+msgstr ""
 
 #: ../qml/About.qml:90
 msgid "Part of the icons is made by %1 from %2 is licensed by %3"
-msgstr "Djelovi ikonica su kreirani od %1 od %2 je licenciran od %3"
+msgstr ""
 
 #. TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
 #: ../qml/About.qml:103
@@ -158,90 +157,88 @@ msgid ""
 "Thanks to %1 for the icons based on:<br>%3 by %8 from %2,<br>%4 by %9 from "
 "%2,<br>%5 by %10 from %2,<br>%6 by %11 from %2,<br>%7 by %12 from %2"
 msgstr ""
-"Hvala %1 za ikonice bazirane na:<br>%3 od %8 iz %2,<br>%4 od %9 iz %2,<br>%5 "
-"od %10 iz %2,<br>%6 iz %11 iz %2,<br>%7 od %12 iz %2"
 
 #: ../qml/About.qml:124
 msgid "Translate this app on Weblate!"
-msgstr "Prevedi ovu aplikaciju na Weblate!"
+msgstr ""
 
 #: ../qml/About.qml:133
 msgid "Support Weblate"
-msgstr "Podrži Weblate"
+msgstr ""
 
 #: ../qml/Settings.qml:14 ../qml/Main.qml:236
 msgid "Settings"
-msgstr "Podešavanja"
+msgstr ""
 
 #: ../qml/Settings.qml:36
 msgid "Units"
-msgstr "Jedinice"
+msgstr ""
 
 #: ../qml/Settings.qml:53
 msgid "Log a point every:"
-msgstr "Zapiši  tačku svakih:"
+msgstr ""
 
 #: ../qml/Settings.qml:55
 msgid "between 50 and 3600000"
-msgstr "između 50 i 3600000"
+msgstr ""
 
 #. TRANSLATORS: millisecond abbreviation
 #: ../qml/Settings.qml:82
 msgid "ms"
-msgstr "ms"
+msgstr ""
 
 #: ../qml/Settings.qml:92
 msgid "Altitude offset:"
-msgstr "Pomak nadmorske visine:"
+msgstr ""
 
 #: ../qml/Settings.qml:93
 msgid "between -100 and 100"
-msgstr "između -100 i 100"
+msgstr ""
 
 #: ../qml/Settings.qml:115
 msgid "meter(s)"
-msgstr "metra"
+msgstr ""
 
 #: ../qml/Main.qml:151 ../qml/Main.qml:154
 msgid "Distance: "
-msgstr "Distanca: "
+msgstr ""
 
 #: ../qml/Main.qml:157
 msgid "Time: "
-msgstr "Vrijeme: "
+msgstr ""
 
 #: ../qml/Main.qml:232
 msgid "Recent Activities"
-msgstr "Nedavne aktivnosti"
+msgstr ""
 
 #: ../qml/Main.qml:241
 msgid "Filter"
-msgstr "Filter"
+msgstr ""
 
 #: ../qml/Main.qml:246
 msgid "Import"
-msgstr "Ubaci"
+msgstr ""
 
 #: ../qml/Main.qml:291
 msgid "Edit the type and the name of your activity"
-msgstr "Uredi tip i ime aktivnosti"
+msgstr ""
 
 #: ../qml/Main.qml:312
 msgid "No saved activities"
-msgstr "Nema sačuvanih aktivnosti"
+msgstr ""
 
 #: ../qml/Main.qml:315
 msgid "Swipe up to log a new activity"
-msgstr "Prevuci gore da zabilježiš novu aktivnost"
+msgstr ""
 
 #: ../qml/Main.qml:397
 msgid "Track information"
-msgstr "Informacije praćenja"
+msgstr ""
 
 #: ../qml/Main.qml:411
 msgid "Close"
-msgstr "Zatvori"
+msgstr ""
 
 #: ../qml/Main.qml:422
 msgid "Log new Activity"
-msgstr "Zapiši novu aktivnost"
+msgstr ""

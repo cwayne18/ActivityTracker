@@ -34,13 +34,14 @@ Page {
             right: parent.right
          }
          text: i18n.tr("Units")
-         model: ["Kilometers", "Miles"]
+         model: [i18n.tr("Kilometers"), i18n.tr("Miles")]
+         property var units_id: ["kilometers", "miles"]
          expanded: true
          selectedIndex: switch(runits) {case "kilometers": return 0; case "miles": return 1;}
          onSelectedIndexChanged: {
-            console.warn(model[selectedIndex].toLowerCase())
-            runits=model[selectedIndex].toLowerCase()
-            pygpx.set_units(model[selectedIndex].toLowerCase())
+            console.warn("changed distance unit to: "+units_id[selectedIndex])
+            runits=units_id[selectedIndex]
+            pygpx.set_units(units_id[selectedIndex])
          }
       }
 

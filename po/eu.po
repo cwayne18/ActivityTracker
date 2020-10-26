@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15 10:29+0000\n"
-"PO-Revision-Date: 2020-02-06 19:50+0000\n"
+"PO-Revision-Date: 2020-06-29 10:41+0000\n"
 "Last-Translator: aitzol berasategi <aitzol@disroot.org>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/activity-tracker/"
 "translations/eu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.11-dev\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #: ../qml/SportSelectPopUp.qml:10
 msgid "Choose sport:"
@@ -29,15 +29,15 @@ msgstr "Ondoren"
 
 #: ../qml/Tracker.qml:29
 msgid "Activity in Progress"
-msgstr "Uneko aktibitatea"
+msgstr "Uneko jarduera"
 
 #: ../qml/Tracker.qml:29
 msgid "New Activity"
-msgstr "Aktibitate berria"
+msgstr "Jarduera berria"
 
 #: ../qml/Tracker.qml:67
 msgid "Do you want to cancel the activity?"
-msgstr "Bertan behera utzi nahi al duzu aktibitatea?"
+msgstr "Jarduera bertan behera utzi nahi al duzu?"
 
 #: ../qml/Tracker.qml:70
 msgid "Yes, cancel"
@@ -65,7 +65,7 @@ msgstr "Ez, jarraitu"
 
 #: ../qml/Tracker.qml:232 ../qml/Main.qml:276
 msgid "Select the type and the name of your activity"
-msgstr "Aukeratu zure aktibitate mota eta izena"
+msgstr "Aukeratu zure jarduera mota eta izena"
 
 #: ../qml/Tracker.qml:300
 msgid "Start"
@@ -77,7 +77,7 @@ msgstr "Gelditu"
 
 #: ../qml/Map.qml:17
 msgid "Activity Map"
-msgstr "Aktibitate mapa"
+msgstr "Jarduera mapa"
 
 #: ../qml/Map.qml:20
 msgid "Info"
@@ -121,7 +121,7 @@ msgstr "Hautatu ondorengo kirol bat"
 
 #: ../qml/ActivityDialog.qml:29
 msgid "Activity Type"
-msgstr "Aktibitate mota"
+msgstr "Jarduera mota"
 
 #: ../qml/ActivityDialog.qml:39
 msgid "Save"
@@ -215,7 +215,7 @@ msgstr "Denbora: "
 
 #: ../qml/Main.qml:232
 msgid "Recent Activities"
-msgstr "Azkeneko aktibitateak"
+msgstr "Azken jarduerak"
 
 #: ../qml/Main.qml:241
 msgid "Filter"
@@ -227,19 +227,19 @@ msgstr "Inportatu"
 
 #: ../qml/Main.qml:291
 msgid "Edit the type and the name of your activity"
-msgstr "Editatu zure aktibitate mota eta izena"
+msgstr "Editatu zure jarduera mota eta izena"
 
 #: ../qml/Main.qml:312
 msgid "No saved activities"
-msgstr "Ez dago gordetako aktibitaterik"
+msgstr "Ez dago gordetako jarduerarik"
 
 #: ../qml/Main.qml:315
 msgid "Swipe up to log a new activity"
-msgstr "Irristatu goruntz aktibitate berria erregistratzeko"
+msgstr "Irristatu goruntz jarduera berria erregistratzeko"
 
 #: ../qml/Main.qml:397
 msgid "Track information"
-msgstr "Jarraipen informazioa"
+msgstr "Jarraipenaren informazioa"
 
 #: ../qml/Main.qml:411
 msgid "Close"
@@ -247,4 +247,4 @@ msgstr "Itxi"
 
 #: ../qml/Main.qml:422
 msgid "Log new Activity"
-msgstr "Aktibitate berria erregistratu"
+msgstr "Jarduera berria erregistratu"

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15 10:29+0000\n"
-"PO-Revision-Date: 2020-03-13 15:33+0000\n"
-"Last-Translator: Seyed Hany Hosseini <hany1894@gmail.com>\n"
+"PO-Revision-Date: 2020-06-12 16:41+0000\n"
+"Last-Translator: Alireza Jabbari <rhrurhraj@gmail.com>\n"
 "Language-Team: Persian <https://hosted.weblate.org/projects/activity-tracker/"
 "translations/fa/>\n"
 "Language: fa\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.1-dev\n"
 
 #: ../qml/SportSelectPopUp.qml:10
 msgid "Choose sport:"
@@ -57,7 +57,7 @@ msgstr "مایل به توقف عملیات ضبط هستید؟"
 
 #: ../qml/Tracker.qml:199
 msgid "Yes, Stop!"
-msgstr "بله ، توقف"
+msgstr "بله ، توقف!"
 
 #: ../qml/Tracker.qml:220
 msgid "No, Continue"
@@ -136,7 +136,6 @@ msgid "About"
 msgstr "درباره"
 
 #: ../qml/About.qml:37
-#, fuzzy
 msgid "Activity Tracker"
 msgstr "فعالیت سنج"
 
@@ -145,13 +144,12 @@ msgid "Version"
 msgstr "نسخه"
 
 #: ../qml/About.qml:81
-#, fuzzy
 msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
-msgstr "منتشر شده تحت قانون GNU GPL v3.<br> سورس کد در دسترس در"
+msgstr "منتشر شده تحت قانون GNU GPL v3.<br> سورس کد در دسترس است در"
 
 #: ../qml/About.qml:90
 msgid "Part of the icons is made by %1 from %2 is licensed by %3"
-msgstr ""
+msgstr "بخشی از آیکون ها ساخته شده توسط %1 از %2 پروانه داده شده توسط %3"
 
 #. TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
 #: ../qml/About.qml:103
@@ -159,6 +157,8 @@ msgid ""
 "Thanks to %1 for the icons based on:<br>%3 by %8 from %2,<br>%4 by %9 from "
 "%2,<br>%5 by %10 from %2,<br>%6 by %11 from %2,<br>%7 by %12 from %2"
 msgstr ""
+"با تشکر از %1 برای آیکون ها بر اساس:<br>%3 توسط %8 از %2,<br>%4 توسط %9 از "
+"%2,<br>%5 توسط %10 از %2,<br>%6 توسط %11 از %2,<br>%7 توسط %12 از %2"
 
 #: ../qml/About.qml:124
 msgid "Translate this app on Weblate!"
@@ -190,9 +190,8 @@ msgid "ms"
 msgstr "میلی ثانیه"
 
 #: ../qml/Settings.qml:92
-#, fuzzy
 msgid "Altitude offset:"
-msgstr "تلورانس ارتفاع:"
+msgstr "انحراف ارتفاع:"
 
 #: ../qml/Settings.qml:93
 msgid "between -100 and 100"
@@ -215,7 +214,6 @@ msgid "Recent Activities"
 msgstr "فعالیت های اخیر"
 
 #: ../qml/Main.qml:241
-#, fuzzy
 msgid "Filter"
 msgstr "فیلتر"
 

@@ -7,133 +7,133 @@ msgid ""
 msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-15 10:29+0000\n"
-"PO-Revision-Date: 2020-06-02 14:41+0000\n"
-"Last-Translator: Paulraj <paulrajmail@gmail.com>\n"
-"Language-Team: Tamil <https://hosted.weblate.org/projects/activity-tracker/"
-"translations/ta/>\n"
-"Language: ta\n"
+"POT-Creation-Date: 2020-02-16 17:32+0000\n"
+"PO-Revision-Date: 2020-09-04 13:36+0000\n"
+"Last-Translator: Arturo Hernández Pérez <al374891@uji.es>\n"
+"Language-Team: Valencian <https://hosted.weblate.org/projects/"
+"activity-tracker/translations/ca@valencia/>\n"
+"Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.1-dev\n"
+"X-Generator: Weblate 4.3-dev\n"
 
 #: ../qml/SportSelectPopUp.qml:10
 msgid "Choose sport:"
-msgstr "விளையாட்டினை தேர்ந்தெடுக்கவும்:"
+msgstr "Elegir esport:"
 
 #: ../qml/SportSelectPopUp.qml:21
 msgid "After"
-msgstr "அடுத்து"
+msgstr "Després"
 
 #: ../qml/Tracker.qml:29
 msgid "Activity in Progress"
-msgstr "தொடர்ச்சியில் உள்ள செயல்பாடு"
+msgstr "Activitat en curs"
 
 #: ../qml/Tracker.qml:29
 msgid "New Activity"
-msgstr "புதிய செயல்பாடு"
+msgstr "Activitat nova"
 
 #: ../qml/Tracker.qml:67
 msgid "Do you want to cancel the activity?"
-msgstr "செயல்பாட்டினை ரத்து செய்யவேண்டுமா?"
+msgstr "Voleu cancel·lar l'activitat?"
 
 #: ../qml/Tracker.qml:70
 msgid "Yes, cancel"
-msgstr "ஆம், ரத்து செய்க"
+msgstr "Sí, cancel·lar"
 
 #: ../qml/Tracker.qml:89
 msgid "No, continue"
-msgstr "இல்லை, தொடர்க"
+msgstr "No, continuar"
 
 #: ../qml/Tracker.qml:128 ../qml/Tracker.qml:133
 msgid "No data"
-msgstr "தகவல் இல்லை"
+msgstr "Cap dada"
 
 #: ../qml/Tracker.qml:197
 msgid "Do you want to stop the recording?"
-msgstr "ஒலிப்பதிவை நிறுத்த வேண்டுமா?"
+msgstr "Voleu detenir l'enregistrament de l'activitat?"
 
 #: ../qml/Tracker.qml:199
 msgid "Yes, Stop!"
-msgstr "ஆம், நிறுத்துக!"
+msgstr "Sí, detenir!"
 
 #: ../qml/Tracker.qml:220
 msgid "No, Continue"
-msgstr "இல்லை, தொடர்க"
+msgstr "No, continuar"
 
 #: ../qml/Tracker.qml:232 ../qml/Main.qml:276
 msgid "Select the type and the name of your activity"
-msgstr "உங்களது செயல்பாட்டின் வகை மற்றும் பெயரினை தேர்ந்தெடுக்கவும்"
+msgstr "Seleccioneu el tipus i el nom de la seua activitat"
 
 #: ../qml/Tracker.qml:300
 msgid "Start"
-msgstr "தொடங்கு"
+msgstr "Començar"
 
 #: ../qml/Tracker.qml:321
 msgid "Stop"
-msgstr "நிறுத்து"
+msgstr "Detenir"
 
 #: ../qml/Map.qml:17
 msgid "Activity Map"
-msgstr ""
+msgstr "Mapa d'activitat"
 
 #: ../qml/Map.qml:20
 msgid "Info"
-msgstr "தகவல்"
+msgstr "Info"
 
 #: ../qml/ImportPage.qml:34
 msgid "Choose"
-msgstr "தேர்வு செய்யவும்"
+msgstr "Elegir"
 
 #: ../qml/components/Sports.qml:7
 msgid "Run"
-msgstr "இயக்க"
+msgstr "Córrer"
 
 #: ../qml/components/Sports.qml:8
 msgid "BikeRide"
-msgstr "பைக் ரைடு"
+msgstr "Passeig en bicicleta"
 
 #: ../qml/components/Sports.qml:9
 msgid "Walk"
-msgstr "நடக்க"
+msgstr "Caminar"
 
 #: ../qml/components/Sports.qml:10
 msgid "Drive"
-msgstr "இயக்கி"
+msgstr "Conduir"
 
 #: ../qml/components/Sports.qml:11
 msgid "Hike"
-msgstr "உயர்வு"
+msgstr "Fer senderisme"
 
 #: ../qml/components/Sports.qml:12
 msgid "Unicycle"
-msgstr "ஒற்றைத் தனியாழி"
+msgstr "Monocicle"
 
 #: ../qml/ActivityDialog.qml:16
 msgid "Name"
-msgstr "பெயர்"
+msgstr "Nom"
 
 #: ../qml/ActivityDialog.qml:19
 msgid "Select a sport below"
-msgstr ""
+msgstr "Seleccioneu davall un esport"
 
 #: ../qml/ActivityDialog.qml:29
 msgid "Activity Type"
-msgstr ""
+msgstr "Tipus d'activitat"
 
 #: ../qml/ActivityDialog.qml:39
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
 #: ../qml/ActivityDialog.qml:53
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel·lar"
 
 #: ../qml/About.qml:8 ../qml/Settings.qml:18
 msgid "About"
-msgstr ""
+msgstr "Quant a"
 
 #: ../qml/About.qml:37
 msgid "Activity Tracker"

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: activitytracker.cwayne18\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15 10:29+0000\n"
-"PO-Revision-Date: 2020-02-09 01:50+0000\n"
-"Last-Translator: Sergio Marques <so.boston.android@gmail.com>\n"
+"PO-Revision-Date: 2020-09-30 21:41+0000\n"
+"Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/"
 "activity-tracker/translations/pt/>\n"
 "Language: pt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.11-dev\n"
+"X-Generator: Weblate 4.3-dev\n"
 
 #: ../qml/SportSelectPopUp.qml:10
 msgid "Choose sport:"
@@ -117,7 +117,7 @@ msgstr "Nome"
 
 #: ../qml/ActivityDialog.qml:19
 msgid "Select a sport below"
-msgstr "Selecione um dos desportos abaixo"
+msgstr "Selecione um desporto em baixo"
 
 #: ../qml/ActivityDialog.qml:29
 msgid "Activity Type"
@@ -163,7 +163,7 @@ msgstr ""
 
 #: ../qml/About.qml:124
 msgid "Translate this app on Weblate!"
-msgstr "Traduza esta aplicação no Weblate!"
+msgstr "Traduza esta app no Weblate!"
 
 #: ../qml/About.qml:133
 msgid "Support Weblate"

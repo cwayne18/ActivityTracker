@@ -38,7 +38,7 @@ Page {
             }
 
             Label {
-               text: i18n.tr("Version") + " 0.15"
+               text: i18n.tr("Version") + " 0.15.1"
                anchors.horizontalCenter: parent.horizontalCenter
             }
          }
@@ -47,7 +47,7 @@ Page {
             id: logo
             width: units.gu(17)
             source: Image {
-               source: "images/new-icon.svg"
+               source: "../images/new-icon.svg"
             }
             anchors.horizontalCenter: parent.horizontalCenter
             aspect: LomiriShape.DropShadow

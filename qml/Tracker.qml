@@ -196,7 +196,7 @@ Rectangle {
             id: dialogue
             title: i18n.tr("Do you want to stop the recording?")
             PopUpButton {
-               texth: i18n.tr("Yes, Stop!")
+               texth: i18n.tr("Yes, stop!")
                color: UbuntuColors.green
                onClicked: {
                   PopupUtils.close(dialogue)
@@ -217,7 +217,7 @@ Rectangle {
                }
             }
             PopUpButton {
-               texth: i18n.tr("No, Continue")
+               texth: i18n.tr("No, continue")
                color: UbuntuColors.red
                onClicked: PopupUtils.close(dialogue)
             }

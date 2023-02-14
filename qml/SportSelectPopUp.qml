@@ -18,7 +18,7 @@ Dialog {
       }
    }
    Button {
-      text:i18n.tr("After")
+      text: sportsComponent.selected != -1 ? i18n.tr("Cancel") : i18n.tr("Choose later")
       onClicked:{
          PopupUtils.close(sportselectdialog)
          openDialog=false

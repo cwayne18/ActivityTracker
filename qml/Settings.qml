@@ -33,7 +33,7 @@ Page {
             left: parent.left
             right: parent.right
          }
-         text: i18n.tr("Units")
+         text: i18n.tr("Distance unit:")
          model: [i18n.tr("Kilometers"), i18n.tr("Miles")]
          property var units_id: ["kilometers", "miles"]
          expanded: true

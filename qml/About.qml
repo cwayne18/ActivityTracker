@@ -24,10 +24,8 @@ Page {
          anchors.centerIn: parent
          spacing: units.gu(4)
          width: parent.width-spacing
-         // #335280 is the new blue by Canonical
-         // https://github.com/CanonicalLtd/desktop-design/blob/master/Colour/colour.png
-         property string themableBlue: Theme.name == "Ubuntu.Components.Themes.SuruDark" ? UbuntuColors.blue : "#335280"
-         property string linkColor: " style=\"color:"+about_column.themableBlue+";\""  //' style="color:'+ about_column.themableBlue +';"'
+
+         property string linkColor: " style=\"color:"+theme.palette.normal.activity+";\""
 
          Column {
             width: parent.width
@@ -67,7 +65,7 @@ Page {
                textFormat: Text.RichText
                text: "<a "+about_column.linkColor+" href=\"https://github.com/cwayne18/ActivityTracker\"> © 2015 Chris Wayne</a>"
                anchors.horizontalCenter: parent.horizontalCenter
-               color: about_column.themableBlue
+               color: theme.palette.normal.activity
             }
          }
 
@@ -78,7 +76,7 @@ Page {
             Label {
                textFormat: Text.RichText
                font.underline: false
-               text: i18n.tr("Released under the terms of the GNU GPL v3.<br>Source code available on") + " <a style=\"text-decoration: none;color:"+about_column.themableBlue+";\" href=\"https://github.com/ernesst/ActivityTracker\">GitHub.com</a>"
+               text: i18n.tr("Released under the terms of the GNU GPL v3.<br>Source code available on") + " <a "+about_column.linkColor+"\" href=\"https://github.com/ernesst/ActivityTracker\">GitHub.com</a>"
                font.pointSize: units.gu(1)
                horizontalAlignment: Text.AlignHCenter
                anchors.horizontalCenter: parent.horizontalCenter
@@ -90,7 +88,7 @@ Page {
                text: i18n.tr('Part of the icons is made by %1 from %2 is licensed by %3')
                .arg('<a href="http://www.freepik.com" title="Freepik"'+about_column.linkColor+'>Freepik</a>')
                .arg('<a href="https://www.flaticon.com/" title="Flaticon"'+about_column.linkColor+'>www.flaticon.com</a>')
-               .arg('<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank"'+about_column.linkColor+'>CC 3.0 BY</a>"')
+               .arg('<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank"'+about_column.linkColor+'>CC 3.0 BY</a>.')
                anchors.horizontalCenter: parent.horizontalCenter
                horizontalAlignment: Text.AlignHCenter
                wrapMode: Text.Wrap

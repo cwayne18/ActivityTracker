@@ -6,5 +6,5 @@
         "keep-display-on",
         "content_exchange"
     ],
-    "policy_version": 16.04
+    "policy_version": 20.04
 }

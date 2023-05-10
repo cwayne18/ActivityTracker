@@ -1,6 +1,6 @@
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import QtQuick 2.4
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components.Popups 1.3
 import "components"
 
 
@@ -39,13 +39,9 @@ Dialog {
          texth: i18n.tr("Save")
          height: units.gu(8)
          width: parent.width /2 -units.gu(0.5)
-         color: UbuntuColors.green
+         color: LomiriColors.green
          enabled: sportsComponent.selected != -1
-         onClicked: {
-            PopupUtils.close(activity_dialogue)
-            listModel.clear()
-            pygpx.get_runs(listModel)
-         }
+         // on clicked event is handled in Tracker.qml
       }
 
       PopUpButton {
@@ -53,10 +49,10 @@ Dialog {
          texth: i18n.tr("Cancel")
          height: units.gu(8)
          width: parent.width /2 -units.gu(0.5)
-         color: UbuntuColors.red
+         color: LomiriColors.red
          onClicked: {
-            PopupUtils.close(activity_dialogue)
-         }
+           PopupUtils.close(activity_dialogue)
+        }
       }
    }
 }

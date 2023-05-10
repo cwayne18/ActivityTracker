@@ -1,6 +1,6 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 import QtPositioning 5.9
 import QtLocation 5.9
 import "components"
@@ -68,7 +68,7 @@ Rectangle {
             PopUpButton {
                id: yesimsure
                texth: i18n.tr("Yes, cancel")
-               color: UbuntuColors.red
+               color: LomiriColors.red
                onClicked: {
                   PopupUtils.close(areyousuredialog)
                   timer.start()
@@ -87,7 +87,7 @@ Rectangle {
             PopUpButton {
                id: noooooooodb
                texth: i18n.tr("No, continue")
-               color: UbuntuColors.green
+               color: LomiriColors.green
                onClicked: {
                   PopupUtils.close(areyousuredialog)
                   am_running = true
@@ -181,7 +181,7 @@ Rectangle {
          center : src.position.coordinate
          radius : 30.0
          opacity: .3
-         color : UbuntuColors.green
+         color : LomiriColors.green
          border.width : 3
       }
       MapPolyline {
@@ -197,7 +197,7 @@ Rectangle {
             title: i18n.tr("Do you want to stop the recording?")
             PopUpButton {
                texth: i18n.tr("Yes, stop!")
-               color: UbuntuColors.green
+               color: LomiriColors.green
                onClicked: {
                   PopupUtils.close(dialogue)
 
@@ -218,7 +218,7 @@ Rectangle {
             }
             PopUpButton {
                texth: i18n.tr("No, continue")
-               color: UbuntuColors.red
+               color: LomiriColors.red
                onClicked: PopupUtils.close(dialogue)
             }
          }
@@ -249,6 +249,7 @@ Rectangle {
                distfloat = parseFloat(dist.slice(0,-2))
                pygpx.get_runs(listModel)
                newrunEdge.collapse()
+               newrunEdge.preloadContent = false
                newrunEdge.contentUrl = ""
                newrunEdge.contentUrl = Qt.resolvedUrl("Tracker.qml")
             }
@@ -298,7 +299,7 @@ Rectangle {
 
             Button {
                text: i18n.tr("Start")
-               color: UbuntuColors.green
+               color: LomiriColors.green
                visible: !am_running
                height: units.gu(10)
                //   width:parent.width/2
@@ -319,7 +320,7 @@ Rectangle {
             }
             Button {
                text: i18n.tr("Stop")
-               color: UbuntuColors.red
+               color: LomiriColors.red
                visible:am_running
                height: units.gu(10)
                //   width:parent.width/2

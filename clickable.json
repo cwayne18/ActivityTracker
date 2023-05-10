@@ -1,4 +1,0 @@
-{
-	"builder": "pure-qml-cmake",
-	"dependencies_target": ["qml-module-io-thp-pyotherside"]
-}

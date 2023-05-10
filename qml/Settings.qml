@@ -1,10 +1,10 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import QtSystemInfo 5.0
 import QtLocation 5.3
-import Ubuntu.Components.ListItems 1.3 as LI
-import Ubuntu.Components.Popups 1.3
-import Ubuntu.Components.Pickers 1.3
+import Lomiri.Components.ListItems 1.3 as LI
+import Lomiri.Components.Popups 1.3
+import Lomiri.Components.Pickers 1.3
 
 
 Page {
@@ -58,7 +58,7 @@ Page {
                TextField {
                   id: pointsIntervalField
                   // text: persistentSettings.pointsInterval/1000
-                  color: !acceptableInput ? UbuntuColors.red : theme.palette.normal.backgroundText
+                  color: !acceptableInput ? LomiriColors.red : theme.palette.normal.backgroundText
                   placeholderText: "5000"
                   inputMethodHints: Qt.ImhDigitsOnly //Qt.ImhFormattedNumbersOnly
                   hasClearButton:false
@@ -94,7 +94,7 @@ Page {
             summary.text: i18n.tr("between -100 and 100")
                TextField {
                   id: altitudeOffsetField
-                  color: !acceptableInput ? UbuntuColors.red : theme.palette.normal.backgroundText
+                  color: !acceptableInput ? LomiriColors.red : theme.palette.normal.backgroundText
                   placeholderText: "0"
                   inputMethodHints: Qt.ImhDigitsOnly
                   hasClearButton:false

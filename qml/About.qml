@@ -1,5 +1,5 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import "components"
 
 Page {
@@ -50,7 +50,7 @@ Page {
                source: "images/new-icon.svg"
             }
             anchors.horizontalCenter: parent.horizontalCenter
-            aspect: UbuntuShape.DropShadow
+            aspect: LomiriShape.DropShadow
          }
 
          Column {
@@ -116,7 +116,7 @@ Page {
 
          Row {
             anchors.horizontalCenter: parent.horizontalCenter; spacing:units.gu(1)
-            Icon {name:"language-chooser";color:UbuntuColors.blue;height:translate.height}
+            Icon {name:"language-chooser";color:LomiriColors.blue;height:translate.height}
             Button {
                id: translate
                text: i18n.tr("Translate this app on Weblate!")
@@ -125,7 +125,7 @@ Page {
          }
          Row {
             anchors.horizontalCenter: parent.horizontalCenter; spacing:units.gu(1)
-            Icon {name:"like";color:UbuntuColors.red;height:supportWL.height}
+            Icon {name:"like";color:LomiriColors.red;height:supportWL.height}
             Button {
                id:supportWL
                text: i18n.tr("Support Weblate")

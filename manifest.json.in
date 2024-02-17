@@ -1,0 +1,15 @@
+{
+    "name": "activitytracker.cwayne18",
+    "description": "Activity tracker for Ubuntu touch",
+    "architecture": "all",
+    "title": "Activity tracker",
+    "hooks": {
+        "activitytracker": {
+            "apparmor": "activitytracker.apparmor",
+            "desktop": "activitytracker.desktop"
+        }
+    },
+    "version": "0.15.1",
+    "maintainer": "Erne st <slash.tux@gmail.com>",
+    "framework": "ubuntu-sdk-20.04"
+}

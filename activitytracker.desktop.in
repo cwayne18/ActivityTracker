@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Activity Tracker
+Exec=qmlscene %u qml/Main.qml
+Icon=./images/new-icon.svg
+Terminal=false
+Type=Application
+X-Lomiri-Touch=true
+X-Lomiri-Supported-Orientations=portrait

@@ -4,12 +4,12 @@
 
 import os
 
-import ubuntuuitoolkit
+import Lomiriuitoolkit
 
 from autopilot import introspection
 from autopilot.matchers import Eventually
 from testtools.matchers import Equals
-from ubuntuuitoolkit import base
+from Lomiriuitoolkit import base
 
 
 PACKAGE_ID = 'geepeeess.cwayne18'
@@ -22,7 +22,7 @@ def get_path_to_source_root():
 
 
 class ApplicationCustomProxyObject(
-        ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase):
+        Lomiriuitoolkit.LomiriUIToolkitCustomProxyObjectBase):
 
     """Autopilot custom proxy object for the app."""
 
@@ -37,10 +37,10 @@ class ApplicationCustomProxyObject(
 
     @property
     def main_view(self):
-        return self.select_single(ubuntuuitoolkit.MainView)
+        return self.select_single(Lomiriuitoolkit.MainView)
 
 
-class ClickAppTestCase(base.UbuntuUIToolkitAppTestCase):
+class ClickAppTestCase(base.LomiriUIToolkitAppTestCase):
 
     """Common test case that provides several useful methods for the tests."""
 
@@ -74,4 +74,3 @@ class ClickAppTestCase(base.UbuntuUIToolkitAppTestCase):
     def _launch_installed_application(self):
         return self.launch_click_package(
             PACKAGE_ID, emulator_base=ApplicationCustomProxyObject)
-

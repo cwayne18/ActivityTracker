@@ -1,0 +1,250 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the activitytracker.cwayne18 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: activitytracker.cwayne18\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-15 10:29+0000\n"
+"PO-Revision-Date: 2019-10-12 07:42+0000\n"
+"Last-Translator: zhengqiangzhang <zhang_z_qiang@hotmail.com>\n"
+"Language-Team: Odia <https://hosted.weblate.org/projects/activity-tracker/"
+"translations/or/>\n"
+"Language: or\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9-dev\n"
+
+#: ../qml/SportSelectPopUp.qml:10
+msgid "Choose sport:"
+msgstr "ଖେଳ ବାଛ:"
+
+#: ../qml/SportSelectPopUp.qml:21
+msgid "After"
+msgstr "ପରେ"
+
+#: ../qml/Tracker.qml:29
+msgid "Activity in Progress"
+msgstr "ଚାଲିଥିବା କାମ"
+
+#: ../qml/Tracker.qml:29
+msgid "New Activity"
+msgstr "ନୂଆ କାମ"
+
+#: ../qml/Tracker.qml:67
+msgid "Do you want to cancel the activity?"
+msgstr "ଚାଲିଥିବା କାମକୁ ସ୍ଥଗିତ କରିବାକୁ ଚାହୁଁଛନ୍ତି କି?"
+
+#: ../qml/Tracker.qml:70
+msgid "Yes, cancel"
+msgstr "ହଁ, ସ୍ଥଗିତ କର"
+
+#: ../qml/Tracker.qml:89
+msgid "No, continue"
+msgstr "ନା, ଚାଲୁ ରଖ"
+
+#: ../qml/Tracker.qml:128 ../qml/Tracker.qml:133
+msgid "No data"
+msgstr "ତତଥ୍ୟ ଶୂନ୍ୟ"
+
+#: ../qml/Tracker.qml:197
+msgid "Do you want to stop the recording?"
+msgstr "ଅଭିଲିଖନୀ ଅଟକାଇବାକୁ ଚାହଁଛନ୍ତି କି?"
+
+#: ../qml/Tracker.qml:199
+msgid "Yes, Stop!"
+msgstr "ହଁ, ବନ୍ଦ କର!"
+
+#: ../qml/Tracker.qml:220
+msgid "No, Continue"
+msgstr "ନା, ଚାଲୁ ରଖ"
+
+#: ../qml/Tracker.qml:232 ../qml/Main.qml:276
+msgid "Select the type and the name of your activity"
+msgstr "ନିଜର କାର୍ଯ୍ୟର ଜାତି ଓ ନାମ ବାଛ"
+
+#: ../qml/Tracker.qml:300
+msgid "Start"
+msgstr "ଆରମ୍ଭ"
+
+#: ../qml/Tracker.qml:321
+msgid "Stop"
+msgstr "ରୁହ"
+
+#: ../qml/Map.qml:17
+msgid "Activity Map"
+msgstr "ଚାଲିଥିବା କାମ"
+
+#: ../qml/Map.qml:20
+msgid "Info"
+msgstr "ତଥ୍ୟ"
+
+#: ../qml/ImportPage.qml:34
+msgid "Choose"
+msgstr "ବାଛ"
+
+#: ../qml/components/Sports.qml:7
+msgid "Run"
+msgstr "ଚଲାଅ"
+
+#: ../qml/components/Sports.qml:8
+msgid "BikeRide"
+msgstr "ବାଇକ ଯାତ୍ରା"
+
+#: ../qml/components/Sports.qml:9
+msgid "Walk"
+msgstr "ଚାଲ"
+
+#: ../qml/components/Sports.qml:10
+msgid "Drive"
+msgstr "ଚଲାଅ"
+
+#: ../qml/components/Sports.qml:11
+msgid "Hike"
+msgstr "ଚଢ"
+
+#: ../qml/components/Sports.qml:12
+msgid "Unicycle"
+msgstr ""
+
+#: ../qml/ActivityDialog.qml:16
+msgid "Name"
+msgstr "ନାମ"
+
+#: ../qml/ActivityDialog.qml:19
+msgid "Select a sport below"
+msgstr "ତଳୁ ଗୋଟିଏ ଖେଳ ବାଛନ୍ତୁ"
+
+#: ../qml/ActivityDialog.qml:29
+msgid "Activity Type"
+msgstr "କାର୍ଯ୍ୟ ଜାତି"
+
+#: ../qml/ActivityDialog.qml:39
+msgid "Save"
+msgstr "ରଖନ୍ତୁ"
+
+#: ../qml/ActivityDialog.qml:53
+msgid "Cancel"
+msgstr "ସ୍ଥଗିତ କର"
+
+#: ../qml/About.qml:8 ../qml/Settings.qml:18
+msgid "About"
+msgstr "ବିଷୟରେ"
+
+#: ../qml/About.qml:37
+msgid "Activity Tracker"
+msgstr "କାର୍ଯ୍ୟ ଖୋଜାରୀ"
+
+#: ../qml/About.qml:43
+msgid "Version"
+msgstr "ପିଢ଼ି"
+
+#: ../qml/About.qml:81
+msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
+msgstr ""
+"ଏହାକୁ GNU GPL v3 ର ସର୍ତାବଳୀ ଅନୁସାରେ ପ୍ରକାଶ କରାଯାଇଛି |<br> ମୂଳ ସାଙ୍କେତ ଉପଲବ୍ଧ ଅଛି"
+
+#: ../qml/About.qml:90
+msgid "Part of the icons is made by %1 from %2 is licensed by %3"
+msgstr "ଚିହ୍ନର କିଛି ଅଂଶ %1 ଦ୍ଵାରା ନିର୍ମିତ %2 ଠାରୁ ଏବଂ ଅନୁମୋଦିତ କରାଯାଇଛି %3 ଦ୍ଵାରା |"
+
+#. TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
+#: ../qml/About.qml:103
+msgid ""
+"Thanks to %1 for the icons based on:<br>%3 by %8 from %2,<br>%4 by %9 from "
+"%2,<br>%5 by %10 from %2,<br>%6 by %11 from %2,<br>%7 by %12 from %2"
+msgstr ""
+"ଧନ୍ୟବାଦ %1 କୁ ଚିହ୍ନ ପାଇଁ ଯାହା ପର୍ଯ୍ୟବେସିତ: <br> %3 ଉପରେ ଯାହା ନିର୍ମିତ %8 ଦ୍ଵାରା ଓ ଆସିଛି %2 "
+"ରୁ ,<br> %4 ଯାହା ନିର୍ମିତ %9 ଦ୍ଵାରା ଓ ଆସିଛି %2 ରୁ, <br> %5 ଯାହା ନିର୍ମିତ %10 ଦ୍ଵାରା ଓ ଆସିଛି "
+"%2 ରୁ,<br> %6 ଯାହା ନିର୍ମିତ %11 ଦ୍ଵାରା ଓ ଆସିଛି %2 ରୁ, <br> %7 ଯାହା ନିର୍ମିତ %12 ଦ୍ଵାରା ଓ "
+"ଆସିଛି %2 ରୁ"
+
+#: ../qml/About.qml:124
+msgid "Translate this app on Weblate!"
+msgstr "ଏହି ଆପ୍ କୁ ୱେବଲେଟ ରେ ଟ୍ରାନ୍ସଲେଟ କରନ୍ତୁ!"
+
+#: ../qml/About.qml:133
+msgid "Support Weblate"
+msgstr "ୱେବଲେଟ କୁ ସାହାଯ୍ୟ କରନ୍ତୁ"
+
+#: ../qml/Settings.qml:14 ../qml/Main.qml:236
+msgid "Settings"
+msgstr ""
+
+#: ../qml/Settings.qml:36
+msgid "Units"
+msgstr ""
+
+#: ../qml/Settings.qml:53
+msgid "Log a point every:"
+msgstr "ଅଭିଲେଖ କର ଗୋଟିଏ ବିନ୍ଦୁଟିକୁ ପ୍ରତି:"
+
+#: ../qml/Settings.qml:55
+msgid "between 50 and 3600000"
+msgstr "୫୦ ରୁ ୩୬୦୦୦୦୦ ମଧ୍ୟରେ"
+
+#. TRANSLATORS: millisecond abbreviation
+#: ../qml/Settings.qml:82
+msgid "ms"
+msgstr "ms"
+
+#: ../qml/Settings.qml:92
+msgid "Altitude offset:"
+msgstr ""
+
+#: ../qml/Settings.qml:93
+#, fuzzy
+msgid "between -100 and 100"
+msgstr "୫୦ ରୁ ୩୬୦୦୦୦୦ ମଧ୍ୟରେ"
+
+#: ../qml/Settings.qml:115
+msgid "meter(s)"
+msgstr ""
+
+#: ../qml/Main.qml:151 ../qml/Main.qml:154
+msgid "Distance: "
+msgstr "ବାଟ: "
+
+#: ../qml/Main.qml:157
+msgid "Time: "
+msgstr "ସମୟ:- "
+
+#: ../qml/Main.qml:232
+msgid "Recent Activities"
+msgstr "ଗତ କାର୍ଯ୍ୟ ଗୁଡିକ"
+
+#: ../qml/Main.qml:241
+msgid "Filter"
+msgstr ""
+
+#: ../qml/Main.qml:246
+msgid "Import"
+msgstr "ବାହାରୁ ଆଣ"
+
+#: ../qml/Main.qml:291
+msgid "Edit the type and the name of your activity"
+msgstr "ନିଜର କାର୍ଯ୍ୟର ଜାତି ଓ ନାମ କୁ ସଂଶୋଧନ କରନ୍ତୁ"
+
+#: ../qml/Main.qml:312
+msgid "No saved activities"
+msgstr ""
+
+#: ../qml/Main.qml:315
+msgid "Swipe up to log a new activity"
+msgstr "ଏକ ନୂଆ କାର୍ଯ୍ୟ ଅଭିଲେଖନି କରିବା ପାଇଁ ଉପରକୁ କରନ୍ତୁ"
+
+#: ../qml/Main.qml:397
+msgid "Track information"
+msgstr "ତଥ୍ୟ କୋଜ"
+
+#: ../qml/Main.qml:411
+msgid "Close"
+msgstr "ବନ୍ଦ କରନ୍ତୁ"
+
+#: ../qml/Main.qml:422
+msgid "Log new Activity"
+msgstr "ନୂଆ କାର୍ଯ୍ୟ ଅଭିଲେଖନ କରନ୍ତୁ"

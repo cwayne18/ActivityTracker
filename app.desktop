@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Activity Tracker
-Exec=qmlscene $@ Main.qml
-Icon=./images/run-journal_256px.png
-Terminal=false
-Type=Application
-X-Ubuntu-Touch=true
-X-Ubuntu-Supported-Orientations=portrait

@@ -1,0 +1,246 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the activitytracker.cwayne18 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: activitytracker.cwayne18\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-15 10:29+0000\n"
+"PO-Revision-Date: 2020-06-12 16:41+0000\n"
+"Last-Translator: Alireza Jabbari <rhrurhraj@gmail.com>\n"
+"Language-Team: Persian <https://hosted.weblate.org/projects/activity-tracker/"
+"translations/fa/>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.1-dev\n"
+
+#: ../qml/SportSelectPopUp.qml:10
+msgid "Choose sport:"
+msgstr "انتخاب ورزش:"
+
+#: ../qml/SportSelectPopUp.qml:21
+msgid "After"
+msgstr "بعد از"
+
+#: ../qml/Tracker.qml:29
+msgid "Activity in Progress"
+msgstr "فعالیت درحال انجام"
+
+#: ../qml/Tracker.qml:29
+msgid "New Activity"
+msgstr "فعالیت جدید"
+
+#: ../qml/Tracker.qml:67
+msgid "Do you want to cancel the activity?"
+msgstr "مایل به انصراف از این فعالیت هستید؟"
+
+#: ../qml/Tracker.qml:70
+msgid "Yes, cancel"
+msgstr "بله ، انصراف"
+
+#: ../qml/Tracker.qml:89
+msgid "No, continue"
+msgstr "خیر ، ادامه"
+
+#: ../qml/Tracker.qml:128 ../qml/Tracker.qml:133
+msgid "No data"
+msgstr "فاقد داده"
+
+#: ../qml/Tracker.qml:197
+msgid "Do you want to stop the recording?"
+msgstr "مایل به توقف عملیات ضبط هستید؟"
+
+#: ../qml/Tracker.qml:199
+msgid "Yes, Stop!"
+msgstr "بله ، توقف!"
+
+#: ../qml/Tracker.qml:220
+msgid "No, Continue"
+msgstr "خیر ، ادامه"
+
+#: ../qml/Tracker.qml:232 ../qml/Main.qml:276
+msgid "Select the type and the name of your activity"
+msgstr "انتخاب نوع و نام فعالیت موردنظر"
+
+#: ../qml/Tracker.qml:300
+msgid "Start"
+msgstr "شروع"
+
+#: ../qml/Tracker.qml:321
+msgid "Stop"
+msgstr "توقف"
+
+#: ../qml/Map.qml:17
+msgid "Activity Map"
+msgstr "نقشه مسیر فعالیت"
+
+#: ../qml/Map.qml:20
+msgid "Info"
+msgstr "اطلاعات"
+
+#: ../qml/ImportPage.qml:34
+msgid "Choose"
+msgstr "انتخاب"
+
+#: ../qml/components/Sports.qml:7
+msgid "Run"
+msgstr "دویدن"
+
+#: ../qml/components/Sports.qml:8
+msgid "BikeRide"
+msgstr "دوچرخه سواری"
+
+#: ../qml/components/Sports.qml:9
+msgid "Walk"
+msgstr "پیاده روی"
+
+#: ../qml/components/Sports.qml:10
+msgid "Drive"
+msgstr "اتومبیل رانی"
+
+#: ../qml/components/Sports.qml:11
+msgid "Hike"
+msgstr "پیاده روی"
+
+#: ../qml/components/Sports.qml:12
+msgid "Unicycle"
+msgstr "تک چرخ"
+
+#: ../qml/ActivityDialog.qml:16
+msgid "Name"
+msgstr "نام"
+
+#: ../qml/ActivityDialog.qml:19
+msgid "Select a sport below"
+msgstr "یک رشته ورزشی را در لیست زیر انتخاب کنید"
+
+#: ../qml/ActivityDialog.qml:29
+msgid "Activity Type"
+msgstr "نوع فعالیت"
+
+#: ../qml/ActivityDialog.qml:39
+msgid "Save"
+msgstr "ذخیره"
+
+#: ../qml/ActivityDialog.qml:53
+msgid "Cancel"
+msgstr "انصراف"
+
+#: ../qml/About.qml:8 ../qml/Settings.qml:18
+msgid "About"
+msgstr "درباره"
+
+#: ../qml/About.qml:37
+msgid "Activity Tracker"
+msgstr "فعالیت سنج"
+
+#: ../qml/About.qml:43
+msgid "Version"
+msgstr "نسخه"
+
+#: ../qml/About.qml:81
+msgid "Released under the terms of the GNU GPL v3.<br>Source code available on"
+msgstr "منتشر شده تحت قانون GNU GPL v3.<br> سورس کد در دسترس است در"
+
+#: ../qml/About.qml:90
+msgid "Part of the icons is made by %1 from %2 is licensed by %3"
+msgstr "بخشی از آیکون ها ساخته شده توسط %1 از %2 پروانه داده شده توسط %3"
+
+#. TRANSLATORS: %1 is the name of the author of the icons, %2 is the project name. args from %3 to %7 are icon name while %8 to %12 are original authors names
+#: ../qml/About.qml:103
+msgid ""
+"Thanks to %1 for the icons based on:<br>%3 by %8 from %2,<br>%4 by %9 from "
+"%2,<br>%5 by %10 from %2,<br>%6 by %11 from %2,<br>%7 by %12 from %2"
+msgstr ""
+"با تشکر از %1 برای آیکون ها بر اساس:<br>%3 توسط %8 از %2,<br>%4 توسط %9 از "
+"%2,<br>%5 توسط %10 از %2,<br>%6 توسط %11 از %2,<br>%7 توسط %12 از %2"
+
+#: ../qml/About.qml:124
+msgid "Translate this app on Weblate!"
+msgstr "این برنامه را در وبلیت ترجمه کنید !"
+
+#: ../qml/About.qml:133
+msgid "Support Weblate"
+msgstr "حمایت از وبلیت"
+
+#: ../qml/Settings.qml:14 ../qml/Main.qml:236
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: ../qml/Settings.qml:36
+msgid "Units"
+msgstr "واحد ها"
+
+#: ../qml/Settings.qml:53
+msgid "Log a point every:"
+msgstr "ذخیره کن یک امتیاز هر:"
+
+#: ../qml/Settings.qml:55
+msgid "between 50 and 3600000"
+msgstr "بین 50 و 3600000"
+
+#. TRANSLATORS: millisecond abbreviation
+#: ../qml/Settings.qml:82
+msgid "ms"
+msgstr "میلی ثانیه"
+
+#: ../qml/Settings.qml:92
+msgid "Altitude offset:"
+msgstr "انحراف ارتفاع:"
+
+#: ../qml/Settings.qml:93
+msgid "between -100 and 100"
+msgstr "بین -100 و 100"
+
+#: ../qml/Settings.qml:115
+msgid "meter(s)"
+msgstr "متر"
+
+#: ../qml/Main.qml:151 ../qml/Main.qml:154
+msgid "Distance: "
+msgstr "مسافت: "
+
+#: ../qml/Main.qml:157
+msgid "Time: "
+msgstr "زمان: "
+
+#: ../qml/Main.qml:232
+msgid "Recent Activities"
+msgstr "فعالیت های اخیر"
+
+#: ../qml/Main.qml:241
+msgid "Filter"
+msgstr "فیلتر"
+
+#: ../qml/Main.qml:246
+msgid "Import"
+msgstr "وارد کردن"
+
+#: ../qml/Main.qml:291
+msgid "Edit the type and the name of your activity"
+msgstr "نوع و نام فعالیت خود را ویرایش کنید"
+
+#: ../qml/Main.qml:312
+msgid "No saved activities"
+msgstr "هیچ فعالیتی ذخیره نشده"
+
+#: ../qml/Main.qml:315
+msgid "Swipe up to log a new activity"
+msgstr "به بالا بکشید تا فعالیت جدیدی خیره کنید"
+
+#: ../qml/Main.qml:397
+msgid "Track information"
+msgstr "اطلاعات مسیر"
+
+#: ../qml/Main.qml:411
+msgid "Close"
+msgstr "بستن"
+
+#: ../qml/Main.qml:422
+msgid "Log new Activity"
+msgstr "ذخیره فعالیت جدید"

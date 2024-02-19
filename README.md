@@ -1,4 +1,6 @@
+# From 2024, @Danfro is becoming the active maintainer for this lovely application, Please go to : https://github.com/Danfro/ActivityTracker
 
+# Long life to ActivityTracker and thanks to Danfro.
 
 # ActivityTracker
 This repo is a fork of the original app created by CWayne18.
